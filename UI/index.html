@@ -1,0 +1,500 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>SHOTEL</title>
+      <base href="/">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.5Vmat9kUJqY.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNeqjJvPSIdvUFWoJcT_X4FPOrXIA/cb=gapi.loaded_0" async=""></script><script src="https://apis.google.com/js/platform.js?onload=onLoad" gapi_processed="true"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+      <style type="text/css">
+         body,
+         html {
+         height: 100%;
+         }
+         .app-loading {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+         }
+         #image {
+         height: 260px;
+         width: 180px;
+         background:
+         url('/assets/img/sprite.png') 0px -0px;
+         background-repeat: no-repeat;
+         }
+      </style>
+      <link rel="stylesheet" href="cssStype/styles.1d51e0d032e861368648.css">
+      <style></style>
+      <script charset="utf-8" src="1.df0b5880ae0ebd5b7f56.js"></script><script charset="utf-8" src="3.60addfa53e7e864a3f44.js"></script>
+      <style>[_nghost-c1]     .mat-drawer-side{border-right:none}[_nghost-c1]     .mat-input-element:disabled{color:#212529}[_nghost-c1]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}[_nghost-c1]     .mat-card{padding:0!important}[_nghost-c1]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}</style>
+      <style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-opened{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:background-color,visibility}@media (-ms-high-contrast:active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}@media (-ms-high-contrast:active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media (-ms-high-contrast:active){.mat-drawer.mat-drawer-end,[dir=rtl] .mat-drawer{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer{transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%,0,0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}</style>
+      <style>.nav-link[_ngcontent-c4]{text-transform:none!important}.off-canvas-sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   i[_ngcontent-c4], .sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   i[_ngcontent-c4]{font-size:24px;float:left;margin-right:15px;line-height:30px;width:30px;text-align:center}.off-canvas-sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   p[_ngcontent-c4], .sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   p[_ngcontent-c4]{margin:0;line-height:30px;font-size:12px;font-weight:600;text-transform:none}.nav[_ngcontent-c4]{display:list-item!important}</style>
+      <style>.main-container[_ngcontent-c5]{min-width:1150px}.chart-panel[_ngcontent-c5]{height:600px}.log-panel[_ngcontent-c5]{min-width:350px;width:25%;height:600px}</style>
+      <style>.mat-card{transition:box-shadow 280ms cubic-bezier(.4,0,.2,1);display:block;position:relative;padding:16px;border-radius:4px}.mat-card .mat-divider-horizontal{position:absolute;left:0;width:100%}[dir=rtl] .mat-card .mat-divider-horizontal{left:auto;right:0}.mat-card .mat-divider-horizontal.mat-divider-inset{position:static;margin:0}[dir=rtl] .mat-card .mat-divider-horizontal.mat-divider-inset{margin-right:0}@media (-ms-high-contrast:active){.mat-card{outline:solid 1px}}.mat-card-actions,.mat-card-content,.mat-card-subtitle{display:block;margin-bottom:16px}.mat-card-title{display:block;margin-bottom:8px}.mat-card-actions{margin-left:-8px;margin-right:-8px;padding:8px 0}.mat-card-actions-align-end{display:flex;justify-content:flex-end}.mat-card-image{width:calc(100% + 32px);margin:0 -16px 16px -16px}.mat-card-footer{display:block;margin:0 -16px -16px -16px}.mat-card-actions .mat-button,.mat-card-actions .mat-raised-button{margin:0 8px}.mat-card-header{display:flex;flex-direction:row}.mat-card-header .mat-card-title{margin-bottom:12px}.mat-card-header-text{margin:0 16px}.mat-card-avatar{height:40px;width:40px;border-radius:50%;flex-shrink:0;object-fit:cover}.mat-card-title-group{display:flex;justify-content:space-between}.mat-card-sm-image{width:80px;height:80px}.mat-card-md-image{width:112px;height:112px}.mat-card-lg-image{width:152px;height:152px}.mat-card-xl-image{width:240px;height:240px;margin:-8px}.mat-card-title-group>.mat-card-xl-image{margin:-8px 0 8px 0}@media (max-width:599px){.mat-card-title-group{margin:0}.mat-card-xl-image{margin-left:0;margin-right:0}}.mat-card-content>:first-child,.mat-card>:first-child{margin-top:0}.mat-card-content>:last-child:not(.mat-card-footer),.mat-card>:last-child:not(.mat-card-footer){margin-bottom:0}.mat-card-image:first-child{margin-top:-16px;border-top-left-radius:inherit;border-top-right-radius:inherit}.mat-card>.mat-card-actions:last-child{margin-bottom:-8px;padding-bottom:0}.mat-card-actions .mat-button:first-child,.mat-card-actions .mat-raised-button:first-child{margin-left:0;margin-right:0}.mat-card-subtitle:not(:first-child),.mat-card-title:not(:first-child){margin-top:-4px}.mat-card-header .mat-card-subtitle:not(:first-child){margin-top:-8px}.mat-card>.mat-card-xl-image:first-child{margin-top:-8px}.mat-card>.mat-card-xl-image:last-child{margin-bottom:-8px}</style>
+      <style>.ngx-charts{float:left;overflow:visible}.ngx-charts .arc,.ngx-charts .bar,.ngx-charts .circle{cursor:pointer}.ngx-charts .arc.active,.ngx-charts .arc:hover,.ngx-charts .bar.active,.ngx-charts .bar:hover,.ngx-charts .card.active,.ngx-charts .card:hover,.ngx-charts .cell.active,.ngx-charts .cell:hover{opacity:.8;transition:opacity .1s ease-in-out}.ngx-charts .arc:focus,.ngx-charts .bar:focus,.ngx-charts .card:focus,.ngx-charts .cell:focus,.ngx-charts g:focus{outline:0}.ngx-charts .area-series.inactive,.ngx-charts .line-series-range.inactive,.ngx-charts .line-series.inactive,.ngx-charts .polar-series-area.inactive,.ngx-charts .polar-series-path.inactive{transition:opacity .1s ease-in-out;opacity:.2}.ngx-charts .line-highlight{display:none}.ngx-charts .line-highlight.active{display:block}.ngx-charts .area{opacity:.6}.ngx-charts .circle:hover{cursor:pointer}.ngx-charts .label{font-size:12px;font-weight:400}.ngx-charts .tooltip-anchor{fill:#000}.ngx-charts .gridline-path{stroke:#ddd;stroke-width:1;fill:none}.ngx-charts .refline-path{stroke:#a8b2c7;stroke-width:1;stroke-dasharray:5;stroke-dashoffset:5}.ngx-charts .refline-label{font-size:9px}.ngx-charts .reference-area{fill-opacity:.05;fill:#000}.ngx-charts .gridline-path-dotted{stroke:#ddd;stroke-width:1;fill:none;stroke-dasharray:1,20;stroke-dashoffset:3}.ngx-charts .grid-panel rect{fill:none}.ngx-charts .grid-panel.odd rect{fill:rgba(0,0,0,.05)}</style>
+      <style>[_nghost-c8]     .log-list .mat-icon{color:rgba(0,0,0,.5)}.log-info[_ngcontent-c8]{font-size:14px;padding-top:.65rem!important;padding-bottom:.65rem!important}.log-list[_ngcontent-c8]{overflow-y:auto;overflow-x:hidden;height:calc(100% - 50px)}</style>
+      <style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1,1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}</style>
+      <style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0}.mat-menu-panel.ng-animating{pointer-events:none}@media (-ms-high-contrast:active){.mat-menu-panel{outline:solid 1px}}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}@media (-ms-high-contrast:active){.mat-menu-item-highlighted,.mat-menu-item.cdk-keyboard-focused,.mat-menu-item.cdk-program-focused{outline:dotted 1px}}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:'';display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}</style>
+      <script charset="utf-8" src="0.83a43d849587d6d8b4c1.js"></script><script charset="utf-8" src="4.bdc2c8395de50856f03c.js"></script><script charset="utf-8" src="2.a40730b8d1e514f117b4.js"></script>
+      <style>.ngx-charts-tooltip-content{position:fixed;border-radius:3px;z-index:5000;display:block;font-weight:400;opacity:0;pointer-events:none!important}.ngx-charts-tooltip-content.type-popover{background:#fff;color:#060709;border:1px solid #72809b;box-shadow:0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);font-size:13px;padding:4px}.ngx-charts-tooltip-content.type-popover .tooltip-caret{position:absolute;z-index:5001;width:0;height:0}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-left{border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-top{border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-right{border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-bottom{border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #fff}.ngx-charts-tooltip-content.type-tooltip{color:#fff;background:rgba(0,0,0,.75);font-size:12px;padding:0 10px;text-align:center;pointer-events:auto}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-left{border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-top{border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-right{border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-bottom{border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content .tooltip-label{display:block;line-height:1em;padding:8px 5px 5px;font-size:1em}.ngx-charts-tooltip-content .tooltip-val{display:block;font-size:1.3em;line-height:1em;padding:0 5px 8px}.ngx-charts-tooltip-content .tooltip-caret{position:absolute;z-index:5001;width:0;height:0}.ngx-charts-tooltip-content.position-right{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}.ngx-charts-tooltip-content.position-left{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}.ngx-charts-tooltip-content.position-top{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}.ngx-charts-tooltip-content.position-bottom{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}.ngx-charts-tooltip-content.animate{opacity:1;transition:opacity .3s,transform .3s,-webkit-transform .3s;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);pointer-events:auto}.area-tooltip-container{padding:5px 0;pointer-events:none}.tooltip-item{text-align:left;line-height:1.2em;padding:5px 0}.tooltip-item .tooltip-item-color{display:inline-block;height:12px;width:12px;margin-right:5px;color:#5b646b;border-radius:3px}</style>
+   </head>
+   <body>
+      <app-root _nghost-c0="" ng-version="6.1.7">
+         <router-outlet _ngcontent-c0=""></router-outlet>
+         <app-home-layout _nghost-c1="" class="ng-star-inserted">
+            <mat-drawer-container _ngcontent-c1="" autosize="" class="wrapper mat-drawer-container">
+               <!---->
+               <div class="mat-drawer-backdrop ng-star-inserted"></div>
+               <div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               <mat-drawer _ngcontent-c1="" class="sidebar mat-drawer ng-tns-c3-0 ng-trigger ng-trigger-transform mat-drawer-side ng-star-inserted" data-active-color="danger" data-background-color="white" mode="side" opened="" tabindex="-1" style="transform: none; visibility: visible;">
+                  <div class="mat-drawer-inner-container">
+                     <app-sidebar _ngcontent-c1="" _nghost-c4="">
+                        <div _ngcontent-c4="" class="sidebar-wrapper">
+                           <div _ngcontent-c4="" class="logo">
+                              <a _ngcontent-c4="" class="simple-text text-left" style="cursor: pointer">
+                                 <div _ngcontent-c4="" class="logo-img"><img _ngcontent-c4="" src="/assets/img/logo.png"></div>
+                                 <span _ngcontent-c4="" style="margin-left: 70px; font-size: 20px;">HOTEL</span>
+                              </a>
+                           </div>
+                           <ul _ngcontent-c4="" class="nav flex-column">
+                              <!---->
+                              <li _ngcontent-c4="" class="nav-item active ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-home"></i>
+                                    <p _ngcontent-c4="">Trang chính</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-retweet"></i>
+                                    <p _ngcontent-c4="">Thuê - trả phòng</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
+                                    <p _ngcontent-c4="">Đặt phòng</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-chart-pie"></i>
+                                    <p _ngcontent-c4="">Quản lý kho</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-cog"></i>
+                                    <p _ngcontent-c4="">Quản lý hệ thống</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-user-circle"></i>
+                                    <p _ngcontent-c4="">Tài khoản</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-credit-card"></i>
+                                    <p _ngcontent-c4="">Gia hạn</p>
+                                 </a>
+                              </li>
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                    <i _ngcontent-c4="" class="fas fa-sign-out-alt"></i>
+                                    <p _ngcontent-c4="">Đăng xuất</p>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </app-sidebar>
+                  </div>
+               </mat-drawer>
+               <div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
+               <!---->
+               <mat-drawer-content class="mat-drawer-content ng-star-inserted" style="margin-left: 260px;">
+                  <div _ngcontent-c1="" class="main-panel">
+                     <router-outlet _ngcontent-c1=""></router-outlet>
+                     <app-dashboard _nghost-c5="" class="ng-star-inserted">
+                        <div _ngcontent-c5="" class="topbar">
+                           <div _ngcontent-c5="" class="container-fluid d-flex h-100">
+                              <div _ngcontent-c5="" class="justify-content-center align-self-center"><button _ngcontent-c5="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c5="" class="material-icons">menu</i></button><span _ngcontent-c5="" class="topbar-title">Thông tin hệ thống</span></div>
+                           </div>
+                        </div>
+                        <div _ngcontent-c5="" class="main-container">
+                           <div _ngcontent-c5="" class="px-4 container-fluid h-100 w-100">
+                              <div _ngcontent-c5="" class="d-flex w-100">
+                                 <div _ngcontent-c5="" class="w-25 pr-3 pt-4">
+                                    <mat-card _ngcontent-c5="" class="card p-0 mat-card">
+                                       <div _ngcontent-c5="" class="card-body">
+                                          <div _ngcontent-c5="" class="row">
+                                             <div _ngcontent-c5="" class="col-5">
+                                                <div _ngcontent-c5="" class="icon-big text-center"><i _ngcontent-c5="" class="fas fa-retweet icon-warning"></i></div>
+                                             </div>
+                                             <div _ngcontent-c5="" class="col-7">
+                                                <div _ngcontent-c5="" class="numbers flex-grow-1">
+                                                   <p _ngcontent-c5="">Thuê trong ngày</p>
+                                                   0 lượt 
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c5="" class="footer">
+                                             <hr _ngcontent-c5="">
+                                             <div _ngcontent-c5="" class="stats pointer"><i _ngcontent-c5="" class="fas fa-sync text-muted"></i> Cập nhật </div>
+                                          </div>
+                                       </div>
+                                    </mat-card>
+                                 </div>
+                                 <div _ngcontent-c5="" class="w-25 pr-3 pt-4">
+                                    <mat-card _ngcontent-c5="" class="card p-0 mat-card">
+                                       <div _ngcontent-c5="" class="card-body">
+                                          <div _ngcontent-c5="" class="row">
+                                             <div _ngcontent-c5="" class="col-5">
+                                                <div _ngcontent-c5="" class="icon-big text-center"><i _ngcontent-c5="" class="fas fa-door-open text-primary"></i></div>
+                                             </div>
+                                             <div _ngcontent-c5="" class="col-7">
+                                                <div _ngcontent-c5="" class="numbers flex-grow-1">
+                                                   <p _ngcontent-c5="">Phòng chờ</p>
+                                                   0 phòng 
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c5="" class="footer">
+                                             <hr _ngcontent-c5="">
+                                             <div _ngcontent-c5="" class="stats pointer"><i _ngcontent-c5="" class="fas fa-key text-muted"></i> Thuê phòng </div>
+                                          </div>
+                                       </div>
+                                    </mat-card>
+                                 </div>
+                                 <div _ngcontent-c5="" class="w-25 pr-3 pt-4">
+                                    <mat-card _ngcontent-c5="" class="card p-0 mat-card">
+                                       <div _ngcontent-c5="" class="card-body">
+                                          <div _ngcontent-c5="" class="row">
+                                             <div _ngcontent-c5="" class="col-5">
+                                                <div _ngcontent-c5="" class="icon-big text-center"><i _ngcontent-c5="" class="fas fa-door-closed text-warning"></i></div>
+                                             </div>
+                                             <div _ngcontent-c5="" class="col-7">
+                                                <div _ngcontent-c5="" class="numbers flex-grow-1">
+                                                   <p _ngcontent-c5="">Phòng đang thuê</p>
+                                                   0 phòng 
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c5="" class="footer">
+                                             <hr _ngcontent-c5="">
+                                             <div _ngcontent-c5="" class="stats pointer"><i _ngcontent-c5="" class="fas fa-reply text-muted"></i> Thêm menu &amp; Trả phòng </div>
+                                          </div>
+                                       </div>
+                                    </mat-card>
+                                 </div>
+                                 <div _ngcontent-c5="" class="w-25 pt-4">
+                                    <mat-card _ngcontent-c5="" class="card p-0 mat-card">
+                                       <div _ngcontent-c5="" class="card-body">
+                                          <div _ngcontent-c5="" class="row">
+                                             <div _ngcontent-c5="" class="col-5">
+                                                <div _ngcontent-c5="" class="icon-big text-center"><i _ngcontent-c5="" class="fas fa-broom text-danger"></i></div>
+                                             </div>
+                                             <div _ngcontent-c5="" class="col-7">
+                                                <div _ngcontent-c5="" class="numbers flex-grow-1">
+                                                   <p _ngcontent-c5="">Phòng cần dọn</p>
+                                                   0 phòng 
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c5="" class="footer">
+                                             <hr _ngcontent-c5="">
+                                             <div _ngcontent-c5="" class="stats pointer"><i _ngcontent-c5="" class="fas fa-broom text-muted"></i> Dọn phòng </div>
+                                          </div>
+                                       </div>
+                                    </mat-card>
+                                 </div>
+                              </div>
+                              <div _ngcontent-c5="" class="d-flex mt-4">
+                                 <mat-card _ngcontent-c5="" class="flex-grow-1 chart-panel mr-3 mat-card">
+                                    <div _ngcontent-c5="" class="w-100" style="height:570px">
+                                       <ngx-charts-line-chart _ngcontent-c5="" class="ng-tns-c7-1">
+                                          <ngx-charts-chart class="ng-tns-c7-1 ng-tns-c9-2">
+                                             <div class="ngx-charts-outer ng-trigger ng-trigger-animationState" style="width: 845px;">
+                                                <svg class="ngx-charts" width="845" height="570">
+                                                   <defs class="ng-tns-c7-1">
+                                                      <clipPath class="ng-tns-c7-1" id="clipa6e2u">
+                                                         <rect class="ng-tns-c7-1" width="772" height="510" transform="translate(-5, -5)"></rect>
+                                                      </clipPath>
+                                                   </defs>
+                                                   <g class="line-chart chart ng-tns-c7-1" transform="translate(68 , 10)">
+                                                      <!---->
+                                                      <g ngx-charts-x-axis="" class="ng-tns-c7-1 ng-star-inserted" style="">
+                                                         <g class="x axis" transform="translate(0,505)">
+                                                            <!---->
+                                                            <g ngx-charts-x-axis-ticks="" class="ng-star-inserted">
+                                                               <g>
+                                                                  <!---->
+                                                                  <g class="tick ng-star-inserted" transform="translate(7.470588235294031,20)" style="">
+                                                                     <title>16/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 16/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(82.17647058823522,20)" style="">
+                                                                     <title>17/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 17/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(156.8823529411764,20)" style="">
+                                                                     <title>18/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 18/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(231.5882352941176,20)" style="">
+                                                                     <title>19/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 19/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(306.2941176470588,20)" style="">
+                                                                     <title>20/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 20/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(381,20)" style="">
+                                                                     <title>21/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 21/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(455.70588235294116,20)" style="">
+                                                                     <title>22/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 22/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(530.4117647058823,20)" style="">
+                                                                     <title>23/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 23/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(605.1176470588235,20)" style="">
+                                                                     <title>24/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 24/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(679.8235294117648,20)" style="">
+                                                                     <title>25/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 25/05 </text>
+                                                                  </g>
+                                                                  <g class="tick ng-star-inserted" transform="translate(754.529411764706,20)">
+                                                                     <title>26/05</title>
+                                                                     <text stroke-width="0.01" text-anchor="middle" transform="" style="font-size: 12px;"> 26/05 </text>
+                                                                  </g>
+                                                               </g>
+                                                               <!---->
+                                                               <g transform="translate(7.470588235294031,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(82.17647058823522,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(156.8823529411764,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(231.5882352941176,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(306.2941176470588,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(381,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(455.70588235294116,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(530.4117647058823,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(605.1176470588235,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(679.8235294117648,20)" class="ng-star-inserted" style="">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                               <g transform="translate(754.529411764706,20)" class="ng-star-inserted">
+                                                                  <!---->
+                                                                  <g transform="translate(0,-25)" class="ng-star-inserted">
+                                                                     <line class="gridline-path gridline-path-vertical" y2="0" y1="-500"></line>
+                                                                  </g>
+                                                               </g>
+                                                            </g>
+                                                            <!---->
+                                                            <g ngx-charts-axis-label="" class="ng-star-inserted">
+                                                               <text stroke-width="0.01" x="381" y="45" text-anchor="middle" transform=""> Ngày </text>
+                                                            </g>
+                                                         </g>
+                                                      </g>
+                                                      <!---->
+                                                      <g ngx-charts-y-axis="" class="ng-tns-c7-1 ng-star-inserted" style="">
+                                                         <g class="y axis" transform="translate(-5 , 0)">
+                                                            <!---->
+                                                            <g ngx-charts-y-axis-ticks="" class="ng-star-inserted">
+                                                               <g>
+                                                                  <!---->
+                                                                  <g class="tick ng-star-inserted" transform="translate(0,500)">
+                                                                     <title>0</title>
+                                                                     <text stroke-width="0.01" dy=".32em" x="-9" text-anchor="end" style="font-size: 12px;"> 0 </text>
+                                                                  </g>
+                                                               </g>
+                                                               <!----><!---->
+                                                               <g transform="translate(0,500)" class="ng-star-inserted">
+                                                                  <!---->
+                                                                  <g transform="translate(5,0)" class="ng-star-inserted">
+                                                                     <!---->
+                                                                     <line class="gridline-path gridline-path-horizontal ng-star-inserted" x1="0" x2="762"></line>
+                                                                     <!---->
+                                                                  </g>
+                                                               </g>
+                                                               <!---->
+                                                            </g>
+                                                            <!---->
+                                                            <g ngx-charts-axis-label="" class="ng-star-inserted">
+                                                               <text stroke-width="0.01" x="-250" y="-38" text-anchor="middle" transform="rotate(270)"> Lượt thuê phòng </text>
+                                                            </g>
+                                                         </g>
+                                                      </g>
+                                                      <g class="ng-tns-c7-1" clip-path="url(#clipa6e2u)">
+                                                         <!---->
+                                                         <g class="ng-tns-c7-1 ng-trigger ng-trigger-animationState ng-star-inserted" style="">
+                                                            <g class="ng-tns-c7-1" ngx-charts-line-series="">
+                                                               <g>
+                                                                  <defs>
+                                                                     <!---->
+                                                                  </defs>
+                                                                  <g class="line-highlight" ngx-charts-area="">
+                                                                     <!---->
+                                                                     <defs class="ng-star-inserted" style="">
+                                                                        <g ngx-charts-svg-linear-gradient="" orientation="vertical">
+                                                                           <linearGradient id="gradadcas" x1="0%" y1="100%" x2="0%" y2="0%">
+                                                                              <!---->
+                                                                              <stop offset="0%" style="stop-color: rgb(168, 56, 93); stop-opacity: 0;" class="ng-star-inserted"></stop>
+                                                                              <stop offset="100%" style="stop-color: rgb(168, 56, 93); stop-opacity: 1;" class="ng-star-inserted"></stop>
+                                                                           </linearGradient>
+                                                                        </g>
+                                                                     </defs>
+                                                                     <path class="area" style="opacity: 0.25;" fill="url(#gradadcas)" d="M7.470588235294031,500L82.17647058823522,500L156.8823529411764,500L231.5882352941176,500L306.2941176470588,500L381,500L455.70588235294116,500L530.4117647058823,500L605.1176470588235,500L679.8235294117648,500L754.529411764706,500L754.529411764706,500L679.8235294117648,500L605.1176470588235,500L530.4117647058823,500L455.70588235294116,500L381,500L306.2941176470588,500L231.5882352941176,500L156.8823529411764,500L82.17647058823522,500L7.470588235294031,500Z"></path>
+                                                                  </g>
+                                                                  <g class="line-series ng-tns-c17-4" ngx-charts-line="">
+                                                                     <path class="line ng-trigger ng-trigger-animationState" stroke-width="1.5px" d="M7.470588235294031,500L82.17647058823522,500L156.8823529411764,500L231.5882352941176,500L306.2941176470588,500L381,500L455.70588235294116,500L530.4117647058823,500L605.1176470588235,500L679.8235294117648,500L754.529411764706,500" fill="none" stroke="#a8385d"></path>
+                                                                  </g>
+                                                                  <!---->
+                                                               </g>
+                                                            </g>
+                                                         </g>
+                                                         <!---->
+                                                         <g class="ng-tns-c7-1 ng-star-inserted" style="">
+                                                            <g class="ng-tns-c7-1 ng-tns-c10-5" ngx-charts-tooltip-area="">
+                                                               <g class="ng-tns-c10-5">
+                                                                  <rect class="tooltip-area" style="opacity: 0; cursor: 'auto';" y="0" x="0" width="762" height="500"></rect>
+                                                                  <!---->
+                                                                  <rect class="tooltip-anchor ng-trigger ng-trigger-animationState" ngx-tooltip="" y="0" x="231.5882352941176" width="1" height="500" style="opacity: 0; pointer-events: none;"></rect>
+                                                               </g>
+                                                            </g>
+                                                            <!---->
+                                                            <g class="ng-tns-c7-1 ng-star-inserted" style="">
+                                                               <g class="ng-tns-c7-1 ng-tns-c11-9" ngx-charts-circle-series="">
+                                                                  <!---->
+                                                               </g>
+                                                            </g>
+                                                         </g>
+                                                      </g>
+                                                   </g>
+                                                   <!---->
+                                                </svg>
+                                                <!----><!---->
+                                             </div>
+                                          </ngx-charts-chart>
+                                       </ngx-charts-line-chart>
+                                    </div>
+                                 </mat-card>
+                                 <div _ngcontent-c5="" class="log-panel">
+                                    <app-log-panel _ngcontent-c5="" _nghost-c8="">
+                                       <mat-card _ngcontent-c8="" class="p-0 h-100 mat-card">
+                                          <div _ngcontent-c8="" class="border-bottom px-3 d-flex" style="padding-top:0.75rem; padding-bottom:0.75rem; height: 50px;">
+                                             <span _ngcontent-c8="" class="text-primary"> Nhật ký hệ thống </span>
+                                             <div _ngcontent-c8="" class="flex-grow-1"></div>
+                                             <div _ngcontent-c8="">
+                                                <mat-icon _ngcontent-c8="" aria-haspopup="true" class="pointer mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">more_vert</mat-icon>
+                                                <mat-menu _ngcontent-c8="" class="ng-tns-c14-3">
+                                                   <!---->
+                                                </mat-menu>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c8="" class="log-list flex-grow-1">
+                                             <!----><!---->
+                                          </div>
+                                       </mat-card>
+                                    </app-log-panel>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </app-dashboard>
+                  </div>
+               </mat-drawer-content>
+            </mat-drawer-container>
+         </app-home-layout>
+      </app-root>
+      <script type="text/javascript" src="runtime.1ec0ce3279564e5c0749.js"></script><script type="text/javascript" src="polyfills.e2c8de29d9e5cc89eea3.js"></script><script type="text/javascript" src="scripts.80ba81c407a324e7653b.js"></script><script type="text/javascript" src="main.6eb44e59065b9f942aad.js"></script>
+      <script>
+         var width = 180;
+         var frame = 1;
+         const interval = 30;
+         var loadInterval = setInterval(() => {
+           var px = width * frame;
+           if (frame <= 50) {
+             try {
+               document.getElementById("image").style.backgroundPosition =
+                 `-${px}px -0px`;
+               if (frame == 50) {
+                 clearInterval(loadInterval);
+               }
+             } catch (error) {
+               clearInterval(loadInterval);
+             }
+           }
+           frame++;
+         }, interval);
+      </script>
+      <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>
+   </body>
+</html>

@@ -27,4 +27,14 @@ public class PaymentMethodController {
     public void addPaymentMethod(@RequestBody PaymentMethod paymentMethod){
         paymentMethodService.addPaymentMethod(paymentMethod);
     }
+
+    @RequestMapping(method= RequestMethod.PUT, value="/paymentMethod/{id}")
+    public void updatePaymentMethod(@RequestBody PaymentMethod paymentMethod, @PathVariable String id){
+        paymentMethodService.updatePaymentMethod(id, paymentMethod);
+    }
+
+    @RequestMapping(method= RequestMethod.DELETE, value="/paymentMethod/{id}")
+    public void deletePaymentMethod(@PathVariable String id){
+        paymentMethodService.deletePaymentMethod(id);
+    }
 }

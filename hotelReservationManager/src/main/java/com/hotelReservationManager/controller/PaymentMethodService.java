@@ -26,4 +26,18 @@ public class PaymentMethodService {
     public void addPaymentMethod(PaymentMethod paymentMethod) {
         payments.add(paymentMethod);
     }
+
+    public void updatePaymentMethod(String id, PaymentMethod paymentMethod) {
+        for (int i = 0 ; i < payments.size() ; i++){
+            PaymentMethod p = payments.get(i);
+            if (p.getId().equals(id)){
+                payments.set(i, paymentMethod);
+                return;
+            }
+        }
+    }
+
+    public void deletePaymentMethod(String id) {
+        payments.removeIf(t->t.getId().equals(id));
+    }
 }

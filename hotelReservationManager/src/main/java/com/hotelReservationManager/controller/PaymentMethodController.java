@@ -18,7 +18,7 @@ public class PaymentMethodController {
     @RequestMapping("/test")
     public String test(){
         System.out.println("Appcontroller->test()");
-        return "test.jsp";
+        return "QLHT-Phong";
     }
 
     @RequestMapping("/paymentMethod")

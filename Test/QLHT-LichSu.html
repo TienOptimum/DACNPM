@@ -414,7 +414,7 @@
                                     </thead>
                                     <tbody role="rowgroup">
                                        <!---->
-                                       <tr _ngcontent-c39="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
+                                       <tr _ngcontent-c39="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" onclick="swapForm('edit_rent_room','')">
                                           <!---->
                                           <td _ngcontent-c39="" class="mat-cell cdk-column-roomName mat-column-roomName ng-star-inserted" mat-cell="" role="gridcell"> 1 </td>
                                           <td _ngcontent-c39="" class="mat-cell cdk-column-startTime mat-column-startTime ng-star-inserted" mat-cell="" role="gridcell"> 07/06 21:04 </td>
@@ -508,6 +508,504 @@
                               </div>
                            </div>
                            <div _ngcontent-c39="" class="right-panel">
+						   <app-history-update _ngcontent-c38="" _nghost-c40="" class="ng-star-inserted" id="edit_rent_room" style="display:none;" >
+   <div _ngcontent-c40="" class="topbar-sub" >
+      <div _ngcontent-c40="" class="container-fluid d-flex h-100">
+         <div _ngcontent-c40="" class="justify-content-center align-self-center d-flex flex-row w-100">
+            <i _ngcontent-c40="" class="material-icons icon-bar-sub text-warning">meeting_room</i>
+            <div _ngcontent-c40="" class="topbar-sub-title">111</div>
+            <div _ngcontent-c40="" class="flex-grow-1"></div>
+            <button _ngcontent-c40="" class="btn btn-danger btn-bar" type="button"><i _ngcontent-c40="" class="fas fa-trash"></i> Xóa</button><button _ngcontent-c40="" class="btn btn-info btn-bar" type="button"><i _ngcontent-c40="" class="fas fa-print"></i> In</button><button _ngcontent-c40="" class="btn btn-primary btn-bar" type="button"><i _ngcontent-c40="" class="fas fa-save"></i> Lưu</button>
+         </div>
+      </div>
+   </div>
+   <div _ngcontent-c40="" class="form-sub">
+      <form _ngcontent-c40="" novalidate="" class="ng-untouched ng-pristine ng-valid">
+         <app-error _ngcontent-c40="" _nghost-c4="">
+            <ul _ngcontent-c4="" class="error-list my-1">
+               <!---->
+            </ul>
+         </app-error>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-161 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.startDate" placeholder="Ngày nhận phòng" required="" aria-haspopup="true" id="mat-input-33" aria-invalid="false" aria-required="true" disabled=""></span>
+                     <mat-datepicker _ngcontent-c40="" disabled="false"></mat-datepicker>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-161 ng-star-inserted" id="mat-form-field-label-87" for="mat-input-33" aria-owns="mat-input-33">
+                           <!----><!---->Ngày nhận phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-161 ng-star-inserted">
+                     <mat-datepicker-toggle _ngcontent-c40="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
+                        <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
+                           <span class="mat-button-wrapper">
+                              <!---->
+                              <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
+                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
+                              </svg>
+                           </span>
+                           <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                           <div class="mat-button-focus-overlay"></div>
+                        </button>
+                     </mat-datepicker-toggle>
+                  </div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-161 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-161 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-162 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float ng-valid">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5" name="model.startTime" placeholder="Giờ nhận phòng" required="" id="mat-input-34" aria-invalid="false" aria-required="true"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-162 ng-star-inserted" id="mat-form-field-label-89" for="mat-input-34" aria-owns="mat-input-34">
+                           <!----><!---->Giờ nhận phòng<!----><!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c5-162 ng-star-inserted"> *</span>
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-162 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-162 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-163 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.endDate" placeholder="Ngày trả phòng" required="" aria-haspopup="true" id="mat-input-35" aria-invalid="false" aria-required="true" disabled=""></span>
+                     <mat-datepicker _ngcontent-c40="" disabled="false"></mat-datepicker>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-163 ng-star-inserted" id="mat-form-field-label-91" for="mat-input-35" aria-owns="mat-input-35">
+                           <!----><!---->Ngày trả phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-163 ng-star-inserted">
+                     <mat-datepicker-toggle _ngcontent-c40="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
+                        <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
+                           <span class="mat-button-wrapper">
+                              <!---->
+                              <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
+                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
+                              </svg>
+                           </span>
+                           <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                           <div class="mat-button-focus-overlay"></div>
+                        </button>
+                     </mat-datepicker-toggle>
+                  </div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-163 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-163 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-164 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float ng-valid">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5" name="model.endTime" placeholder="Giờ trả phòng" required="" id="mat-input-36" aria-invalid="false" aria-required="true"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-164 ng-star-inserted" id="mat-form-field-label-93" for="mat-input-36" aria-owns="mat-input-36">
+                           <!----><!---->Giờ trả phòng<!----><!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c5-164 ng-star-inserted"> *</span>
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-164 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-164 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-165 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <mat-select _ngcontent-c40="" class="mat-select ng-tns-c33-166 ng-untouched ng-pristine ng-valid ng-star-inserted" name="type" placeholder="Kiểu thuê phòng" role="listbox" id="mat-select-10" tabindex="0" aria-label="Kiểu thuê phòng" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">
+                        <div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin="">
+                           <div class="mat-select-value">
+                              <!----><!---->
+                              <span class="mat-select-value-text ng-tns-c33-166 ng-star-inserted">
+                                 <!----><span class="ng-tns-c33-166 ng-star-inserted">Thuê theo giờ</span><!---->
+                              </span>
+                           </div>
+                           <div class="mat-select-arrow-wrapper">
+                              <div class="mat-select-arrow"></div>
+                           </div>
+                        </div>
+                        <!---->
+                     </mat-select>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-165 ng-star-inserted" id="mat-form-field-label-95" for="mat-select-10" aria-owns="mat-select-10">
+                           <!----><!---->Kiểu thuê phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-165 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-165 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <div _ngcontent-c40="" class="d-inline w-50 pl-2 text-muted text-sm"><i _ngcontent-c40="" class="far fa-clock text-primary"></i> 3 Phút</div>
+         <!----><!---->
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-167 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.roomMoney" placeholder="Tiền phòng" type="number" id="mat-input-37" aria-invalid="false" aria-required="false"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-167 ng-star-inserted" id="mat-form-field-label-97" for="mat-input-37" aria-owns="mat-input-37">
+                           <!----><!---->Tiền phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-167 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-167 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-167 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <div _ngcontent-c40=""></div>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-168 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.surchargeRoomMoney" placeholder="Phụ thu phòng" type="number" id="mat-input-38" aria-invalid="false" aria-required="false"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-168 ng-star-inserted" id="mat-form-field-label-99" for="mat-input-38" aria-owns="mat-input-38">
+                           <!----><!---->Phụ thu phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-168 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-168 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-168 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-169 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.prepaidMoney" placeholder="Tiền trả trước" type="number" id="mat-input-39" aria-invalid="false" aria-required="false"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-169 ng-star-inserted" id="mat-form-field-label-101" for="mat-input-39" aria-owns="mat-input-39">
+                           <!----><!---->Tiền trả trước<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-169 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-169 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-169 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-170 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.surchargeMoney" placeholder="Thu / giảm trừ khác" type="number" id="mat-input-40" aria-invalid="false" aria-required="false"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-170 ng-star-inserted" id="mat-form-field-label-103" for="mat-input-40" aria-owns="mat-input-40">
+                           <!----><!---->Thu / giảm trừ khác<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-170 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-170 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-170 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-171 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.menuMoney" placeholder="Tiền menu" id="mat-input-41" aria-invalid="false" aria-required="false" disabled=""></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-171 ng-star-inserted" id="mat-form-field-label-105" for="mat-input-41" aria-owns="mat-input-41">
+                           <!----><!---->Tiền menu<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-171 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-171 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-171 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-172 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.totalMoney" placeholder="Tổng tiền" id="mat-input-42" aria-invalid="false" aria-required="false" disabled=""></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-172 ng-star-inserted" id="mat-form-field-label-107" for="mat-input-42" aria-owns="mat-input-42">
+                           <!----><!---->Tổng tiền<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-172 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-172 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-172 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-173 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.payMoney" placeholder="Tiền cần thanh toán" id="mat-input-43" aria-invalid="false" aria-required="false" disabled=""></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-173 ng-star-inserted" id="mat-form-field-label-109" for="mat-input-43" aria-owns="mat-input-43">
+                           <!----><!---->Tiền cần thanh toán<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+                  <div class="mat-form-field-suffix ng-tns-c5-173 ng-star-inserted"><span _ngcontent-c40="" matsuffix="">.000 ₫</span></div>
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-173 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-173 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-100 mat-form-field ng-tns-c5-174 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.note" placeholder="Ghi chú ( Tên khách hàng, CMT, SDT ... )" id="mat-input-44" aria-invalid="false" aria-required="false"></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-174 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-111" for="mat-input-44" aria-owns="mat-input-44">
+                           <!----><!---->Ghi chú ( Tên khách hàng, CMT, SDT ... )<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-174 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-174 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pr-2 mat-form-field ng-tns-c5-175 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.createdUsername" placeholder="Tài khoản nhận phòng" id="mat-input-45" aria-invalid="false" aria-required="false" disabled=""></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-175 ng-star-inserted" id="mat-form-field-label-113" for="mat-input-45" aria-owns="mat-input-45">
+                           <!----><!---->Tài khoản nhận phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-175 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-175 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <mat-form-field _ngcontent-c40="" class="w-50 pl-2 mat-form-field ng-tns-c5-176 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+            <div class="mat-form-field-wrapper">
+               <div class="mat-form-field-flex">
+                  <!----><!---->
+                  <div class="mat-form-field-infix">
+                     <span class="bmd-form-group"><input _ngcontent-c40="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.updatedUsername" placeholder="Tài khoản trả phòng" id="mat-input-46" aria-invalid="false" aria-required="false" disabled=""></span>
+                     <span class="mat-form-field-label-wrapper">
+                        <!---->
+                        <label class="mat-form-field-label ng-tns-c5-176 ng-star-inserted" id="mat-form-field-label-115" for="mat-input-46" aria-owns="mat-input-46">
+                           <!----><!---->Tài khoản trả phòng<!----><!---->
+                        </label>
+                     </span>
+                  </div>
+                  <!---->
+               </div>
+               <!---->
+               <div class="mat-form-field-underline ng-tns-c5-176 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+               <div class="mat-form-field-subscript-wrapper">
+                  <!----><!---->
+                  <div class="mat-form-field-hint-wrapper ng-tns-c5-176 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                     <!---->
+                     <div class="mat-form-field-hint-spacer"></div>
+                  </div>
+               </div>
+            </div>
+         </mat-form-field>
+         <div _ngcontent-c40="" style="margin: 0px -1rem">
+            <mat-toolbar _ngcontent-c40="" class="border-top mat-toolbar mat-toolbar-single-row">
+               <span _ngcontent-c40="" class="title-toolbar">Menu sử dụng</span>
+               <div _ngcontent-c40="" class="flex-grow-1"></div>
+               <mat-icon _ngcontent-c40="" class="pointer mat-icon notranslate material-icons mat-icon-no-color" role="img" style="color: #c2c2c2" aria-hidden="true">add_box</mat-icon>
+            </mat-toolbar>
+            <table _ngcontent-c40="" class="w-100 border-top border-bottom mat-table" mat-table="" role="grid">
+               <thead role="rowgroup">
+                  <!---->
+                  <tr _ngcontent-c40="" class="mat-header-row ng-star-inserted" mat-header-row="" role="row">
+                     <!---->
+                     <th _ngcontent-c40="" class="mat-header-cell cdk-column-menuName mat-column-menuName ng-star-inserted" mat-header-cell="" mattooltip="Click cột này để +1 số lượng" role="columnheader" aria-describedby="cdk-describedby-message-23" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Tên menu (+1) </th>
+                     <!---->
+                     <th _ngcontent-c40="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" mattooltip="Click cột để -1 số lượng" role="columnheader" aria-describedby="cdk-describedby-message-24" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Số lượng (-1)</th>
+                     <!---->
+                     <th _ngcontent-c40="" class="mat-header-cell cdk-column-totalMoney mat-column-totalMoney ng-star-inserted" mat-header-cell="" role="columnheader"> Thành tiền </th>
+                     <th _ngcontent-c40="" class="mat-header-cell cdk-column-action mat-column-action ng-star-inserted" mat-header-cell="" role="columnheader"> Thao tác </th>
+                  </tr>
+               </thead>
+               <tbody role="rowgroup">
+                  <!---->
+               </tbody>
+               <tfoot role="rowgroup">
+                  <!---->
+                  <tr _ngcontent-c40="" class="mat-footer-row ng-star-inserted" mat-footer-row="" role="row">
+                     <!---->
+                     <td _ngcontent-c40="" class="mat-footer-cell cdk-column-menuName mat-column-menuName ng-star-inserted" mat-footer-cell="" role="gridcell"> Tổng tiền </td>
+                     <td _ngcontent-c40="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"></td>
+                     <td _ngcontent-c40="" class="mat-footer-cell cdk-column-totalMoney mat-column-totalMoney ng-star-inserted" mat-footer-cell="" role="gridcell"> 0&nbsp;₫ </td>
+                     <td _ngcontent-c40="" class="mat-footer-cell cdk-column-action mat-column-action ng-star-inserted" mat-footer-cell="" role="gridcell"></td>
+                  </tr>
+               </tfoot>
+            </table>
+         </div>
+      </form>
+   </div>
+</app-history-update>
                               <!---->
                            </div>
                            <div _ngcontent-c39=""></div>
@@ -538,6 +1036,16 @@
            }
            frame++;
          }, interval);
+      </script>
+	  <script>
+         function swapForm(on,off){
+            var x = document.getElementById(on);
+            var y = document.getElementById(off);
+
+            x.style.display ="block";
+            y.style.display ="none";
+         }
+
       </script>
       <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=851571817.1634971" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

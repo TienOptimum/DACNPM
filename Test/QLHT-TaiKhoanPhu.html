@@ -172,7 +172,7 @@
                            <div _ngcontent-c46="" class="container-fluid d-flex h-100">
                               <div _ngcontent-c46="" class="justify-content-center align-self-center">
                                  <button _ngcontent-c46="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c46="" class="material-icons">arrow_back</i></button><span _ngcontent-c46="" class="topbar-title">Tài khoản phụ</span>
-                                 <button _ngcontent-c46="" class="btn-top text-primary mat-button" mat-button="">
+                                 <button _ngcontent-c46="" class="btn-top text-primary mat-button" mat-button="" onclick="swapForm('add_new_account','edit_account','change_password')">
                                     <span class="mat-button-wrapper">
                                        <mat-icon _ngcontent-c46="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>
                                        <span _ngcontent-c46="" class="icon-text">Thêm mới</span>
@@ -287,19 +287,19 @@
                                     </thead>
                                     <tbody role="rowgroup">
                                        <!---->
-                                       <tr _ngcontent-c46="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
+                                       <tr _ngcontent-c46="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" >
                                           <!---->
                                           <td _ngcontent-c46="" class="mat-cell cdk-column-username mat-column-username ng-star-inserted" mat-cell="" role="gridcell"> nhanvien1 </td>
                                           <td _ngcontent-c46="" class="mat-cell cdk-column-statusText mat-column-statusText ng-star-inserted" mat-cell="" role="gridcell"><span _ngcontent-c46="" class="active-online"></span> Đang hoạt động </td>
                                           <td _ngcontent-c46="" class="mat-cell cdk-column-lastActivity mat-column-lastActivity ng-star-inserted" mat-cell="" role="gridcell"> Chưa đăng nhập </td>
                                           <td _ngcontent-c46="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                              <div _ngcontent-c46="" class="icon-sm">
-                                                <mat-icon _ngcontent-c46="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
+                                                <mat-icon _ngcontent-c46="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('edit_account','add_new_account','change_password')">edit</mat-icon>
                                              </div>
                                           </td>
                                           <td _ngcontent-c46="" class="mat-cell cdk-column-editPassword mat-column-editPassword ng-star-inserted" mat-cell="" role="gridcell">
                                              <div _ngcontent-c46="" class="icon-sm">
-                                                <mat-icon _ngcontent-c46="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">vpn_key</mat-icon>
+                                                <mat-icon _ngcontent-c46="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('change_password','add_new_account','edit_account')" >vpn_key</mat-icon>
                                              </div>
                                           </td>
                                        </tr>
@@ -383,7 +383,689 @@
                            </div>
                            <div _ngcontent-c46="" class="right-panel">
                               <app-user-sub-entry _ngcontent-c46="" mode="0" _nghost-c47="">
-                                 <!---->
+                                 <!----><div _ngcontent-c68="" class="ng-star-inserted" id="add_new_account" style="display:none;">
+   <div _ngcontent-c68="" class="topbar-sub">
+      <div _ngcontent-c68="" class="container-fluid d-flex h-100">
+         <div _ngcontent-c68="" class="justify-content-center align-self-center d-flex flex-row w-100">
+            <!---->
+            <div _ngcontent-c68="" class="topbar-sub-title ng-star-inserted">Thêm mới</div>
+            <!----><!---->
+            <div _ngcontent-c68="" class="flex-grow-1"></div>
+            <!----><button _ngcontent-c68="" class="btn btn-primary btn-bar ng-star-inserted" type="button"><i _ngcontent-c68="" class="fas fa-check"></i> Lưu</button><!----><!---->
+         </div>
+      </div>
+   </div>
+   <div _ngcontent-c68="" class="form-sub">
+      <form _ngcontent-c68="" novalidate="" class="ng-pristine ng-valid ng-touched">
+         <app-error _ngcontent-c68="" _nghost-c4="">
+            <ul _ngcontent-c4="" class="error-list my-1">
+               <!---->
+            </ul>
+         </app-error>
+         <div _ngcontent-c68="">
+            <div _ngcontent-c68="">
+               <mat-form-field _ngcontent-c68="" class="w-100 pr-2 mat-form-field ng-tns-c5-463 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-pristine ng-valid ng-touched">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-valid ng-touched" matinput="" name="model.username" placeholder="Tên tài khoản" id="mat-input-140" aria-invalid="false" aria-required="false"></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-463 ng-star-inserted mat-empty mat-form-field-empty" id="mat-form-field-label-345" for="mat-input-140" aria-owns="mat-input-140">
+                                 <!----><!---->Tên tài khoản<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-463 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-463 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <!----><br _ngcontent-c68="" class="ng-star-inserted"><!---->
+               <mat-form-field _ngcontent-c68="" class="w-50 pr-2 mat-form-field ng-tns-c5-464 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid ng-star-inserted">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.password" placeholder="Mật khẩu" type="password" id="mat-input-141" aria-invalid="false" aria-required="false"></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-464 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-347" for="mat-input-141" aria-owns="mat-input-141">
+                                 <!----><!---->Mật khẩu<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-464 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-464 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <!---->
+               <mat-form-field _ngcontent-c68="" class="w-50 pr-2 mat-form-field ng-tns-c5-465 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid ng-star-inserted">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.repassword" placeholder="Xác nhận mật khẩu" type="password" id="mat-input-142" aria-invalid="false" aria-required="false"></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-465 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-349" for="mat-input-142" aria-owns="mat-input-142">
+                                 <!----><!---->Xác nhận mật khẩu<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-465 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-465 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <br _ngcontent-c68=""><!---->
+               <mat-slide-toggle _ngcontent-c68="" class="my-2 mat-slide-toggle mat-accent mat-checked ng-star-inserted" id="mat-slide-toggle-2" tabindex="-1">
+                  <label class="mat-slide-toggle-label" for="mat-slide-toggle-2-input">
+                     <div class="mat-slide-toggle-bar">
+                        <input class="mat-slide-toggle-input cdk-visually-hidden" role="switch" type="checkbox" id="mat-slide-toggle-2-input" tabindex="0" aria-checked="true">
+                        <div class="mat-slide-toggle-thumb-container" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                           <div class="mat-slide-toggle-thumb"></div>
+                           <div class="mat-slide-toggle-ripple mat-ripple" mat-ripple="">
+                              <div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <span class="mat-slide-toggle-content"><span style="display:none">&nbsp;</span>Đang hoạt động</span>
+                  </label>
+               </mat-slide-toggle>
+               <br _ngcontent-c68=""><!----><label _ngcontent-c68="" class="mt-3 mb-3 ng-star-inserted"><i _ngcontent-c68="" class="fas fa-cog fa-lg text-primary"></i> Thiết lập quyền hạn</label><!---->
+               <div _ngcontent-c68="" class="d-flex flex-wrap permit1 mt-1 ng-star-inserted">
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-104" cdk-describedby-host="" id="mat-checkbox-42" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-42-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-42-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thuê - trả phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-105" cdk-describedby-host="" id="mat-checkbox-43" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-43-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-43-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Đặt phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-106" cdk-describedby-host="" id="mat-checkbox-44" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-44-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-44-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thiết lập hệ thống</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-107" cdk-describedby-host="" id="mat-checkbox-45" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-45-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-45-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem sửa lịch sử</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-108" cdk-describedby-host="" id="mat-checkbox-46" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-46-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-46-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem thống kê</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-109" cdk-describedby-host="" id="mat-checkbox-47" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-47-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-47-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thiết lập khác</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-110" cdk-describedby-host="" id="mat-checkbox-48" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-48-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-48-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Quản lý kho</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-111" cdk-describedby-host="" id="mat-checkbox-49" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-49-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-49-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Sửa giờ nhận trả phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-112" cdk-describedby-host="" id="mat-checkbox-50" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-50-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-50-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem lịch đặt phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-113" cdk-describedby-host="" id="mat-checkbox-51" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-51-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-51-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Quản lý thu chi khác</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+
+<div _ngcontent-c68="" class="ng-star-inserted" id="edit_account" style="display:none;">
+   <div _ngcontent-c68="" class="topbar-sub">
+      <div _ngcontent-c68="" class="container-fluid d-flex h-100">
+         <div _ngcontent-c68="" class="justify-content-center align-self-center d-flex flex-row w-100">
+            <!----><!---->
+            <div _ngcontent-c68="" class="topbar-sub-title ng-star-inserted">Chỉnh sửa</div>
+            <!---->
+            <div _ngcontent-c68="" class="flex-grow-1"></div>
+            <!----><!----><button _ngcontent-c68="" class="btn btn-primary btn-bar mr-2 ng-star-inserted" type="button"><i _ngcontent-c68="" class="fas fa-save"></i> Lưu</button><!----><button _ngcontent-c68="" class="btn btn-danger btn-bar ng-star-inserted" type="button"><i _ngcontent-c68="" class="fas fa-trash"></i> Xóa</button>
+         </div>
+      </div>
+   </div>
+   <div _ngcontent-c68="" class="form-sub">
+      <form _ngcontent-c68="" novalidate="" class="ng-pristine ng-untouched">
+         <app-error _ngcontent-c68="" _nghost-c4="">
+            <ul _ngcontent-c4="" class="error-list my-1">
+               <!---->
+            </ul>
+         </app-error>
+         <div _ngcontent-c68="">
+            <div _ngcontent-c68="">
+               <mat-form-field _ngcontent-c68="" class="w-100 pr-2 mat-form-field ng-tns-c5-463 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-pristine ng-touched mat-form-field-should-float mat-form-field-disabled">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group is-filled"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-touched" matinput="" name="model.username" placeholder="Tên tài khoản" id="mat-input-140" aria-invalid="false" aria-required="false" disabled=""></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-463 ng-star-inserted" id="mat-form-field-label-345" for="mat-input-140" aria-owns="mat-input-140">
+                                 <!----><!---->Tên tài khoản<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-463 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-463 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <!----><!----><!----><br _ngcontent-c68=""><!---->
+               <mat-slide-toggle _ngcontent-c68="" class="my-2 mat-slide-toggle mat-accent mat-checked ng-star-inserted" id="mat-slide-toggle-3" tabindex="-1">
+                  <label class="mat-slide-toggle-label" for="mat-slide-toggle-3-input">
+                     <div class="mat-slide-toggle-bar">
+                        <input class="mat-slide-toggle-input cdk-visually-hidden" role="switch" type="checkbox" id="mat-slide-toggle-3-input" tabindex="0" aria-checked="true">
+                        <div class="mat-slide-toggle-thumb-container" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                           <div class="mat-slide-toggle-thumb"></div>
+                           <div class="mat-slide-toggle-ripple mat-ripple" mat-ripple="">
+                              <div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <span class="mat-slide-toggle-content"><span style="display:none">&nbsp;</span>Đang hoạt động</span>
+                  </label>
+               </mat-slide-toggle>
+               <br _ngcontent-c68=""><!----><label _ngcontent-c68="" class="mt-3 mb-3 ng-star-inserted"><i _ngcontent-c68="" class="fas fa-cog fa-lg text-primary"></i> Thiết lập quyền hạn</label><!---->
+               <div _ngcontent-c68="" class="d-flex flex-wrap permit1 mt-1 ng-star-inserted">
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-144" cdk-describedby-host="" id="mat-checkbox-82" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-82-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-82-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thuê - trả phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-145" cdk-describedby-host="" id="mat-checkbox-83" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-83-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-83-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Đặt phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-146" cdk-describedby-host="" id="mat-checkbox-84" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-84-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-84-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thiết lập hệ thống</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-147" cdk-describedby-host="" id="mat-checkbox-85" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-85-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-85-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem sửa lịch sử</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-148" cdk-describedby-host="" id="mat-checkbox-86" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-86-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-86-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem thống kê</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-149" cdk-describedby-host="" id="mat-checkbox-87" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-87-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-87-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Thiết lập khác</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-150" cdk-describedby-host="" id="mat-checkbox-88" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-88-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-88-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Quản lý kho</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-151" cdk-describedby-host="" id="mat-checkbox-89" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-89-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-89-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Sửa giờ nhận trả phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-152" cdk-describedby-host="" id="mat-checkbox-90" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-90-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-90-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Xem lịch đặt phòng</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+                  <mat-checkbox _ngcontent-c68="" class="mr-3 mat-checkbox mat-accent ng-star-inserted" aria-describedby="cdk-describedby-message-153" cdk-describedby-host="" id="mat-checkbox-91" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-91-input">
+                        <div class="mat-checkbox-inner-container">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-91-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span>Quản lý thu chi khác</span>
+                     </label>
+                  </mat-checkbox>
+                  <!---->
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+	<div _ngcontent-c68="" class="ng-star-inserted" id="change_password" style="display:none;">
+   <div _ngcontent-c68="" class="topbar-sub">
+      <div _ngcontent-c68="" class="container-fluid d-flex h-100">
+         <div _ngcontent-c68="" class="justify-content-center align-self-center d-flex flex-row w-100">
+            <!----><!----><!---->
+            <div _ngcontent-c68="" class="topbar-sub-title ng-star-inserted">Đổi mật khẩu</div>
+            <div _ngcontent-c68="" class="flex-grow-1"></div>
+            <!----><!----><button _ngcontent-c68="" class="btn btn-primary btn-bar mr-2 ng-star-inserted" type="button"><i _ngcontent-c68="" class="fas fa-save"></i> Lưu</button><!---->
+         </div>
+      </div>
+   </div>
+   <div _ngcontent-c68="" class="form-sub">
+      <form _ngcontent-c68="" novalidate="" class="ng-pristine ng-untouched ng-valid">
+         <app-error _ngcontent-c68="" _nghost-c4="">
+            <ul _ngcontent-c4="" class="error-list my-1">
+               <!---->
+            </ul>
+         </app-error>
+         <div _ngcontent-c68="">
+            <div _ngcontent-c68="">
+               <mat-form-field _ngcontent-c68="" class="w-100 pr-2 mat-form-field ng-tns-c5-463 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-pristine ng-touched mat-form-field-should-float mat-form-field-disabled">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group is-filled"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-touched" matinput="" name="model.username" placeholder="Tên tài khoản" id="mat-input-140" aria-invalid="false" aria-required="false" disabled=""></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-463 ng-star-inserted" id="mat-form-field-label-345" for="mat-input-140" aria-owns="mat-input-140">
+                                 <!----><!---->Tên tài khoản<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-463 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-463 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <!----><!---->
+               <mat-form-field _ngcontent-c68="" class="w-50 pr-2 mat-form-field ng-tns-c5-468 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid ng-star-inserted">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.password" placeholder="Mật khẩu" type="password" id="mat-input-145" aria-invalid="false" aria-required="false"></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-468 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-355" for="mat-input-145" aria-owns="mat-input-145">
+                                 <!----><!---->Mật khẩu<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-468 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-468 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <!---->
+               <mat-form-field _ngcontent-c68="" class="w-50 pr-2 mat-form-field ng-tns-c5-469 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid ng-star-inserted">
+                  <div class="mat-form-field-wrapper">
+                     <div class="mat-form-field-flex">
+                        <!----><!---->
+                        <div class="mat-form-field-infix">
+                           <span class="bmd-form-group"><input _ngcontent-c68="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.repassword" placeholder="Xác nhận mật khẩu" type="password" id="mat-input-146" aria-invalid="false" aria-required="false"></span>
+                           <span class="mat-form-field-label-wrapper">
+                              <!---->
+                              <label class="mat-form-field-label ng-tns-c5-469 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-357" for="mat-input-146" aria-owns="mat-input-146">
+                                 <!----><!---->Xác nhận mật khẩu<!----><!---->
+                              </label>
+                           </span>
+                        </div>
+                        <!---->
+                     </div>
+                     <!---->
+                     <div class="mat-form-field-underline ng-tns-c5-469 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                     <div class="mat-form-field-subscript-wrapper">
+                        <!----><!---->
+                        <div class="mat-form-field-hint-wrapper ng-tns-c5-469 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                           <!---->
+                           <div class="mat-form-field-hint-spacer"></div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-form-field>
+               <br _ngcontent-c68=""><!----><br _ngcontent-c68=""><!----><!---->
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
                               </app-user-sub-entry>
                            </div>
                            <div _ngcontent-c46=""></div>
@@ -414,6 +1096,20 @@
            }
            frame++;
          }, interval);
+      </script>
+	  <script>
+	  function swapForm(elementID,elementID1,elementID2) {
+	  var x = document.getElementById(elementID);
+	  var y = document.getElementById(elementID1);
+	  var z = document.getElementById(elementID2);
+		
+		x.style.display ="block";
+        y.style.display ="none";
+		z.style.display ="none";
+				
+}
+  
+
       </script>
       <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

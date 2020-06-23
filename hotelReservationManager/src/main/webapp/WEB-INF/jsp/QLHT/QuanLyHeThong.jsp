@@ -1,5 +1,5 @@
 <html lang="en">
-	<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
    <head>
       <meta charset="utf-8">
       <title>SHOTEL</title>
@@ -8,7 +8,7 @@
       <link rel="icon" type="image/x-icon" href="favicon.ico">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
       <link rel="stylesheet" href="css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-      <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.OqeHn6JG0ew.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNpDL4OrveV-s5ATjWVth_wbuLQqA/cb=gapi.loaded_0" async=""></script><script src="https://apis.google.com/js/platform.js?onload=onLoad" gapi_processed="true"></script>
+      <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.5Vmat9kUJqY.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNeqjJvPSIdvUFWoJcT_X4FPOrXIA/cb=gapi.loaded_0" async=""></script><script src="https://apis.google.com/js/platform.js?onload=onLoad" gapi_processed="true"></script>
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
       <style type="text/css">
          body,
@@ -32,7 +32,7 @@
       </style>
       <link rel="stylesheet" href="css/styles.css">
       <style></style>
-      <script charset="utf-8" src="1.d8b1a80d404fed8a7a5e.js"></script><script charset="utf-8" src="3.6c098552832d79f746cb.js"></script>
+      <script charset="utf-8" src="1.df0b5880ae0ebd5b7f56.js"></script><script charset="utf-8" src="3.60addfa53e7e864a3f44.js"></script>
       <style>[_nghost-c1]     .mat-drawer-side{border-right:none}[_nghost-c1]     .mat-input-element:disabled{color:#212529}[_nghost-c1]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}[_nghost-c1]     .mat-card{padding:0!important}[_nghost-c1]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}</style>
       <style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-opened{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:background-color,visibility}@media (-ms-high-contrast:active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}@media (-ms-high-contrast:active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media (-ms-high-contrast:active){.mat-drawer.mat-drawer-end,[dir=rtl] .mat-drawer{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer{transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%,0,0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}</style>
       <style>.nav-link[_ngcontent-c4]{text-transform:none!important}.off-canvas-sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   i[_ngcontent-c4], .sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   i[_ngcontent-c4]{font-size:24px;float:left;margin-right:15px;line-height:30px;width:30px;text-align:center}.off-canvas-sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   p[_ngcontent-c4], .sidebar[_ngcontent-c4]   .nav[_ngcontent-c4]   p[_ngcontent-c4]{margin:0;line-height:30px;font-size:12px;font-weight:600;text-transform:none}.nav[_ngcontent-c4]{display:list-item!important}</style>
@@ -42,7 +42,7 @@
       <style>[_nghost-c8]     .log-list .mat-icon{color:rgba(0,0,0,.5)}.log-info[_ngcontent-c8]{font-size:14px;padding-top:.65rem!important;padding-bottom:.65rem!important}.log-list[_ngcontent-c8]{overflow-y:auto;overflow-x:hidden;height:calc(100% - 50px)}</style>
       <style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1,1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}</style>
       <style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0}.mat-menu-panel.ng-animating{pointer-events:none}@media (-ms-high-contrast:active){.mat-menu-panel{outline:solid 1px}}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}@media (-ms-high-contrast:active){.mat-menu-item-highlighted,.mat-menu-item.cdk-keyboard-focused,.mat-menu-item.cdk-program-focused{outline:dotted 1px}}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:'';display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}</style>
-      <script charset="utf-8" src="0.6b42a3ddf543bb988c41.js"></script><script charset="utf-8" src="4.695119e786b537b13f9b.js"></script><script charset="utf-8" src="2.48e53a1f3e96c79e76fa.js"></script>
+      <script charset="utf-8" src="0.83a43d849587d6d8b4c1.js"></script><script charset="utf-8" src="4.bdc2c8395de50856f03c.js"></script><script charset="utf-8" src="2.a40730b8d1e514f117b4.js"></script>
       <style>.ngx-charts-tooltip-content{position:fixed;border-radius:3px;z-index:5000;display:block;font-weight:400;opacity:0;pointer-events:none!important}.ngx-charts-tooltip-content.type-popover{background:#fff;color:#060709;border:1px solid #72809b;box-shadow:0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);font-size:13px;padding:4px}.ngx-charts-tooltip-content.type-popover .tooltip-caret{position:absolute;z-index:5001;width:0;height:0}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-left{border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-top{border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-right{border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #fff}.ngx-charts-tooltip-content.type-popover .tooltip-caret.position-bottom{border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #fff}.ngx-charts-tooltip-content.type-tooltip{color:#fff;background:rgba(0,0,0,.75);font-size:12px;padding:0 10px;text-align:center;pointer-events:auto}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-left{border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-top{border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-right{border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-bottom{border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid rgba(0,0,0,.75)}.ngx-charts-tooltip-content .tooltip-label{display:block;line-height:1em;padding:8px 5px 5px;font-size:1em}.ngx-charts-tooltip-content .tooltip-val{display:block;font-size:1.3em;line-height:1em;padding:0 5px 8px}.ngx-charts-tooltip-content .tooltip-caret{position:absolute;z-index:5001;width:0;height:0}.ngx-charts-tooltip-content.position-right{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}.ngx-charts-tooltip-content.position-left{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}.ngx-charts-tooltip-content.position-top{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}.ngx-charts-tooltip-content.position-bottom{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}.ngx-charts-tooltip-content.animate{opacity:1;transition:opacity .3s,transform .3s,-webkit-transform .3s;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);pointer-events:auto}.area-tooltip-container{padding:5px 0;pointer-events:none}.tooltip-item{text-align:left;line-height:1.2em;padding:5px 0}.tooltip-item .tooltip-item-color{display:inline-block;height:12px;width:12px;margin-right:5px;color:#5b646b;border-radius:3px}</style>
       <style>[_nghost-c19]     .mat-drawer-side{border-right:none}[_nghost-c19]     .mat-input-element:disabled{color:#212529}[_nghost-c19]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}[_nghost-c19]     .mat-card{padding:0!important}[_nghost-c19]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}</style>
       <style>.card[_ngcontent-c20]{color:rgba(0,0,0,.6)}.room-panel[_ngcontent-c20]{flex-grow:1;min-width:700px;overflow-x:auto;padding-top:14px;width:calc(100vh - 710px)}.mat-expansion-panel[_ngcontent-c20]:not([class*=mat-elevation-z]){box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.mat-expansion-panel[_ngcontent-c20]{border-radius:0}[_nghost-c20]     .mat-tab-body-wrapper{height:100%!important}[_nghost-c20]     .mat-card{padding:0}[_nghost-c20]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}.room-name[_ngcontent-c20]{line-height:40px;text-align:left;width:120px;margin-left:.75rem;font-size:15px}.icon-text[_ngcontent-c20]   span[_ngcontent-c20]{margin-left:.5rem}.room-list-panel[_ngcontent-c20]{margin-top:-1rem}.rent-room-header[_ngcontent-c20]{width:250px}.rent-room-name[_ngcontent-c20]{line-height:40px;text-align:left;margin-left:.75rem;font-size:15px}.icon-yellow[_ngcontent-c20]{color:#ffd600!important}.icon-black[_ngcontent-c20]{color:#000!important}.left-text[_ngcontent-c20]{width:90px}</style>
@@ -60,16 +60,14 @@
       <style>.mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:0}.mat-tab-label:focus:not(.mat-tab-disabled){opacity:1}@media (-ms-high-contrast:active){.mat-tab-label:focus{outline:dotted 2px}}.mat-tab-label.mat-tab-disabled{cursor:default}@media (-ms-high-contrast:active){.mat-tab-label.mat-tab-disabled{opacity:.5}}.mat-tab-label .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}@media (-ms-high-contrast:active){.mat-tab-label{opacity:1}}@media (max-width:599px){.mat-tab-label{min-width:72px}}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:.5s cubic-bezier(.35,0,.25,1)}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}@media (-ms-high-contrast:active){.mat-ink-bar{outline:solid 2px;height:0}}.mat-tab-header-pagination{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;touch-action:none}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-pagination-after,.mat-tab-header-rtl .mat-tab-header-pagination-before{padding-right:4px}.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:'';height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-label-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}.mat-tab-list{flex-grow:1;position:relative;transition:transform .5s cubic-bezier(.35,0,.25,1)}.mat-tab-labels{display:flex}[mat-align-tabs=center] .mat-tab-labels{justify-content:center}[mat-align-tabs=end] .mat-tab-labels{justify-content:flex-end}</style>
       <style>.mat-progress-bar{display:block;height:4px;overflow:hidden;position:relative;transition:opacity 250ms linear;width:100%}._mat-animation-noopable.mat-progress-bar{transition:none;animation:none}.mat-progress-bar .mat-progress-bar-element,.mat-progress-bar .mat-progress-bar-fill::after{height:100%;position:absolute;width:100%}.mat-progress-bar .mat-progress-bar-background{width:calc(100% + 10px)}@media (-ms-high-contrast:active){.mat-progress-bar .mat-progress-bar-background{display:none}}.mat-progress-bar .mat-progress-bar-buffer{transform-origin:top left;transition:transform 250ms ease}@media (-ms-high-contrast:active){.mat-progress-bar .mat-progress-bar-buffer{border-top:solid 5px;opacity:.5}}.mat-progress-bar .mat-progress-bar-secondary{display:none}.mat-progress-bar .mat-progress-bar-fill{animation:none;transform-origin:top left;transition:transform 250ms ease}@media (-ms-high-contrast:active){.mat-progress-bar .mat-progress-bar-fill{border-top:solid 4px}}.mat-progress-bar .mat-progress-bar-fill::after{animation:none;content:'';display:inline-block;left:0}.mat-progress-bar[dir=rtl],[dir=rtl] .mat-progress-bar{transform:rotateY(180deg)}.mat-progress-bar[mode=query]{transform:rotateZ(180deg)}.mat-progress-bar[mode=query][dir=rtl],[dir=rtl] .mat-progress-bar[mode=query]{transform:rotateZ(180deg) rotateY(180deg)}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-fill,.mat-progress-bar[mode=query] .mat-progress-bar-fill{transition:none}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary,.mat-progress-bar[mode=query] .mat-progress-bar-primary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-translate 2s infinite linear;left:-145.166611%}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-primary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-primary-indeterminate-scale 2s infinite linear}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary,.mat-progress-bar[mode=query] .mat-progress-bar-secondary{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-translate 2s infinite linear;left:-54.888891%;display:block}.mat-progress-bar[mode=indeterminate] .mat-progress-bar-secondary.mat-progress-bar-fill::after,.mat-progress-bar[mode=query] .mat-progress-bar-secondary.mat-progress-bar-fill::after{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-secondary-indeterminate-scale 2s infinite linear}.mat-progress-bar[mode=buffer] .mat-progress-bar-background{-webkit-backface-visibility:hidden;backface-visibility:hidden;animation:mat-progress-bar-background-scroll 250ms infinite linear;display:block}.mat-progress-bar._mat-animation-noopable .mat-progress-bar-background,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-buffer,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-primary.mat-progress-bar-fill::after,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary,.mat-progress-bar._mat-animation-noopable .mat-progress-bar-secondary.mat-progress-bar-fill::after{animation:none;transition:none}@keyframes mat-progress-bar-primary-indeterminate-translate{0%{transform:translateX(0)}20%{animation-timing-function:cubic-bezier(.5,0,.70173,.49582);transform:translateX(0)}59.15%{animation-timing-function:cubic-bezier(.30244,.38135,.55,.95635);transform:translateX(83.67142%)}100%{transform:translateX(200.61106%)}}@keyframes mat-progress-bar-primary-indeterminate-scale{0%{transform:scaleX(.08)}36.65%{animation-timing-function:cubic-bezier(.33473,.12482,.78584,1);transform:scaleX(.08)}69.15%{animation-timing-function:cubic-bezier(.06,.11,.6,1);transform:scaleX(.66148)}100%{transform:scaleX(.08)}}@keyframes mat-progress-bar-secondary-indeterminate-translate{0%{animation-timing-function:cubic-bezier(.15,0,.51506,.40969);transform:translateX(0)}25%{animation-timing-function:cubic-bezier(.31033,.28406,.8,.73371);transform:translateX(37.65191%)}48.35%{animation-timing-function:cubic-bezier(.4,.62704,.6,.90203);transform:translateX(84.38617%)}100%{transform:translateX(160.27778%)}}@keyframes mat-progress-bar-secondary-indeterminate-scale{0%{animation-timing-function:cubic-bezier(.15,0,.51506,.40969);transform:scaleX(.08)}19.15%{animation-timing-function:cubic-bezier(.31033,.28406,.8,.73371);transform:scaleX(.4571)}44.15%{animation-timing-function:cubic-bezier(.4,.62704,.6,.90203);transform:scaleX(.72796)}100%{transform:scaleX(.08)}}@keyframes mat-progress-bar-background-scroll{to{transform:translateX(-8px)}}</style>
       <style>.mat-tab-body-content{height:100%;overflow:auto}.mat-tab-group-dynamic-height .mat-tab-body-content{overflow:hidden}</style>
+      <style>.topbar[_ngcontent-c37]{min-width:1250px}.card[_ngcontent-c37]{color:rgba(0,0,0,.6)}.left-panel[_ngcontent-c37]{flex-grow:1;min-width:800px;overflow-x:auto;padding-top:14px;width:calc(100vh - 710px)}.btn-calendar[_ngcontent-c37]{width:2.2rem!important;height:2.2rem!important;color:#6c757d!important}.booking[_ngcontent-c37]{width:calc(100% / 7);min-height:130px;border-right:1px solid #dee2e6;border-bottom:1px solid #dee2e6}.text-xs[_ngcontent-c37]{font-size:12px!important}.btn-day[_ngcontent-c37]{font-weight:500!important;color:#3c4043!important}.btn-today[_ngcontent-c37]{background-color:#1a73e8!important;color:#fff!important}.cell-before[_ngcontent-c37]{opacity:.6}.calendar-event[_ngcontent-c37]{font-size:14px!important}[_nghost-c37]     .mat-icon.sm{font-size:18px!important;height:22px;width:22px}.icon-text-calendar[_ngcontent-c37]   span[_ngcontent-c37]{margin-left:0!important}[_nghost-c37]     .br-tooltip{white-space:pre-line!important}.calendar-cell[_ngcontent-c37]{position:relative}.btn-booking[_ngcontent-c37]{position:absolute;top:2px;right:2px;display:none}.cell-after[_ngcontent-c37]:hover   .btn-booking[_ngcontent-c37]{display:block}.booking-title[_ngcontent-c37]{line-height:40px;text-align:left;width:200px;margin-left:.75rem;font-size:15px}.booking-list-panel[_ngcontent-c37]{font-size:14px}[_nghost-c37]     .hidden-underline .mat-form-field-underline{display:none!important}.hidden-visibility[_ngcontent-c37]{visibility:hidden}@media (min-width:1500px){.row-info[_ngcontent-c37]{padding-left:.75rem!important;padding-right:.75rem!important}}.fc-cell[_ngcontent-c37]{width:97px;min-width:97px;font-size:14px}.fc-view-container[_ngcontent-c37]{position:relative}.fc-view[_ngcontent-c37], .fc-view[_ngcontent-c37] > table[_ngcontent-c37]{position:relative;z-index:1;overflow:auto}.fc-view-container[_ngcontent-c37]   *[_ngcontent-c37], .fc-view-container[_ngcontent-c37]   [_ngcontent-c37]:after, .fc-view-container[_ngcontent-c37]   [_ngcontent-c37]:before{box-sizing:content-box}.fc[_ngcontent-c37]{direction:ltr;text-align:left}.fc[_ngcontent-c37]   table[_ngcontent-c37]{box-sizing:border-box;table-layout:fixed;border-collapse:collapse;border-spacing:0;font-size:1em}.fc[_ngcontent-c37]   .fc-row[_ngcontent-c37]{border-style:solid;border-width:0}.fc-row[_ngcontent-c37]{position:relative;height:35px}.fc-row[_ngcontent-c37]   .fc-bg[_ngcontent-c37]{z-index:1}.fc-bg[_ngcontent-c37]{bottom:0}.fc-bg[_ngcontent-c37], .fc-bgevent-skeleton[_ngcontent-c37], .fc-highlight-skeleton[_ngcontent-c37], .fc-mirror-skeleton[_ngcontent-c37]{position:absolute;top:0;left:0;right:0}.fc-row[_ngcontent-c37]   .fc-content-skeleton[_ngcontent-c37]{position:absolute;top:0;left:0;right:0;z-index:4;padding-bottom:2px}.fc-event[_ngcontent-c37]{background-color:#3788d8;color:#fff;text-decoration:none;height:20px;top:5px;border-radius:3px;position:absolute}.fc-sticky[_ngcontent-c37]{position:-webkit-sticky;position:sticky;left:-3px;background:#fff;z-index:100}</style>
       <style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media (hover:none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-flat-button,.mat-icon-button,.mat-stroked-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-flat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-focus-overlay,.mat-stroked-button .mat-button-ripple.mat-ripple{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button .mat-icon,.mat-icon-button i{line-height:24px}.mat-button-focus-overlay,.mat-button-ripple.mat-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-focus-overlay{opacity:0;transition:opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}@media (-ms-high-contrast:active){.mat-button-focus-overlay{background-color:#fff}}@media (-ms-high-contrast:black-on-white){.mat-button-focus-overlay{background-color:#000}}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}@media (-ms-high-contrast:active){.mat-button,.mat-fab,.mat-flat-button,.mat-icon-button,.mat-mini-fab,.mat-raised-button{outline:solid 1px}}</style>
-      <style>.topbar[_ngcontent-c37]{min-width:1250px}.card[_ngcontent-c37]{color:rgba(0,0,0,.6)}.left-panel[_ngcontent-c37]{flex-grow:1;min-width:800px;overflow-x:auto;padding-top:14px;width:calc(100vh - 710px)}.btn-calendar[_ngcontent-c37]{width:2.2rem!important;height:2.2rem!important;color:#6c757d!important}.booking[_ngcontent-c37]{width:calc(100% / 7);min-height:130px;border-right:1px solid #dee2e6;border-bottom:1px solid #dee2e6}.text-xs[_ngcontent-c37]{font-size:12px!important}.btn-day[_ngcontent-c37]{font-weight:500!important;color:#3c4043!important}.btn-today[_ngcontent-c37]{background-color:#1a73e8!important;color:#fff!important}.cell-before[_ngcontent-c37]{opacity:.6}.calendar-event[_ngcontent-c37]{font-size:14px!important}[_nghost-c37]     .mat-icon.sm{font-size:18px!important;height:22px;width:22px}.icon-text-calendar[_ngcontent-c37]   span[_ngcontent-c37]{margin-left:0!important}[_nghost-c37]     .br-tooltip{white-space:pre-line!important}.calendar-cell[_ngcontent-c37]{position:relative}.btn-booking[_ngcontent-c37]{position:absolute;top:2px;right:2px;display:none}.cell-after[_ngcontent-c37]:hover   .btn-booking[_ngcontent-c37]{display:block}.booking-title[_ngcontent-c37]{line-height:40px;text-align:left;width:200px;margin-left:.75rem;font-size:15px}.booking-list-panel[_ngcontent-c37]{font-size:14px}[_nghost-c37]     .hidden-underline .mat-form-field-underline{display:none!important}.hidden-visibility[_ngcontent-c37]{visibility:hidden}@media (min-width:1500px){.row-info[_ngcontent-c37]{padding-left:.75rem!important;padding-right:.75rem!important}}.fc-cell[_ngcontent-c37]{width:97px;min-width:97px;font-size:14px}.fc-view-container[_ngcontent-c37]{position:relative}.fc-view[_ngcontent-c37], .fc-view[_ngcontent-c37] > table[_ngcontent-c37]{position:relative;z-index:1;overflow:auto}.fc-view-container[_ngcontent-c37]   *[_ngcontent-c37], .fc-view-container[_ngcontent-c37]   [_ngcontent-c37]:after, .fc-view-container[_ngcontent-c37]   [_ngcontent-c37]:before{box-sizing:content-box}.fc[_ngcontent-c37]{direction:ltr;text-align:left}.fc[_ngcontent-c37]   table[_ngcontent-c37]{box-sizing:border-box;table-layout:fixed;border-collapse:collapse;border-spacing:0;font-size:1em}.fc[_ngcontent-c37]   .fc-row[_ngcontent-c37]{border-style:solid;border-width:0}.fc-row[_ngcontent-c37]{position:relative;height:35px}.fc-row[_ngcontent-c37]   .fc-bg[_ngcontent-c37]{z-index:1}.fc-bg[_ngcontent-c37]{bottom:0}.fc-bg[_ngcontent-c37], .fc-bgevent-skeleton[_ngcontent-c37], .fc-highlight-skeleton[_ngcontent-c37], .fc-mirror-skeleton[_ngcontent-c37]{position:absolute;top:0;left:0;right:0}.fc-row[_ngcontent-c37]   .fc-content-skeleton[_ngcontent-c37]{position:absolute;top:0;left:0;right:0;z-index:4;padding-bottom:2px}.fc-event[_ngcontent-c37]{background-color:#3788d8;color:#fff;text-decoration:none;height:20px;top:5px;border-radius:3px;position:absolute}.st-booking[_ngcontent-c37]{background-color:#42a5f5}.st-checkin[_ngcontent-c37]{background-color:#26a69a}.st-checkout[_ngcontent-c37]{background-color:#ffe0b2}.st-note[_ngcontent-c37]{width:10px;height:10px}.st-text[_ngcontent-c37]{font-size:14px}.fc-sticky[_ngcontent-c37]{position:-webkit-sticky;position:sticky;left:-3px;background:#fff;z-index:100}.table-bordered[_ngcontent-c37]   thead[_ngcontent-c37]   td[_ngcontent-c37], .table-bordered[_ngcontent-c37]   thead[_ngcontent-c37]   th[_ngcontent-c37]{border-bottom-width:2px}</style>
       <style>.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon{width:1em}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-datepicker-toggle-default-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon{display:block;width:1.5em;height:1.5em}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-datepicker-toggle-default-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-datepicker-toggle-default-icon{margin:auto}</style>
       <style>mat-table{display:block}mat-header-row{min-height:56px}mat-footer-row,mat-row{min-height:48px}mat-footer-row,mat-header-row,mat-row{display:flex;border-width:0;border-bottom-width:1px;border-style:solid;align-items:center;box-sizing:border-box}mat-footer-row::after,mat-header-row::after,mat-row::after{display:inline-block;min-height:inherit;content:''}mat-cell:first-of-type,mat-footer-cell:first-of-type,mat-header-cell:first-of-type{padding-left:24px}[dir=rtl] mat-cell:first-of-type,[dir=rtl] mat-footer-cell:first-of-type,[dir=rtl] mat-header-cell:first-of-type{padding-left:0;padding-right:24px}mat-cell:last-of-type,mat-footer-cell:last-of-type,mat-header-cell:last-of-type{padding-right:24px}[dir=rtl] mat-cell:last-of-type,[dir=rtl] mat-footer-cell:last-of-type,[dir=rtl] mat-header-cell:last-of-type{padding-right:0;padding-left:24px}mat-cell,mat-footer-cell,mat-header-cell{flex:1;display:flex;align-items:center;overflow:hidden;word-wrap:break-word;min-height:inherit}table.mat-table{border-spacing:0}tr.mat-header-row{height:56px}tr.mat-footer-row,tr.mat-row{height:48px}th.mat-header-cell{text-align:left}[dir=rtl] th.mat-header-cell{text-align:right}td.mat-cell,td.mat-footer-cell,th.mat-header-cell{padding:0;border-bottom-width:1px;border-bottom-style:solid}td.mat-cell:first-of-type,td.mat-footer-cell:first-of-type,th.mat-header-cell:first-of-type{padding-left:24px}[dir=rtl] td.mat-cell:first-of-type,[dir=rtl] td.mat-footer-cell:first-of-type,[dir=rtl] th.mat-header-cell:first-of-type{padding-left:0;padding-right:24px}td.mat-cell:last-of-type,td.mat-footer-cell:last-of-type,th.mat-header-cell:last-of-type{padding-right:24px}[dir=rtl] td.mat-cell:last-of-type,[dir=rtl] td.mat-footer-cell:last-of-type,[dir=rtl] th.mat-header-cell:last-of-type{padding-right:0;padding-left:24px}</style>
       <style>.mat-paginator{display:block}.mat-paginator-outer-container{display:flex}.mat-paginator-container{display:flex;align-items:center;justify-content:flex-end;min-height:56px;padding:0 8px;flex-wrap:wrap-reverse;width:100%}.mat-paginator-page-size{display:flex;align-items:baseline;margin-right:8px}[dir=rtl] .mat-paginator-page-size{margin-right:0;margin-left:8px}.mat-paginator-page-size-label{margin:0 4px}.mat-paginator-page-size-select{margin:6px 4px 0 4px;width:56px}.mat-paginator-page-size-select.mat-form-field-appearance-outline{width:64px}.mat-paginator-page-size-select.mat-form-field-appearance-fill{width:64px}.mat-paginator-range-label{margin:0 32px 0 24px}.mat-paginator-range-actions{display:flex;align-items:center}.mat-paginator-icon{width:28px;fill:currentColor}[dir=rtl] .mat-paginator-icon{transform:rotate(180deg)}</style>
       <style>.mat-sort-header-container{display:flex;cursor:pointer;align-items:center}.mat-sort-header-disabled .mat-sort-header-container{cursor:default}.mat-sort-header-position-before{flex-direction:row-reverse}.mat-sort-header-button{border:none;background:0 0;display:flex;align-items:center;padding:0;cursor:inherit;outline:0;font:inherit;color:currentColor}.mat-sort-header-button::-moz-focus-inner{border:0}.mat-sort-header-arrow{height:12px;width:12px;min-width:12px;position:relative;display:flex;opacity:0}.mat-sort-header-arrow,[dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow{margin:0 0 0 6px}.mat-sort-header-position-before .mat-sort-header-arrow,[dir=rtl] .mat-sort-header-arrow{margin:0 6px 0 0}.mat-sort-header-stem{background:currentColor;height:10px;width:2px;margin:auto;display:flex;align-items:center}@media (-ms-high-contrast:active){.mat-sort-header-stem{width:0;border-left:solid 2px}}.mat-sort-header-indicator{width:100%;height:2px;display:flex;align-items:center;position:absolute;top:0;left:0}.mat-sort-header-pointer-middle{margin:auto;height:2px;width:2px;background:currentColor;transform:rotate(45deg)}@media (-ms-high-contrast:active){.mat-sort-header-pointer-middle{width:0;height:0;border-top:solid 2px;border-left:solid 2px}}.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{background:currentColor;width:6px;height:2px;position:absolute;top:0}@media (-ms-high-contrast:active){.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{width:0;height:0;border-left:solid 6px;border-top:solid 2px}}.mat-sort-header-pointer-left{transform-origin:right;left:0}.mat-sort-header-pointer-right{transform-origin:left;right:0}</style>
-      <style>.changed[_ngcontent-c42]{background:#eaeff9}.mat-toolbar-single-row[_ngcontent-c42], [_nghost-c42]     .mat-toolbar-row{height:45px}.title-toolbar[_ngcontent-c42]{font-weight:400;font-size:14px;color:grey}[_nghost-c42]     .mat-input-element:disabled{color:#212529}[_nghost-c42]     .mat-toolbar{background-color:#fff}[_nghost-c42]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}</style>
-      <style>.error-list[_ngcontent-c44]{list-style:none;-webkit-padding-start:0!important;padding-inline-start:0!important;font-size:14px}</style>
-      <style>@media (-ms-high-contrast:active){.mat-toolbar{outline:solid 1px}}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%}.mat-toolbar-multiple-rows{min-height:64px}.mat-toolbar-row,.mat-toolbar-single-row{height:64px}@media (max-width:599px){.mat-toolbar-multiple-rows{min-height:56px}.mat-toolbar-row,.mat-toolbar-single-row{height:56px}}</style>
-      <style>.mat-chip{position:relative;overflow:hidden;box-sizing:border-box;-webkit-tap-highlight-color:transparent;transform:translateZ(0)}.mat-standard-chip{transition:box-shadow 280ms cubic-bezier(.4,0,.2,1);display:inline-flex;padding:7px 12px;border-radius:16px;align-items:center;cursor:default;min-height:32px;height:1px}.mat-standard-chip .mat-chip-remove.mat-icon{width:18px;height:18px}.mat-standard-chip::after{top:0;left:0;right:0;bottom:0;position:absolute;border-radius:inherit;opacity:0;content:'';pointer-events:none;transition:opacity .2s cubic-bezier(.35,0,.25,1)}.mat-standard-chip:hover::after{opacity:.12}.mat-standard-chip:focus{outline:0}.mat-standard-chip:focus::after{opacity:.16}@media (-ms-high-contrast:active){.mat-standard-chip{outline:solid 1px}.mat-standard-chip:focus{outline:dotted 2px}}.mat-standard-chip.mat-chip-disabled::after{opacity:0}.mat-standard-chip.mat-chip-disabled .mat-chip-remove,.mat-standard-chip.mat-chip-disabled .mat-chip-trailing-icon{cursor:default}.mat-standard-chip.mat-chip-with-avatar,.mat-standard-chip.mat-chip-with-trailing-icon.mat-chip-with-avatar{padding-top:0;padding-bottom:0}.mat-standard-chip.mat-chip-with-trailing-icon.mat-chip-with-avatar{padding-right:8px;padding-left:0}[dir=rtl] .mat-standard-chip.mat-chip-with-trailing-icon.mat-chip-with-avatar{padding-left:8px;padding-right:0}.mat-standard-chip.mat-chip-with-trailing-icon{padding-top:7px;padding-bottom:7px;padding-right:8px;padding-left:12px}[dir=rtl] .mat-standard-chip.mat-chip-with-trailing-icon{padding-left:8px;padding-right:12px}.mat-standard-chip.mat-chip-with-avatar{padding-left:0;padding-right:12px}[dir=rtl] .mat-standard-chip.mat-chip-with-avatar{padding-right:0;padding-left:12px}.mat-standard-chip .mat-chip-avatar{width:24px;height:24px;margin-right:8px;margin-left:4px}[dir=rtl] .mat-standard-chip .mat-chip-avatar{margin-left:8px;margin-right:4px}.mat-standard-chip .mat-chip-remove,.mat-standard-chip .mat-chip-trailing-icon{width:18px;height:18px;cursor:pointer}.mat-standard-chip .mat-chip-remove,.mat-standard-chip .mat-chip-trailing-icon{margin-left:8px;margin-right:0}[dir=rtl] .mat-standard-chip .mat-chip-remove,[dir=rtl] .mat-standard-chip .mat-chip-trailing-icon{margin-right:8px;margin-left:0}.mat-chip-list-wrapper{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;margin:-4px}.mat-chip-list-wrapper .mat-standard-chip,.mat-chip-list-wrapper input.mat-input-element{margin:4px}.mat-chip-list-stacked .mat-chip-list-wrapper{flex-direction:column;align-items:flex-start}.mat-chip-list-stacked .mat-chip-list-wrapper .mat-standard-chip{width:100%}.mat-chip-avatar{border-radius:50%;justify-content:center;align-items:center;display:flex;overflow:hidden;object-fit:cover}input.mat-chip-input{width:150px;margin:4px;flex:1 0 150px}</style>
+      <style>.card[_ngcontent-c44]{width:9rem;cursor:pointer}</style>
+      <style>.card[_ngcontent-c45]{width:9rem;cursor:pointer}</style>
    </head>
    <body>
       <app-root _nghost-c0="" ng-version="6.1.7">
@@ -105,7 +103,7 @@
                                     <p _ngcontent-c4="">Thuê - trả phòng</p>
                                  </a>
                               </li>
-                              <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
                                  <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
@@ -115,18 +113,11 @@
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
                                  <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                                    <i _ngcontent-c4="" class="fas fa-database"></i>
+                                    <i _ngcontent-c4="" class="fas fa-chart-pie"></i>
                                     <p _ngcontent-c4="">Quản lý kho</p>
                                  </a>
                               </li>
-                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
-                                 <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                                    <i _ngcontent-c4="" class="fas fa-balance-scale"></i>
-                                    <p _ngcontent-c4="">Quản lý thu chi</p>
-                                 </a>
-                              </li>
-                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
+                              <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                                  <!---->
                                  <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-cog"></i>
@@ -155,10 +146,6 @@
                                  </a>
                               </li>
                            </ul>
-                           <div _ngcontent-c4="" style="position: absolute; bottom: 10px; left: 25px; font-weight: 400;">
-                              <div _ngcontent-c4="" class="text-secondary"> Copyright © by </div>
-                              <div _ngcontent-c4="" class="text-secondary"> SA TECHNOLOGY JSC </div>
-                           </div>
                         </div>
                      </app-sidebar>
                   </div>
@@ -168,341 +155,154 @@
                <mat-drawer-content class="mat-drawer-content ng-star-inserted" style="margin-left: 260px;">
                   <div _ngcontent-c19="" class="main-panel">
                      <router-outlet _ngcontent-c19=""></router-outlet>
-                     <app-booking _nghost-c37="" class="ng-star-inserted">
-                        <div _ngcontent-c37="" class="topbar">
-                           <div _ngcontent-c37="" class="container-fluid d-flex h-100">
-                              <div _ngcontent-c37="" class="justify-content-center align-self-center">
-                                 <button _ngcontent-c37="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c37="" class="material-icons">menu</i></button><span _ngcontent-c37="" class="topbar-title">Đặt phòng</span>
-                                 <button _ngcontent-c37="" class="btn-top text-primary mat-button" mat-button="">
-                                    <span class="mat-button-wrapper">
-                                       <mat-icon _ngcontent-c37="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>
-                                       <span _ngcontent-c37="" class="icon-text">Thêm mới</span>
-                                    </span>
-                                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
-                                    <div class="mat-button-focus-overlay"></div>
-                                 </button>
+                     <app-manager _nghost-c45="" class="ng-star-inserted">
+                        <div _ngcontent-c45="" class="topbar">
+                           <div _ngcontent-c45="" class="container-fluid d-flex h-100">
+                              <div _ngcontent-c45="" class="justify-content-center align-self-center"><button _ngcontent-c45="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c45="" class="material-icons">menu</i></button><span _ngcontent-c45="" class="topbar-title">Quản lý hệ thống</span></div>
+                           </div>
+                        </div>
+                        <div _ngcontent-c45="" class="main-container">
+                           <div _ngcontent-c45="" class="px-4 container-fluid h-100">
+                              <div _ngcontent-c45="" class="row p-2 pt-3" style="width: 42rem">
+                                 <!---->
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">memory</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Cách tính tiền </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">home</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Loại phòng </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">local_hotel</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Phòng </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">fastfood</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Menu </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">account_tree</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Tài khoản phụ </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">insert_chart_outlined</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Thống kê </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">description</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Lịch sử </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                    <!---->
+                                    <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
+                                       <div _ngcontent-c45="" class="card-body">
+                                          <div _ngcontent-c45="" class="row">
+                                             <div _ngcontent-c45="" class="col-12">
+                                                <div _ngcontent-c45="" class="icon-big text-center"><i _ngcontent-c45="" class="material-icons text-info material-icons-outlined" style="font-size: 40px;">perm_data_setting</i></div>
+                                             </div>
+                                          </div>
+                                          <div _ngcontent-c45="" class="footer text-center">
+                                             <hr _ngcontent-c45="">
+                                             <div _ngcontent-c45="" class="stats"> Thiết lập khác </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                        <!---->
-                        <div _ngcontent-c37="" class="main-container d-flex flex-row">
-                           <div _ngcontent-c37="" class="left-panel">
-                              <mat-tab-group _ngcontent-c37="" class="h-100 mat-tab-group mat-primary mat-tab-group-dynamic-height" dynamicheight="">
-                                 <mat-tab-header class="mat-tab-header">
-                                    <div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="">
-                                       <div class="mat-tab-header-pagination-chevron"></div>
-                                    </div>
-                                    <div class="mat-tab-label-container">
-                                       <div class="mat-tab-list" role="tablist" style="transform: translateX(0px);">
-                                          <div class="mat-tab-labels">
-                                             <!---->
-                                             <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple mat-tab-label-active ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-3-0" tabindex="0" aria-posinset="1" aria-setsize="4" aria-controls="mat-tab-content-3-0" aria-selected="true" aria-disabled="false">
-                                                <div class="mat-tab-label-content">
-                                                   <!----><!---->
-                                                   <mat-icon _ngcontent-c37="" class="text-info mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">local_hotel</mat-icon>
-                                                   &nbsp;&nbsp;&nbsp;Lịch theo phòng&nbsp;&nbsp;&nbsp; <!----><!---->
-                                                </div>
-                                             </div>
-                                             <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-3-1" tabindex="-1" aria-posinset="2" aria-setsize="4" aria-controls="mat-tab-content-3-1" aria-selected="false" aria-disabled="false">
-                                                <div class="mat-tab-label-content">
-                                                   <!----><!---->
-                                                   <mat-icon _ngcontent-c37="" class="text-primary mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">date_range</mat-icon>
-                                                   &nbsp;&nbsp;&nbsp;Lịch theo loại phòng&nbsp;&nbsp;&nbsp; <!----><!---->
-                                                </div>
-                                             </div>
-                                             <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-3-2" tabindex="-1" aria-posinset="3" aria-setsize="4" aria-controls="mat-tab-content-3-2" aria-selected="false" aria-disabled="false">
-                                                <div class="mat-tab-label-content">
-                                                   <!----><!---->
-                                                   <mat-icon _ngcontent-c37="" class="text-warning mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">today</mat-icon>
-                                                   &nbsp;&nbsp;&nbsp;Xem theo ngày&nbsp;&nbsp;&nbsp; <!----><!---->
-                                                </div>
-                                             </div>
-                                             <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-3-3" tabindex="-1" aria-posinset="4" aria-setsize="4" aria-controls="mat-tab-content-3-3" aria-selected="false" aria-disabled="false">
-                                                <div class="mat-tab-label-content">
-                                                   <!----><!---->
-                                                   <mat-icon _ngcontent-c37="" class="text-info mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">search</mat-icon>
-                                                   &nbsp;&nbsp;&nbsp;Tìm kiếm&nbsp;&nbsp;&nbsp; <!----><!---->
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 193px;"></mat-ink-bar>
-                                       </div>
-                                    </div>
-                                    <div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="">
-                                       <div class="mat-tab-header-pagination-chevron"></div>
-                                    </div>
-                                 </mat-tab-header>
-                                 <div class="mat-tab-body-wrapper">
-                                    <!---->
-                                    <mat-tab-body class="mat-tab-body ng-tns-c36-97 mat-tab-body-active ng-star-inserted" role="tabpanel" id="mat-tab-content-3-0" aria-labelledby="mat-tab-label-3-0">
-                                       <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: none;">
-                                          <!----><!---->
-                                          <div _ngcontent-c37="" class="list-panel pb-0 ng-star-inserted" style="">
-                                             <mat-form-field _ngcontent-c37="" class="w-date pr-3 mat-form-field ng-tns-c21-81 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float mat-form-field-disabled" style="width: 150px">
-                                                <div class="mat-form-field-wrapper">
-                                                   <div class="mat-form-field-flex">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-infix">
-                                                         <span class="bmd-form-group is-filled"><input _ngcontent-c37="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" placeholder="Từ ngày" required="" aria-haspopup="true" id="mat-input-13" aria-invalid="false" aria-required="true" disabled=""></span>
-                                                         <mat-datepicker _ngcontent-c37="" disabled="false"></mat-datepicker>
-                                                         <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                            <label class="mat-form-field-label ng-tns-c21-81 ng-star-inserted" id="mat-form-field-label-35" for="mat-input-13" aria-owns="mat-input-13">
-                                                               <!----><!---->Từ ngày<!----><!---->
-                                                            </label>
-                                                         </span>
-                                                      </div>
-                                                      <!---->
-                                                      <div class="mat-form-field-suffix ng-tns-c21-81 ng-star-inserted">
-                                                         <mat-datepicker-toggle _ngcontent-c37="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                            <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                                                               <span class="mat-button-wrapper">
-                                                                  <!---->
-                                                                  <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                                                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                                                                  </svg>
-                                                               </span>
-                                                               <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                               <div class="mat-button-focus-overlay"></div>
-                                                            </button>
-                                                         </mat-datepicker-toggle>
-                                                      </div>
-                                                   </div>
-                                                   <!---->
-                                                   <div class="mat-form-field-underline ng-tns-c21-81 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                                   <div class="mat-form-field-subscript-wrapper">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-hint-wrapper ng-tns-c21-81 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                         <!---->
-                                                         <div class="mat-form-field-hint-spacer"></div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </mat-form-field>
-                                             <mat-form-field _ngcontent-c37="" class="w-date pr-3 mat-form-field ng-tns-c21-82 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float mat-form-field-disabled" style="width: 150px">
-                                                <div class="mat-form-field-wrapper">
-                                                   <div class="mat-form-field-flex">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-infix">
-                                                         <span class="bmd-form-group is-filled"><input _ngcontent-c37="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" placeholder="Đến ngày" required="" aria-haspopup="true" id="mat-input-14" aria-invalid="false" aria-required="true" disabled=""></span>
-                                                         <mat-datepicker _ngcontent-c37="" disabled="false"></mat-datepicker>
-                                                         <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                            <label class="mat-form-field-label ng-tns-c21-82 ng-star-inserted" id="mat-form-field-label-37" for="mat-input-14" aria-owns="mat-input-14">
-                                                               <!----><!---->Đến ngày<!----><!---->
-                                                            </label>
-                                                         </span>
-                                                      </div>
-                                                      <!---->
-                                                      <div class="mat-form-field-suffix ng-tns-c21-82 ng-star-inserted">
-                                                         <mat-datepicker-toggle _ngcontent-c37="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                            <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                                                               <span class="mat-button-wrapper">
-                                                                  <!---->
-                                                                  <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                                                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                                                                  </svg>
-                                                               </span>
-                                                               <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                               <div class="mat-button-focus-overlay"></div>
-                                                            </button>
-                                                         </mat-datepicker-toggle>
-                                                      </div>
-                                                   </div>
-                                                   <!---->
-                                                   <div class="mat-form-field-underline ng-tns-c21-82 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                                   <div class="mat-form-field-subscript-wrapper">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-hint-wrapper ng-tns-c21-82 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                         <!---->
-                                                         <div class="mat-form-field-hint-spacer"></div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </mat-form-field>
-                                             <mat-form-field _ngcontent-c37="" class="pr-3 mat-form-field ng-tns-c21-83 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float" style="width: 150px">
-                                                <div class="mat-form-field-wrapper">
-                                                   <div class="mat-form-field-flex">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-infix">
-                                                         <mat-select _ngcontent-c37="" class="mat-select ng-tns-c22-84 ng-untouched ng-pristine ng-valid ng-star-inserted" role="listbox" id="mat-select-4" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">
-                                                            <div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin="">
-                                                               <div class="mat-select-value">
-                                                                  <!----><!---->
-                                                                  <span class="mat-select-value-text ng-tns-c22-84 ng-star-inserted" style="">
-                                                                     <!----><span class="ng-tns-c22-84 ng-star-inserted">Loại phòng</span><!---->
-                                                                  </span>
-                                                               </div>
-                                                               <div class="mat-select-arrow-wrapper">
-                                                                  <div class="mat-select-arrow"></div>
-                                                               </div>
-                                                            </div>
-                                                            <!---->
-                                                         </mat-select>
-                                                         <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                         </span>
-                                                      </div>
-                                                      <!---->
-                                                   </div>
-                                                   <!---->
-                                                   <div class="mat-form-field-underline ng-tns-c21-83 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                                   <div class="mat-form-field-subscript-wrapper">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-hint-wrapper ng-tns-c21-83 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                         <!---->
-                                                         <div class="mat-form-field-hint-spacer"></div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </mat-form-field>
-                                             <mat-form-field _ngcontent-c37="" class="mat-form-field ng-tns-c21-85 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" style="width: 150px">
-                                                <div class="mat-form-field-wrapper">
-                                                   <div class="mat-form-field-flex">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-infix">
-                                                         <span class="bmd-form-group"><input _ngcontent-c37="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.searchText" placeholder="Tên phòng" style="width: 210px" type="search" id="mat-input-15" aria-invalid="false" aria-required="false"></span>
-                                                         <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                            <label class="mat-form-field-label ng-tns-c21-85 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-41" for="mat-input-15" aria-owns="mat-input-15">
-                                                               <!----><!---->Tên phòng<!----><!---->
-                                                            </label>
-                                                         </span>
-                                                      </div>
-                                                      <!---->
-                                                   </div>
-                                                   <!---->
-                                                   <div class="mat-form-field-underline ng-tns-c21-85 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                                   <div class="mat-form-field-subscript-wrapper">
-                                                      <!----><!---->
-                                                      <div class="mat-form-field-hint-wrapper ng-tns-c21-85 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                         <!---->
-                                                         <div class="mat-form-field-hint-spacer"></div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </mat-form-field>
-                                          </div>
-                                          <div _ngcontent-c37="" class="d-flex align-items-center ml-4 mb-3 ng-star-inserted" style="">
-                                             <div _ngcontent-c37="" class="mr-2 st-note st-booking"></div>
-                                             <div _ngcontent-c37="" class="st-text">Chưa nhận phòng</div>
-                                             <div _ngcontent-c37="" class="ml-4 mr-2 st-note st-checkin"></div>
-                                             <div _ngcontent-c37="" class="st-text">Đã nhận phòng</div>
-                                             <div _ngcontent-c37="" class="ml-4 mr-2 st-note st-checkout"></div>
-                                             <div _ngcontent-c37="" class="st-text">Đã trả phòng</div>
-                                          </div>
-                                          <div _ngcontent-c37="" class="mx-4 border-left border-right ng-star-inserted" style="">
-                                             <div _ngcontent-c37="" class="fc fc-ltr fc-unthemed">
-                                                <div _ngcontent-c37="" class="fc-view-container">
-                                                   <div _ngcontent-c37="" class="fc-view" style="overflow: auto;min-height: 500px;">
-                                                      <table _ngcontent-c37="">
-                                                         <thead _ngcontent-c37="" class="fc-head">
-                                                            <tr _ngcontent-c37="">
-                                                               <td _ngcontent-c37="">
-                                                                  <div _ngcontent-c37="" class="fc-row">
-                                                                     <table _ngcontent-c37="" class="table-bordered">
-                                                                        <thead _ngcontent-c37="">
-                                                                           <tr _ngcontent-c37="">
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center py-1 text-primary fc-sticky">Phòng</td>
-                                                                              <!---->
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 09/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 10/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 11/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 12/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 13/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 14/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 15/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 16/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 17/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 18/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 19/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 20/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 21/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 22/06</td>
-                                                                              <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 23/06</td>
-                                                                           </tr>
-                                                                        </thead>
-                                                                     </table>
-                                                                  </div>
-                                                               </td>
-                                                            </tr>
-                                                         </thead>
-                                                         <tbody _ngcontent-c37="" class="fc-body">
-                                                            <tr _ngcontent-c37="">
-                                                               <td _ngcontent-c37="">
-                                                                  <div _ngcontent-c37="" class="fc-scroller">
-                                                                     <div _ngcontent-c37="" class="fc-day-grid">
-                                                                        <!---->
-                                                                        <div _ngcontent-c37="" class="fc-row ng-star-inserted">
-                                                                           <table _ngcontent-c37="" class="table-bordered">
-                                                                              <thead _ngcontent-c37="" class="fc-head">
-                                                                                 <tr _ngcontent-c37="">
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center text-primary py-1 fc-sticky">hhhds</td>
-                                                                                    <!---->
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                    <td _ngcontent-c37="" class="fc-cell text-center pointer ng-star-inserted"></td>
-                                                                                 </tr>
-                                                                              </thead>
-                                                                           </table>
-                                                                           <div _ngcontent-c37="" class="fc-content-skeleton">
-                                                                              <!---->
-                                                                           </div>
-                                                                        </div>
-                                                                     </div>
-                                                                  </div>
-                                                               </td>
-                                                            </tr>
-                                                         </tbody>
-                                                      </table>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <!---->
-                                       </div>
-                                    </mat-tab-body>
-                                    <mat-tab-body class="mat-tab-body ng-tns-c36-98 ng-star-inserted" role="tabpanel" id="mat-tab-content-3-1" aria-labelledby="mat-tab-label-3-1">
-                                       <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                          <!---->
-                                       </div>
-                                    </mat-tab-body>
-                                    <mat-tab-body class="mat-tab-body ng-tns-c36-99 ng-star-inserted" role="tabpanel" id="mat-tab-content-3-2" aria-labelledby="mat-tab-label-3-2">
-                                       <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                          <!---->
-                                       </div>
-                                    </mat-tab-body>
-                                    <mat-tab-body class="mat-tab-body ng-tns-c36-100 ng-star-inserted" role="tabpanel" id="mat-tab-content-3-3" aria-labelledby="mat-tab-label-3-3">
-                                       <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                          <!---->
-                                       </div>
-                                    </mat-tab-body>
-                                 </div>
-                              </mat-tab-group>
-                           </div>
-                           <div _ngcontent-c37="" class="right-panel">
-                              <!----><!---->
-                           </div>
-                        </div>
-                     </app-booking>
+                     </app-manager>
                   </div>
                </mat-drawer-content>
             </mat-drawer-container>
          </app-main-layout>
       </app-root>
-      <script type="text/javascript" src="runtime.a52389c198157dc938ec.js"></script><script type="text/javascript" src="polyfills.e2c8de29d9e5cc89eea3.js"></script><script type="text/javascript" src="scripts.80ba81c407a324e7653b.js"></script><script type="text/javascript" src="main.ba5acffda288f570a1a6.js"></script>
+      <script type="text/javascript" src="runtime.1ec0ce3279564e5c0749.js"></script><script type="text/javascript" src="polyfills.e2c8de29d9e5cc89eea3.js"></script><script type="text/javascript" src="scripts.80ba81c407a324e7653b.js"></script><script type="text/javascript" src="main.6eb44e59065b9f942aad.js"></script>
       <script>
          var width = 180;
          var frame = 1;
@@ -523,11 +323,7 @@
            frame++;
          }, interval);
       </script>
-      <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=649110198.9749256"></iframe>
+      <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
-      <div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;">
-         <div id="cdk-describedby-message-12">Trang trước</div>
-         <div id="cdk-describedby-message-13">Trang sau</div>
-      </div>
    </body>
 </html>

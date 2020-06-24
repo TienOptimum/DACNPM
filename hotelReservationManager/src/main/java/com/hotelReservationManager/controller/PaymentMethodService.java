@@ -1,5 +1,6 @@
 package com.hotelReservationManager.controller;
 
+import com.hotelReservationManager.model.PaymentMethod;
 import org.springframework.stereotype.Service;
 
 import java.sql.Time;

@@ -311,21 +311,21 @@
                                                                <tr _ngcontent-c37="">
                                                                   <td _ngcontent-c37="" class="fc-cell text-center py-1 text-primary fc-sticky">Phòng</td>
                                                                   <!---->
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 26/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 27/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 28/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 29/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 30/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 31/05</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 01/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 02/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 03/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 04/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 05/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 06/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 07/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 08/06</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> 09/06</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
+                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
                                                                </tr>
                                                                </thead>
                                                             </table>

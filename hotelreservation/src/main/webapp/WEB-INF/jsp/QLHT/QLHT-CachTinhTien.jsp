@@ -269,10 +269,10 @@
                               <!---->
                               <tr _ngcontent-c27="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                  <!---->
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> Phòng đơn </td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${kindofroom.name}	 </td>
 
 
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> 10.000&nbsp;₫/Giờ</td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.price}&nbsp;₫/Giờ</td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c27="" class="icon-sm">
                                        <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('form-edit-tinhtien','form-add-tinhtien')">edit</mat-icon>
@@ -292,10 +292,10 @@
 
                                  </script>
 
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> Phòng đôi </td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name}	 </td>
 
 
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> 10.000&nbsp;₫/Giờ</td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.price}&nbsp;₫/Giờ</td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c27="" class="icon-sm">
                                        <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>

@@ -1,10 +1,9 @@
 package com.hotelreservation.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "menu")
@@ -25,4 +24,9 @@ public class Menu {
     private Double entryPrice;
     @Column(name = "price")
     private Double price;
+
+    @ManyToMany(mappedBy = "menus")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private Collection<Stock> stocks;
 }

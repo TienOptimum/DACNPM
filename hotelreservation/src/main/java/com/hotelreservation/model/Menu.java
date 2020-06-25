@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Set;
 
 @Entity
 @Table(name = "menu")
@@ -25,8 +26,6 @@ public class Menu {
     @Column(name = "price")
     private Double price;
 
-    @ManyToMany(mappedBy = "menus")
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    private Collection<Stock> stocks;
+    @OneToMany(mappedBy = "menu")
+    private Set<HistoryStock> historyStocks;
 }

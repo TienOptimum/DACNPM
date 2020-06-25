@@ -1,3 +1,5 @@
 INSERT INTO user(username,password) values ('neit','123'),('tb','123');
 
 INSERT INTO kind_of_room (name,description) values ('Phòng đơn','Phòng một giường'),('Phòng đôi','Phòng hai giường');
+
+INSERT INTO payment_method(name,price,surcharge) values ('Phòng đơn',200000,20000), ('Phòng đôi',300000,20000);

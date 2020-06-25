@@ -1,5 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <head>
    <meta charset="utf-8">
    <title>SHOTEL</title>
@@ -232,11 +234,19 @@
                                        </div>
                                     </div>
                                  </th>
-
-
-
-
-
+                                 <th _ngcontent-c27="" class="mat-header-cell ng-tns-c31-103 cdk-column-ptM mat-column-ptM ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for ptM"> Giá ngày </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-103 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
                                  <th _ngcontent-c27="" class="mat-header-cell ng-tns-c31-108 cdk-column-ptM mat-column-ptM ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                     <div class="mat-sort-header-container">
                                        <button class="mat-sort-header-button" type="button" aria-label="Change sorting for ptM"> Phụ thu quá giờ </button><!---->
@@ -267,21 +277,19 @@
                               </thead>
                               <tbody role="rowgroup">
                               <!---->
+                              <c:forEach var="paymentmethod" items="${paymentmethods}">
                               <tr _ngcontent-c27="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                  <!---->
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${kindofroom.name}	 </td>
-
-
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.price}&nbsp;₫/Giờ</td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${paymentmethod.name}	 </td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${paymentmethod.price}	 </td>
+                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> ${paymentmethod.surcharge}&nbsp;₫/Giờ</td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c27="" class="icon-sm">
                                        <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('form-edit-tinhtien','form-add-tinhtien')">edit</mat-icon>
                                     </div>
                                  </td>
                               </tr>
-                              <tr _ngcontent-c27="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
-                                 <!---->
-
+                              </c:forEach>
                                  <script>
                                     function swapForm(on,off){
                                        var x = document.getElementById(on);
@@ -291,17 +299,6 @@
                                     }
 
                                  </script>
-
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name}	 </td>
-
-
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-ptM mat-column-ptM ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.price}&nbsp;₫/Giờ</td>
-                                 <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
-                                    <div _ngcontent-c27="" class="icon-sm">
-                                       <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
-                                    </div>
-                                 </td>
-                              </tr>
                               </tbody>
                               <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;">
                               <!---->

@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "stock")
@@ -19,15 +20,6 @@ public class Stock {
     @Column(name = "stockIn_date")
     private Date stockInDate;
 
-    @ManyToMany
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    @JoinTable(name="stock_menu",
-                joinColumns = @JoinColumn(name = "stock_id"),
-                inverseJoinColumns = @JoinColumn(name = "menu_id")
-    )
-    private Collection<Menu> menus;
-
-    @Column(name="amount")
-    private Integer amount;
+    @OneToMany(mappedBy = "stock")
+    private Set<HistoryStock> historyStocks;
 }

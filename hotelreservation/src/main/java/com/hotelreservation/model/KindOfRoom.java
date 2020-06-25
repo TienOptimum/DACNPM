@@ -23,4 +23,11 @@ public class KindOfRoom {
     @Column(name = "description")
     private String description;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

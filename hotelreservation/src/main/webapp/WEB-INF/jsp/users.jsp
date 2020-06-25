@@ -25,7 +25,6 @@
             </tr>
             <c:forEach var="user" items="${users}">
                 <tr>
-                    <td>${user.id}</td>
                     <td>${user.username}</td>
                     <td>${user.password}</td>
                 </tr>

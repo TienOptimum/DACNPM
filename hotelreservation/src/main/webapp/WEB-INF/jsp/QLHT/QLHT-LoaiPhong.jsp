@@ -1,5 +1,7 @@
 <html lang="en">
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
    <head>
       <meta charset="utf-8">
       <title>SHOTEL</title>
@@ -262,28 +264,18 @@
                                     </thead>
                                     <tbody role="rowgroup">
                                        <!---->
+                                       <c:forEach var="kindofroom" items="${kindofrooms}">
                                        <tr _ngcontent-c38="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" onclick="swapForm('edit_new_room','add_new_room')">
                                           <!---->
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> Phòng đơn </td>
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-description mat-column-description ng-star-inserted" mat-cell="" role="gridcell"> Phòng đơn </td>
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-priority mat-column-priority ng-star-inserted" mat-cell="" role="gridcell"> 1 </td>
+                                          <td _ngcontent-c38="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name} </td>
+                                          <td _ngcontent-c38="" class="mat-cell cdk-column-description mat-column-description ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.description} </td>
                                           <td _ngcontent-c38="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                              <div _ngcontent-c38="" class="icon-sm">
                                                 <mat-icon _ngcontent-c38="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
                                              </div>
                                           </td>
                                        </tr>
-                                       <tr _ngcontent-c38="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
-                                          <!---->
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> Phòng đôi </td>
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-description mat-column-description ng-star-inserted" mat-cell="" role="gridcell"> Phòng đôi </td>
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-priority mat-column-priority ng-star-inserted" mat-cell="" role="gridcell"> 2 </td>
-                                          <td _ngcontent-c38="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
-                                             <div _ngcontent-c38="" class="icon-sm">
-                                                <mat-icon _ngcontent-c38="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
-                                             </div>
-                                          </td>
-                                       </tr>
+                                       </c:forEach>
                                     </tbody>
                                     <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;">
                                        <!---->

@@ -1,6 +1,7 @@
 package com.hotelreservation.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "history_reservation")
@@ -10,7 +11,9 @@ public class HistoryReservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @JoinColumn(name="reservation_id")
-    private Reservation reservation;
+    @ElementCollection
+    private List<Reservation> reservation;
     @JoinColumn(name="room_id")
-    private Room room;
+    @ElementCollection
+    private List<Room> room;
 }

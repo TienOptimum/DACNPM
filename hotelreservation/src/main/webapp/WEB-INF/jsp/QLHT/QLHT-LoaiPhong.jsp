@@ -245,19 +245,6 @@
                                                 </div>
                                              </div>
                                           </th>
-                                          <th _ngcontent-c38="" class="mat-header-cell ng-tns-c31-142 cdk-column-priority mat-column-priority ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" aria-sort="ascending" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                                             <div class="mat-sort-header-container mat-sort-header-sorted">
-                                                <button class="mat-sort-header-button" type="button" aria-label="Change sorting for priority"> Ưu tiên hiển thị </button><!---->
-                                                <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-142 ng-star-inserted" style="transform: translateY(0px); opacity: 1;">
-                                                   <div class="mat-sort-header-stem"></div>
-                                                   <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
-                                                      <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
-                                                      <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
-                                                      <div class="mat-sort-header-pointer-middle"></div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </th>
                                           <th _ngcontent-c38="" class="mat-header-cell ng-tns-c31-143 cdk-column-edit mat-column-edit ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                              <div class="mat-sort-header-container">
                                                 <button class="mat-sort-header-button" type="button" aria-label="Change sorting for edit">Chỉnh sửa</button><!---->

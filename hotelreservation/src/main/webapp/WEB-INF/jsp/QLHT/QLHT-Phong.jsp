@@ -101,42 +101,42 @@
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted"  onclick="thueTraPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-retweet"></i>
                               <p _ngcontent-c10="">Thuê - trả phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="far fa-calendar-alt"></i>
                               <p _ngcontent-c10="">Đặt phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-database"></i>
                               <p _ngcontent-c10="">Quản lý kho</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyThuChiRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-balance-scale"></i>
                               <p _ngcontent-c10="">Quản lý thu chi</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item active ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-cog"></i>
                               <p _ngcontent-c10="">Quản lý hệ thống</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-user-circle"></i>
                               <p _ngcontent-c10="">Tài khoản</p>
                            </a>
@@ -169,7 +169,7 @@
                   <div _ngcontent-c40="" class="topbar">
                      <div _ngcontent-c40="" class="container-fluid d-flex h-100">
                         <div _ngcontent-c40="" class="justify-content-center align-self-center">
-                           <button _ngcontent-c40="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c40="" class="material-icons">arrow_back</i></button><span _ngcontent-c40="" class="topbar-title">Phòng</span>
+                           <button _ngcontent-c40="" class="btn btn-secondary bmd-btn-icon btn-back" type="button" onclick="turnBackMainManager()"><i _ngcontent-c40="" class="material-icons">arrow_back</i></button><span _ngcontent-c40="" class="topbar-title">Phòng</span>
                            <button _ngcontent-c40="" class="btn-top text-primary mat-button" mat-button="" onclick="swapForm('form-add-phong','form-edit-phong')">
                                     <span class="mat-button-wrapper">
                                        <mat-icon _ngcontent-c40="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>
@@ -760,6 +760,42 @@
       }
       frame++;
    }, interval);
+</script>
+
+<script>
+   function thueTraPhongRedirect(){
+      location.replace("lounge")
+   }
+</script>
+<script>
+   function datPhongRedirect(){
+      location.replace("reservation")
+   }
+</script>
+<script>
+   function quanLyKhoRedirect(){
+      location.replace("warehouse")
+   }
+</script>
+<script>
+   function quanLyThuChiRedirect(){
+      location.replace("cashPay")
+   }
+</script>
+<script>
+   function taiKhoanRedirect(){
+      location.replace("user")
+   }
+</script>
+<script>
+   function quanLyHeThongRedirect(){
+      location.replace("main/manager")
+   }
+</script>
+<script>
+   function turnBackMainManager() {
+      location.replace("main/manager")
+   }
 </script>
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
 <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

@@ -11,7 +11,7 @@ public class MenuController {
     @Autowired
     MenuRepository menuRepository;
 
-    @RequestMapping("/menu")
+    @RequestMapping("/main/menu")
     public String viewAll(Model model){
         model.addAttribute("menus",menuRepository.findAll());
         return "QLHT/QLHT-Menu";

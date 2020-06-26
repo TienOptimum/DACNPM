@@ -11,7 +11,7 @@ public class RoomController {
     @Autowired
     RoomRepository roomRepository;
 
-    @RequestMapping("/room")
+    @RequestMapping("/main/room")
     public String viewAll(Model model){
         model.addAttribute("rooms",roomRepository.findAll());
         return "QLHT/QLHT-Phong";

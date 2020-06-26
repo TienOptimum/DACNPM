@@ -98,44 +98,44 @@
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-retweet"></i>
                                     <p _ngcontent-c4="">Thuê - trả phòng</p>
                                  </a>
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
                                     <p _ngcontent-c4="">Đặt phòng</p>
                                  </a>
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-chart-pie"></i>
                                     <p _ngcontent-c4="">Quản lý kho</p>
                                  </a>
                               </li>
+                              <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
+                                 <!---->
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyThuChiRedirect()" style="cursor: pointer">
+                                    <i _ngcontent-c10="" class="fas fa-balance-scale"></i>
+                                    <p _ngcontent-c10="">Quản lý thu chi</p>
+                                 </a>
+                              </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-cog"></i>
                                     <p _ngcontent-c4="">Quản lý hệ thống</p>
                                  </a>
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-user-circle"></i>
                                     <p _ngcontent-c4="">Tài khoản</p>
-                                 </a>
-                              </li>
-                              <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
-                                 <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                                    <i _ngcontent-c4="" class="fas fa-credit-card"></i>
-                                    <p _ngcontent-c4="">Gia hạn</p>
                                  </a>
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
@@ -165,7 +165,7 @@
                            <div _ngcontent-c45="" class="px-4 container-fluid h-100">
                               <div _ngcontent-c45="" class="row p-2 pt-3" style="width: 42rem">
                                  <!---->
-                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                 <div _ngcontent-c45="" class="ng-star-inserted" onclick="cachTinhTienRedirect()">
                                     <!---->
                                     <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
                                        <div _ngcontent-c45="" class="card-body">
@@ -181,7 +181,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                 <div _ngcontent-c45="" class="ng-star-inserted" onclick="loaiPhongRedirect()">
                                     <!---->
                                     <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
                                        <div _ngcontent-c45="" class="card-body">
@@ -197,7 +197,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                 <div _ngcontent-c45="" class="ng-star-inserted" onclick="phongRedirect()">
                                     <!---->
                                     <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
                                        <div _ngcontent-c45="" class="card-body">
@@ -213,7 +213,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div _ngcontent-c45="" class="ng-star-inserted">
+                                 <div _ngcontent-c45="" class="ng-star-inserted" onclick="menuRedirect()">
                                     <!---->
                                     <div _ngcontent-c45="" class="card m-2 ng-star-inserted">
                                        <div _ngcontent-c45="" class="card-body">
@@ -323,6 +323,53 @@
            frame++;
          }, interval);
       </script>
+
+      <script>
+         function thueTraPhongRedirect() {
+            location.replace("lounge")
+         }
+      </script>
+      <script>
+         function datPhongRedirect() {
+            location.replace("reservation")
+         }
+      </script>
+      <script>
+         function quanLyKhoRedirect() {
+            location.replace("warehouse")
+         }
+      </script>
+      <script>
+         function taiKhoanRedirect() {
+            location.replace("user")
+         }
+      </script>
+      <script>
+         function cachTinhTienRedirect() {
+            location.replace("main/paymentMethod")
+         }
+      </script>
+      <script>
+         function loaiPhongRedirect() {
+            location.replace("main/kindofroom")
+         }
+      </script>
+      <script>
+         function phongRedirect() {
+            location.replace("main/room")
+         }
+      </script>
+      <script>
+         function menuRedirect() {
+            location.replace("main/menu")
+         }
+      </script>
+      <script>
+         function quanLyThuChiRedirect() {
+            location.replace("cashPay")
+         }
+      </script>
+
       <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
    </body>

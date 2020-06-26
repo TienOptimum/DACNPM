@@ -11,7 +11,7 @@ public class KindOfRoomController {
     @Autowired
     KindOfRoomRepository kindOfRoomRepository;
 
-    @RequestMapping("/kindofroom")
+    @RequestMapping("/main/kindofroom")
     public String viewAll(Model model){
         model.addAttribute("kindofrooms",kindOfRoomRepository.findAll());
         return "QLHT/QLHT-LoaiPhong";

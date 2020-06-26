@@ -12,7 +12,7 @@ public class PaymentMethodController {
     @Autowired
     PaymentMethodRepository paymentMethodRepository;
 
-    @RequestMapping("/paymentMethod")
+    @RequestMapping("/main/paymentMethod")
     public String viewAll(Model model){
         model.addAttribute("paymentmethods",paymentMethodRepository.findAll());
         return "QLHT/QLHT-CachTinhTien";

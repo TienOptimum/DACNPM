@@ -163,7 +163,7 @@
                         <div _ngcontent-c38="" class="topbar">
                            <div _ngcontent-c38="" class="container-fluid d-flex h-100">
                               <div _ngcontent-c38="" class="justify-content-center align-self-center">
-                                 <button _ngcontent-c38="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c38="" class="material-icons">arrow_back</i></button><span _ngcontent-c38="" class="topbar-title">Loại phòng</span>
+                                 <button _ngcontent-c38="" class="btn btn-secondary bmd-btn-icon btn-back" type="button" onclick="turnBackMainManager()"><i _ngcontent-c38="" class="material-icons">arrow_back</i></button><span _ngcontent-c38="" class="topbar-title">Loại phòng</span>
                                  <button _ngcontent-c38="" class="btn-top text-primary mat-button" mat-button="" onclick="swapForm('add_new_room','edit_new_roomm')">
                                     <span class="mat-button-wrapper">
                                        <mat-icon _ngcontent-c38="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>
@@ -618,10 +618,14 @@
       </script>
       <script>
          function quanLyHeThongRedirect(){
-            location.replace("system")
+            location.replace("main")
          }
       </script>
-
+      <script>
+         function turnBackMainManager() {
+            location.replace("main/manager")
+         }
+      </script>
 	  
       <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

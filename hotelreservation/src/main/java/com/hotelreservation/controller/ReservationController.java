@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ReservationController {
 
     @RequestMapping("/lounge")
-    private String test(){
+    private String loungeRedirect(){
         return "ThueTraPhong/ThueTraPhong-PhongCho";
+    }
+
+    @RequestMapping("/reservation")
+    private String reservationRedirect(){
+        return "DatPhong/DatPhong";
     }
 }

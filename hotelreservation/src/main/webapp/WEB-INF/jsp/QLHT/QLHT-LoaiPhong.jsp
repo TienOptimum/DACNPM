@@ -102,42 +102,42 @@
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" c style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-retweet"></i>
                                     <p _ngcontent-c10="">Thuê - trả phòng</p>
                                  </a>
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="far fa-calendar-alt"></i>
                                     <p _ngcontent-c10="">Đặt phòng</p>
                                  </a>
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-database"></i>
                                     <p _ngcontent-c10="">Quản lý kho</p>
                                  </a>
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyThuChiRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-balance-scale"></i>
                                     <p _ngcontent-c10="">Quản lý thu chi</p>
                                  </a>
                               </li>
                               <li _ngcontent-c10="" class="nav-item active ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-cog"></i>
                                     <p _ngcontent-c10="">Quản lý hệ thống</p>
                                  </a>
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-user-circle"></i>
                                     <p _ngcontent-c10="">Tài khoản</p>
                                  </a>
@@ -594,6 +594,31 @@
       <script>
          function thueTraPhongRedirect(){
             location.replace("lounge")
+         }
+      </script>
+      <script>
+         function datPhongRedirect(){
+            location.replace("reservation")
+         }
+      </script>
+      <script>
+         function quanLyKhoRedirect(){
+            location.replace("warehouse")
+         }
+      </script>
+      <script>
+         function quanLyThuChiRedirect(){
+            location.replace("cashPay")
+         }
+      </script>
+      <script>
+         function taiKhoanRedirect(){
+            location.replace("user")
+         }
+      </script>
+      <script>
+         function quanLyHeThongRedirect(){
+            location.replace("system")
          }
       </script>
 

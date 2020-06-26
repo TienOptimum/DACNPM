@@ -8,19 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class UserController {
-    @Autowired
-    UserRepository userRepo;
 
-    @RequestMapping("/")
-    public String home(){
-        return "Hello World!";
-    }
-
-
-    @RequestMapping("/users")
-    public String home(Model model) {
-        model.addAttribute("users", userRepo.findAll());
-        return "users";
+    @RequestMapping("/user")
+    public String userRedirect() {
+        return "TaiKhoan/TaiKhoan";
     }
 }
 

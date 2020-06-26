@@ -33,6 +33,7 @@
    </style>
    <link rel="stylesheet" href="css/styles.css">
    <style></style>
+   <script type="text/javascript" src="/js/redirect.js" />
    <script charset="utf-8" src="1.d8b1a80d404fed8a7a5e.js"></script><script charset="utf-8" src="0.6b42a3ddf543bb988c41.js"></script><script charset="utf-8" src="4.c1b2eb0b058eacbe3cae.js"></script>
    <style>[_nghost-c1]     .mat-drawer-side{border-right:none}[_nghost-c1]     .mat-input-element:disabled{color:#212529}[_nghost-c1]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}[_nghost-c1]     .mat-card{padding:0!important}[_nghost-c1]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}</style>
    <style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-opened{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:background-color,visibility}@media (-ms-high-contrast:active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:.4s;transition-timing-function:cubic-bezier(.25,.8,.25,1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}@media (-ms-high-contrast:active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media (-ms-high-contrast:active){.mat-drawer.mat-drawer-end,[dir=rtl] .mat-drawer{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer{transform:translate3d(100%,0,0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%,0,0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}</style>
@@ -107,21 +108,21 @@
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-retweet"></i>
                               <p _ngcontent-c4="">Thuê - trả phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
                               <p _ngcontent-c4="">Đặt phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-database"></i>
                               <p _ngcontent-c4="">Quản lý kho</p>
                            </a>
@@ -135,23 +136,16 @@
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-cog"></i>
                               <p _ngcontent-c4="">Quản lý hệ thống</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-user-circle"></i>
                               <p _ngcontent-c4="">Tài khoản</p>
-                           </a>
-                        </li>
-                        <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
-                           <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                              <i _ngcontent-c4="" class="fas fa-credit-card"></i>
-                              <p _ngcontent-c4="">Gia hạn</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
@@ -162,10 +156,6 @@
                            </a>
                         </li>
                      </ul>
-                     <div _ngcontent-c4="" style="position: absolute; bottom: 10px; left: 25px; font-weight: 400;">
-                        <div _ngcontent-c4="" class="text-secondary"> Copyright © by </div>
-                        <div _ngcontent-c4="" class="text-secondary"> SA TECHNOLOGY JSC </div>
-                     </div>
                   </div>
                </app-sidebar>
             </div>

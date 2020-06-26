@@ -32,6 +32,7 @@
    </style>
    <link rel="stylesheet" href="css/styles.css">
    <style></style>
+   <script type="text/javascript" src="/js/redirect.js" />
    <script charset="utf-8" src="1.d8b1a80d404fed8a7a5e.js"></script><script charset="utf-8" src="3.6c098552832d79f746cb.js"></script><script charset="utf-8" src="0.6b42a3ddf543bb988c41.js"></script><script charset="utf-8" src="2.a3cbf4ac2200ddd71257.js"></script>
    <style>.error-list[_ngcontent-c4]{list-style:none;-webkit-padding-start:0!important;padding-inline-start:0!important;font-size:14px}</style>
    <style>.mat-form-field{display:inline-block;position:relative;text-align:left}[dir=rtl] .mat-form-field{text-align:right}.mat-form-field-wrapper{position:relative}.mat-form-field-flex{display:inline-flex;align-items:baseline;box-sizing:border-box;width:100%}.mat-form-field-prefix,.mat-form-field-suffix{white-space:nowrap;flex:none;position:relative}.mat-form-field-infix{display:block;position:relative;flex:auto;min-width:0;width:180px}@media (-ms-high-contrast:active){.mat-form-field-infix{border-image:linear-gradient(transparent,transparent)}}.mat-form-field-label-wrapper{position:absolute;left:0;box-sizing:content-box;width:100%;height:100%;overflow:hidden;pointer-events:none}[dir=rtl] .mat-form-field-label-wrapper{left:auto;right:0}.mat-form-field-label{position:absolute;left:0;font:inherit;pointer-events:none;width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;transform-origin:0 0;transition:transform .4s cubic-bezier(.25,.8,.25,1),color .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1);display:none}[dir=rtl] .mat-form-field-label{transform-origin:100% 0;left:auto;right:0}.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,.mat-form-field-empty.mat-form-field-label{display:block}.mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{display:none}.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{display:block;transition:none}.mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,.mat-input-server[placeholder]:not(:placeholder-shown)+.mat-form-field-label-wrapper .mat-form-field-label{display:none}.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,.mat-form-field-can-float .mat-input-server[placeholder]:not(:placeholder-shown)+.mat-form-field-label-wrapper .mat-form-field-label{display:block}.mat-form-field-label:not(.mat-form-field-empty){transition:none}.mat-form-field-underline{position:absolute;width:100%;pointer-events:none;transform:scaleY(1.0001)}.mat-form-field-ripple{position:absolute;left:0;width:100%;transform-origin:50%;transform:scaleX(.5);opacity:0;transition:background-color .3s cubic-bezier(.55,0,.55,.2)}.mat-form-field.mat-focused .mat-form-field-ripple,.mat-form-field.mat-form-field-invalid .mat-form-field-ripple{opacity:1;transform:scaleX(1);transition:transform .3s cubic-bezier(.25,.8,.25,1),opacity .1s cubic-bezier(.25,.8,.25,1),background-color .3s cubic-bezier(.25,.8,.25,1)}.mat-form-field-subscript-wrapper{position:absolute;box-sizing:border-box;width:100%;overflow:hidden}.mat-form-field-label-wrapper .mat-icon,.mat-form-field-subscript-wrapper .mat-icon{width:1em;height:1em;font-size:inherit;vertical-align:baseline}.mat-form-field-hint-wrapper{display:flex}.mat-form-field-hint-spacer{flex:1 0 1em}.mat-error{display:block}.mat-form-field-control-wrapper{position:relative}.mat-form-field._mat-animation-noopable .mat-form-field-label,.mat-form-field._mat-animation-noopable .mat-form-field-ripple{transition:none}</style>
@@ -100,51 +101,44 @@
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-retweet"></i>
                               <p _ngcontent-c10="">Thuê - trả phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="far fa-calendar-alt"></i>
                               <p _ngcontent-c10="">Đặt phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-database"></i>
                               <p _ngcontent-c10="">Quản lý kho</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyThuChiRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-balance-scale"></i>
                               <p _ngcontent-c10="">Quản lý thu chi</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item active ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-cog"></i>
                               <p _ngcontent-c10="">Quản lý hệ thống</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                               <i _ngcontent-c10="" class="fas fa-user-circle"></i>
                               <p _ngcontent-c10="">Tài khoản</p>
-                           </a>
-                        </li>
-                        <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
-                           <!---->
-                           <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                              <i _ngcontent-c10="" class="fas fa-credit-card"></i>
-                              <p _ngcontent-c10="">Gia hạn</p>
                            </a>
                         </li>
                         <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
@@ -168,7 +162,7 @@
                   <div _ngcontent-c46="" class="topbar">
                      <div _ngcontent-c46="" class="container-fluid d-flex h-100">
                         <div _ngcontent-c46="" class="justify-content-center align-self-center">
-                           <button _ngcontent-c46="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c46="" class="material-icons">arrow_back</i></button><span _ngcontent-c46="" class="topbar-title">Tài khoản phụ</span>
+                           <button _ngcontent-c46="" class="btn btn-secondary bmd-btn-icon btn-back" onclick="turnBackMainManager()" type="button"><i _ngcontent-c46="" class="material-icons">arrow_back</i></button><span _ngcontent-c46="" class="topbar-title">Tài khoản phụ</span>
                            <button _ngcontent-c46="" class="btn-top text-primary mat-button" mat-button="" onclick="swapForm('add_new_account','edit_account','change_password')">
                                     <span class="mat-button-wrapper">
                                        <mat-icon _ngcontent-c46="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>

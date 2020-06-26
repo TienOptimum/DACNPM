@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <%@ page contentType="text/html; charset=UTF-8" %>
 <head>
@@ -155,10 +156,6 @@
                            </a>
                         </li>
                      </ul>
-                     <div _ngcontent-c10="" style="position: absolute; bottom: 10px; left: 25px; font-weight: 400;">
-                        <div _ngcontent-c10="" class="text-secondary"> Copyright © by </div>
-                        <div _ngcontent-c10="" class="text-secondary"> SA TECHNOLOGY JSC </div>
-                     </div>
                   </div>
                </app-sidebar>
             </div>
@@ -258,19 +255,6 @@
                                        </div>
                                     </div>
                                  </th>
-                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-161 cdk-column-priority mat-column-priority ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" aria-sort="ascending" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                                    <div class="mat-sort-header-container mat-sort-header-sorted">
-                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for priority"> Ưu tiên hiển thị </button><!---->
-                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-161 ng-star-inserted" style="transform: translateY(0px); opacity: 1;">
-                                          <div class="mat-sort-header-stem"></div>
-                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
-                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
-                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
-                                             <div class="mat-sort-header-pointer-middle"></div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </th>
                                  <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-162 cdk-column-edit mat-column-edit ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                     <div class="mat-sort-header-container">
                                        <button class="mat-sort-header-button" type="button" aria-label="Change sorting for edit">Chỉnh sửa</button><!---->
@@ -288,18 +272,19 @@
                               </thead>
                               <tbody role="rowgroup">
                               <!---->
+                              <c:forEach var="room" items="${rooms}">
                               <tr _ngcontent-c40="" class="pointer mat-row ng-star-inserted" mat-row="" role="row"  onclick="swapForm('form-edit-phong','form-add-phong')">
                                  <!---->
-                                 <td _ngcontent-c40="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> 1 </td>
-                                 <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name} </td>
-                                 <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name} </td>
-                                 <td _ngcontent-c40="" class="mat-cell cdk-column-priority mat-column-priority ng-star-inserted" mat-cell="" role="gridcell">  </td>
+                                 <td _ngcontent-c40="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${room.name} </td>
+                                 <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${room.kindOfRoom.name} </td>
+                                 <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${room.paymentMethod.name} </td>
                                  <td _ngcontent-c40="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c40="" class="icon-sm">
                                        <mat-icon _ngcontent-c40="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
                                     </div>
                                  </td>
                               </tr>
+                              </c:forEach>
                               </tbody>
                               <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;">
                               <!---->

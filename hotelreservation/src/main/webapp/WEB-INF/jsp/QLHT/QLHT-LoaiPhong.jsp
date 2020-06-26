@@ -102,7 +102,7 @@
                               </li>
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" c style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-retweet"></i>
                                     <p _ngcontent-c10="">Thuê - trả phòng</p>
                                  </a>
@@ -145,22 +145,11 @@
                               <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
                                  <!---->
                                  <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                                    <i _ngcontent-c10="" class="fas fa-credit-card"></i>
-                                    <p _ngcontent-c10="">Gia hạn</p>
-                                 </a>
-                              </li>
-                              <li _ngcontent-c10="" class="nav-item ng-star-inserted" style="">
-                                 <!---->
-                                 <a _ngcontent-c10="" class="nav-link ng-star-inserted" style="cursor: pointer">
                                     <i _ngcontent-c10="" class="fas fa-sign-out-alt"></i>
                                     <p _ngcontent-c10="">Đăng xuất</p>
                                  </a>
                               </li>
                            </ul>
-                           <div _ngcontent-c10="" style="position: absolute; bottom: 10px; left: 25px; font-weight: 400;">
-                              <div _ngcontent-c10="" class="text-secondary"> Copyright © by </div>
-                              <div _ngcontent-c10="" class="text-secondary"> SA TECHNOLOGY JSC </div>
-                           </div>
                         </div>
                      </app-sidebar>
                   </div>
@@ -601,6 +590,13 @@
          }
 
       </script>
+
+      <script>
+         function thueTraPhongRedirect(){
+            location.replace("lounge")
+         }
+      </script>
+
 	  
       <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
       <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

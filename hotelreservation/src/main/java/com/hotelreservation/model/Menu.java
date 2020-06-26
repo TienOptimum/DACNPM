@@ -28,4 +28,20 @@ public class Menu {
 
     @OneToMany(mappedBy = "menu")
     private Set<HistoryStock> historyStocks;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Double getEntryPrice() {
+        return entryPrice;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
 }

@@ -1,5 +1,7 @@
 <html lang="en">
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <head>
    <meta charset="utf-8">
    <title>SHOTEL</title>
@@ -271,19 +273,6 @@
                                        </div>
                                     </div>
                                  </th>
-                                 <th _ngcontent-c42="" class="mat-header-cell ng-tns-c31-177 cdk-column-priority mat-column-priority ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" aria-sort="ascending" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                                    <div class="mat-sort-header-container mat-sort-header-sorted">
-                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for priority"> Ưu tiên hiển thị </button><!---->
-                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-177 ng-star-inserted" style="transform: translateY(0px); opacity: 1;">
-                                          <div class="mat-sort-header-stem"></div>
-                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
-                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
-                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
-                                             <div class="mat-sort-header-pointer-middle"></div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </th>
                                  <th _ngcontent-c42="" class="mat-header-cell ng-tns-c31-178 cdk-column-edit mat-column-edit ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                     <div class="mat-sort-header-container">
                                        <button class="mat-sort-header-button" type="button" aria-label="Change sorting for edit">Chỉnh sửa</button><!---->
@@ -301,29 +290,20 @@
                               </thead>
                               <tbody role="rowgroup">
                               <!---->
+                              <c:forEach var="menu" items="${menus}">
                               <tr _ngcontent-c42="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                  <!---->
-                                 <script>
-                                    function swapForm(on,off){
-                                       var x = document.getElementById(on);
-                                       var y = document.getElementById(off);
-
-                                       x.style.display ="block";
-                                       y.style.display ="none";
-                                    }
-
-                                 </script>
-                                 <td _ngcontent-c42="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${kindoffood.name}	 </td>
-                                 <td _ngcontent-c42="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${kindoffood.kind}	 </td>
-                                 <td _ngcontent-c42="" class="mat-cell cdk-column-priceImport mat-column-priceImport ng-star-inserted" mat-cell="" role="gridcell"> ${kindoffood.priceStock}&nbsp;₫ </td>
-                                 <td _ngcontent-c42="" class="mat-cell cdk-column-price mat-column-price ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.priceAfter}&nbsp;₫ </td>
-                                 <td _ngcontent-c42="" class="mat-cell cdk-column-priority mat-column-priority ng-star-inserted" mat-cell="" role="gridcell">  </td>
+                                 <td _ngcontent-c42="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${menu.name}	 </td>
+                                 <td _ngcontent-c42="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${menu.type}	 </td>
+                                 <td _ngcontent-c42="" class="mat-cell cdk-column-priceImport mat-column-priceImport ng-star-inserted" mat-cell="" role="gridcell"> ${menu.entryPrice}&nbsp;₫ </td>
+                                 <td _ngcontent-c42="" class="mat-cell cdk-column-price mat-column-price ng-star-inserted" mat-cell="" role="gridcell"> ${menu.price}&nbsp;₫ </td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c27="" class="icon-sm">
                                        <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('form-edit-menu','form-add-menu')">edit</mat-icon>
                                     </div>
                                  </td>
                               </tr>
+                              </c:forEach>
                               </tbody>
                               <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;">
                               <!---->
@@ -770,6 +750,16 @@
       }
       frame++;
    }, interval);
+</script>
+<script>
+   function swapForm(on,off){
+      var x = document.getElementById(on);
+      var y = document.getElementById(off);
+
+      x.style.display ="block";
+      y.style.display ="none";
+   }
+
 </script>
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
 <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

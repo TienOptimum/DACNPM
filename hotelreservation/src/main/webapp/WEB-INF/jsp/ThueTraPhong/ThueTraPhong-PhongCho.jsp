@@ -30,7 +30,7 @@
          background-repeat: no-repeat;
       }
    </style>
-   <link rel="stylesheet" href="css/all.css">
+   <link rel="stylesheet" href="css/styles.css">
    <style></style>
    <script charset="utf-8" src="1.d8b1a80d404fed8a7a5e.js"></script><script charset="utf-8" src="3.6c098552832d79f746cb.js"></script>
    <style>[_nghost-c1]     .mat-drawer-side{border-right:none}[_nghost-c1]     .mat-input-element:disabled{color:#212529}[_nghost-c1]     .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-color:rgba(0,0,0,.22)!important;background-image:none!important}[_nghost-c1]     .mat-card{padding:0!important}[_nghost-c1]     .mat-card .mat-icon{color:rgba(0,0,0,.7)}</style>

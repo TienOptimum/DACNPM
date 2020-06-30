@@ -107,51 +107,44 @@
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="thueTraPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-retweet"></i>
                               <p _ngcontent-c4="">Thuê - trả phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted"  onclick="datPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
                               <p _ngcontent-c4="">Đặt phòng</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-database"></i>
                               <p _ngcontent-c4="">Quản lý kho</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyThuChiRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-balance-scale"></i>
                               <p _ngcontent-c4="">Quản lý thu chi</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyHeThongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-cog"></i>
                               <p _ngcontent-c4="">Quản lý hệ thống</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()"  style="cursor: pointer">
                               <i _ngcontent-c4="" class="fas fa-user-circle"></i>
                               <p _ngcontent-c4="">Tài khoản</p>
-                           </a>
-                        </li>
-                        <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">
-                           <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
-                              <i _ngcontent-c4="" class="fas fa-credit-card"></i>
-                              <p _ngcontent-c4="">Gia hạn</p>
                            </a>
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted" style="">

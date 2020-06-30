@@ -107,7 +107,7 @@
                         </li>
                         <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                            <!---->
-                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                           <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="datPhongRedirect()" style="cursor: pointer">
                               <i _ngcontent-c4="" class="far fa-calendar-alt"></i>
                               <p _ngcontent-c4="">Đặt phòng</p>
                            </a>

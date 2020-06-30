@@ -162,7 +162,7 @@
                   <div _ngcontent-c46="" class="topbar">
                      <div _ngcontent-c46="" class="container-fluid d-flex h-100">
                         <div _ngcontent-c46="" class="justify-content-center align-self-center">
-                           <button _ngcontent-c46="" class="btn btn-secondary bmd-btn-icon btn-back" onclick="turnBackMainManager()" type="button"><i _ngcontent-c46="" class="material-icons">arrow_back</i></button><span _ngcontent-c46="" class="topbar-title">Tài khoản phụ</span>
+                           <button _ngcontent-c46="" class="btn btn-secondary bmd-btn-icon btn-back" onclick="turnBackMainManager()_ngcontent-c4" type="button"><i _ngcontent-c46="" class="material-icons">arrow_back</i></button><span _ngcontent-c46="" class="topbar-title">Tài khoản phụ</span>
                            <button _ngcontent-c46="" class="btn-top text-primary mat-button" mat-button="" onclick="swapForm('add_new_account','edit_account','change_password')">
                                     <span class="mat-button-wrapper">
                                        <mat-icon _ngcontent-c46="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">note_add</mat-icon>

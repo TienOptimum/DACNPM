@@ -112,7 +112,7 @@
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="quanLyKhoRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-chart-pie"></i>
                                     <p _ngcontent-c4="">Quản lý kho</p>
                                  </a>

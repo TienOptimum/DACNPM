@@ -137,7 +137,7 @@
                               </li>
                               <li _ngcontent-c4="" class="nav-item ng-star-inserted active" style="">
                                  <!---->
-                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" style="cursor: pointer">
+                                 <a _ngcontent-c4="" class="nav-link ng-star-inserted" onclick="taiKhoanRedirect()" style="cursor: pointer">
                                     <i _ngcontent-c4="" class="fas fa-user-circle"></i>
                                     <p _ngcontent-c4="">Tài khoản</p>
                                  </a>

@@ -155,10 +155,7 @@
                            </a>
                         </li>
                      </ul>
-                     <div _ngcontent-c4="" style="position: absolute; bottom: 10px; left: 25px; font-weight: 400;">
-                        <div _ngcontent-c4="" class="text-secondary"> Copyright © by </div>
-                        <div _ngcontent-c4="" class="text-secondary"> SA TECHNOLOGY JSC </div>
-                     </div>
+                    
                   </div>
                </app-sidebar>
             </div>

@@ -257,7 +257,10 @@
                                     <tbody role="rowgroup">
                                        <!---->
                                        <c:forEach var="kindofroom" items="${kindofrooms}">
-                                       <tr _ngcontent-c38="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" onclick="swapForm('edit_new_room','add_new_room')">
+                                          <c:url var="updateKindOfRoom" value="/main/kindofroom/update">
+                                             <c:param name="kindofroomID" value="${kindofroom.id}"/>
+                                          </c:url>
+                                       <tr _ngcontent-c38="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" onclick="document.location = '${updateKindOfRoom}';">
                                           <!---->
                                           <td _ngcontent-c38="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.name} </td>
                                           <td _ngcontent-c38="" class="mat-cell cdk-column-description mat-column-description ng-star-inserted" mat-cell="" role="gridcell"> ${kindofroom.description} </td>
@@ -434,7 +437,6 @@
                                        </div>
                                        </div>
                                        <!---->
-                                    </div>
                                  </mat-form-field>
                               </form>
                            </div>

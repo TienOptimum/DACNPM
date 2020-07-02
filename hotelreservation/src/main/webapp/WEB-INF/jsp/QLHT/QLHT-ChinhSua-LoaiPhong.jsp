@@ -358,6 +358,7 @@
                                         </div>
                                         <div _ngcontent-c43="" class="form-sub">
                                             <form _ngcontent-c43="" novalidate="" class="ng-pristine ng-touched ng-valid" action="/main/kindofroom/create" method="post" modelAttribute="kindofroom">
+                                                <input name="id" value="${kindofroomUpdate.id}" style="display: none;">
                                                 <app-error _ngcontent-c43="" _nghost-c4="">
                                                     <ul _ngcontent-c4="" class="error-list my-1">
                                                         <!---->
@@ -369,7 +370,8 @@
                                                             <!----><!---->
                                                             <div class="mat-form-field-infix">
                                                                 <span class="bmd-form-group is-filled">
-                                                                    <input _ngcontent-c43="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-touched ng-valid" path="name" required="" aria-invalid="false" aria-required="true"></span>
+                                                                    <input _ngcontent-c43="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-touched ng-valid" name="name" value="${kindofroomUpdate.name}" required="" aria-invalid="false" aria-required="true">
+                                                                </span>
                                                                 <span class="mat-form-field-label-wrapper">
                                                    <!---->
                                                 <label class="mat-form-field-label ng-tns-c5-43 ng-star-inserted" id="mat-form-field-label-27" for="mat-input-10" aria-owns="mat-input-10">
@@ -396,7 +398,7 @@
                                                             <!----><!---->
                                                             <div class="mat-form-field-infix">
                                                                 <span class="bmd-form-group is-filled">
-                                                                    <input _ngcontent-c43="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" path="description" aria-invalid="false" aria-required="false"></span>
+                                                                    <input _ngcontent-c43="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" name="description" value="${kindofroomUpdate.description}" aria-invalid="false" aria-required="false"></span>
                                                                 <span class="mat-form-field-label-wrapper">
                                              <!---->
                                                 <label class="mat-form-field-label ng-tns-c5-44 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-11" aria-owns="mat-input-11">

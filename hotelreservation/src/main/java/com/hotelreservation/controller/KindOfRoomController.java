@@ -27,15 +27,18 @@ public class KindOfRoomController {
 
     @PostMapping("/main/kindofroom/create")
     public String create(@ModelAttribute KindOfRoom kindOfRoom){
+        System.out.println(kindOfRoom.getId());
         kindOfRoomService.saveKindOfRoom(kindOfRoom);
         return "redirect:/main/kindofroom";
     }
 
-//    @GetMapping("/main/kindofroom/update")
-//    public String showFormForUpdate(@RequestParam("kindofroomID") int id, Model model) throws ResourceNotFoundException{
-//        KindOfRoom kindOfRoom = kindOfRoomService.getKindOfRoom(id);
-//        model.addAttribute("kindofroom",kindOfRoom);
-//        return
-//    }
+    @GetMapping("/main/kindofroom/update")
+    public String showFormForUpdate(@RequestParam("kindofroomID") int id, Model model, Model model1) throws ResourceNotFoundException{
+        KindOfRoom kindOfRoom = kindOfRoomService.getKindOfRoom(id);
+        model.addAttribute("kindofroomUpdate",kindOfRoom);
+        List<KindOfRoom> kindOfRooms = kindOfRoomService.getKindOfRooms();
+        model1.addAttribute("kindofrooms",kindOfRooms);
+        return "QLHT/QLHT-ChinhSua-LoaiPhong";
+    }
 
 }

@@ -354,7 +354,7 @@
                                  <!---->
                                  <div _ngcontent-c43="" class="ng-star-inserted" id="add_new_room" style="display:none;">
                                     <div>
-                                       <form action="/main/kindofroom/create" method="post" modelAttribute="kindofroom">
+                                       <form class="formAdd" action="/main/kindofroom/create" method="post" modelAttribute="kindofroom">
                                           <label>Tên Loại Phòng</label>
                                           <input path="name" name="name">
                                           <label>Mô tả</label>

@@ -44,4 +44,36 @@ public class Menu {
     public Double getPrice() {
         return price;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setEntryPrice(Double entryPrice) {
+        this.entryPrice = entryPrice;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Set<HistoryStock> getHistoryStocks() {
+        return historyStocks;
+    }
+
+    public void setHistoryStocks(Set<HistoryStock> historyStocks) {
+        this.historyStocks = historyStocks;
+    }
 }

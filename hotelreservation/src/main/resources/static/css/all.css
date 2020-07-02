@@ -3812,3 +3812,11 @@
 .fas {
  font-weight:900
 }
+
+.formAdd label{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ color:red;
+}

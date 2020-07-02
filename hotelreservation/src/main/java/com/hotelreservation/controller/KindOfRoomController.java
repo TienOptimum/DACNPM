@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 
 @Controller
@@ -27,7 +26,6 @@ public class KindOfRoomController {
 
     @PostMapping("/main/kindofroom/create")
     public String create(@ModelAttribute KindOfRoom kindOfRoom){
-        System.out.println(kindOfRoom.getId());
         kindOfRoomService.saveKindOfRoom(kindOfRoom);
         return "redirect:/main/kindofroom";
     }

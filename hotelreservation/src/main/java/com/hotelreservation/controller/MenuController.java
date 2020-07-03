@@ -25,7 +25,6 @@ public class MenuController {
 
     @PostMapping("/main/menu/create")
     public String create(@ModelAttribute Menu menu){
-        System.out.println(menu.getId());
         menuService.saveMenu(menu);
         return "redirect:/main/menu";
     }
@@ -36,6 +35,6 @@ public class MenuController {
         model.addAttribute("menuUpdate",menu);
         List<Menu> menus = menuService.getMenus();
         model1.addAttribute("menus",menus);
-        return "QLHT/QLHT-Menu";
+        return "QLHT/QLHT-ChinhSua-Menu";
     }
 }

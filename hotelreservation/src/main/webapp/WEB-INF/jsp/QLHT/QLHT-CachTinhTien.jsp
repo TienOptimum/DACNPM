@@ -268,7 +268,10 @@
                               <tbody role="rowgroup">
                               <!---->
                               <c:forEach var="paymentmethod" items="${paymentmethods}">
-                              <tr _ngcontent-c27="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
+                                 <c:url var = "updatePaymentMethod" value="/main/paymentmethod/update">
+                                    <c:param name="paymentmethodID" value="${paymentmethod.id}"/>
+                                 </c:url>
+                              <tr _ngcontent-c27="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" onclick="document.location = '${updatePaymentMethod}';">
                                  <!---->
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${paymentmethod.name}	 </td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell">${paymentmethod.price}	 </td>
@@ -379,37 +382,37 @@
                                        <div _ngcontent-c33="" class="topbar-sub-title ng-star-inserted">Thêm mới</div>
                                        <!---->
                                        <div _ngcontent-c33="" class="flex-grow-1"></div>
-                                       <!----><button _ngcontent-c33="" class="btn btn-primary btn-bar ng-star-inserted" type="button"><i _ngcontent-c33="" class="fas fa-check"></i> Lưu </button><!----><!---->
+                                       <!----><button _ngcontent-c33="" class="btn btn-primary btn-bar ng-star-inserted" type="submit"><i _ngcontent-c33="" class="fas fa-check"></i> Lưu </button><!----><!---->
                                     </div>
                                  </div>
                               </div>
                               <div _ngcontent-c33="" class="form-sub">
-                                 <form _ngcontent-c33="" novalidate="" class="ng-pristine ng-touched ng-invalid">
+                                 <form _ngcontent-c33="" class="formAdd" action="/main/paymentmethod/create" method="post" modelAttribute="paymentMethod"novalidate="" class="ng-pristine ng-touched ng-invalid">
                                     <app-error _ngcontent-c33="" _nghost-c4="">
                                        <ul _ngcontent-c4="" class="error-list my-1">
                                           <!---->
                                        </ul>
                                     </app-error>
-                                    <mat-form-field _ngcontent-c33="" class="w-100 mat-form-field ng-tns-c5-24 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-pristine ng-touched mat-form-field-invalid ng-invalid">
+                                    <mat-form-field _ngcontent-c53="" class="w-100 mat-form-field ng-tns-c5-238 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-touched mat-form-field-should-float ng-dirty ng-valid">
                                        <div class="mat-form-field-wrapper">
                                           <div class="mat-form-field-flex">
                                              <!----><!---->
                                              <div class="mat-form-field-infix">
-                                                <span class="bmd-form-group"><input _ngcontent-c33="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-touched ng-invalid" matinput="" name="name" placeholder="Tên cách tính" required="" id="mat-input-3" aria-invalid="true" aria-required="true"></span>
+                                                <span class="bmd-form-group is-filled"><input _ngcontent-c53="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-touched ng-dirty ng-valid" matinput="" path="name" name="name" placeholder="Tên cách tính" required="" id="mat-input-77" aria-invalid="false" aria-required="true"></span>
                                                 <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-24 ng-star-inserted mat-empty mat-form-field-empty" id="mat-form-field-label-9" for="mat-input-3" aria-owns="mat-input-3">
-                           <!----><!---->Tên cách tính<!----><!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c5-24 ng-star-inserted"> *</span>
-                        </label>
-                     </span>
+               <!---->
+               <label class="mat-form-field-label ng-tns-c5-238 ng-star-inserted" id="mat-form-field-label-195" for="mat-input-77" aria-owns="mat-input-77">
+                  <!----><!---->Tên cách tính<!----><!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c5-238 ng-star-inserted"> *</span>
+               </label>
+            </span>
                                              </div>
                                              <!---->
                                           </div>
                                           <!---->
-                                          <div class="mat-form-field-underline ng-tns-c5-24 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                                          <div class="mat-form-field-underline ng-tns-c5-238 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
                                           <div class="mat-form-field-subscript-wrapper">
                                              <!----><!---->
-                                             <div class="mat-form-field-hint-wrapper ng-tns-c5-24 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                             <div class="mat-form-field-hint-wrapper ng-tns-c5-238 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
                                                 <!---->
                                                 <div class="mat-form-field-hint-spacer"></div>
                                              </div>
@@ -417,6 +420,33 @@
                                        </div>
                                     </mat-form-field>
                                     <br _ngcontent-c33="">
+
+                                    <mat-form-field _ngcontent-c53="" class="w-100 mat-form-field ng-tns-c5-238 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-touched mat-form-field-should-float ng-dirty ng-valid">
+                                       <div class="mat-form-field-wrapper">
+                                          <div class="mat-form-field-flex">
+                                             <!----><!---->
+                                             <div class="mat-form-field-infix">
+                                                <span class="bmd-form-group is-filled"><input _ngcontent-c53="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-touched ng-dirty ng-valid" matinput="" path="price" name="price" placeholder="Giá ngày" required="" id="mat-input-77" aria-invalid="false" aria-required="true"></span>
+                                                <span class="mat-form-field-label-wrapper">
+               <!---->
+               <label class="mat-form-field-label ng-tns-c5-238 ng-star-inserted" id="mat-form-field-label-195" for="mat-input-77" aria-owns="mat-input-77">
+                  <!----><!---->Giá ngày<!----><!----><span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c5-238 ng-star-inserted"> *</span>
+               </label>
+            </span>
+                                             </div>
+                                             <!---->
+                                          </div>
+                                          <!---->
+                                          <div class="mat-form-field-underline ng-tns-c5-238 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                                          <div class="mat-form-field-subscript-wrapper">
+                                             <!----><!---->
+                                             <div class="mat-form-field-hint-wrapper ng-tns-c5-238 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                                <!---->
+                                                <div class="mat-form-field-hint-spacer"></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </mat-form-field>
 
                                     <br _ngcontent-c33=""><!---->
                                     <div _ngcontent-c33="" class="ng-star-inserted">
@@ -429,7 +459,7 @@
                                              <div class="mat-form-field-flex">
                                                 <!----><!---->
                                                 <div class="mat-form-field-infix">
-                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="text-right mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5" name="qdSt" placeholder="Giờ nhận phòng (QĐ)" required="" id="mat-input-17" aria-describedby="mat-hint-4" aria-invalid="false" aria-required="true"></span>
+                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="text-right mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5"  placeholder="Giờ nhận phòng (QĐ)" required="" id="mat-input-17" aria-describedby="mat-hint-4" aria-invalid="false" aria-required="true"></span>
                                                    <span class="mat-form-field-label-wrapper">
                            <!---->
                            <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-37" for="mat-input-17" aria-owns="mat-input-17">
@@ -456,7 +486,7 @@
                                              <div class="mat-form-field-flex">
                                                 <!----><!---->
                                                 <div class="mat-form-field-infix">
-                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="text-right mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5" name="qdEt" placeholder="Giờ trả phòng (QĐ)" required="" id="mat-input-18" aria-describedby="mat-hint-5" aria-invalid="false" aria-required="true"></span>
+                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="text-right mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" maxlength="5"  placeholder="Giờ trả phòng (QĐ)" required="" id="mat-input-18" aria-describedby="mat-hint-5" aria-invalid="false" aria-required="true"></span>
                                                    <span class="mat-form-field-label-wrapper">
                            <!---->
                            <label class="mat-form-field-label ng-tns-c5-39 ng-star-inserted" id="mat-form-field-label-39" for="mat-input-18" aria-owns="mat-input-18">
@@ -489,7 +519,7 @@
                                           <div class="mat-form-field-flex">
                                              <!----><!---->
                                              <div class="mat-form-field-infix">
-                                                <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="ptM" placeholder="Phụ thu quá giờ" required="" type="number" id="mat-input-7" aria-describedby="mat-hint-2" aria-invalid="false" aria-required="true"></span>
+                                                <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" path="surcharge" name="surcharge" placeholder="Phụ thu quá giờ" required="" type="number" id="mat-input-7" aria-describedby="mat-hint-2" aria-invalid="false" aria-required="true"></span>
                                                 <span class="mat-form-field-label-wrapper">
                         <!---->
                         <label class="mat-form-field-label ng-tns-c5-28 ng-star-inserted" id="mat-form-field-label-17" for="mat-input-7" aria-owns="mat-input-7">
@@ -517,7 +547,7 @@
                                           <div class="mat-form-field-flex">
                                              <!----><!---->
                                              <div class="mat-form-field-infix">
-                                                <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="roundedMinutes" placeholder="Số phút làm tròn" type="number" id="mat-input-8" aria-describedby="mat-hint-3" aria-invalid="false" aria-required="false"></span>
+                                                <span class="bmd-form-group is-filled"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput=""  placeholder="Số phút làm tròn" type="number" id="mat-input-8" aria-describedby="mat-hint-3" aria-invalid="false" aria-required="false"></span>
                                                 <span class="mat-form-field-label-wrapper">
                         <!---->
                         <label class="mat-form-field-label ng-tns-c5-29 ng-star-inserted" id="mat-form-field-label-19" for="mat-input-8" aria-owns="mat-input-8">
@@ -552,7 +582,7 @@
                                              <div class="mat-form-field-flex">
                                                 <!----><!---->
                                                 <div class="mat-form-field-infix">
-                                                   <span class="bmd-form-group"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="mHoliday" placeholder="Giá ngày lễ" type="number" id="mat-input-12" aria-invalid="false" aria-required="false"></span>
+                                                   <span class="bmd-form-group"><input _ngcontent-c33="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" path="priceForHoliday" name="priceForHoliday" placeholder="Giá ngày lễ" type="number" id="mat-input-12" aria-invalid="false" aria-required="false"></span>
                                                    <span class="mat-form-field-label-wrapper">
                            <!---->
                            <label class="mat-form-field-label ng-tns-c5-33 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-27" for="mat-input-12" aria-owns="mat-input-12">
@@ -576,6 +606,7 @@
                                        </mat-form-field>
                                        <div _ngcontent-c33="" class="text-secondary"> Không cần nhập vào nếu giá giống với giá ngày thường </div>
                                     </div>
+                                    <input type="submit" value="thêm mới"/>
                                  </form>
                               </div>
                            </div>

@@ -292,7 +292,7 @@
                                  <td _ngcontent-c42="" class="mat-cell cdk-column-price mat-column-price ng-star-inserted" mat-cell="" role="gridcell"> ${menu.price}&nbsp;₫ </td>
                                  <td _ngcontent-c27="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
                                     <div _ngcontent-c27="" class="icon-sm">
-                                       <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true" onclick="swapForm('form-edit-menu','form-add-menu')">edit</mat-icon>
+                                       <mat-icon _ngcontent-c27="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
                                     </div>
                                  </td>
                               </tr>

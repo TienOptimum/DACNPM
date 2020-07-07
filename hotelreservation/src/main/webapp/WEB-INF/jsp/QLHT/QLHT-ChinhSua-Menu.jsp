@@ -374,7 +374,7 @@
                             </div>
                             <div _ngcontent-c42="" class="right-panel">
                                 <app-menu-entry _ngcontent-c42="" mode="0" _nghost-c43="">
-                                    <div _ngcontent-c33="" class="ng-star-inserted" id="form-edit-menu" style="display:none;">
+                                    <div _ngcontent-c33="" class="ng-star-inserted" id="form-edit-menu" style="display:block;">
                                         <div _ngcontent-c33="" class="topbar-sub">
                                             <div _ngcontent-c33="" class="container-fluid d-flex h-100">
                                                 <div _ngcontent-c33="" class="justify-content-center align-self-center d-flex flex-row w-100">
@@ -386,13 +386,13 @@
                                         </div>
                                         <div _ngcontent-c33="" class="form-sub">
                                             <form _ngcontent-c33="" novalidate="" class="ng-pristine ng-valid ng-touched" action="/main/menu/create" method="post" modelAttribute="menu">
-                                                <input style="display: none;" name="id" value="${menu.id}">
+                                                <input style="display: none;" name="id" value="${menuUpdate.id}">
                                                 <mat-form-field _ngcontent-c41="" class="w-100 mat-form-field ng-tns-c5-47 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid ng-touched mat-form-field-should-float ng-dirty">
                                                     <div class="mat-form-field-wrapper">
                                                         <div class="mat-form-field-flex">
                                                             <div class="mat-form-field-infix">
                                                                 <span class="bmd-form-group is-filled">
-                                                                    <input _ngcontent-c34="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" name="name" value="${menu.name}" required="" id="mat-input-3" aria-invalid="false" aria-required="true"></span>
+                                                                    <input _ngcontent-c34="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" name="name" value="${menuUpdate.name}" required="" id="mat-input-3" aria-invalid="false" aria-required="true"></span>
                                                                 <span class="mat-form-field-label-wrapper">
                                                                 <label class="mat-form-field-label ng-tns-c5-47 ng-star-inserted" id="mat-form-field-label-29" aria-owns="mat-input-10">
                                                                 <!----><!---->Tên Menu<!----><!---->
@@ -417,7 +417,7 @@
                                                             <!----><!---->
                                                             <div class="mat-form-field-infix">
                                                                 <span class="bmd-form-group is-filled">
-                                                                    <input _ngcontent-c34="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" name="type" value="${menu.type}" required="" aria-invalid="false" aria-required="true"></span>
+                                                                    <input _ngcontent-c34="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" name="type" value="${menuUpdate.type}" required="" aria-invalid="false" aria-required="true"></span>
                                                                 <span class="mat-form-field-label-wrapper">
                                                    <label class="mat-form-field-label ng-tns-c22-29 ng-star-inserted" for="mat-input-3" aria-owns="mat-input-3">
                                                    <!----><!---->Loại menu<!----><!----><span class="mat-placeholder-required mat-form-field-required-marker ng-tns-c22-29 ng-star-inserted"> *</span>
@@ -443,7 +443,7 @@
                                                         <div class="mat-form-field-flex">
                                                             <!----><!---->
                                                             <div class="mat-form-field-infix">
-                                                                <span class="bmd-form-group is-filled"><input _ngcontent-c34="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" matinput="" name="entryPrice" value="${menu.entryPrice}"  required="" type="number" id="mat-input-4" aria-invalid="false" aria-required="true"></span>
+                                                                <span class="bmd-form-group is-filled"><input _ngcontent-c34="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" matinput="" name="entryPrice" value="${menuUpdate.entryPrice}"  required="" type="number" id="mat-input-4" aria-invalid="false" aria-required="true"></span>
                                                                 <span class="mat-form-field-label-wrapper">
                                                    <label class="mat-form-field-label ng-tns-c22-32 ng-star-inserted" id="mat-form-field-label-15" for="mat-input-4" aria-owns="mat-input-4">
                                                    <!----><!---->Giá nhập<!----><!----><span class="mat-placeholder-required mat-form-field-required-marker ng-tns-c22-32 ng-star-inserted"> *</span>
@@ -469,7 +469,7 @@
                                                         <div class="mat-form-field-flex">
                                                             <!----><!---->
                                                             <div class="mat-form-field-infix">
-                                                                <span class="bmd-form-group is-filled"><input _ngcontent-c34="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" matinput="" name="price" ${menu.price} required="" type="number" id="mat-input-5" aria-invalid="false" aria-required="true"></span>
+                                                                <span class="bmd-form-group is-filled"><input _ngcontent-c34="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-dirty ng-valid ng-touched" matinput="" name="price" value="${menuUpdate.price}" required="" type="number" id="mat-input-5" aria-invalid="false" aria-required="true"></span>
                                                                 <span class="mat-form-field-label-wrapper">
                                                    <label class="mat-form-field-label ng-tns-c22-33 ng-star-inserted" id="mat-form-field-label-17" for="mat-input-5" aria-owns="mat-input-5">
                                                    <!----><!---->Giá bán<!----><!----><span class="mat-placeholder-required mat-form-field-required-marker ng-tns-c22-33 ng-star-inserted"> *</span>
@@ -490,8 +490,8 @@
                                                         </div>
                                                     </div>
                                                 </mat-form-field>
-                                                <button _ngcontent-c33="" class="btn btn-primary btn-bar mr-2 ng-star-inserted" type="button"><i _ngcontent-c33="" class="fas fa-save"></i> Lưu </button><!---->
-                                                <button _ngcontent-c33="" class="btn btn-danger btn-bar ng-star-inserted" type="button"><i _ngcontent-c33="" class="fas fa-trash"></i> Xóa </button>
+                                                <button _ngcontent-c33="" class="btn btn-primary btn-bar mr-2 ng-star-inserted" type="submit"><i _ngcontent-c33="" class="fas fa-save"></i> Lưu </button><!---->
+<%--                                                <button _ngcontent-c33="" class="btn btn-danger btn-bar ng-star-inserted" type="button"><i _ngcontent-c33="" class="fas fa-trash"></i> Xóa </button>--%>
                                                 <br _ngcontent-c33="">
                                             </form>
                                         </div>
@@ -526,16 +526,6 @@
         }
         frame++;
     }, interval);
-</script>
-<script>
-    function swapForm(on,off){
-        var x = document.getElementById(on);
-        var y = document.getElementById(off);
-
-        x.style.display ="block";
-        y.style.display ="none";
-    }
-
 </script>
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=271133433.42576146" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe>
 <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div>

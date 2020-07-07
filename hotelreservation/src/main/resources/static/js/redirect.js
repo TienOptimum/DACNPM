@@ -3,7 +3,7 @@ function thueTraPhongRedirect() {
 }
 
 function datPhongRedirect() {
-    location.replace("reservation")
+    location.replace("main/reservation")
 }
 
 function quanLyKhoRedirect() {

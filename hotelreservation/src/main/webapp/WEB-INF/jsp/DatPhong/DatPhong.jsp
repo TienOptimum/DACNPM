@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <%@ page contentType="text/html; charset=UTF-8" %>
 <head>
@@ -69,7 +70,6 @@
    <style>.mat-sort-header-container{display:flex;cursor:pointer;align-items:center}.mat-sort-header-disabled .mat-sort-header-container{cursor:default}.mat-sort-header-position-before{flex-direction:row-reverse}.mat-sort-header-button{border:none;background:0 0;display:flex;align-items:center;padding:0;cursor:inherit;outline:0;font:inherit;color:currentColor}.mat-sort-header-button::-moz-focus-inner{border:0}.mat-sort-header-arrow{height:12px;width:12px;min-width:12px;position:relative;display:flex;opacity:0}.mat-sort-header-arrow,[dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow{margin:0 0 0 6px}.mat-sort-header-position-before .mat-sort-header-arrow,[dir=rtl] .mat-sort-header-arrow{margin:0 6px 0 0}.mat-sort-header-stem{background:currentColor;height:10px;width:2px;margin:auto;display:flex;align-items:center}@media (-ms-high-contrast:active){.mat-sort-header-stem{width:0;border-left:solid 2px}}.mat-sort-header-indicator{width:100%;height:2px;display:flex;align-items:center;position:absolute;top:0;left:0}.mat-sort-header-pointer-middle{margin:auto;height:2px;width:2px;background:currentColor;transform:rotate(45deg)}@media (-ms-high-contrast:active){.mat-sort-header-pointer-middle{width:0;height:0;border-top:solid 2px;border-left:solid 2px}}.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{background:currentColor;width:6px;height:2px;position:absolute;top:0}@media (-ms-high-contrast:active){.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{width:0;height:0;border-left:solid 6px;border-top:solid 2px}}.mat-sort-header-pointer-left{transform-origin:right;left:0}.mat-sort-header-pointer-right{transform-origin:left;right:0}</style>
    <link rel="stylesheet" href="cssStype/styles.1d51e0d032e861368648.css">
    <link rel="stylesheet" href="cssStype/all.css">
-   <
 </head>
 <body>
 <app-root _nghost-c0="" ng-version="6.1.7">
@@ -174,235 +174,262 @@
                      </div>
                   </div>
                   <!---->
-                  <div _ngcontent-c37="" class="main-container d-flex flex-row">
-                     <div _ngcontent-c37="" class="left-panel">
-                        <mat-tab-group _ngcontent-c37="" class="h-100 mat-tab-group mat-primary mat-tab-group-dynamic-height" dynamicheight="">
-                           <mat-tab-header class="mat-tab-header">
-                              <div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="">
-                                 <div class="mat-tab-header-pagination-chevron"></div>
-                              </div>
-                              <div class="mat-tab-label-container">
-                                 <div class="mat-tab-list" role="tablist" style="transform: translateX(0px);">
-                                    <div class="mat-tab-labels">
-                                       <!---->
-                                       <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple mat-tab-label-active ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-1-0" tabindex="0" aria-posinset="1" aria-setsize="4" aria-controls="mat-tab-content-1-0" aria-selected="true" aria-disabled="false">
-                                          <div class="mat-tab-label-content">
-                                             <!----><!---->
-                                             <mat-icon _ngcontent-c37="" class="text-info mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">local_hotel</mat-icon>
-                                             &nbsp;&nbsp;&nbsp;Lịch theo phòng&nbsp;&nbsp;&nbsp; <!----><!---->
-                                          </div>
-                                       </div>
-
-
-                                       <div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-1-3" tabindex="-1" aria-posinset="4" aria-setsize="4" aria-controls="mat-tab-content-1-3" aria-selected="false" aria-disabled="false">
-                                          <div class="mat-tab-label-content">
-                                             <!----><!---->
-                                             <mat-icon _ngcontent-c37="" class="text-info mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">search</mat-icon>
-                                             &nbsp;&nbsp;&nbsp;Tìm kiếm&nbsp;&nbsp;&nbsp; <!----><!---->
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 0px; width: 193px;"></mat-ink-bar>
+                  <div _ngcontent-c40="" class="main-container d-flex flex-row">
+                     <div _ngcontent-c40="" class="list-panel">
+                        <mat-form-field _ngcontent-c40="" class="w-100 mat-form-field ng-tns-c5-157 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder">
+                           <div class="mat-form-field-wrapper">
+                              <div class="mat-form-field-flex">
+                                 <!----><!---->
+                                 <div class="mat-form-field-infix">
+                                    <span class="bmd-form-group"><input _ngcontent-c40="" class="w-100 mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Tìm kiếm" id="mat-input-41" aria-invalid="false" aria-required="false"></span>
+                                    <span class="mat-form-field-label-wrapper">
+                                             <!---->
+                                             <label class="mat-form-field-label ng-tns-c5-157 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-105" for="mat-input-41" aria-owns="mat-input-41">
+                                                <!----><!---->Tìm kiếm<!----><!---->
+                                             </label>
+                                          </span>
                                  </div>
+                                 <!---->
                               </div>
-                              <div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple="">
-                                 <div class="mat-tab-header-pagination-chevron"></div>
-                              </div>
-                           </mat-tab-header>
-                           <div class="mat-tab-body-wrapper">
                               <!---->
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-44 mat-tab-body-active ng-star-inserted" role="tabpanel" id="mat-tab-content-1-0" aria-labelledby="mat-tab-label-1-0">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: none;">
-                                    <!----><!---->
-                                    <div _ngcontent-c37="" class="list-panel pb-0 ng-star-inserted" style="">
-                                       <mat-form-field _ngcontent-c37="" class="w-date pr-2 mat-form-field ng-tns-c21-31 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float mat-form-field-disabled">
-                                          <div class="mat-form-field-wrapper">
-                                             <div class="mat-form-field-flex">
-                                                <!----><!---->
-                                                <div class="mat-form-field-infix">
-                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c37="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" placeholder="Từ ngày" required="" aria-haspopup="true" id="mat-input-0" aria-invalid="false" aria-required="true" disabled=""></span>
-                                                   <mat-datepicker _ngcontent-c37="" disabled="false"></mat-datepicker>
-                                                   <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                            <label class="mat-form-field-label ng-tns-c21-31 ng-star-inserted" id="mat-form-field-label-3" for="mat-input-0" aria-owns="mat-input-0">
-                                                               <!----><!---->Từ ngày<!----><!---->
-                                                            </label>
-                                                         </span>
-                                                </div>
-                                                <!---->
-                                                <div class="mat-form-field-suffix ng-tns-c21-31 ng-star-inserted">
-                                                   <mat-datepicker-toggle _ngcontent-c37="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                      <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                                                               <span class="mat-button-wrapper">
-                                                                  <!---->
-                                                                  <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                                                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                                                                  </svg>
-                                                               </span>
-                                                         <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                         <div class="mat-button-focus-overlay"></div>
-                                                      </button>
-                                                   </mat-datepicker-toggle>
-                                                </div>
-                                             </div>
-                                             <!---->
-                                             <div class="mat-form-field-underline ng-tns-c21-31 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                             <div class="mat-form-field-subscript-wrapper">
-                                                <!----><!---->
-                                                <div class="mat-form-field-hint-wrapper ng-tns-c21-31 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                   <!---->
-                                                   <div class="mat-form-field-hint-spacer"></div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </mat-form-field>
-                                       <mat-form-field _ngcontent-c37="" class="w-date pr-2 mat-form-field ng-tns-c21-32 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-should-float mat-form-field-disabled">
-                                          <div class="mat-form-field-wrapper">
-                                             <div class="mat-form-field-flex">
-                                                <!----><!---->
-                                                <div class="mat-form-field-infix">
-                                                   <span class="bmd-form-group is-filled"><input _ngcontent-c37="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" placeholder="Đến ngày" required="" aria-haspopup="true" id="mat-input-1" aria-invalid="false" aria-required="true" disabled=""></span>
-                                                   <mat-datepicker _ngcontent-c37="" disabled="false"></mat-datepicker>
-                                                   <span class="mat-form-field-label-wrapper">
-                                                            <!---->
-                                                            <label class="mat-form-field-label ng-tns-c21-32 ng-star-inserted" id="mat-form-field-label-5" for="mat-input-1" aria-owns="mat-input-1">
-                                                               <!----><!---->Đến ngày<!----><!---->
-                                                            </label>
-                                                         </span>
-                                                </div>
-                                                <!---->
-                                                <div class="mat-form-field-suffix ng-tns-c21-32 ng-star-inserted">
-                                                   <mat-datepicker-toggle _ngcontent-c37="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                      <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                                                               <span class="mat-button-wrapper">
-                                                                  <!---->
-                                                                  <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                                                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                                                                  </svg>
-                                                               </span>
-                                                         <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                         <div class="mat-button-focus-overlay"></div>
-                                                      </button>
-                                                   </mat-datepicker-toggle>
-                                                </div>
-                                             </div>
-                                             <!---->
-                                             <div class="mat-form-field-underline ng-tns-c21-32 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                             <div class="mat-form-field-subscript-wrapper">
-                                                <!----><!---->
-                                                <div class="mat-form-field-hint-wrapper ng-tns-c21-32 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                                   <!---->
-                                                   <div class="mat-form-field-hint-spacer"></div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </mat-form-field>
-                                    </div>
-                                    <div _ngcontent-c37="" class="mx-3 border-left border-right ng-star-inserted" style="">
-                                       <div _ngcontent-c37="" class="fc fc-ltr fc-unthemed">
-                                          <div _ngcontent-c37="" class="fc-view-container">
-                                             <div _ngcontent-c37="" class="fc-view" style="overflow: auto;min-height: 500px;">
-                                                <table _ngcontent-c37="">
-                                                   <thead _ngcontent-c37="" class="fc-head">
-                                                   <tr _ngcontent-c37="">
-                                                      <td _ngcontent-c37="">
-                                                         <div _ngcontent-c37="" class="fc-row">
-                                                            <table _ngcontent-c37="" class="table-bordered">
-                                                               <thead _ngcontent-c37="">
-                                                               <tr _ngcontent-c37="">
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center py-1 text-primary fc-sticky">Phòng</td>
-                                                                  <!---->
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                                  <td _ngcontent-c37="" class="fc-cell text-center text-secondary ng-star-inserted"> ${kindofroom.day}</td>
-                                                               </tr>
-                                                               </thead>
-                                                            </table>
-                                                         </div>
-                                                      </td>
-                                                   </tr>
-                                                   </thead>
-                                                   <tbody _ngcontent-c37="" class="fc-body">
-                                                   <tr _ngcontent-c37="">
-                                                      <td _ngcontent-c37="">
-                                                         <div _ngcontent-c37="" class="fc-scroller">
-                                                            <div _ngcontent-c37="" class="fc-day-grid">
-                                                               <!---->
-                                                            </div>
-                                                         </div>
-                                                      </td>
-                                                   </tr>
-                                                   </tbody>
-                                                </table>
-                                             </div>
+                              <div class="mat-form-field-underline ng-tns-c5-157 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                              <div class="mat-form-field-subscript-wrapper">
+                                 <!----><!---->
+                                 <div class="mat-form-field-hint-wrapper ng-tns-c5-157 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                    <!---->
+                                    <div class="mat-form-field-hint-spacer"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </mat-form-field>
+                        <div _ngcontent-c40="" class="card">
+                           <table _ngcontent-c40="" class="w-100 mat-table" mat-table="" matsort="" role="grid">
+                              <thead role="rowgroup">
+                              <!---->
+                              <tr _ngcontent-c40="" class="mat-header-row ng-star-inserted" mat-header-row="" role="row">
+                                 <!---->
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-158 cdk-column-name mat-column-name ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for name"> Tên Phòng </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-158 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
                                           </div>
                                        </div>
                                     </div>
+                                 </th>
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-159 cdk-column-type mat-column-type ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for type"> Loại phòng </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-159 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-160 cdk-column-rule mat-column-rule ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for rule"> Họ tên khách hàng </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-160 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-160 cdk-column-rule mat-column-rule ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for rule"> Số điện thoại </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-160 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-162 cdk-column-edit mat-column-edit ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for edit">Chỉnh sửa</button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-162 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
+                              </tr>
+                              </thead>
+                              <tbody role="rowgroup">
+                              <!---->
+                              <c:forEach var="historyReservation" items="${historyReservations}">
+                                 <c:url var="updateReservation" value="/main/reservation/update">
+                                    <c:param name="reservationID" value="${historyReservation.reservation.id}"/>
+                                 </c:url>
+                                 <tr _ngcontent-c40="" class="pointer mat-row ng-star-inserted" mat-row="" role="row"  onclick="document.location = '${updateReservation}';">
                                     <!---->
-                                 </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-45 ng-star-inserted" role="tabpanel" id="mat-tab-content-1-1" aria-labelledby="mat-tab-label-1-1">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.room.name} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.room.kindOfRoom.name} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.customerName} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.phone} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
+                                       <div _ngcontent-c40="" class="icon-sm">
+                                          <mat-icon _ngcontent-c40="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </c:forEach>
+                              </tbody>
+                              <tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;">
+                              <!---->
+                              </tfoot>
+                           </table>
+                           <mat-paginator _ngcontent-c40="" class="mat-paginator">
+                              <div class="mat-paginator-outer-container">
+                                 <div class="mat-paginator-container">
                                     <!---->
+                                    <div class="mat-paginator-page-size ng-star-inserted">
+                                       <div class="mat-paginator-page-size-label">Số dòng mỗi trang</div>
+                                       <!---->
+                                       <mat-form-field class="mat-paginator-page-size-select mat-form-field ng-tns-c5-163 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted mat-form-field-should-float">
+                                          <div class="mat-form-field-wrapper">
+                                             <div class="mat-form-field-flex">
+                                                <!----><!---->
+                                                <div class="mat-form-field-infix">
+                                                   <mat-select class="mat-select ng-tns-c34-164 ng-star-inserted" role="listbox" id="mat-select-11" tabindex="0" aria-label="Số dòng mỗi trang" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">
+                                                      <div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin="">
+                                                         <div class="mat-select-value">
+                                                            <!----><!---->
+                                                            <span class="mat-select-value-text ng-tns-c34-164 ng-star-inserted">
+                                                                     <!----><span class="ng-tns-c34-164 ng-star-inserted">10</span><!---->
+                                                                  </span>
+                                                         </div>
+                                                         <div class="mat-select-arrow-wrapper">
+                                                            <div class="mat-select-arrow"></div>
+                                                         </div>
+                                                      </div>
+                                                      <!---->
+                                                   </mat-select>
+                                                   <span class="mat-form-field-label-wrapper">
+                                                            <!---->
+                                                         </span>
+                                                </div>
+                                                <!---->
+                                             </div>
+                                             <!---->
+                                             <div class="mat-form-field-underline ng-tns-c5-163 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                                             <div class="mat-form-field-subscript-wrapper">
+                                                <!----><!---->
+                                                <div class="mat-form-field-hint-wrapper ng-tns-c5-163 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                                   <!---->
+                                                   <div class="mat-form-field-hint-spacer"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </mat-form-field>
+                                       <!---->
+                                    </div>
+                                    <div class="mat-paginator-range-actions">
+                                       <div class="mat-paginator-range-label">1 - 1 trong 1</div>
+                                       <!---->
+                                       <button class="mat-paginator-navigation-previous mat-icon-button" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-70" cdk-describedby-host="" aria-label="Trang trước" disabled="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <span class="mat-button-wrapper">
+                                                   <svg class="mat-paginator-icon" focusable="false" viewBox="0 0 24 24">
+                                                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                   </svg>
+                                                </span>
+                                          <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                                          <div class="mat-button-focus-overlay"></div>
+                                       </button>
+                                       <button class="mat-paginator-navigation-next mat-icon-button" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-71" cdk-describedby-host="" aria-label="Trang sau" disabled="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                <span class="mat-button-wrapper">
+                                                   <svg class="mat-paginator-icon" focusable="false" viewBox="0 0 24 24">
+                                                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                   </svg>
+                                                </span>
+                                          <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                                          <div class="mat-button-focus-overlay"></div>
+                                       </button>
+                                       <!---->
+                                    </div>
                                  </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-46 ng-star-inserted" role="tabpanel" id="mat-tab-content-1-2" aria-labelledby="mat-tab-label-1-2">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                    <!---->
-                                 </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-47 ng-star-inserted" role="tabpanel" id="mat-tab-content-1-3" aria-labelledby="mat-tab-label-1-3">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                    <!---->
-                                 </div>
-                              </mat-tab-body>
-                           </div>
-                        </mat-tab-group>
+                              </div>
+                           </mat-paginator>
+                        </div>
                      </div>
-                     <div _ngcontent-c37="" class="right-panel">
-                        <app-booking-entry _ngcontent-c25="" mode="0" _nghost-c35="" class="ng-star-inserted" id="add_new_rentroom" style="display:none;">
-                           <div _ngcontent-c35="" class="topbar-sub" >
+                     <div _ngcontent-c25="" class="right-panel">
+                        <!---->
+                        <app-booking-entry _ngcontent-c25="" mode="0" _nghost-c35="" class="ng-star-inserted">
+                           <div _ngcontent-c35="" class="topbar-sub" id="add_new_rentroom" style="display: none;">
                               <div _ngcontent-c35="" class="container-fluid d-flex h-100">
-                                 <div _ngcontent-c35="" class="justify-content-center align-self-center d-flex flex-row w-100" >
+                                 <div _ngcontent-c35="" class="justify-content-center align-self-center d-flex flex-row w-100">
                                     <!---->
-                                    <div _ngcontent-c35="" class="topbar-sub-title ng-star-inserted" >Thêm mới</div>
+                                    <div _ngcontent-c35="" class="topbar-sub-title ng-star-inserted">Thêm mới</div>
                                     <!---->
                                     <div _ngcontent-c35="" class="flex-grow-1"></div>
-                                    <!----><button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="button"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
                                  </div>
                               </div>
                            </div>
-                           <div _ngcontent-c35="" class="form-sub">
-                              <form _ngcontent-c35="" novalidate="" class="ng-untouched ng-pristine ng-valid">
+                           <div _ngcontent-c35="" class="form-sub" >
+                              <form _ngcontent-c35="" novalidate="" class="ng-valid ng-dirty ng-touched" action="/main/reservation/create" method="post" modelAttribute="reservation">
                                  <app-error _ngcontent-c35="" _nghost-c4="">
                                     <ul _ngcontent-c4="" class="error-list my-1">
                                        <!---->
                                     </ul>
                                  </app-error>
-                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-36 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid">
+                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-35 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.customerName" placeholder="Họ tên khách hàng" id="mat-input-9" aria-invalid="false" aria-required="false"></span>
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-dirty ng-touched" matinput="" name="customerName" id="mat-input-9" aria-invalid="false" aria-required="false"></span>
                                              <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-36 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-23" for="mat-input-9" aria-owns="mat-input-9">
-                           <!----><!---->Họ tên khách hàng<!----><!---->
-                        </label>
-                     </span>
+                                             <label class="mat-form-field-label ng-tns-c5-35 ng-star-inserted" id="mat-form-field-label-23" for="mat-input-9" aria-owns="mat-input-9">
+                                             <!----><!---->Họ tên khách hàng<!----><!---->
+                                             </label>
+                                             </span>
+                                          </div>
+                                          <!---->
+                                       </div>
+                                       <!---->
+                                       <div class="mat-form-field-underline ng-tns-c5-35 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                                       <div class="mat-form-field-subscript-wrapper">
+                                          <!----><!---->
+                                          <div class="mat-form-field-hint-wrapper ng-tns-c5-35 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                             <!---->
+                                             <div class="mat-form-field-hint-spacer"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </mat-form-field>
+                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-36 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
+                                    <div class="mat-form-field-wrapper">
+                                       <div class="mat-form-field-flex">
+                                          <!----><!---->
+                                          <div class="mat-form-field-infix">
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-dirty ng-touched" matinput="" name="phone" id="mat-input-10" aria-invalid="false" aria-required="false"></span>
+                                             <span class="mat-form-field-label-wrapper">
+                                             <label class="mat-form-field-label ng-tns-c5-36 ng-star-inserted" id="mat-form-field-label-25" for="mat-input-10" aria-owns="mat-input-10">
+                                             <!----><!---->Số điện thoại<!----><!---->
+                                             </label>
+                                             </span>
                                           </div>
                                           <!---->
                                        </div>
@@ -417,18 +444,17 @@
                                        </div>
                                     </div>
                                  </mat-form-field>
-                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-37 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid">
+                                 <mat-form-field _ngcontent-c35="" class="w-50 pr-2 mat-form-field ng-tns-c5-37 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder mat-form-field-disabled mat-form-field-should-float ng-touched ng-dirty">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.customerPhone" placeholder="Số điện thoại" id="mat-input-10" aria-invalid="false" aria-required="false"></span>
-                                             <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-37 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-25" for="mat-input-10" aria-owns="mat-input-10">
-                           <!----><!---->Số điện thoại<!----><!---->
-                        </label>
-                     </span>
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-touched ng-dirty" matinput="" name="checkIn_date" aria-haspopup="true" id="mat-input-11" aria-invalid="false" aria-required="false" disabled="" min="2020-07-07"></span>
+                                                <label class="mat-form-field-label ng-tns-c5-37 ng-star-inserted" id="mat-form-field-label-27" for="mat-input-11" aria-owns="mat-input-11">
+                                                <!----><!---->Ngày nhận phòng<!----><!---->
+                                                </label>
+                                                <input type="date" name="birthday">
                                           </div>
                                           <!---->
                                        </div>
@@ -443,35 +469,19 @@
                                        </div>
                                     </div>
                                  </mat-form-field>
-                                 <mat-form-field _ngcontent-c35="" class="w-50 pr-2 mat-form-field ng-tns-c5-38 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+                                 <mat-form-field _ngcontent-c35="" class="w-50 pl-2 mat-form-field ng-tns-c5-38 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.startDate" placeholder="Ngày nhận phòng" aria-haspopup="true" id="mat-input-11" aria-invalid="false" aria-required="false" disabled="" min="2020-06-23"></span>
-                                             <mat-datepicker _ngcontent-c35="" disabled="false"></mat-datepicker>
-                                             <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-27" for="mat-input-11" aria-owns="mat-input-11">
-                           <!----><!---->Ngày nhận phòng<!----><!---->
-                        </label>
-                     </span>
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="checkOut_date" aria-haspopup="true" id="mat-input-12" aria-invalid="false" aria-required="false" disabled="" min="2020-07-07"></span>
+                                                <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-12" aria-owns="mat-input-12">
+                                                <!----><!---->Ngày trả phòng<!----><!---->
+                                                </label>
+                                                <input type="date" name="birthday">
                                           </div>
                                           <!---->
-                                          <div class="mat-form-field-suffix ng-tns-c5-38 ng-star-inserted">
-                                             <mat-datepicker-toggle _ngcontent-c35="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                           <span class="mat-button-wrapper">
-                              <!---->
-                              <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                              </svg>
-                           </span>
-                                                   <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                   <div class="mat-button-focus-overlay"></div>
-                                                </button>
-                                             </mat-datepicker-toggle>
-                                          </div>
                                        </div>
                                        <!---->
                                        <div class="mat-form-field-underline ng-tns-c5-38 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
@@ -484,35 +494,21 @@
                                        </div>
                                     </div>
                                  </mat-form-field>
-                                 <mat-form-field _ngcontent-c35="" class="w-50 pl-2 mat-form-field ng-tns-c5-39 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine mat-form-field-disabled mat-form-field-should-float">
+                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-39 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-touched ng-dirty">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="model.endDate" placeholder="Ngày trả phòng" aria-haspopup="true" id="mat-input-12" aria-invalid="false" aria-required="false" disabled="" min="2020-06-23"></span>
-                                             <mat-datepicker _ngcontent-c35="" disabled="false"></mat-datepicker>
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-touched ng-dirty" matinput="" name="deposits" type="number" id="mat-input-13" aria-invalid="false" aria-required="false"></span>
                                              <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-39 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-12" aria-owns="mat-input-12">
-                           <!----><!---->Ngày trả phòng<!----><!---->
-                        </label>
-                     </span>
+                                                <label class="mat-form-field-label ng-tns-c5-39 ng-star-inserted" id="mat-form-field-label-31" for="mat-input-13" aria-owns="mat-input-13">
+                                                <!----><!---->Tiền trả trước<!----><!---->
+                                                </label>
+                                             </span>
                                           </div>
                                           <!---->
-                                          <div class="mat-form-field-suffix ng-tns-c5-39 ng-star-inserted">
-                                             <mat-datepicker-toggle _ngcontent-c35="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1">
-                                                <button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0">
-                           <span class="mat-button-wrapper">
-                              <!---->
-                              <svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewBox="0 0 24 24" width="24px">
-                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path>
-                              </svg>
-                           </span>
-                                                   <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                   <div class="mat-button-focus-overlay"></div>
-                                                </button>
-                                             </mat-datepicker-toggle>
-                                          </div>
+                                          <div class="mat-form-field-suffix ng-tns-c5-39 ng-star-inserted"><span _ngcontent-c35="" matsuffix="">.0 ₫</span></div>
                                        </div>
                                        <!---->
                                        <div class="mat-form-field-underline ng-tns-c5-39 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
@@ -525,53 +521,26 @@
                                        </div>
                                     </div>
                                  </mat-form-field>
-                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-40 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float">
+                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-41 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="input-money mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.prepaidMoney" placeholder="Tiền trả trước" type="number" id="mat-input-13" aria-invalid="false" aria-required="false"></span>
+                                             <span class="bmd-form-group is-filled">
+                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-dirty ng-touched" matinput="" name="note" id="mat-input-15" aria-invalid="false" aria-required="false"></span>
                                              <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-40 ng-star-inserted" id="mat-form-field-label-31" for="mat-input-13" aria-owns="mat-input-13">
-                           <!----><!---->Tiền trả trước<!----><!---->
-                        </label>
-                     </span>
-                                          </div>
-                                          <!---->
-                                          <div class="mat-form-field-suffix ng-tns-c5-40 ng-star-inserted"><span _ngcontent-c35="" matsuffix="">.000 ₫</span></div>
-                                       </div>
-                                       <!---->
-                                       <div class="mat-form-field-underline ng-tns-c5-40 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                       <div class="mat-form-field-subscript-wrapper">
-                                          <!----><!---->
-                                          <div class="mat-form-field-hint-wrapper ng-tns-c5-40 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                             <!---->
-                                             <div class="mat-form-field-hint-spacer"></div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </mat-form-field>
-                                 <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-42 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid">
-                                    <div class="mat-form-field-wrapper">
-                                       <div class="mat-form-field-flex">
-                                          <!----><!---->
-                                          <div class="mat-form-field-infix">
-                                             <span class="bmd-form-group"><input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" name="model.note" placeholder="Ghi chú" id="mat-input-15" aria-invalid="false" aria-required="false"></span>
-                                             <span class="mat-form-field-label-wrapper">
-                        <!---->
-                        <label class="mat-form-field-label ng-tns-c5-42 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-35" for="mat-input-15" aria-owns="mat-input-15">
-                           <!----><!---->Ghi chú<!----><!---->
-                        </label>
-                     </span>
+                                                <label class="mat-form-field-label ng-tns-c5-41 ng-star-inserted" id="mat-form-field-label-35" for="mat-input-15" aria-owns="mat-input-15">
+                                                <!----><!---->Ghi chú<!----><!---->
+                                                </label>
+                                             </span>
                                           </div>
                                           <!---->
                                        </div>
                                        <!---->
-                                       <div class="mat-form-field-underline ng-tns-c5-42 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                                       <div class="mat-form-field-underline ng-tns-c5-41 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
                                        <div class="mat-form-field-subscript-wrapper">
                                           <!----><!---->
-                                          <div class="mat-form-field-hint-wrapper ng-tns-c5-42 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                                          <div class="mat-form-field-hint-wrapper ng-tns-c5-41 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
                                              <!---->
                                              <div class="mat-form-field-hint-spacer"></div>
                                           </div>
@@ -584,17 +553,26 @@
                                        <span _ngcontent-c35="" class="title-toolbar">Phòng đặt</span>
                                        <div _ngcontent-c35="" class="flex-grow-1"></div>
                                        <button _ngcontent-c35="" class="text-warning mat-button" mat-button="">
-                  <span class="mat-button-wrapper">
-                     <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">add_box</mat-icon>
-                     <span _ngcontent-c35="">Thêm phòng</span>
-                  </span>
+                     <span class="mat-button-wrapper">
+                        <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">add_box</mat-icon>
+                        <span _ngcontent-c35="">Thêm phòng</span>
+                     </span>
                                           <div class="mat-button-ripple mat-ripple" matripple=""></div>
                                           <div class="mat-button-focus-overlay"></div>
                                        </button>
                                     </mat-toolbar>
                                     <div _ngcontent-c35="" class="mx-3 my-2">
-                                       <!----><!---->
-                                       <div _ngcontent-c35="" class="w-100 text-center ng-star-inserted"> Chưa chỉ định phòng </div>
+                                       <!---->
+                                       <mat-chip-list _ngcontent-c35="" class="mat-chip-list ng-star-inserted" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false" role="listbox" aria-orientation="horizontal" id="mat-chip-list-24">
+                                          <div class="mat-chip-list-wrapper">
+                                             <!---->
+                                             <mat-chip _ngcontent-c35="" class="mat-chip mat-primary mat-standard-chip mat-chip-selected mat-chip-with-trailing-icon ng-star-inserted" color="primary" removable="true" role="option" selected="" tabindex="-1" aria-disabled="false" aria-selected="true">
+                                                1
+                                                <mat-icon _ngcontent-c35="" class="mat-chip-remove mat-chip-trailing-icon mat-icon notranslate material-icons mat-icon-no-color" matchipremove="" role="img" aria-hidden="true">cancel</mat-icon>
+                                             </mat-chip>
+                                          </div>
+                                       </mat-chip-list>
+                                       <!---->
                                     </div>
                                  </div>
                                  <div _ngcontent-c35="" style="margin: 0px -1rem">
@@ -602,10 +580,10 @@
                                        <span _ngcontent-c35="" class="title-toolbar">Loại phòng đặt</span>
                                        <div _ngcontent-c35="" class="flex-grow-1"></div>
                                        <button _ngcontent-c35="" class="text-primary mat-button" mat-button="">
-                  <span class="mat-button-wrapper">
-                     <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">vertical_align_bottom</mat-icon>
-                     <span _ngcontent-c35="">Cập nhật theo phòng</span>
-                  </span>
+                     <span class="mat-button-wrapper">
+                        <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">vertical_align_bottom</mat-icon>
+                        <span _ngcontent-c35="">Cập nhật theo phòng</span>
+                     </span>
                                           <div class="mat-button-ripple mat-ripple" matripple=""></div>
                                           <div class="mat-button-focus-overlay"></div>
                                        </button>
@@ -623,38 +601,33 @@
                                        </thead>
                                        <tbody role="rowgroup">
                                        <!---->
+                                       <c:forEach var="room" items="${rooms}">
                                        <tr _ngcontent-c35="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                           <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" mattooltip="Click +1" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Phòng đơn </td>
+                                          <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" mattooltip="Click +1" role="gridcell" aria-describedby="cdk-describedby-message-10" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> ${room.kindOfRoom} </td>
                                           <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" mattooltip="Click -1" role="gridcell" aria-describedby="cdk-describedby-message-12" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 0 </td>
-                                          <!---->
-                                       </tr>
-                                       <tr _ngcontent-c35="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
-                                          <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" mattooltip="Click +1" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Phòng đôi </td>
-                                          <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" mattooltip="Click -1" role="gridcell" aria-describedby="cdk-describedby-message-12" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 0 </td>
+                                          <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" mattooltip="Click -1" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 0 </td>
                                           <!---->
                                        </tr>
+                                       </c:forEach>
                                        </tbody>
                                        <tfoot role="rowgroup">
                                        <!---->
                                        <tr _ngcontent-c35="" class="mat-footer-row ng-star-inserted" mat-footer-row="" role="row">
                                           <!---->
                                           <td _ngcontent-c35="" class="mat-footer-cell cdk-column-name mat-column-name ng-star-inserted" mat-footer-cell="" role="gridcell"> Tổng số phòng </td>
-                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"> 0 </td>
+                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"> 1 </td>
                                        </tr>
                                        </tfoot>
                                     </table>
                                  </div>
                                  <!---->
+                                 <button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="submit"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
                               </form>
                            </div>
                         </app-booking-entry>
-                        <!----><!---->
+                        <!---->
                      </div>
-                  </div>
                </app-booking>
             </div>
          </mat-drawer-content>

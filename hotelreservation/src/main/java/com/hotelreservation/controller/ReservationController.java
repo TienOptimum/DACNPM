@@ -38,7 +38,6 @@ public class ReservationController {
 
     @PostMapping("/main/reservation/create")
     public String create(@ModelAttribute Reservation reservation){
-        System.out.println(reservation.getId());
         reservationService.saveReservation(reservation);
         return "redirect:/main/reservation";
     }

@@ -3,9 +3,11 @@ package com.hotelreservation.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "reservation")
@@ -21,15 +23,19 @@ public class Reservation {
     @Column(name = "phone")
     private String phone;
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm")
     @Column (name = "checkIn_date")
     private Date checkInDate;
     @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm")
     @Column (name = "checkOut_date")
     private Date checkOutDate;
     @Column(name = "deposits")
     private Double deposits;
     @Column(name = "note")
     private String note;
+    @OneToMany(mappedBy = "reservation")
+    private List<HistoryReservation> reservations;
 
     public Integer getId() {
         return id;

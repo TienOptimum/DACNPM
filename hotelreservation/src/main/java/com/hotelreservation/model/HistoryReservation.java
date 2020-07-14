@@ -1,8 +1,15 @@
 package com.hotelreservation.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "history_reservation")
 public class HistoryReservation {
@@ -10,10 +17,26 @@ public class HistoryReservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @ManyToOne
     @JoinColumn(name="reservation_id")
-    @ElementCollection
-    private List<Reservation> reservation;
+    private Reservation reservation;
+    @ManyToOne
     @JoinColumn(name="room_id")
-    @ElementCollection
-    private List<Room> room;
+    private Room room;
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 }

@@ -374,8 +374,8 @@
                      </div>
                      <div _ngcontent-c25="" class="right-panel">
                         <!---->
-                        <app-booking-entry _ngcontent-c25="" mode="0" _nghost-c35="" class="ng-star-inserted">
-                           <div _ngcontent-c35="" class="topbar-sub" id="add_new_rentroom" style="display: none;">
+                        <app-booking-entry _ngcontent-c25="" mode="0" _nghost-c35="" class="ng-star-inserted" id="add_new_rentroom" style="display: none;">
+                           <div _ngcontent-c35="" class="topbar-sub" >
                               <div _ngcontent-c35="" class="container-fluid d-flex h-100">
                                  <div _ngcontent-c35="" class="justify-content-center align-self-center d-flex flex-row w-100">
                                     <!---->
@@ -450,11 +450,10 @@
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
                                              <span class="bmd-form-group is-filled">
-                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-touched ng-dirty" matinput="" name="checkIn_date" aria-haspopup="true" id="mat-input-11" aria-invalid="false" aria-required="false" disabled="" min="2020-07-07"></span>
                                                 <label class="mat-form-field-label ng-tns-c5-37 ng-star-inserted" id="mat-form-field-label-27" for="mat-input-11" aria-owns="mat-input-11">
                                                 <!----><!---->Ngày nhận phòng<!----><!---->
                                                 </label>
-                                                <input type="date" name="birthday">
+                                                <input type="datetime-local" name="checkInDate">
                                           </div>
                                           <!---->
                                        </div>
@@ -475,11 +474,10 @@
                                           <!----><!---->
                                           <div class="mat-form-field-infix">
                                              <span class="bmd-form-group is-filled">
-                                                <input _ngcontent-c35="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine" matinput="" name="checkOut_date" aria-haspopup="true" id="mat-input-12" aria-invalid="false" aria-required="false" disabled="" min="2020-07-07"></span>
                                                 <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-12" aria-owns="mat-input-12">
                                                 <!----><!---->Ngày trả phòng<!----><!---->
                                                 </label>
-                                                <input type="date" name="birthday">
+                                                <input type="datetime-local" name="checkOutDate">
                                           </div>
                                           <!---->
                                        </div>
@@ -549,53 +547,14 @@
                                  </mat-form-field>
                                  <!---->
                                  <div _ngcontent-c35="" style="margin: 0px -1rem">
-                                    <mat-toolbar _ngcontent-c35="" class="border-top border-bottom mat-toolbar mat-toolbar-single-row">
-                                       <span _ngcontent-c35="" class="title-toolbar">Phòng đặt</span>
-                                       <div _ngcontent-c35="" class="flex-grow-1"></div>
-                                       <button _ngcontent-c35="" class="text-warning mat-button" mat-button="">
-                     <span class="mat-button-wrapper">
-                        <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">add_box</mat-icon>
-                        <span _ngcontent-c35="">Thêm phòng</span>
-                     </span>
-                                          <div class="mat-button-ripple mat-ripple" matripple=""></div>
-                                          <div class="mat-button-focus-overlay"></div>
-                                       </button>
-                                    </mat-toolbar>
-                                    <div _ngcontent-c35="" class="mx-3 my-2">
-                                       <!---->
-                                       <mat-chip-list _ngcontent-c35="" class="mat-chip-list ng-star-inserted" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false" role="listbox" aria-orientation="horizontal" id="mat-chip-list-24">
-                                          <div class="mat-chip-list-wrapper">
-                                             <!---->
-                                             <mat-chip _ngcontent-c35="" class="mat-chip mat-primary mat-standard-chip mat-chip-selected mat-chip-with-trailing-icon ng-star-inserted" color="primary" removable="true" role="option" selected="" tabindex="-1" aria-disabled="false" aria-selected="true">
-                                                1
-                                                <mat-icon _ngcontent-c35="" class="mat-chip-remove mat-chip-trailing-icon mat-icon notranslate material-icons mat-icon-no-color" matchipremove="" role="img" aria-hidden="true">cancel</mat-icon>
-                                             </mat-chip>
-                                          </div>
-                                       </mat-chip-list>
-                                       <!---->
-                                    </div>
-                                 </div>
-                                 <div _ngcontent-c35="" style="margin: 0px -1rem">
-                                    <mat-toolbar _ngcontent-c35="" class="border-top mat-toolbar mat-toolbar-single-row">
-                                       <span _ngcontent-c35="" class="title-toolbar">Loại phòng đặt</span>
-                                       <div _ngcontent-c35="" class="flex-grow-1"></div>
-                                       <button _ngcontent-c35="" class="text-primary mat-button" mat-button="">
-                     <span class="mat-button-wrapper">
-                        <mat-icon _ngcontent-c35="" class="mr-1 mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">vertical_align_bottom</mat-icon>
-                        <span _ngcontent-c35="">Cập nhật theo phòng</span>
-                     </span>
-                                          <div class="mat-button-ripple mat-ripple" matripple=""></div>
-                                          <div class="mat-button-focus-overlay"></div>
-                                       </button>
-                                    </mat-toolbar>
                                     <table _ngcontent-c35="" class="w-100 border-top border-bottom mat-table" mat-table="" role="grid">
                                        <thead role="rowgroup">
                                        <!---->
                                        <tr _ngcontent-c35="" class="mat-header-row ng-star-inserted" mat-header-row="" role="row">
                                           <!---->
-                                          <th _ngcontent-c35="" class="mat-header-cell cdk-column-name mat-column-name ng-star-inserted" mat-header-cell="" mattooltip="Click cột này để +1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Loại phòng (+1) </th>
+                                          <th _ngcontent-c35="" class="mat-header-cell cdk-column-name mat-column-name ng-star-inserted" mat-header-cell="" mattooltip="Click cột này để +1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Loại phòng </th>
                                           <!---->
-                                          <th _ngcontent-c35="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" mattooltip="Click cột để -1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Số phòng (-1) </th>
+                                          <th _ngcontent-c35="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" mattooltip="Click cột để -1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Chọn </th>
                                           <!---->
                                        </tr>
                                        </thead>
@@ -604,25 +563,25 @@
                                        <c:forEach var="room" items="${rooms}">
                                        <tr _ngcontent-c35="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                           <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" mattooltip="Click +1" role="gridcell" aria-describedby="cdk-describedby-message-10" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> ${room.kindOfRoom} </td>
+                                          <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell" aria-describedby="cdk-describedby-message-10" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> ${room.name} ${room.kindOfRoom.name} </td>
                                           <!---->
-                                          <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" mattooltip="Click -1" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 0 </td>
+                                          <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> <input class="noselect" type="checkbox" name="noselect" value="${room.id}"> </td>
                                           <!---->
                                        </tr>
                                        </c:forEach>
                                        </tbody>
                                        <tfoot role="rowgroup">
                                        <!---->
-                                       <tr _ngcontent-c35="" class="mat-footer-row ng-star-inserted" mat-footer-row="" role="row">
-                                          <!---->
-                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-name mat-column-name ng-star-inserted" mat-footer-cell="" role="gridcell"> Tổng số phòng </td>
-                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"> 1 </td>
-                                       </tr>
+<%--                                       <tr _ngcontent-c35="" class="mat-footer-row ng-star-inserted" mat-footer-row="" role="row">--%>
+<%--                                          <!---->--%>
+<%--                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-name mat-column-name ng-star-inserted" mat-footer-cell="" role="gridcell"> Tổng số phòng </td>--%>
+<%--                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"> 1 </td>--%>
+<%--                                       </tr>--%>
                                        </tfoot>
                                     </table>
                                  </div>
                                  <!---->
-                                 <button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="submit"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
+                                 <button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="submit" onclick="getSelected()"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
                               </form>
                            </div>
                         </app-booking-entry>
@@ -661,10 +620,22 @@
       var x = document.getElementById(on);
 
       x.style.display ="block";
-
-
    }
 </script>
+
+<script>
+   function getSelected() {
+      var x = document.getElementsByClassName("noselect");
+      var i;
+      for (i =0 ; i<x.length;i++){
+         if(x[i].checked == true){
+            x[i].setAttribute("name","selected");
+         }
+      }
+   }
+   
+</script>
+
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>
 <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
 <div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;">

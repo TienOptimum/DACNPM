@@ -58,6 +58,7 @@ public class ReservationController {
         String[] rooms = request.getParameterValues("selected");
 
         try {
+            if(rooms != null)
             for (int i = 0 ; i < rooms.length ; i++){
                 HistoryReservation historyReservation = new HistoryReservation();
                 historyReservation.setReservation(reservation);
@@ -71,12 +72,16 @@ public class ReservationController {
     }
 
     @GetMapping("/main/reservation/update")
-    public String showFormForUpdate(@RequestParam("reservationID") int id, Model model, Model model1) throws ResourceNotFoundException {
+    public String showFormForUpdate(@RequestParam("reservationID") int id, Model model) throws ResourceNotFoundException {
         Reservation reservation = reservationService.getReservation(id);
         model.addAttribute("reservationUpdate",reservation);
+        List<Room> rooms = roomService.getRooms();
         List<Reservation> reservations = reservationService.getReservations();
-        model1.addAttribute("reservations",reservation);
-        return "DatPhong/DatPhong";
+        List<HistoryReservation> historyReservations = historyReservationService.getHistoryReservationByReservationID(id);
+        model.addAttribute("reservations",reservations);
+        model.addAttribute("rooms",rooms);
+        model.addAttribute("history",historyReservations);
+        return "DatPhong/ChinhSua-DatPhong";
     }
 
 

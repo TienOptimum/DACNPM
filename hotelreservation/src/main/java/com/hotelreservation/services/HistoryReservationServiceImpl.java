@@ -33,4 +33,11 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
         return historyReservationRepository.findById(id).orElseThrow(
                 ()-> new ResourceNotFoundException(id));
     }
+
+    @Override
+    public List<HistoryReservation> getHistoryReservationByReservationID(int id) throws ResourceNotFoundException {
+        return historyReservationRepository.findHistoryReservationByReservationID(id);
+    }
+
+
 }

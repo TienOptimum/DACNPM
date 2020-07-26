@@ -1,4 +1,3 @@
-INSERT INTO user(username, password) values ('admin','admin');
 
 INSERT INTO kind_of_room (name,description) values ('Phòng đơn','Phòng một giường'),('Phòng đôi','Phòng hai giường');
 
@@ -7,3 +6,5 @@ INSERT INTO payment_method(name,price,surcharge) values ('Phòng đơn',200000,2
 INSERT INTO menu(name,type,entry_price,price) values ('Bánh','Đồ ăn',8000,10000),('Sting','Đồ uống',7000,15000);
 
 INSERT INTO room(name,kind_of_room_id,payment_method_id) values ('111',1,1),('222',2,2);
+
+INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123')

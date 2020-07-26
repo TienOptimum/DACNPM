@@ -392,6 +392,7 @@
                                        <!---->
                                     </ul>
                                  </app-error>
+                                 <label value="${error}"/>
                                  <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-35 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
@@ -454,6 +455,7 @@
                                                 <!----><!---->Ngày nhận phòng<!----><!---->
                                                 </label>
                                                 <input type="datetime-local" name="checkInDate">
+                                             </span>
                                           </div>
                                           <!---->
                                        </div>
@@ -478,6 +480,7 @@
                                                 <!----><!---->Ngày trả phòng<!----><!---->
                                                 </label>
                                                 <input type="datetime-local" name="checkOutDate">
+                                             </span>
                                           </div>
                                           <!---->
                                        </div>

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +39,14 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     @Override
     public List<HistoryReservation> getHistoryReservationByReservationID(int id) throws ResourceNotFoundException {
         return historyReservationRepository.findHistoryReservationByReservationID(id);
+    }
+
+    @Override
+    public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate) {
+        if (historyReservationRepository.checkReservationAvailable(checkInDate, checkOutDate).size() == 0){
+            return true;
+        }
+        return false;
     }
 
 

@@ -14,6 +14,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -52,23 +56,30 @@ public class ReservationController {
 
 
     @PostMapping("/main/reservation/create")
-    public String create(@ModelAttribute Reservation reservation, HttpServletRequest request){
-        reservationService.saveReservation(reservation);
+    public String create(@ModelAttribute Reservation reservation, HttpServletRequest request,Model model){
+        Timestamp checkIn = new Timestamp(reservation.getCheckInDate().getTime());
+        Timestamp checkOut = new Timestamp(reservation.getCheckOutDate().getTime());
 
-        String[] rooms = request.getParameterValues("selected");
+        if(historyReservationService.checkRoomAvailable(checkIn,checkOut)){
+            reservationService.saveReservation(reservation);
 
-        try {
-            if(rooms != null)
-            for (int i = 0 ; i < rooms.length ; i++){
-                HistoryReservation historyReservation = new HistoryReservation();
-                historyReservation.setReservation(reservation);
-                historyReservation.setRoom(roomService.getRoom(Integer.parseInt(rooms[i])));
-                historyReservationService.saveHistoryReservation(historyReservation);
+            String[] rooms = request.getParameterValues("selected");
+
+            try {
+                if(rooms != null)
+                    for (int i = 0 ; i < rooms.length ; i++){
+                        HistoryReservation historyReservation = new HistoryReservation();
+                        historyReservation.setReservation(reservation);
+                        historyReservation.setRoom(roomService.getRoom(Integer.parseInt(rooms[i])));
+                        historyReservationService.saveHistoryReservation(historyReservation);
+                    }
+            }catch (ResourceNotFoundException ex) {
+
             }
-        }catch (ResourceNotFoundException ex) {
-
+            return "redirect:/main/reservation";
         }
-        return "redirect:/main/reservation";
+        model.addAttribute("error","Phòng đặt bị trùng lịch, vui lòng chọn lại lịch !");
+        return "/main/reservation/create";
     }
 
     @GetMapping("/main/reservation/update")

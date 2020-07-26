@@ -25,9 +25,6 @@ public class Room {
     private PaymentMethod paymentMethod;
     @Column(name="description")
     private String description;
-    @ManyToOne
-    @JoinColumn(name = "room_status_id")
-    private RoomStatus roomStatus;
 
     public Integer getId() {
         return id;
@@ -47,10 +44,6 @@ public class Room {
 
     public PaymentMethod getPaymentMethod() {
         return paymentMethod;
-    }
-
-    public RoomStatus getRoomStatus() {
-        return roomStatus;
     }
 
     public void setId(Integer id) {
@@ -73,7 +66,4 @@ public class Room {
         this.paymentMethod = paymentMethod;
     }
 
-    public void setRoomStatus(RoomStatus roomStatus) {
-        this.roomStatus = roomStatus;
-    }
 }

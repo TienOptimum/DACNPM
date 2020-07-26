@@ -4,20 +4,15 @@ import com.hotelreservation.entry.RoomParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.model.Room;
-import com.hotelreservation.model.RoomStatus;
-import com.hotelreservation.repositories.PaymentMethodRepository;
-import com.hotelreservation.repositories.RoomRepository;
 import com.hotelreservation.services.KindOfRoomService;
 import com.hotelreservation.services.PaymentMethodService;
 import com.hotelreservation.services.RoomService;
-import com.hotelreservation.services.RoomStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class RoomController {

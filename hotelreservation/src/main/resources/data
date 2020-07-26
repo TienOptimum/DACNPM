@@ -6,6 +6,4 @@ INSERT INTO payment_method(name,price,surcharge) values ('Phòng đơn',200000,2
 
 INSERT INTO menu(name,type,entry_price,price) values ('Bánh','Đồ ăn',8000,10000),('Sting','Đồ uống',7000,15000);
 
-INSERT INTO room_status(name) values ('free'),('hired'),('pending');
-
-INSERT INTO room(name,kind_of_room_id,payment_method_id,room_status_id) values ('111',1,1,1),('222',2,2,1);
+INSERT INTO room(name,kind_of_room_id,payment_method_id) values ('111',1,1),('222',2,2);

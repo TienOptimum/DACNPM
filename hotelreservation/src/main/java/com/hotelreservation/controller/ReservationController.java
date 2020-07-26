@@ -96,9 +96,9 @@ public class ReservationController {
         return "DatPhong/ChinhSua-DatPhong";
     }
 
-    @RequestMapping("/main/reservation/delete/room")
-    public void deleteRoom(@RequestParam("historyID") int id) throws ResourceNotFoundException{
-        historyReservationService.deleteHistoryReservation(id);
-    }
+//    @RequestMapping("/main/reservation/delete/room")
+//    public void deleteRoom(@RequestParam("historyID") int id) throws ResourceNotFoundException{
+//        historyReservationService.deleteHistoryReservation(id);
+//    }
 
 }

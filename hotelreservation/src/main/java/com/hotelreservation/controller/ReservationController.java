@@ -43,6 +43,7 @@ public class ReservationController {
     @Autowired
     HistoryReservationService historyReservationService;
 
+
     @RequestMapping("/main/reservation")
     public String viewAll(Model model){
         List<Reservation> reservations = reservationService.getReservations();
@@ -91,10 +92,13 @@ public class ReservationController {
         List<HistoryReservation> historyReservations = historyReservationService.getHistoryReservationByReservationID(id);
         model.addAttribute("reservations",reservations);
         model.addAttribute("rooms",rooms);
-        model.addAttribute("history",historyReservations);
+        model.addAttribute("historys",historyReservations);
         return "DatPhong/ChinhSua-DatPhong";
     }
 
-
+    @RequestMapping("/main/reservation/delete/room")
+    public void deleteRoom(@RequestParam("historyID") int id) throws ResourceNotFoundException{
+        historyReservationService.deleteHistoryReservation(id);
+    }
 
 }

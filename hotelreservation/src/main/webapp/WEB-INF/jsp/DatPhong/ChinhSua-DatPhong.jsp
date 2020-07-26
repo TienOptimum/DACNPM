@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.5Vmat9kUJqY.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNeqjJvPSIdvUFWoJcT_X4FPOrXIA/cb=gapi.loaded_0" async=""></script><script src="https://apis.google.com/js/platform.js?onload=onLoad" gapi_processed="true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <style type="text/css">
         body,
@@ -554,21 +555,23 @@
                                                     <!---->
                                                     <tr _ngcontent-c35="" class="mat-header-row ng-star-inserted" mat-header-row="" role="row">
                                                         <!---->
-                                                        <th _ngcontent-c35="" class="mat-header-cell cdk-column-name mat-column-name ng-star-inserted" mat-header-cell="" mattooltip="Click cột này để +1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Loại phòng </th>
+                                                        <th _ngcontent-c35="" class="mat-header-cell cdk-column-name mat-column-name ng-star-inserted" mat-header-cell="" role="columnheader" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Loại phòng </th>
                                                         <!---->
-                                                        <th _ngcontent-c35="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" mattooltip="Click cột để -1 số phòng" role="columnheader" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Chọn </th>
+                                                        <th _ngcontent-c35="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" role="columnheader" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Chọn </th>
                                                         <!---->
+                                                        <th _ngcontent-c35="" class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-header-cell="" role="columnheader" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Xóa </th>
                                                     </tr>
                                                     </thead>
                                                     <tbody role="rowgroup">
                                                     <!---->
-                                                    <c:forEach var="history" items="${history}">
-                                                        <tr _ngcontent-c35="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
+                                                    <c:forEach var="history" items="${historys}">
+                                                        <tr _ngcontent-c35="" class="pointer mat-row ng-star-inserted" mat-row="" role="row" id="history_${history.id}">
                                                             <!---->
                                                             <td _ngcontent-c35="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell" aria-describedby="cdk-describedby-message-10" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> ${history.room.name} ${history.room.kindOfRoom.name} </td>
                                                             <!---->
                                                             <td _ngcontent-c35="" class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-cell="" role="gridcell" aria-describedby="cdk-describedby-message-11" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> <input class="noselect" type="checkbox" nsame="noselect" value="${history.room.id}"> </td>
                                                             <!---->
+                                                            <td><button type="button" id="${history.id}" class="delete" onclick="deleteHis(this.id)"> Delete </button></td>
                                                         </tr>
                                                     </c:forEach>
                                                     </tbody>
@@ -635,7 +638,22 @@
             }
         }
     }
+</script>
 
+<script>
+    function deleteHis(id) {
+        console.log(id);
+        $.ajax({
+            url: "main/reservation/delete/room",
+            type: "post",
+            data:{
+                historyID:id,
+            },
+            success : function (data) {
+                alert('New message received');
+            }
+        });
+    }
 </script>
 
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>

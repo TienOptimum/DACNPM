@@ -65,4 +65,5 @@ public class Room {
     public void setPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
+
 }

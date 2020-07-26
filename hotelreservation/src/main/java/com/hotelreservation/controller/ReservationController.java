@@ -8,6 +8,7 @@ import com.hotelreservation.model.Room;
 import com.hotelreservation.services.HistoryReservationService;
 import com.hotelreservation.services.ReservationService;
 import com.hotelreservation.services.RoomService;
+import com.hotelreservation.services.RoomStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,6 +40,9 @@ public class ReservationController {
     @Autowired
     HistoryReservationService historyReservationService;
 
+    @Autowired
+    RoomStatusService roomStatusService;
+
     @RequestMapping("/main/reservation")
     public String viewAll(Model model){
         List<Reservation> reservations = reservationService.getReservations();
@@ -62,6 +66,7 @@ public class ReservationController {
             for (int i = 0 ; i < rooms.length ; i++){
                 HistoryReservation historyReservation = new HistoryReservation();
                 historyReservation.setReservation(reservation);
+                roomService.getRoom(Integer.parseInt(rooms[i])).setRoomStatus(roomStatusService.getRoomStatusById(3));
                 historyReservation.setRoom(roomService.getRoom(Integer.parseInt(rooms[i])));
                 historyReservationService.saveHistoryReservation(historyReservation);
             }
@@ -80,10 +85,13 @@ public class ReservationController {
         List<HistoryReservation> historyReservations = historyReservationService.getHistoryReservationByReservationID(id);
         model.addAttribute("reservations",reservations);
         model.addAttribute("rooms",rooms);
-        model.addAttribute("history",historyReservations);
+        model.addAttribute("historys",historyReservations);
         return "DatPhong/ChinhSua-DatPhong";
     }
 
-
+    @RequestMapping("/main/reservation/delete/room")
+    public void deleteRoom(@RequestParam("historyID") int id) throws ResourceNotFoundException{
+        historyReservationService.deleteHistoryReservation(id);
+    }
 
 }

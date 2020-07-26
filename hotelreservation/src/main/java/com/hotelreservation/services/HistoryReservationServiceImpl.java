@@ -39,5 +39,10 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
         return historyReservationRepository.findHistoryReservationByReservationID(id);
     }
 
+    @Override
+    public void deleteHistoryReservation(int id) throws ResourceNotFoundException {
+        historyReservationRepository.deleteById(id);
+    }
+
 
 }

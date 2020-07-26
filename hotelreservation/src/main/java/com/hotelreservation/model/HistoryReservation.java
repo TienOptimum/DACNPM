@@ -24,6 +24,14 @@ public class HistoryReservation {
     @JoinColumn(name="room_id")
     private Room room;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public Reservation getReservation() {
         return reservation;
     }

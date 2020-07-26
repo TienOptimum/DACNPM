@@ -4,10 +4,13 @@ import com.hotelreservation.entry.RoomParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.model.Room;
+import com.hotelreservation.model.RoomStatus;
 import com.hotelreservation.repositories.PaymentMethodRepository;
 import com.hotelreservation.repositories.RoomRepository;
 import com.hotelreservation.services.KindOfRoomService;
+import com.hotelreservation.services.PaymentMethodService;
 import com.hotelreservation.services.RoomService;
+import com.hotelreservation.services.RoomStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +26,7 @@ public class RoomController {
     @Autowired
     KindOfRoomService kindOfRoomService;
     @Autowired
-    PaymentMethodRepository paymentMethodRepository;
+    PaymentMethodService paymentMethodService;
 
     @RequestMapping("/main/room")
     public String viewAll(Model model, Model model1, Model model2){
@@ -31,7 +34,7 @@ public class RoomController {
         model.addAttribute("rooms",rooms);
         List<KindOfRoom> kindOfRooms = kindOfRoomService.getKindOfRooms();
         model1.addAttribute("kindofrooms", kindOfRooms);
-        model2.addAttribute("paymentmethods",paymentMethodRepository.findAll());
+        model2.addAttribute("paymentmethods",paymentMethodService.getPaymentMethods());
         return "QLHT/QLHT-Phong";
     }
 
@@ -40,9 +43,10 @@ public class RoomController {
         Room room = new Room();
         room.setName(roomParam.name);
         room.setDescription(roomParam.description);
+
         try {
             room.setKindOfRoom(kindOfRoomService.getKindOfRoom(roomParam.kind_of_room_id));
-            room.setPaymentMethod(paymentMethodRepository.getOne(roomParam.payment_method_id));
+            room.setPaymentMethod(paymentMethodService.getPaymentMethod(roomParam.payment_method_id));
         } catch (ResourceNotFoundException ex) {
 
         }

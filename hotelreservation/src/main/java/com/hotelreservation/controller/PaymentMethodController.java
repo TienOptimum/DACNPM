@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Time;
 import java.util.List;
 
 @Controller
@@ -25,7 +26,6 @@ public class PaymentMethodController {
 
     @PostMapping("/main/paymentmethod/create")
     public String create(@ModelAttribute PaymentMethod paymentMethod){
-        System.out.println(paymentMethod.getId());
         paymentMethodService.savePaymentMethod(paymentMethod);
         return "redirect:/main/paymentMethod";
     }
@@ -36,6 +36,6 @@ public class PaymentMethodController {
         model.addAttribute("paymentmethodUpdate",paymentMethod);
         List<PaymentMethod> paymentMethods = paymentMethodService.getPaymentMethods();
         model1.addAttribute("paymentmethods",paymentMethods);
-        return "QLHT/QLHT-CachTinhTien";
+        return "QLHT/QLHT-ChinhSua-CachTinhTien";
     }
 }

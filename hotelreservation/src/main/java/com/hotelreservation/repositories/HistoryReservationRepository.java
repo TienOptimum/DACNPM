@@ -16,6 +16,6 @@ public interface HistoryReservationRepository extends JpaRepository<HistoryReser
     List<HistoryReservation> findHistoryReservationByReservationID(@Param("reservationID") int reservationID);
 
     @Query(nativeQuery = true,
-            value = "select * from history_reservation, reservation where history_reservation.reservation_id = reservation.id and (reservation.check_in_date between :checkInDate and :checkOutDate) and (reservation.check_out_date between :checkInDate and :checkOutDate) " )
+            value = "select history_reservation.id, early_check_in, history_reservation.reservation_id, history_reservation.room_id from history_reservation, reservation where history_reservation.reservation_id = reservation.id and (:checkInDate between reservation.check_in_date and reservation.check_out_date) and (:checkOutDate between reservation.check_in_date and reservation.check_out_date) " )
     List<HistoryReservation> checkReservationAvailable(@Param("checkInDate") Timestamp checkInDate, @Param("checkOutDate") Timestamp checkOutDate);
 }

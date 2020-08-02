@@ -223,7 +223,20 @@
                                  </th>
                                  <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-159 cdk-column-type mat-column-type ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                     <div class="mat-sort-header-container">
-                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for type"> Loại phòng </button><!---->
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for type"> Ngày nhận phòng </button><!---->
+                                       <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-159 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
+                                          <div class="mat-sort-header-stem"></div>
+                                          <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
+                                             <div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"></div>
+                                             <div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"></div>
+                                             <div class="mat-sort-header-pointer-middle"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </th>
+                                 <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-159 cdk-column-type mat-column-type ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <div class="mat-sort-header-container">
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for type"> Ngày trả phòng </button><!---->
                                        <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-159 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
                                           <div class="mat-sort-header-stem"></div>
                                           <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
@@ -249,7 +262,7 @@
                                  </th>
                                  <th _ngcontent-c40="" class="mat-header-cell ng-tns-c31-160 cdk-column-rule mat-column-rule ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                                     <div class="mat-sort-header-container">
-                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for rule"> Số điện thoại </button><!---->
+                                       <button class="mat-sort-header-button" type="button" aria-label="Change sorting for rule"> Nhận phòng </button><!---->
                                        <div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c31-160 ng-star-inserted" style="transform: translateY(25%); opacity: 0;">
                                           <div class="mat-sort-header-stem"></div>
                                           <div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);">
@@ -281,13 +294,21 @@
                                  <c:url var="updateReservation" value="/main/reservation/update">
                                     <c:param name="reservationID" value="${historyReservation.reservation.id}"/>
                                  </c:url>
-                                 <tr _ngcontent-c40="" class="pointer mat-row ng-star-inserted" mat-row="" role="row"  onclick="document.location = '${updateReservation}';">
+
+                                 <c:url var="startRoom" value="/main/reservation/start">
+                                    <c:param name="historyReservationID" value="${historyReservation.id}"/>
+                                 </c:url>
+
+                                 <tr _ngcontent-c40="" class="pointer mat-row ng-star-inserted" mat-row="" role="row">
                                     <!---->
                                     <td _ngcontent-c40="" class="mat-cell cdk-column-name mat-column-name ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.room.name} </td>
-                                    <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.room.kindOfRoom.name} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.checkInDate} </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-type mat-column-type ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.checkOutDate} </td>
                                     <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.customerName} </td>
-                                    <td _ngcontent-c40="" class="mat-cell cdk-column-rule mat-column-rule ng-star-inserted" mat-cell="" role="gridcell"> ${historyReservation.reservation.phone} </td>
                                     <td _ngcontent-c40="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell">
+                                       <button type="button" class="btn btn-success" onclick="document.location = '${startRoom}';">Nhận phòng</button>
+                                    </td>
+                                    <td _ngcontent-c40="" class="mat-cell cdk-column-edit mat-column-edit ng-star-inserted" mat-cell="" role="gridcell" onclick="document.location = '${updateReservation}';">
                                        <div _ngcontent-c40="" class="icon-sm">
                                           <mat-icon _ngcontent-c40="" class="pointer text-primary mat-icon notranslate material-icons mat-icon-inline mat-icon-no-color" role="img" aria-hidden="true">edit</mat-icon>
                                        </div>
@@ -386,13 +407,12 @@
                               </div>
                            </div>
                            <div _ngcontent-c35="" class="form-sub" >
-                              <form _ngcontent-c35="" novalidate="" class="ng-valid ng-dirty ng-touched" action="/main/reservation/create" method="post" modelAttribute="reservation">
+                              <form _ngcontent-c35="" id="form-add" class="ng-valid ng-dirty ng-touched" action="/main/reservation/create" method="post" modelAttribute="reservation">
                                  <app-error _ngcontent-c35="" _nghost-c4="">
                                     <ul _ngcontent-c4="" class="error-list my-1">
                                        <!---->
                                     </ul>
                                  </app-error>
-                                 <label value="${error}"/>
                                  <mat-form-field _ngcontent-c35="" class="w-100 mat-form-field ng-tns-c5-35 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched">
                                     <div class="mat-form-field-wrapper">
                                        <div class="mat-form-field-flex">
@@ -454,7 +474,7 @@
                                                 <label class="mat-form-field-label ng-tns-c5-37 ng-star-inserted" id="mat-form-field-label-27" for="mat-input-11" aria-owns="mat-input-11">
                                                 <!----><!---->Ngày nhận phòng<!----><!---->
                                                 </label>
-                                                <input type="datetime-local" name="checkInDate">
+                                                <input id="checkInDate" type="datetime-local" name="checkInDate">
                                              </span>
                                           </div>
                                           <!---->
@@ -479,7 +499,7 @@
                                                 <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-12" aria-owns="mat-input-12">
                                                 <!----><!---->Ngày trả phòng<!----><!---->
                                                 </label>
-                                                <input type="datetime-local" name="checkOutDate">
+                                                <input id="checkOutDate" type="datetime-local" name="checkOutDate">
                                              </span>
                                           </div>
                                           <!---->
@@ -573,19 +593,12 @@
                                        </tr>
                                        </c:forEach>
                                        </tbody>
-                                       <tfoot role="rowgroup">
-                                       <!---->
-<%--                                       <tr _ngcontent-c35="" class="mat-footer-row ng-star-inserted" mat-footer-row="" role="row">--%>
-<%--                                          <!---->--%>
-<%--                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-name mat-column-name ng-star-inserted" mat-footer-cell="" role="gridcell"> Tổng số phòng </td>--%>
-<%--                                          <td _ngcontent-c35="" class="mat-footer-cell cdk-column-quantity mat-column-quantity ng-star-inserted" mat-footer-cell="" role="gridcell"> 1 </td>--%>
-<%--                                       </tr>--%>
-                                       </tfoot>
                                     </table>
                                  </div>
                                  <!---->
-                                 <button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="submit" onclick="getSelected()"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
                               </form>
+                              <button _ngcontent-c35="" class="btn btn-primary btn-bar ng-star-inserted" type="submit" onclick="checkValid()"><i _ngcontent-c35="" class="fas fa-check"></i> Lưu</button><!---->
+
                            </div>
                         </app-booking-entry>
                         <!---->
@@ -627,6 +640,34 @@
 </script>
 
 <script>
+   function checkValid() {
+      var checkIn = document.getElementById("checkInDate").value;
+      var checkOut = document.getElementById("checkOutDate").value;
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+            handleCheckValid(this.responseText);
+         }
+      };
+      xhttp.open("POST", "/main/reservation/room/check", true);
+      xhttp.setRequestHeader("Content-type", "application/json");
+      xhttp.send(JSON.stringify({checkIn:checkIn,checkOut:checkOut}));
+   }
+   const OK = 'ok';
+   const FAILED = 'failed';
+   function handleCheckValid(responseStatus) {
+      if (responseStatus == OK) {
+         getSelected();
+         submitForm();
+      }else {
+         alert("Phòng được đặt đã trùng lịch!");
+      }
+   }
+
+   function submitForm() {
+      document.getElementById("form-add").submit();
+   }
+
    function getSelected() {
       var x = document.getElementsByClassName("noselect");
       var i;
@@ -636,7 +677,6 @@
          }
       }
    }
-   
 </script>
 
 <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fadmin.shotel.vn&amp;rpcToken=406070413.1219388"></iframe>

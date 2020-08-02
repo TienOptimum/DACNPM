@@ -480,6 +480,7 @@
                                                 <label class="mat-form-field-label ng-tns-c5-38 ng-star-inserted" id="mat-form-field-label-29" for="mat-input-12" aria-owns="mat-input-12">
                                                 <!----><!---->Ngày trả phòng<!----><!---->
                                                 </label>
+                                             </span>
                                                 <input type="datetime-local" name="checkOutDate" value="${reservationUpdate.checkOutDate}">
                                                         </div>
                                                         <!---->
@@ -650,7 +651,7 @@
                 historyID:id,
             },
             success : function (data) {
-                alert('New message received');
+                $("#history_" + id).remove();
             }
         });
     }

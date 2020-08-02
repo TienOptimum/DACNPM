@@ -169,45 +169,6 @@
                   <div _ngcontent-c20="" class="topbar">
                      <div _ngcontent-c20="" class="container-fluid d-flex h-100">
                         <div _ngcontent-c20="" class="justify-content-center align-self-center"><button _ngcontent-c20="" class="btn btn-secondary bmd-btn-icon btn-back" type="button"><i _ngcontent-c20="" class="material-icons">menu</i></button><span _ngcontent-c20="" class="topbar-title">Thuê - trả phòng</span></div>
-                        <div _ngcontent-c20="" class="justify-content-center align-self-center">
-                           <button _ngcontent-c20="" class="btn btn-secondary bmd-btn-icon mr-2" type="button"><i _ngcontent-c20="" class="material-icons" mattooltip="Giảm dần" style="touch-action: none; user-select: none;" aria-describedby="cdk-describedby-message-24" cdk-describedby-host="" hidden="">arrow_downward</i><i _ngcontent-c20="" class="material-icons" mattooltip="Tăng dần" style="touch-action: none; user-select: none;" aria-describedby="cdk-describedby-message-25" cdk-describedby-host="">arrow_upward</i></button>
-                           <mat-form-field _ngcontent-c20="" class="mat-form-field ng-tns-c21-149 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid mat-form-field-should-float" style="width: 200px">
-                              <div class="mat-form-field-wrapper">
-                                 <div class="mat-form-field-flex">
-                                    <!----><!---->
-                                    <div class="mat-form-field-infix">
-                                       <mat-select _ngcontent-c20="" class="mat-select ng-tns-c22-150 ng-untouched ng-pristine ng-valid ng-star-inserted" name="model.orderBy" role="listbox" id="mat-select-9" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false">
-                                          <div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin="">
-                                             <div class="mat-select-value">
-                                                <!----><!---->
-                                                <span class="mat-select-value-text ng-tns-c22-150 ng-star-inserted">
-                                                         <!----><span class="ng-tns-c22-150 ng-star-inserted">Xếp theo tên</span><!---->
-                                                      </span>
-                                             </div>
-                                             <div class="mat-select-arrow-wrapper">
-                                                <div class="mat-select-arrow"></div>
-                                             </div>
-                                          </div>
-                                          <!---->
-                                       </mat-select>
-                                       <span class="mat-form-field-label-wrapper">
-                                                <!---->
-                                             </span>
-                                    </div>
-                                    <!---->
-                                 </div>
-                                 <!---->
-                                 <div class="mat-form-field-underline ng-tns-c21-149 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
-                                 <div class="mat-form-field-subscript-wrapper">
-                                    <!----><!---->
-                                    <div class="mat-form-field-hint-wrapper ng-tns-c21-149 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
-                                       <!---->
-                                       <div class="mat-form-field-hint-spacer"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </mat-form-field>
-                        </div>
                         <div _ngcontent-c20="" class="justify-content-center align-self-center ml-4">
                                  <span class="bmd-form-group">
                                     <div _ngcontent-c20="" class="input-group">
@@ -262,93 +223,8 @@
                            </mat-tab-header>
                            <div class="mat-tab-body-wrapper" style="">
                               <!---->
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-153 ng-star-inserted mat-tab-body-active" role="tabpanel" id="mat-tab-content-5-0" aria-labelledby="mat-tab-label-5-0">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: none;">
-                                    <!----><!----><!---->
-                                    <mat-expansion-panel _ngcontent-c20="" class="border-bottom mat-elevation-z mat-expansion-panel ng-tns-c26-157 mat-expanded ng-star-inserted" hidetoggle="true" style="">
-                                       <mat-expansion-panel-header _ngcontent-c20="" class="mat-expansion-panel-header ng-tns-c27-158 mat-expanded ng-trigger ng-trigger-expansionHeight ng-star-inserted" role="button" id="mat-expansion-panel-header-15" tabindex="0" aria-controls="cdk-accordion-child-15" aria-expanded="true" aria-disabled="false" style="height: 64px;">
-                                          <span class="mat-content"> ${kindofroom.name}	 </span><!---->
-                                       </mat-expansion-panel-header>
-                                       <div class="mat-expansion-panel-content ng-trigger ng-trigger-bodyExpansion" role="region" aria-labelledby="mat-expansion-panel-header-15" id="cdk-accordion-child-15" style="visibility: visible;">
-                                          <div class="mat-expansion-panel-body">
-                                             <mat-panel-description _ngcontent-c20="" class="mat-expansion-panel-header-description">
-                                                <!---->
-                                                <div _ngcontent-c20="" class="d-flex flex-wrap room-list-panel ng-star-inserted">
-                                                   <!---->
-                                                   <mat-card _ngcontent-c20="" class="mt-3 mr-3 mat-card ng-star-inserted" style="">
-                                                      <div _ngcontent-c20="" class="room-header d-flex flex-row border-bottom ">
-                                                         <div _ngcontent-c20="" class="flex-grow-1 room-name text-primary"> ${kindofroom.id}	 </div>
-                                                         <div _ngcontent-c20="">
-                                                            <button _ngcontent-c20="" aria-haspopup="true" mat-icon-button="" class="mat-icon-button">
-                                                                     <span class="mat-button-wrapper">
-                                                                        <mat-icon _ngcontent-c20="" class="mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true">more_vert</mat-icon>
-                                                                     </span>
-                                                               <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
-                                                               <div class="mat-button-focus-overlay"></div>
-                                                            </button>
-                                                            <mat-menu _ngcontent-c20="" class="ng-tns-c14-170">
-                                                               <!---->
-                                                            </mat-menu>
-                                                         </div>
-                                                      </div>
-                                                      <div _ngcontent-c20="" class="px-2 pt-2 d-flex flex-row">
-                                                         <div _ngcontent-c20="">
-                                                            <mat-icon _ngcontent-c20="" class="mat-icon notranslate material-icons mat-icon-no-color" mattooltip="Trả phòng lần cuối" role="img" style="touch-action: none; user-select: none;" aria-hidden="true" aria-describedby="cdk-describedby-message-27" cdk-describedby-host="">directions_walk</mat-icon>
-                                                         </div>
-                                                         <div _ngcontent-c20="" class="flex-grow-1 icon-text justify-content-center align-self-center"><span _ngcontent-c20="">${kindofroom.description}	</span></div>
-                                                      </div>
-                                                      <div _ngcontent-c20="" class="px-2 py-2 d-flex flex-row">
-                                                         <div _ngcontent-c20="">
-                                                            <!---->
-                                                            <mat-icon _ngcontent-c20="" class="text-success mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true">check</mat-icon>
-                                                            <!---->
-                                                         </div>
-                                                         <div _ngcontent-c20="" class="flex-grow-1 icon-text justify-content-center align-self-center">
-                                                            <!----><span _ngcontent-c20="" class="ng-star-inserted">${kindofroom.description}</span><!---->
-                                                         </div>
-                                                      </div>
-                                                   </mat-card>
-                                                </div>
-                                             </mat-panel-description>
-                                             <!---->
-                                          </div>
-                                       </div>
-                                    </mat-expansion-panel>
-                                    <!---->
-                                    <mat-expansion-panel _ngcontent-c20="" class="border-bottom mat-elevation-z mat-expansion-panel ng-tns-c26-159 mat-expanded ng-star-inserted" hidetoggle="true" style="">
-                                       <mat-expansion-panel-header _ngcontent-c20="" class="mat-expansion-panel-header ng-tns-c27-160 mat-expanded ng-trigger ng-trigger-expansionHeight ng-star-inserted" role="button" id="mat-expansion-panel-header-16" tabindex="0" aria-controls="cdk-accordion-child-16" aria-expanded="true" aria-disabled="false" style="height: 64px;">
-                                          <span class="mat-content"> ${kindofroom.id} </span><!---->
-                                       </mat-expansion-panel-header>
-                                       <div class="mat-expansion-panel-content ng-trigger ng-trigger-bodyExpansion" role="region" aria-labelledby="mat-expansion-panel-header-16" id="cdk-accordion-child-16" style="visibility: visible;">
-                                          <div class="mat-expansion-panel-body">
-                                             <mat-panel-description _ngcontent-c20="" class="mat-expansion-panel-header-description">
-                                                <!---->
-                                                <div _ngcontent-c20="" class="d-flex flex-wrap room-list-panel ng-star-inserted">
-                                                   <!---->
-                                                </div>
-                                             </mat-panel-description>
-                                             <!---->
-                                          </div>
-                                       </div>
-                                    </mat-expansion-panel>
-                                    <!----><!---->
-                                 </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-154 ng-star-inserted" role="tabpanel" id="mat-tab-content-5-1" aria-labelledby="mat-tab-label-5-1">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                    <!---->
-                                 </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-155 ng-star-inserted" role="tabpanel" id="mat-tab-content-5-2" aria-labelledby="mat-tab-label-5-2">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                    <!---->
-                                 </div>
-                              </mat-tab-body>
-                              <mat-tab-body class="mat-tab-body ng-tns-c36-156 ng-star-inserted" role="tabpanel" id="mat-tab-content-5-3" aria-labelledby="mat-tab-label-5-3">
-                                 <div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(100%, 0px, 0px); min-height: 1px;">
-                                    <!---->
-                                 </div>
-                              </mat-tab-body>
+
+
                            </div>
                         </mat-tab-group>
                      </div>

@@ -1,7 +1,7 @@
 
 INSERT INTO kind_of_room (name,description) values ('Phòng đơn','Phòng một giường'),('Phòng đôi','Phòng hai giường');
 
-INSERT INTO payment_method(name,price,surcharge) values ('Phòng đơn',200000,20000), ('Phòng đôi',300000,20000);
+INSERT INTO payment_method(name,price,surcharge,check_in_time,check_out_time) values ('Phòng đơn',200000,20000,'14:00','12:00'), ('Phòng đôi',300000,20000,'14:00','12:00');
 
 INSERT INTO menu(name,type,entry_price,price) values ('Bánh','Đồ ăn',8000,10000),('Sting','Đồ uống',7000,15000);
 

@@ -3,6 +3,7 @@ package com.hotelreservation.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.sql.Time;
@@ -22,12 +23,10 @@ public class PaymentMethod {
     private String name;
     @Column(name = "price")
     private Double price;
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="checkInTime")
-    private Date checkInTime;
-    @Temporal(TemporalType.TIMESTAMP)
+    private Time checkInTime;
     @Column(name="checkOutTime")
-    private Date checkOutTime;
+    private Time checkOutTime;
     @Column(name="surcharge")
     private Double surcharge;
     @Column(name="priceForHoliday")
@@ -61,7 +60,7 @@ public class PaymentMethod {
         return checkInTime;
     }
 
-    public void setCheckInTime(Date checkInTime) {
+    public void setCheckInTime(Time checkInTime) {
         this.checkInTime = checkInTime;
     }
 
@@ -69,7 +68,7 @@ public class PaymentMethod {
         return checkOutTime;
     }
 
-    public void setCheckOutTime(Date checkOutTime) {
+    public void setCheckOutTime(Time checkOutTime) {
         this.checkOutTime = checkOutTime;
     }
 

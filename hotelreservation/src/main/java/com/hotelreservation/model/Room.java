@@ -25,6 +25,17 @@ public class Room {
     private PaymentMethod paymentMethod;
     @Column(name="description")
     private String description;
+    @ManyToOne
+    @JoinColumn(name="room_status_id")
+    private RoomStatus roomStatus;
+
+    public RoomStatus getRoomStatus() {
+        return roomStatus;
+    }
+
+    public void setRoomStatus(RoomStatus roomStatus) {
+        this.roomStatus = roomStatus;
+    }
 
     public Integer getId() {
         return id;

@@ -23,6 +23,8 @@ public class HistoryReservation {
     @ManyToOne
     @JoinColumn(name="room_id")
     private Room room;
+    @Column(name = "early_check_in")
+    private String earlyCheckIn;
 
     public Integer getId() {
         return id;
@@ -30,6 +32,14 @@ public class HistoryReservation {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getEarlyCheckIn() {
+        return earlyCheckIn;
+    }
+
+    public void setEarlyCheckIn(String earlyCheckIn) {
+        this.earlyCheckIn = earlyCheckIn;
     }
 
     public Reservation getReservation() {

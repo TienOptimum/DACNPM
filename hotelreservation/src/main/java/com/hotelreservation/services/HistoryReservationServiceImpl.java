@@ -42,11 +42,23 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     }
 
     @Override
+    public List<HistoryReservation> getHistoryReservationByCheckRoom(Timestamp checkIn, Timestamp checkOut){
+        return historyReservationRepository.checkReservationAvailable(checkIn,checkOut);
+    }
+
+    @Override
     public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate) {
-        if (historyReservationRepository.checkReservationAvailable(checkInDate, checkOutDate).size() == 0){
+        List<HistoryReservation> historyReservations = historyReservationRepository.checkReservationAvailable(checkInDate,checkOutDate);
+
+        if (historyReservations.size() == 0){
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void deleteHistoryReservation(int id) throws ResourceNotFoundException {
+        historyReservationRepository.deleteById(id);
     }
 
 

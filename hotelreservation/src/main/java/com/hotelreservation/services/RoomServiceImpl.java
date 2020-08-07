@@ -33,4 +33,11 @@ public class RoomServiceImpl implements RoomService{
     public void deleteRoom(int id) throws ResourceNotFoundException {
         roomRepository.deleteById(id);
     }
+
+    @Override
+    public List<Room> getRoomByRoomStatusID(int id){
+        return roomRepository.findAllByRoomRoomStatusId(id);
+    }
+
+
 }

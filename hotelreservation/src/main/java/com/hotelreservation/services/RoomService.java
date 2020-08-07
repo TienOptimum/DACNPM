@@ -10,4 +10,5 @@ public interface RoomService {
     public void saveRoom(Room room);
     public Room getRoom(int id) throws ResourceNotFoundException;
     public void deleteRoom(int id) throws ResourceNotFoundException;
+    public List<Room> getRoomByRoomStatusID(int id);
 }

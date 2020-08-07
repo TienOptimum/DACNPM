@@ -5,6 +5,12 @@ INSERT INTO payment_method(name,price,surcharge,check_in_time,check_out_time) va
 
 INSERT INTO menu(name,type,entry_price,price) values ('Bánh','Đồ ăn',8000,10000),('Sting','Đồ uống',7000,15000);
 
-INSERT INTO room(name,kind_of_room_id,payment_method_id) values ('111',1,1),('222',2,2);
+INSERT INTO room(name,kind_of_room_id,payment_method_id,room_status_id) values ('111',1,1,1),('222',2,2,1);
+
+INSERT INTO room_status(name) values ('Trống'),('Đã nhận phòng'),('Chờ nhận phòng');
+
+INSERT INTO reservation (id, check_in_date, check_out_date, customer_name, deposits, phone) VALUES ('1', '2020-08-08 00:32:00', '2020-08-10 00:32:00', 'abc', '111', '0');
+
+INSERT INTO history_reservation (id, cost, early_check_in, reservation_id, room_id) VALUES ('1', '0', 'N', '1', '1');
 
 INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123')

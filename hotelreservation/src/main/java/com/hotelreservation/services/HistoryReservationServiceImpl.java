@@ -47,6 +47,11 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     }
 
     @Override
+    public List<HistoryReservation> getHistoryReservationByRoomRoomStatus(int id) {
+        return historyReservationRepository.findAllByRoomRoomStatusId(id);
+    }
+
+    @Override
     public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate) {
         List<HistoryReservation> historyReservations = historyReservationRepository.checkReservationAvailable(checkInDate,checkOutDate);
 

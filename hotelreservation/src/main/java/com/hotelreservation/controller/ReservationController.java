@@ -5,10 +5,9 @@ import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.HistoryReservation;
 import com.hotelreservation.model.Reservation;
 import com.hotelreservation.model.Room;
-import com.hotelreservation.services.HistoryReservationService;
-import com.hotelreservation.services.PaymentMethodService;
-import com.hotelreservation.services.ReservationService;
-import com.hotelreservation.services.RoomService;
+import com.hotelreservation.model.RoomStatus;
+import com.hotelreservation.repositories.RoomStatusRepository;
+import com.hotelreservation.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
@@ -18,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.crypto.Data;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Controller
 public class ReservationController {
@@ -41,15 +42,18 @@ public class ReservationController {
     @Autowired
     PaymentMethodService paymentMethodService;
 
-    @RequestMapping("roomrent")
-    private String roomRentRedirect(){
-        return "ThueTraPhong/ThueTraPhong-PhongDangThue";
-    }
+    @Autowired
+    RoomStatusService roomStatusService;
 
+    @RequestMapping("/roomrent")
+    private String roomRentRedirect(Model model){
+        List<HistoryReservation> roomRents = historyReservationService.getHistoryReservationByRoomRoomStatus(2);
+        List<Room> roomAvais = roomService.getRoomByRoomStatusID(1);
 
-    @RequestMapping("/lounge")
-    private String loungeRedirect(){
-        return "ThueTraPhong/ThueTraPhong-PhongCho";
+        model.addAttribute("roomRents", roomRents);
+        model.addAttribute("roomAvais",roomAvais);
+
+        return "ThueTraPhong/ThueTraPhong";
     }
 
     @RequestMapping("/main/reservation")
@@ -75,11 +79,13 @@ public class ReservationController {
                         HistoryReservation historyReservation = new HistoryReservation();
                         historyReservation.setReservation(reservation);
                         historyReservation.setRoom(roomService.getRoom(Integer.parseInt(rooms[i])));
+                        historyReservation.setEarlyCheckIn("N");
                         historyReservationService.saveHistoryReservation(historyReservation);
                     }
             }catch (ResourceNotFoundException ex) {
 
             }
+
             return "redirect:/main/reservation";
     }
 
@@ -102,71 +108,84 @@ public class ReservationController {
         historyReservationService.deleteHistoryReservation(id);
     }
 
-    @RequestMapping("main/reservation/start")
+    @RequestMapping("/main/reservation/start")
     public String checkInRoom(@RequestParam("historyReservationID") int id) throws ResourceNotFoundException {
         HistoryReservation historyReservation = historyReservationService.getHistoryReservation(id);
 
         // thời gian check in thực tế
         Date date = new Date();
-        long realTimeCheckIn = date.getTime();
         historyReservation.getReservation().setCheckInDate(date);
+        Date realCheckIn = historyReservation.getReservation().getCheckInDate();
 
         // thời gian check in lý thuyết
-        long checkInTime = historyReservation.getRoom().getPaymentMethod().getCheckInTime().getTime();
+        Date checkInTime = historyReservation.getRoom().getPaymentMethod().getCheckInTime();
 
-        boolean earlyCheckIn = false;
+        String earlyCheckIn = historyReservation.getEarlyCheckIn();
 
-        String status = "";
+        RoomStatus roomStatus = roomStatusService.getRoomStatusByID(2);
 
         // kiểm tra thời gian check in
-        if (realTimeCheckIn < checkInTime){
+        if (realCheckIn.getHours() < checkInTime.getHours()){
             // set việc nhận phòng sớm
-            earlyCheckIn = true;
-            status = "Đã nhận phòng";
+            earlyCheckIn = "Y";
+            historyReservation.getRoom().setRoomStatus(roomStatus);
+        }else{
+            historyReservation.getRoom().setRoomStatus(roomStatus);
         }
 
+        historyReservation.setEarlyCheckIn(earlyCheckIn);
         // xử lí việc nhận phòng
         historyReservationService.saveHistoryReservation(historyReservation);
 
-        return "redirect:/main/reservation";
+        return "redirect:/roomrent";
     }
 
-    @RequestMapping("main/louge/pay")
-    public void pay(){
+    @RequestMapping("/main/louge/pay")
+    public void pay(@RequestParam("historyReservationID") int id) throws ResourceNotFoundException {
+        HistoryReservation historyReservation = historyReservationService.getHistoryReservation(id);
         //thời gian check out lý thuyết
-        int checkOutTime = 0;
+        Date d1 = historyReservation.getReservation().getCheckOutDate();
+        long checkOutTime = d1.getTime();
         //thời gian check out thực tế
-        int realCheckOut = 0;
+        Date date = new Date();
+        long realCheckOut = date.getTime();
         // tiền menu
-        int menuCost = 0;
+        double menuCost = 0;
         // tổng tiền cần thanh toán
-        int totalPay = 0;
+        double totalPay = 0;
         // lấy ra số ngày đặt phòng
-        int getDayReservation = 0;
+        long day = realCheckOut - historyReservation.getReservation().getCheckInDate().getTime();
+        long getDayReservation = TimeUnit.MILLISECONDS.toDays(day);
         //lấy ra giá phòng
-        int paymentMethod = 0;
+        double paymentMethod = historyReservation.getRoom().getPaymentMethod().getPrice();
         // lấy ra giá phụ thu
-        int surcharge = 0;
+        double surcharge = historyReservation.getRoom().getPaymentMethod().getSurcharge();
         // lấy ra danh sách menu đã sử dụng của phòng
-        ArrayList<Integer> menu = new ArrayList();
+//        ArrayList<Integer> menu = new ArrayList();
+//
+//        for (int i = 0; i < menu.size() ; i++){
+//            menuCost += menu.get(i);
+//        }
 
-        for (int i = 0; i < menu.size() ; i++){
-            menuCost += menu.get(i);
-        }
-
-        int timeBonus=0;
+        long diffTimeBonus = realCheckOut - checkOutTime;
+        long timeBonus = 0;
         // kiểm tra thời gian check Out
-        if (realCheckOut > checkOutTime) {
-            timeBonus = realCheckOut - checkOutTime;
+        if (d1.before(date)) {
+            timeBonus = TimeUnit.MILLISECONDS.toHours(diffTimeBonus);
         }
         // kiểm tra việc checkin Sớm
-        boolean earlyCheckIn = true;
+        String earlyCheckIn = historyReservation.getEarlyCheckIn();
 
-        if (earlyCheckIn){
+        if (earlyCheckIn.equals("Y")){
             totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge + 50000;
+        }else{
+            totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge;
         }
 
+        historyReservation.setCost(totalPay);
+        historyReservationService.saveHistoryReservation(historyReservation);
         // xử lí việc hiện thông tin thanh toán
+
     }
 
     //

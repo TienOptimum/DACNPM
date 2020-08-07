@@ -25,6 +25,8 @@ public class HistoryReservation {
     private Room room;
     @Column(name = "early_check_in")
     private String earlyCheckIn;
+    @Column(name = "cost")
+    private double cost;
 
     public Integer getId() {
         return id;
@@ -56,5 +58,13 @@ public class HistoryReservation {
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 }

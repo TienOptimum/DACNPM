@@ -42,6 +42,7 @@ public class RoomController {
         try {
             room.setKindOfRoom(kindOfRoomService.getKindOfRoom(roomParam.kind_of_room_id));
             room.setPaymentMethod(paymentMethodService.getPaymentMethod(roomParam.payment_method_id));
+            room.getRoomStatus().setId(1);
         } catch (ResourceNotFoundException ex) {
 
         }

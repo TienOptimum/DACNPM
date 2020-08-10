@@ -11,6 +11,6 @@ INSERT INTO room_status(name) values ('Trống'),('Đã nhận phòng'),('Chờ 
 
 INSERT INTO reservation (id, check_in_date, check_out_date, customer_name, deposits, phone) VALUES ('1', '2020-08-08 00:32:00', '2020-08-10 00:32:00', 'abc', '111', '0');
 
-INSERT INTO history_reservation (id, cost, early_check_in, reservation_id, room_id) VALUES ('1', '0', 'N', '1', '1');
+INSERT INTO history_reservation (id, cost, early_check_in, reservation_id, room_id,status) VALUES ('1', '0', 'N', '1', '1','ON');
 
 INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123')

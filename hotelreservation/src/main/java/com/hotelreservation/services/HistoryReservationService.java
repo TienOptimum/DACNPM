@@ -17,4 +17,5 @@ public interface HistoryReservationService {
     public void deleteHistoryReservation(int id) throws ResourceNotFoundException;
     public List<HistoryReservation> getHistoryReservationByCheckRoom(Timestamp checkIn, Timestamp checkOut);
     public List<HistoryReservation> getHistoryReservationByRoomRoomStatus(int id);
+    public List<HistoryReservation> getListHistoryReservationByStatus(String status);
 }

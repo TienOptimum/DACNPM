@@ -52,6 +52,11 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     }
 
     @Override
+    public List<HistoryReservation> getListHistoryReservationByStatus(String status) {
+        return historyReservationRepository.findHistoryReservationByStatusValue(status);
+    }
+
+    @Override
     public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate) {
         List<HistoryReservation> historyReservations = historyReservationRepository.checkReservationAvailable(checkInDate,checkOutDate);
 
@@ -65,6 +70,7 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     public void deleteHistoryReservation(int id) throws ResourceNotFoundException {
         historyReservationRepository.deleteById(id);
     }
+
 
 
 }

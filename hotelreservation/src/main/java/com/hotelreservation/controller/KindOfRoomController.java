@@ -1,5 +1,6 @@
 package com.hotelreservation.controller;
 
+import com.hotelreservation.entry.KindOfRoomParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.repositories.KindOfRoomRepository;
@@ -30,13 +31,16 @@ public class KindOfRoomController {
         return "redirect:/main/kindofroom";
     }
 
-    @GetMapping("/main/kindofroom/update")
-    public String showFormForUpdate(@RequestParam("kindofroomID") int id, Model model, Model model1) throws ResourceNotFoundException{
-        KindOfRoom kindOfRoom = kindOfRoomService.getKindOfRoom(id);
-        model.addAttribute("kindofroomUpdate",kindOfRoom);
-        List<KindOfRoom> kindOfRooms = kindOfRoomService.getKindOfRooms();
-        model1.addAttribute("kindofrooms",kindOfRooms);
-        return "QLHT/QLHT-ChinhSua-LoaiPhong";
+    @RequestMapping("/main/kindofroom/update")
+    public @ResponseBody  KindOfRoom showFormForUpdate(@RequestBody KindOfRoomParam kindOfRoom) throws ResourceNotFoundException{
+        KindOfRoom kind = kindOfRoomService.getKindOfRoom(kindOfRoom.id);
+
+        kind.setName(kindOfRoom.name);
+        kind.setDescription(kindOfRoom.description);
+
+        kindOfRoomService.saveKindOfRoom(kind);
+
+        return kind;
     }
 
 }

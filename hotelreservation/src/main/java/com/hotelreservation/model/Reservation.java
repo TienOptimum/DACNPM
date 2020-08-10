@@ -1,5 +1,6 @@
 package com.hotelreservation.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -92,4 +93,5 @@ public class Reservation {
     public void setNote(String note) {
         this.note = note;
     }
+
 }

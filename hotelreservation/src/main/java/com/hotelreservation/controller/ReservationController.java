@@ -22,10 +22,7 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Controller
@@ -47,7 +44,7 @@ public class ReservationController {
 
     @RequestMapping("/roomrent")
     private String roomRentRedirect(Model model){
-        List<HistoryReservation> roomRents = historyReservationService.getHistoryReservationByRoomRoomStatus(2);
+        List<HistoryReservation> roomRents = historyReservationService.getListHistoryReservationByStatus("R-ON");
         List<Room> roomAvais = roomService.getRoomByRoomStatusID(1);
 
         model.addAttribute("roomRents", roomRents);
@@ -60,7 +57,7 @@ public class ReservationController {
     public String viewAll(Model model){
         List<Reservation> reservations = reservationService.getReservations();
         List<Room> rooms = roomService.getRooms();
-        List<HistoryReservation> historyReservations = historyReservationService.getHistoryReservations();
+        List<HistoryReservation> historyReservations = historyReservationService.getListHistoryReservationByStatus("ON");
         model.addAttribute("reservations",reservations);
         model.addAttribute("rooms",rooms);
         model.addAttribute("historyReservations",historyReservations);
@@ -68,18 +65,18 @@ public class ReservationController {
     }
 
 
-    @PostMapping("/main/reservation/create")
+    @PostMapping(value="/main/reservation/create")
     public String create(@ModelAttribute Reservation reservation, HttpServletRequest request){
             reservationService.saveReservation(reservation);
-            String[] rooms = request.getParameterValues("selected");
 
             try {
-                if(rooms != null)
-                    for (int i = 0 ; i < rooms.length ; i++){
+                if(listIDRoom != null)
+                    for (int i = 0 ; i < listIDRoom.size() ; i++){
                         HistoryReservation historyReservation = new HistoryReservation();
                         historyReservation.setReservation(reservation);
-                        historyReservation.setRoom(roomService.getRoom(Integer.parseInt(rooms[i])));
+                        historyReservation.setRoom(roomService.getRoom(listIDRoom.get(i)));
                         historyReservation.setEarlyCheckIn("N");
+                        historyReservation.setStatus("ON");
                         historyReservationService.saveHistoryReservation(historyReservation);
                     }
             }catch (ResourceNotFoundException ex) {
@@ -87,6 +84,14 @@ public class ReservationController {
             }
 
             return "redirect:/main/reservation";
+    }
+
+    List<Integer> listIDRoom = new ArrayList<>();
+    @RequestMapping(value = "/main/reservation/checkedRoom", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public List<Integer> listRoom(@RequestBody List<Integer> listID){
+        listIDRoom = listID;
+        return listIDRoom;
     }
 
     @GetMapping("/main/reservation/update")
@@ -133,6 +138,7 @@ public class ReservationController {
             historyReservation.getRoom().setRoomStatus(roomStatus);
         }
 
+        historyReservation.setStatus("R-ON");
         historyReservation.setEarlyCheckIn(earlyCheckIn);
         // xử lí việc nhận phòng
         historyReservationService.saveHistoryReservation(historyReservation);
@@ -140,9 +146,10 @@ public class ReservationController {
         return "redirect:/roomrent";
     }
 
-    @RequestMapping("/main/louge/pay")
-    public void pay(@RequestParam("historyReservationID") int id) throws ResourceNotFoundException {
-        HistoryReservation historyReservation = historyReservationService.getHistoryReservation(id);
+    @RequestMapping("/roomrent/pay")
+    public @ResponseBody HistoryReservation pay(@RequestBody Map<String, String> body) throws ResourceNotFoundException {
+        int hisID = Integer.parseInt(body.get("id"));
+        HistoryReservation historyReservation = historyReservationService.getHistoryReservation(hisID);
         //thời gian check out lý thuyết
         Date d1 = historyReservation.getReservation().getCheckOutDate();
         long checkOutTime = d1.getTime();
@@ -176,30 +183,42 @@ public class ReservationController {
         // kiểm tra việc checkin Sớm
         String earlyCheckIn = historyReservation.getEarlyCheckIn();
 
+        if (getDayReservation < 1){
+            getDayReservation = 1;
+        }
+
         if (earlyCheckIn.equals("Y")){
             totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge + 50000;
         }else{
             totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge;
         }
 
+        RoomStatus roomStatus = roomStatusService.getRoomStatusByID(1);
+        historyReservation.getRoom().setRoomStatus(roomStatus);
+        historyReservation.setStatus("OFF");
         historyReservation.setCost(totalPay);
         historyReservationService.saveHistoryReservation(historyReservation);
         // xử lí việc hiện thông tin thanh toán
 
+        return historyReservation;
+    }
+
+    @RequestMapping("/main/confirmPay")
+    public String confirmPay(){
+        return "redirect:/roomrent";
     }
 
     //
     @PostMapping(value = "/main/reservation/room/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<String> checkRoomValid(@RequestBody Map<String, String> body) throws ParseException {
-        // dung` ajax goi toi cai /main/reservation/room/check
-        //check cai phong co ok khong
         Date d1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(body.get("checkIn"));
         Timestamp checkInTime = new Timestamp(d1.getTime());
 
         Date d2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(body.get("checkOut"));
         Timestamp checkOutTime = new Timestamp(d2.getTime());
 
+        //check phong co trong lich khong
         if(historyReservationService.checkRoomAvailable(checkInTime,checkOutTime)){
             return ResponseEntity.ok("ok");
         }else{

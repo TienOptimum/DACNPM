@@ -1,5 +1,6 @@
 package com.hotelreservation.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class HistoryReservation {
     private Integer id;
     @ManyToOne
     @JoinColumn(name="reservation_id")
+    @JsonIgnoreProperties("reservations")
     private Reservation reservation;
     @ManyToOne
     @JoinColumn(name="room_id")
@@ -27,6 +29,16 @@ public class HistoryReservation {
     private String earlyCheckIn;
     @Column(name = "cost")
     private double cost;
+    @Column(name= "status")
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;

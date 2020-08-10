@@ -204,11 +204,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="roomRent" items="roomRents">
+                                <c:forEach var="roomRent" items="${roomRents}">
                                     <tr>
-                                        <td></td>
+                                        <td>${roomRent.room.name}</td>
                                         <td><button class="button button-primary"><span>Thêm menu</span></button></td>
-                                        <td><button class="button button-warning" onclick="handlePayment()"><span>Trả phòng</span></button></td>
+                                        <td><button class="button button-warning" onclick="handlePayment(${roomRent.id})"><span>Trả phòng</span></button></td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -254,6 +254,10 @@
                         </div>
                     </div>
                 </div>
+
+                <label> Thanh toán </label>
+                <label id="thanhtoan"></label>
+                <label id="cachtinhtien"></label>
             </div>
         </div>
 
@@ -297,9 +301,26 @@
 <script src="assets/js/plugins/chartjs/chartjs.active.js"></script>
 
 <script>
-    function handlePayment() {
+    function handlePayment(id) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                displayPayment(myObj)
+            }
+        };
+        xhttp.open("POST", "/roomrent/pay", true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify({id:id}));
 
+        function displayPayment(res) {
+            document.getElementById("thanhtoan").innerHTML = res.cost;
+            document.getElementById("cachtinhtien").innerHTML = res.room.paymentMethod.price;
+        }
     }
+
+
+
 </script>
 
 </body>

@@ -50,7 +50,7 @@
 
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
-                        <a href="index.html">
+                        <a href="/index">
                             <img src="assets/images/logo/logo.png" alt="">
                             <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
                         </a>
@@ -131,7 +131,7 @@
 
                 <nav class="side-header-menu" id="side-header-menu">
                     <ul>
-                        <li class="mt-2"><a href="TrangChinh.html"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>  
+                        <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
 					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
 					    <li class="mt-2 active"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
                         <li class="mt-2"><a href="#"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li> 
@@ -233,39 +233,12 @@
 									
 									<!--Loại phòng -->
 									<div class="col-12 mb-20">
-                                        <table class="w-100 border-top border-bottom mat-table" role="grid">
-                                            <thead role="rowgroup">
-                                            <!---->
-                                            <tr class="mat-header-row ng-star-inserted" mat-header-row="" role="row">
-                                                <!---->
-                                                <th class="mat-header-cell cdk-column-name mat-column-name ng-star-inserted" role="columnheader" aria-describedby="cdk-describedby-message-2"  style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Loại phòng </th>
-                                                <!---->
-                                                <th class="mat-header-cell cdk-column-quantity mat-column-quantity ng-star-inserted" role="columnheader" aria-describedby="cdk-describedby-message-3"  style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> Chọn </th>
-                                                <!---->
-                                            </tr>
-                                            </thead>
-                                            <tbody role="rowgroup">
-                                            <!---->
+										<h6 class="mb-15">Loại phòng</h6>
+										<div class="adomx-checkbox-radio-group inline">
                                             <c:forEach var="room" items="${rooms}">
-                                                <tr class="pointer mat-row ng-star-inserted" mat-row="" role="row">
-                                                    <!---->
-                                                    <td class="mat-cell cdk-column-name mat-column-name ng-star-inserted" role="gridcell" aria-describedby="cdk-describedby-message-10"  style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> ${room.name} ${room.kindOfRoom.name} </td>
-                                                    <!---->
-                                                    <td class="mat-cell cdk-column-quantity mat-column-quantity ng-star-inserted" role="gridcell" aria-describedby="cdk-describedby-message-11" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> <input class="noselect" type="checkbox" name="noselect" value="${room.id}"> </td>
-                                                    <!---->
-                                                </tr>
+											<label class="adomx-checkbox"><input type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
                                             </c:forEach>
-                                            </tbody>
-                                        </table>
-
-
-<%--										<h6 class="mb-15">Loại phòng</h6>--%>
-
-<%--										<div class="adomx-checkbox-radio-group inline">--%>
-<%--											<label class="adomx-checkbox"><input type="checkbox"> <i class="icon"></i>Phòng đơn</label>--%>
-<%--											<label class="adomx-checkbox"><input type="checkbox"> <i class="icon"></i>Phòng đôi</label>--%>
-<%--										</div>--%>
-
+										</div>
 									</div>
 									<!--Ghi chú -->
 									<div class="col-12 mb-20">
@@ -408,7 +381,8 @@
         const FAILED = 'failed';
         function handleCheckValid(responseStatus) {
             if (responseStatus == OK) {
-                getSelected();
+                handleCheck();
+                // getSelected();
                 submitForm();
             }else {
                 alert("Phòng được đặt đã trùng lịch!");
@@ -428,6 +402,36 @@
                 }
             }
         }
+        
+        function checkRoom() {
+            var inputs = document.getElementsByClassName("checkRoom");
+            var arr = Array.from(inputs);
+            var result = []
+            for (let i = 0; i < arr.length ; i++){
+                if (arr[i].checked == true){
+                    result.push(arr[i].value)
+                }
+            }
+            console.log(JSON.stringify(result) + "--------------------------------")
+            return result;
+        }
+
+        function handleCheck() {
+            $.ajax({
+                url: "/main/reservation/checkedRoom",
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(checkRoom())
+                ,
+                headers : {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'application/json'
+                },
+            }).done(function(ketqua) {
+                console.log(ketqua)
+            });
+        }
+
     </script>
 </body>
 

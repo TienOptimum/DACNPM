@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
     <!-- CSS
 ============================================ -->
@@ -51,8 +51,8 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="/index">
-                            <img src="assets/images/logo/logo.png" alt="">
-                            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
+                            <img src="../assets/images/logo/logo.png" alt="">
+                            <img src="../assets/images/logo/logo-light.png" class="logo-light" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -81,7 +81,7 @@
                                         <a class="toggle" href="#">
                                             <span class="user">
                                         <span class="avatar">
-                                            <img src="assets/images/avatar/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar/avatar-1.jpg" alt="">
                                             <span class="status"></span>
                                             </span>
                                             <span class="name">Madison Howard</span>
@@ -134,8 +134,8 @@
                         <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
 					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
 					    <li class="mt-2 active"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
-                        <li class="mt-2"><a href="#"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li> 
-						<li class="mt-2"><a href="#"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                        <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+						<li class="mt-2"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
                   
@@ -165,7 +165,7 @@
                                     <!--Header Search-->
                                     <div class="col-auto">
                                         <div class="page-heading">
-											<button class="button button-round button-success" onclick="swapFormOn('div-form-add')"><span>Thêm mới</span></button>
+											<button class="button button-round button-success" onclick="swapFormOn('form-add')"><span>Thêm mới</span></button>
 										</div>
                                     </div>
 									<!--Footer Search-->
@@ -177,7 +177,7 @@
             </div>
 
 			<!--Form start -->
-            <div class="row" id="div-form-add" style="display: none;">
+            <div class="row" id="form-add" style="display: none;">
 
                 <div class="col-12 mb-30">
 					
@@ -186,20 +186,20 @@
                             <h4 class="title">THÊM MỚI ĐẶT PHÒNG</h4>
                         </div>
                         <div class="box-body">
-                            <form id="form-add" action="/main/reservation/create" method="post" modelAttribute="reservation">
+                            <form id="add" action="/main/reservation/create" method="post" modelAttribute="reservation">
                                 <div class="row mbn-20">
 
 									<div class="col-12 mb-20">
 										<div class="row mbn-20">
 										<!--Tên khách hàng -->
                                             <div class="col-lg-4 mb-20">
-												<label for="formLayoutUsername">Họ tên khách hàng</label>
-												<input type="text" id="formLayoutUsername" name="customerName" class="form-control" placeholder="Username">
+												<label>Họ tên khách hàng</label>
+												<input type="text" name="customerName" class="form-control">
                                             </div>
 										<!--Số điện thoại -->
                                             <div class="col-lg-4 mb-20">
-												<label for="formLayoutPhoneNumber">Số điện thoại</label>
-												<input type="number" id="formLayoutPhoneNumber" name="phone" class="form-control" placeholder="Phone Number">
+												<label>Số điện thoại</label>
+												<input type="number" name="phone" class="form-control">
                                             </div>
                                             
                                         </div>
@@ -248,15 +248,91 @@
                             </form>
                             <div class="col-12 mb-20">
                                 <button class="button button-primary" onclick="checkValid()">Lưu</button>
-                                <button class="button button-danger" onclick="swapFormOff('div-form-add')"><span>Hủy</span></button>
+                                <button class="button button-danger" onclick="swapFormOff('form-add')"><span>Hủy</span></button>
                             </div>
                         </div>
                     </div>
-					
 				</div>
-                    
             </div>
-            <!--Form end --> 
+            <!--Form end -->
+
+            <div class="row" id="form-edit" style="display: none;">
+
+                <div class="col-12 mb-30">
+
+                    <div class="box">
+                        <div class="box-head">
+                            <h4 class="title">CHỈNH SỬA ĐẶT PHÒNG</h4>
+                        </div>
+                        <div class="box-body">
+                            <form action="/main/reservation/create" method="post" modelAttribute="reservation">
+                                <div class="row mbn-20">
+
+                                    <div class="col-12 mb-20">
+                                        <div class="row mbn-20">
+                                            <input id="reservation-id" value="" style="display: none;">
+                                            <!--Tên khách hàng -->
+                                            <div class="col-lg-4 mb-20">
+                                                <label>Họ tên khách hàng</label>
+                                                <input type="text" id="cus-update" class="form-control">
+                                            </div>
+                                            <!--Số điện thoại -->
+                                            <div class="col-lg-4 mb-20">
+                                                <label>Số điện thoại</label>
+                                                <input type="number" id="phone-update" class="form-control">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--Date -->
+                                    <div class="col-12 mb-20">
+
+                                        <div class="row mbn-20">
+                                            <!--Ngày nhận phòng -->
+                                            <div class="col-lg-4 mb-20">
+                                                <h6 class="mb-15">Ngày nhận phòng</h6>
+                                                <%--<input type="text" class="form-control input-date-single" id="checkInDate" name="checkInDate">--%>
+                                                <input type="datetime-local" id="checkInDate-update">
+                                            </div>
+                                            <!--Ngày trả phòng -->
+                                            <div class="col-lg-4 mb-20">
+                                                <h6 class="mb-15">Ngày trả phòng</h6>
+                                                <%--<input type="text" class="form-control input-date-single" id="checkOutDate" name="checkOutDate">--%>
+                                                <input type="datetime-local" id="checkOutDate-update">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Tiền trả trước -->
+                                    <div class="col-12 mb-20">
+                                        <label>Tiền trả trước</label>
+                                        <input type="number" id="deposits-update" class="form-control">
+                                    </div>
+
+                                    <!--Loại phòng -->
+                                    <div class="col-12 mb-20">
+                                        <h6 class="mb-15">Loại phòng</h6>
+                                        <div class="adomx-checkbox-radio-group inline">
+                                            <c:forEach var="room" items="${rooms}">
+                                                <label class="adomx-checkbox"><input id="room-id-update${room.id}" type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
+                                            </c:forEach>
+                                        </div>
+                                    </div>
+                                    <!--Ghi chú -->
+                                    <div class="col-12 mb-20">
+                                        <textarea class="form-control" id="note-update"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-12 mb-20">
+                                <button class="button button-primary" onclick="checkValid()">Lưu</button>
+                                <button class="button button-danger" onclick="swapFormOff('form-edit')"><span>Hủy</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			
 			<div class="row">
 
@@ -278,19 +354,16 @@
                                 </thead>
                                 <tbody>
                                     <c:forEach var="historyReservation" items="${historyReservations}">
-                                        <c:url var="updateReservation" value="/main/reservation/update">
-                                            <c:param name="reservationID" value="${historyReservation.reservation.id}"/>
-                                        </c:url>
-                                        <c:url var="startRoom" value="/main/reservation/start">
-                                            <c:param name="historyReservationID" value="${historyReservation.id}"/>
-                                        </c:url>
                                     <tr>
-                                        <td>${historyReservation.room.name}</td>
-                                        <td>${historyReservation.reservation.checkInDate}</td>
-                                        <td>${historyReservation.reservation.checkOutDate}</td>
-                                        <td>${historyReservation.reservation.customerName}</td>
-                                        <td><button class="button button-round button-danger" onclick="document.location = '${startRoom}';"><span>Nhận phòng</span></button></td>
-                                        <td><button class="button button-success" onclick="document.location = '${updateReservation}';"><span>Chỉnh sửa</span></button></td>
+                                        <td id="history-room-name${historyReservation.id}"> ${historyReservation.room.name}</td>
+                                        <td id="history-res-checkin-date${historyReservation.id}"> ${historyReservation.reservation.checkInDate}</td>
+                                        <td id="history-res-checkout-date${historyReservation.id}"> ${historyReservation.reservation.checkOutDate}</td>
+                                        <td id="history-res-cus-name${historyReservation.id}"> ${historyReservation.reservation.customerName}</td>
+                                        <input id="history-res-phone${historyReservation.id}" value="${historyReservation.reservation.phone}" style="display: none;">
+                                        <input id="history-res-deposits${historyReservation.id}" value="${historyReservation.reservation.deposits}" style="display: none;">
+                                        <input id="history-res-note${historyReservation.id}" value="${historyReservation.reservation.note}" style="display: none;">
+                                        <td id="button-start${historyReservation.id}"><button id="${historyReservation.id}" class="button button-round button-danger" onclick="start(this.id)"><span>Nhận phòng</span></button></td>
+                                        <td id="button${historyReservation.id}"><button id="${historyReservation.id}" class="button button-success" onclick="swapFormUpdate('form-edit','form-add',this.id)"><span>Chỉnh sửa</span></button></td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -329,8 +402,39 @@
    }
    
     function swapFormOff(off){
-      var x = document.getElementById(off);
-      x.style.display ="none";
+       var x = document.getElementById(off);
+       x.style.display ="none";
+   }
+   
+   function swapFormUpdate(on,off,id) {
+       var x = document.getElementById(on);
+       var y = document.getElementById(off);
+       x.style.display ="block";
+       y.style.display ="none";
+
+       document.getElementById("reservation-id").value = id;
+       document.getElementById("cus-update").value = document.getElementById("history-res-cus-name"+id).innerText;
+       document.getElementById("phone-update").value = document.getElementById("history-res-phone"+id).value;
+       document.getElementById("checkInDate-update").value = document.getElementById("history-res-checkin-date"+id).innerText;
+       document.getElementById("checkOutDate-update").vale = document.getElementById("history-res-checkout-date"+id).innerText;
+       document.getElementById("deposits-update").value = document.getElementById("history-res-deposits"+id).value;
+       document.getElementById("note-update").value = document.getElementById("history-res-note"+id).value;
+   }
+   
+   function start(id) {
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               window.location.replace("/roomrent");
+           }
+       };
+       xhttp.open("POST", "/main/reservation/start", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify({id:id}));
+   }
+   
+   function deleteRes() {
+
    }
 </script>
 
@@ -382,7 +486,6 @@
         function handleCheckValid(responseStatus) {
             if (responseStatus == OK) {
                 handleCheck();
-                // getSelected();
                 submitForm();
             }else {
                 alert("Phòng được đặt đã trùng lịch!");
@@ -390,19 +493,9 @@
         }
 
         function submitForm() {
-            document.getElementById("form-add").submit();
+            document.getElementById("add").submit();
         }
 
-        function getSelected() {
-            var x = document.getElementsByClassName("noselect");
-            var i;
-            for (i =0 ; i<x.length;i++){
-                if(x[i].checked === true){
-                    x[i].setAttribute("name","selected");
-                }
-            }
-        }
-        
         function checkRoom() {
             var inputs = document.getElementsByClassName("checkRoom");
             var arr = Array.from(inputs);
@@ -412,7 +505,6 @@
                     result.push(arr[i].value)
                 }
             }
-            console.log(JSON.stringify(result) + "--------------------------------")
             return result;
         }
 
@@ -431,7 +523,6 @@
                 console.log(ketqua)
             });
         }
-
     </script>
 </body>
 

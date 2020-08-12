@@ -41,8 +41,6 @@
 <body>
 
     <div class="main-wrapper">
-
-
         <!-- Header Section Start -->
         <div class="header-section">
             <div class="container-fluid">
@@ -63,27 +61,19 @@
                             <!-- Side Header Toggle & Search Start -->
                             <div class="col-auto">
                                 <div class="row align-items-center">
-
                                     <!--Side Header Toggle-->
                                     <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
-
-                                
                                 </div>
                             </div><!-- Side Header Toggle & Search End -->
-
                             <!-- Header Notifications Area Start -->
                             <div class="col-auto">
-
                                 <ul class="header-notification-area">
-
-
-
                                     <!--User-->
                                     <li class="adomx-dropdown col-auto">
                                         <a class="toggle" href="#">
                                             <span class="user">
                                         <span class="avatar">
-                                            <img src="assets/images/avatar/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar/avatar-1.jpg" alt="">
                                             <span class="status"></span>
                                             </span>
                                             <span class="name">Madison Howard</span>
@@ -114,11 +104,8 @@
                                         </div>
 
                                     </li>
-
                                 </ul>
-
                             </div><!-- Header Notifications Area End -->
-
                         </div>
                     </div><!-- Header Right End -->
 
@@ -136,14 +123,12 @@
                         <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
 					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
 					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
-                        <li class="mt-2"><a href="QuanLyKho.html"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li> 
-						<li class="mt-2 active"><a href="QuanLyHeThong.html"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                        <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
-                  
                     </ul>
                 </nav>
-
             </div><!-- Side Header Inner End -->
         </div><!-- Side Header End -->
 
@@ -156,33 +141,26 @@
                 <!-- Page Heading Start -->
 				<div class="col-auto">
 					<div class="row align-items-center">
-
-                                    <!--Side Header Toggle-->
-                                    <div class="col-auto">
-										<div class="page-heading">
-											<h3 class="title">Cách tính tiền</h3>
-										</div>
-									</div>
-
-                                    <!--Header Search-->
-                                    <div class="col-auto">
-                                        <div class="page-heading">
-											<button class="button button-round button-success" onclick="swapForm('form-add','form-edit')"><span>Thêm mới</span></button>
-										</div>
-                                    </div>
-									<!--Footer Search-->
-
-					</div>                
+                        <!--Side Header Toggle-->
+                        <div class="col-auto">
+                            <div class="page-heading">
+                                <h3 class="title">Cách tính tiền</h3>
+                            </div>
+                        </div>
+                        <!--Header Search-->
+                        <div class="col-auto">
+                            <div class="page-heading">
+                                <button class="button button-round button-success" onclick="swapForm('form-add','form-edit')"><span>Thêm mới</span></button>
+                            </div>
+                        </div>
+                        <!--Footer Search-->
+					</div>
 				</div><!-- Page Heading End -->
-		
-
             </div>
 
 			<!--Div form add start -->
             <div class="row" id="form-add" style="display: none;">
-
                 <div class="col-12 mb-30">
-					
 					<div class="box">
                         <div class="box-head">
                             <h4 class="title">THÊM MỚI CÁCH TÍNH</h4>
@@ -191,22 +169,17 @@
 						<!--Form start -->
                             <form action="/main/paymentmethod/create" method="post" modelAttribute="paymentMethod">
                                 <div class="row mbn-20">
-									
 									<div class="col-12 mb-20">
-									
 										<div class="row mbn-20">
 										<!--Tên menu-->
                                             <div class="col-lg-4 mb-20">
 												<label>Tên cách tính</label>
 												<input type="text" name="name" class="form-control">
                                             </div>				
-                                     
                                         </div>
-										
 									</div>
                                     
 									<div class="col-12 mb-20">
-									
 										<div class="row mbn-20">
 										<!--Giờ block đầu -->
                                             <div class="col-lg-4 mb-20">
@@ -223,38 +196,32 @@
 												<label>Giờ trả phòng</label>
 												<input type="text" name="checkOutTime" maxlength="5" class="form-control">
                                             </div>
-                                            
                                         </div>
 									</div>
 									
 									<!--Phụ thu quá giờ -->
 									<div class="col-12 mb-20">
-									
 										<div class="row mbn-20">
 										<!--Phụ thu quá giờ-->
                                             <div class="col-lg-4 mb-20">
 												<label>Phụ thu quá giờ</label>
 												<input type="number" name="surcharge" class="form-control">
                                             </div>
-                                            
                                         </div>
 									</div>
 									
 									<!--Giá cuối tuần và ngày lễ-->
 									<div class="col-12 mb-20">
-									
 										<div class="row mbn-20">
                                             <div class="col-lg-4 mb-20">
 												<label>Giá cuối tuần và ngày lễ</label>
 												<input type="number" name="priceForHoliday" class="form-control">
                                             </div>
-                                            
                                         </div>
 									</div>
 
                                     <div class="col-12 mb-20">
                                         <input type="submit" value="Thêm" class="button button-primary">                                   
-
                                     </div>
 
                                 </div>
@@ -263,18 +230,13 @@
 							<!--Form end --> 
                         </div>
                     </div>
-					
 				</div>
-                    
             </div>
             <!-- Div form add end --> 
 			
-			
-			<!-- Div form edit start --> 
+			<!-- Div form edit start -->
 			<div class="row" id="form-edit" style="display: none;">
-
                 <div class="col-12 mb-30">
-					
 					<div class="box">
                         <div class="box-head">
                             <h4 class="title">CHỈNH SỬA CÁCH TÍNH</h4>
@@ -283,45 +245,35 @@
 						<!--Form start -->
                             <form>
                                 <div class="row mbn-20">
-
                                     <div class="col-12 mb-20">
-
                                         <div class="row mbn-20">
                                             <!--Tên menu-->
                                             <div class="col-lg-4 mb-20">
                                                 <label>Tên cách tính</label>
                                                 <input type="text" name="name" class="form-control">
                                             </div>
-
                                         </div>
-
                                     </div>
 
                                     <div class="col-12 mb-20">
-
                                         <div class="row mbn-20">
-                                            <!--Giờ block đầu -->
                                             <div class="col-lg-4 mb-20">
                                                 <label>Giá</label>
                                                 <input type="number" name="price" class="form-control">
                                             </div>
-                                            <!--Giờ nhận phòng -->
                                             <div class="col-lg-4 mb-20">
                                                 <label>Giờ nhận phòng</label>
                                                 <input type="text" name="checkInTime" maxlength="5" class="form-control">
                                             </div>
-                                            <!--Giá trả phòng -->
                                             <div class="col-lg-4 mb-20">
                                                 <label>Giờ trả phòng</label>
                                                 <input type="text" name="checkOutTime" maxlength="5" class="form-control">
                                             </div>
-
                                         </div>
                                     </div>
 
                                     <!--Phụ thu quá giờ -->
                                     <div class="col-12 mb-20">
-
                                         <div class="row mbn-20">
                                             <!--Phụ thu quá giờ-->
                                             <div class="col-lg-4 mb-20">
@@ -334,7 +286,6 @@
 
                                     <!--Giá cuối tuần và ngày lễ-->
                                     <div class="col-12 mb-20">
-
                                         <div class="row mbn-20">
                                             <div class="col-lg-4 mb-20">
                                                 <label>Giá cuối tuần và ngày lễ</label>
@@ -352,18 +303,14 @@
 
                                 </div>
                             </form>
-
-							<!--Form end --> 
+							<!--Form end -->
                         </div>
                     </div>
-					
 				</div>
-                    
 			</div>
 			<!-- Div form edit end --> 
 			
 			<div class="row">
-
                 <!--Basic Start-->
                 <div class="col-12 mb-30">
                     <div class="box">
@@ -380,21 +327,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="paymentmethod" items="${paymentmethods}">
-
-
-                                    <tr>
-                                        <td>${paymentmethod.name}</td>
-                                        <td>${paymentmethod.price}</td>
-                                        <td>${paymentmethod.surcharge}₫/Giờ</td>
-									    <td><button class="button button-success" onclick="swapForm('form-edit','form-add')"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
-                                    </tr>
-
-                                </c:forEach>
-       
+                                    <c:forEach var="paymentmethod" items="${paymentmethods}">
+                                        <tr>
+                                            <td>${paymentmethod.name}</td>
+                                            <td>${paymentmethod.price}</td>
+                                            <td>${paymentmethod.surcharge}₫/Giờ</td>
+									        <td><button class="button button-success" onclick="swapForm('form-edit','form-add')"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>

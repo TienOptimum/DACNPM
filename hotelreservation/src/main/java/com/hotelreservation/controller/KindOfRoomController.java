@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -43,4 +44,10 @@ public class KindOfRoomController {
         return kind;
     }
 
+    @RequestMapping("/main/kindofroom/delete")
+    @ResponseBody
+    public String update(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
+        kindOfRoomService.deleteKindOfRoom(Integer.parseInt(param.get("id")));
+        return "ok";
+    }
 }

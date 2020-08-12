@@ -131,11 +131,11 @@
 
             <nav class="side-header-menu" id="side-header-menu">
                 <ul>
-                    <li class="mt-2"><a href="TrangChinh.html"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
+                    <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
                     <li class="mt-2 active"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
                     <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
-                    <li class="mt-2"><a href="#"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
-                    <li class="mt-2"><a href="#"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                    <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+                    <li class="mt-2"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
                     <li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
                     <li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
 
@@ -167,7 +167,6 @@
                     <ul class="nav nav-tabs nav-justified">
                         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#waiting">Phòng chờ</a></li>
                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#rented">Phòng đang thuê</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#needclean">Phòng cần dọn</a></li>
                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#history">Lịch sử</a></li>
                     </ul>
                     <div class="tab-content">
@@ -187,7 +186,6 @@
                                             <td>${roomAvai.roomStatus.name}</td>
                                             <td>
                                                 <button class="button button-success"><span>Nhận phòng</span></button>
-                                                <button class="button button-warning"><span>Dọn phòng</span></button>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -213,115 +211,138 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="tab-pane fade" id="needclean">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Tên phòng</th>
-                                    <th>Trạng thái</th>
-                                    <th>Tùy chọn</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>P11</td>
-                                    <td>Đã dọn phòng</td>
-                                    <td><button class="button button-warning"><span>Dọn phòng</span></button></td>
-                                </tr>
-                                </tbody>
-                            </table>
+
+                            <label> Thanh toán </label>
+                            <label id="thanhtoan"></label>
+                            <label id="cachtinhtien"></label>
                         </div>
                         <div class="tab-pane fade" id="history">
                             <table class="table">
                                 <thead>
                                 <tr>
                                     <th>Tên phòng</th>
-                                    <th>Trả phòng lần cuối</th>
+                                    <th>Thời gian trả phòng</th>
                                     <th>Số tiền thanh toán</th>
                                     <th>Tùy chọn</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>P11</td>
-                                    <td>27/7/2020</td>
-                                    <td>250000</td>
-                                    <td><button class="button button-warning"><span>Xóa</span></button></td>
-                                </tr>
+                                <c:forEach var="history" items="${histories}">
+                                    <tr>
+                                        <td id="his-room-name${history.id}">${history.room.name}</td>
+                                        <td id="his-res-checkOut${history.id}">${history.reservation.checkOutDate}</td>
+                                        <td id="his-cost${history.id}">${history.cost}</td>
+                                        <td id="button${history.id}"><button id="${history.id}" class="button button-warning" onclick="showModal(this.id)"><span>Xóa</span></button></td>
+                                    </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal-his" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p>Bạn muốn xóa dữ liệu?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button id="button-modal" value="" type="button" class="btn btn-default" onclick="deleteHis(this.value)">Đồng ý</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <label> Thanh toán </label>
-                <label id="thanhtoan"></label>
-                <label id="cachtinhtien"></label>
+                </div>
             </div>
+
         </div>
 
-    </div>
+    </div><!-- Content Body End -->
 
-</div><!-- Content Body End -->
+    <!-- Footer Section Start -->
+    <div class="footer-section">
+        <div class="container-fluid">
 
-<!-- Footer Section Start -->
-<div class="footer-section">
-    <div class="container-fluid">
+            <div class="footer-copyright text-center">
+                <p class="text-body-light">2019 @ T-Hotel</p>
+            </div>
 
-        <div class="footer-copyright text-center">
-            <p class="text-body-light">2019 @ T-Hotel</p>
         </div>
-
+    </div><!-- Footer Section End -->
     </div>
-</div><!-- Footer Section End -->
-</div>
 
-<!-- JS
-============================================ -->
+    <!-- JS
+    ============================================ -->
 
-<!-- Global Vendor, plugins & Activation JS -->
-<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<!--Plugins JS-->
-<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-<script src="assets/js/plugins/tippy4.min.js.js"></script>
-<!--Main JS-->
-<script src="assets/js/main.js"></script>
+    <!-- Global Vendor, plugins & Activation JS -->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!--Plugins JS-->
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/plugins/tippy4.min.js.js"></script>
+    <!--Main JS-->
+    <script src="assets/js/main.js"></script>
 
-<!-- Plugins & Activation JS For Only This Page -->
+    <!-- Plugins & Activation JS For Only This Page -->
 
-<!--Moment-->
-<script src="assets/js/plugins/moment/moment.min.js"></script>
+    <!--Moment-->
+    <script src="assets/js/plugins/moment/moment.min.js"></script>
 
-<!--Echarts-->
-<script src="assets/js/plugins/chartjs/Chart.min.js"></script>
-<script src="assets/js/plugins/chartjs/chartjs.active.js"></script>
+    <!--Echarts-->
+    <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+    <script src="assets/js/plugins/chartjs/chartjs.active.js"></script>
 
-<script>
-    function handlePayment(id) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myObj = JSON.parse(this.responseText);
-                displayPayment(myObj)
+    <script>
+        function handlePayment(id) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    displayPayment(myObj)
+                }
+            };
+            xhttp.open("POST", "/roomrent/pay", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({id:id}));
+
+            function displayPayment(res) {
+                document.getElementById("thanhtoan").innerHTML = res.cost;
+                document.getElementById("cachtinhtien").innerHTML = res.room.paymentMethod.price;
             }
-        };
-        xhttp.open("POST", "/roomrent/pay", true);
-        xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send(JSON.stringify({id:id}));
-
-        function displayPayment(res) {
-            document.getElementById("thanhtoan").innerHTML = res.cost;
-            document.getElementById("cachtinhtien").innerHTML = res.room.paymentMethod.price;
         }
-    }
 
+        function showModal(id) {
+            document.getElementById("button-modal").value = id;
+            $("#modal-his").modal("show");
+        }
 
+        function deleteHis(id) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    updateViewAfterDeleteHis(id);
+                }
+            };
+            xhttp.open("POST", "/main/reservation/delete/his", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({id:id}));
+        }
 
-</script>
+        function updateViewAfterDeleteHis(id) {
+            $("#modal-his").modal("hide");
+            document.getElementById("his-room-name"+id).remove();
+            document.getElementById("his-res-checkOut"+id).remove();
+            document.getElementById("his-cost"+id).remove();
+            document.getElementById("button"+id).remove();
+        }
+    </script>
 
 </body>
 

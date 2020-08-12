@@ -1,10 +1,10 @@
-<!doctype html>
 <html class="no-js" lang="en">
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Adomx - Responsive Bootstrap 4 Admin Template</title>
+    <title>Quản lý kho</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,25 +15,25 @@
 	============================================ -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/vendor/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/vendor/themify-icons.css">
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/vendor/cryptocurrency-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/cryptocurrency-icons.css">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/plugins/plugins.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.css">
 
     <!-- Helper CSS -->
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/helper.css">
+    <link rel="stylesheet" href="assets/css/helper.css">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="../../../../resources/static/assets/11/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Custom Style CSS Only For Demo Purpose -->
-    <link id="cus-style" rel="stylesheet" href="../../../../resources/static/assets/11/style-primary.css">
+    <link id="cus-style" rel="stylesheet" href="assets/css/style-primary.css">
 
 </head>
 
@@ -49,7 +49,7 @@
 
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
-                        <a href="index.html">
+                        <a href="/index">
                             <img src="assets/images/logo/logo.png" alt="">
                             <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
                         </a>
@@ -74,88 +74,6 @@
                             <div class="col-auto">
 
                                 <ul class="header-notification-area">
-
-                                   
-
-                                        <!-- Dropdown -->
-                                        <div class="adomx-dropdown-menu dropdown-menu-notifications">
-                                            <div class="head">
-                                                <h5 class="title">You have 4 new notification.</h5>
-                                            </div>
-                                            <div class="body custom-scroll">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-notifications-none"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-block"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-info-outline"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-shield-security"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-notifications-none"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-block"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-info-outline"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-shield-security"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="footer">
-                                                <a href="#" class="view-all">view all</a>
-                                            </div>
-                                        </div>
-
-                                    </li>
 
                                     <!--User-->
                                     <li class="adomx-dropdown col-auto">
@@ -212,11 +130,11 @@
 
                 <nav class="side-header-menu" id="side-header-menu">
                     <ul>
-                        <li class="mt-2"><a href="TrangChinh.html"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>  
-					    <li class="mt-2"><a href="ThueTraPhong.html"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
-					<li class="mt-2"><a href="#"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>               
-                        <li class="mt-2 active"><a href="QuanLyKho.jsp"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
-						<li class="mt-2"><a href="#"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                        <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
+					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
+					<li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
+                        <li class="mt-2 active"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+						<li class="mt-2"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
                   
@@ -233,18 +151,17 @@
             <!-- Top Report Wrap Start -->
             <div class="row">
                 <!-- Top Report Start -->
-                <div class="col-xlg-3 col-md-6 col-12 mb-30">
+                <div class="col-md-3 col-12 mb-30">
 				<a href="#">
-                    <div class="card" style="width: 15rem;">    
+                    <div class="card " style="width: 13rem; box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">    
                         <!-- Content -->
                         <div class="card-body text-center">
-                            <h5>Hôm nay</h5>
-                            <h2>0 Lượt</h2>
+                            <i style="font-size: 40px;color: #03a9f4" class="ti-pie-chart"></i>
                         </div>
 
                         <!-- Footer -->
                         <div class="card-footer text-center">
-							<button class="button"><span><i class="ti-reload"></i>Tình trạng kho</span></button>
+						<span>Tình trạng kho</span>
                         </div>
                     </div>
 				</a>
@@ -252,54 +169,51 @@
                 </div><!-- Top Report End -->
 
                 <!-- Top Report Start -->
-                <div class="col-xlg-3 col-md-6 col-12 mb-30">
+                <div class="col-md-3 col-12 mb-30">
                     <a href="#">
-                    <div class="card" style="width: 15rem;">    
+                    <div class="card" style="width: 13rem; box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">    
                         <!-- Content -->
                         <div class="card-body text-center">
-                            <h5>Hôm nay</h5>
-                            <h2>0 Lượt</h2>
+                            <i style="font-size: 40px;color: #4caf50" class="zmdi zmdi-download"></i>
                         </div>
 
                         <!-- Footer -->
                         <div class="card-footer text-center">
-							<button class="button"><span><i class="ti-reload"></i>Nhập kho</span></button>
+						<span>Nhập kho</span>
                         </div>
                     </div>
 				</a>
                 </div><!-- Top Report End -->
 
                 <!-- Top Report Start -->
-                <div class="col-xlg-3 col-md-6 col-12 mb-30">
+                <div class="col-md-3 col-12 mb-30">
                     <a href="#">
-                    <div class="card" style="width: 15rem;">    
+                    <div class="card" style="width: 13rem; box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">    
                         <!-- Content -->
                         <div class="card-body text-center">
-                            <h5>Hôm nay</h5>
-                            <h2>0 Lượt</h2>
+                           <i style="font-size: 40px;color: #ff5722" class="zmdi zmdi-swap-vertical"></i>
                         </div>
 
                         <!-- Footer -->
                         <div class="card-footer text-center">
-							<button class="button"><span><i class="ti-reload"></i>Điều chỉnh kho</span></button>
+						<span>Điều chỉnh kho</span>
                         </div>
                     </div>
 				</a>
                 </div><!-- Top Report End -->
 
                 <!-- Top Report Start -->
-                <div class="col-xlg-3 col-md-6 col-12 mb-30">
+                <div class="col-md-3 col-12 mb-30">
                    <a href="#">
-                    <div class="card" style="width: 15rem;">    
+                    <div class="card" style="width: 13rem; box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">    
                         <!-- Content -->
                         <div class="card-body text-center">
-                            <h5>Hôm nay</h5>
-                            <h2>0 Lượt</h2>
+                          <i style="font-size: 40px;color: #f44336" class="ti-pie-chart"></i>
                         </div>
 
                         <!-- Footer -->
                         <div class="card-footer text-center">
-							<button class="button"><span><i class="ti-reload"></i>Kiểm kho</span></button>
+						<span>Kiểm kho</span>
                         </div>
                     </div>
 				</a>
@@ -316,7 +230,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; <a href="https://themeforest.net/user/codecarnival">Codecarnival</a></p>
+                    <p class="text-body-light">2019 &copy; T-Hotel </p>
                 </div>
 
             </div>

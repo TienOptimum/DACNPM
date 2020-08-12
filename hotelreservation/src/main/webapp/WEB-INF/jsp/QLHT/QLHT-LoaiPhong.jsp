@@ -52,8 +52,8 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="/index">
-                            <img src="assets/images/logo/logo.png" alt="">
-                            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
+                            <img src="../assets/images/logo/logo.png" alt="">
+                            <img src="../assets/images/logo/logo-light.png" class="logo-light" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -81,7 +81,7 @@
                                         <a class="toggle" href="#">
                                             <span class="user">
                                         <span class="avatar">
-                                            <img src="assets/images/avatar/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar/avatar-1.jpg" alt="">
                                             <span class="status"></span>
                                             </span>
                                             <span class="name">Madison Howard</span>
@@ -134,8 +134,8 @@
                         <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
 					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
 					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
-                        <li class="mt-2"><a href="QuanLyKho.html"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li> 
-						<li class="mt-2 active"><a href="QuanLyHeThong.html"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                        <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
                   
@@ -237,37 +237,51 @@
                             <h4 class="title">CHỈNH SỬA LOẠI PHÒNG</h4>
                         </div>
                         <div class="box-body">
-                                <div class="row mbn-20">
+                            <div class="row mbn-20">
 
-									<div class="col-12 mb-20">
-										<div class="row mbn-20">
-                                            <input id="kindofroom-id" value="" style="display: none;">
+                                <div class="col-12 mb-20">
+                                    <div class="row mbn-20">
+                                        <input id="kindofroom-id" value="" style="display: none;">
 										<!--Tên phòng -->
-                                            <div class="col-lg-4 mb-20">
-												<label>Tên loại phòng</label>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Tên loại phòng</label>
 												<input id="name-update" type="text" class="form-control">
-                                            </div>
-                                          
                                         </div>
-									</div>
-                                    
-									<div class="col-12 mb-20">
-									
-										<div class="row mbn-20">
-										<!--Loại phòng -->
-                                            <div class="col-lg-4 mb-20">
-												<label>Mô tả</label>
-												<input id="des-update" type="text" class="form-control">
-                                            </div>
-                                        </div>
-									</div>
-
-                                    <div class="col-12 mb-20">
-                                        <button onclick="update()" class="button button-primary"><span>Cập nhật</span></button>
-										<button class="button button-warning"><span>Xóa</span></button>
-										<button class="button button-danger" onclick="swapFormOff('form-add')"><span>Hủy</span></button>
                                     </div>
                                 </div>
+                                    
+                                <div class="col-12 mb-20">
+                                    <div class="row mbn-20">
+                                        <!--Loại phòng -->
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Mô tả</label>
+                                                <input id="des-update" type="text" class="form-control">
+                                            </div>
+                                        </div>
+									</div>
+
+                                <div class="col-12 mb-20">
+                                    <button onclick="update()" class="button button-primary"><span>Cập nhật</span></button>
+                                    <button class="button button-warning" data-toggle="modal" data-target="#myModal"><span>Xóa</span></button>
+                                    <button class="button button-danger" onclick="swapFormOff('form-edit')"><span>Hủy</span></button>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <p>Bạn muốn xóa dữ liệu?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" onclick="deleteKindOfRoom()">Đồng ý</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 					
@@ -297,7 +311,7 @@
                                     <tr>
                                         <td id="kindofroom-name${kindofroom.id}">${kindofroom.name}</td>
                                         <td id="kindofroom-des${kindofroom.id}">${kindofroom.description}</td>
-										<td><button id="${kindofroom.id}" class="button button-success" onclick="swapFormUpdate('form-edit','form-add',this.id)"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
+										<td id="button${kindofroom.id}"><button id="${kindofroom.id}" class="button button-success" onclick="swapFormUpdate('form-edit','form-add',this.id)"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
                                     </tr>
                                     </c:forEach>
                                 </tbody>
@@ -345,7 +359,6 @@
        x.style.display ="block";
        y.style.display ="none";
 
-
        document.getElementById("kindofroom-id").value = id;
        document.getElementById("name-update").value = document.getElementById("kindofroom-name"+id).innerText;
        document.getElementById("des-update").value = document.getElementById("kindofroom-des"+id).innerText;
@@ -355,8 +368,29 @@
       var x = document.getElementById(off);
       x.style.display ="none";
    }
-</script>
 
+   function deleteKindOfRoom() {
+       var id = document.getElementById("kindofroom-id").value;
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               updateViewAfterDelete();
+           }
+       };
+       xhttp.open("POST", "/main/kindofroom/delete", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify({id:id}));
+   }
+
+   function updateViewAfterDelete() {
+       $('#myModal').modal('hide');
+       document.getElementById("form-edit").style.display = "none";
+       var id = document.getElementById("kindofroom-id").value
+       document.getElementById("kindofroom-name" + id).remove();
+       document.getElementById("kindofroom-des" + id).remove();
+       document.getElementById("button"+ id).remove();
+   }
+</script>
     <!-- Global Vendor, plugins & Activation JS -->
     <script src="../assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="../assets/js/vendor/jquery-3.3.1.min.js"></script>

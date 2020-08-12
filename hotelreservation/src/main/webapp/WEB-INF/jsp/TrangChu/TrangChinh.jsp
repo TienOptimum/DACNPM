@@ -219,7 +219,7 @@
                     </li>
                     <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
                     <li class="mt-2"><a href="#"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
-                    <li class="mt-2"><a href="#"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a>
+                    <li class="mt-2"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a>
                     </li>
                     <li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
                     <li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
@@ -326,29 +326,6 @@
                 </div>
             </div><!-- Top Report End -->
 
-            <!-- Top Report Start -->
-            <div class="col-xlg-3 col-md-6 col-12 mb-30">
-                <div class="top-report">
-
-                    <!-- Head -->
-                    <div class="head">
-                        <h4>Phòng cần dọn</h4>
-                        <a href="#" class="view"><i class="zmdi zmdi-eye"></i></a>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="content">
-                        <h5>Hôm nay</h5>
-                        <h2>5 Phòng</h2>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="footer">
-                        <button class="button button-info"><span><i class="ti-trash"></i>Dọn phòng</span></button>
-                    </div>
-
-                </div>
-            </div><!-- Top Report End -->
         </div><!-- Top Report Wrap End -->
 
         <div class="row mbn-30">

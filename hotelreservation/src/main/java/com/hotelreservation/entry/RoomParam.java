@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class RoomParam {
+    public Integer id;
     public String name;
     public String description;
     public Integer kind_of_room_id;

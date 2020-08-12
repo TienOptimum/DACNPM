@@ -1,18 +1,22 @@
 package com.hotelreservation.controller;
 
+import com.hotelreservation.entry.KindOfRoomParam;
 import com.hotelreservation.entry.RoomParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.model.Room;
+import com.hotelreservation.model.RoomStatus;
 import com.hotelreservation.services.KindOfRoomService;
 import com.hotelreservation.services.PaymentMethodService;
 import com.hotelreservation.services.RoomService;
+import com.hotelreservation.services.RoomStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class RoomController {
@@ -22,6 +26,8 @@ public class RoomController {
     KindOfRoomService kindOfRoomService;
     @Autowired
     PaymentMethodService paymentMethodService;
+    @Autowired
+    RoomStatusService roomStatusService;
 
     @RequestMapping("/main/room")
     public String viewAll(Model model, Model model1, Model model2){
@@ -34,15 +40,17 @@ public class RoomController {
     }
 
     @PostMapping("/main/room/create")
-    public String create(@ModelAttribute RoomParam roomParam){
+    public String create(@ModelAttribute RoomParam roomParam) throws ResourceNotFoundException {
         Room room = new Room();
         room.setName(roomParam.name);
         room.setDescription(roomParam.description);
 
+        RoomStatus roomStatus = roomStatusService.getRoomStatusByID(1);
+
         try {
             room.setKindOfRoom(kindOfRoomService.getKindOfRoom(roomParam.kind_of_room_id));
             room.setPaymentMethod(paymentMethodService.getPaymentMethod(roomParam.payment_method_id));
-            room.getRoomStatus().setId(1);
+            room.setRoomStatus(roomStatus);
         } catch (ResourceNotFoundException ex) {
 
         }
@@ -50,12 +58,23 @@ public class RoomController {
         return "redirect:/main/room";
     }
 
-    @GetMapping("/main/room/update")
-    public String update(@RequestParam("roomID") int id, Model model, Model model1) throws ResourceNotFoundException {
-        Room room = roomService.getRoom(id);
-        model.addAttribute("room",room);
-        List<Room> rooms = roomService.getRooms();
-        model1.addAttribute("rooms",rooms);
-        return "QLHT/QLHT-ChinhSua-Phong";
+    @RequestMapping("/main/room/update")
+    public @ResponseBody Room update(@RequestBody RoomParam roomParam) throws ResourceNotFoundException {
+       Room room = roomService.getRoom(roomParam.id);
+
+       room.setName(roomParam.name);
+       room.setKindOfRoom(kindOfRoomService.getKindOfRoom(roomParam.kind_of_room_id));
+       room.setPaymentMethod(paymentMethodService.getPaymentMethod(roomParam.payment_method_id));
+       room.setDescription(roomParam.description);
+
+       roomService.saveRoom(room);
+       return room;
+    }
+
+    @RequestMapping("/main/room/delete")
+    @ResponseBody
+    public String update(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
+        roomService.deleteRoom(Integer.parseInt(param.get("id")));
+        return "ok";
     }
 }

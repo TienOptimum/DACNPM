@@ -46,9 +46,11 @@ public class ReservationController {
     private String roomRentRedirect(Model model){
         List<HistoryReservation> roomRents = historyReservationService.getListHistoryReservationByStatus("R-ON");
         List<Room> roomAvais = roomService.getRoomByRoomStatusID(1);
+        List<HistoryReservation> history = historyReservationService.getListHistoryReservationByStatus("OFF");
 
         model.addAttribute("roomRents", roomRents);
         model.addAttribute("roomAvais",roomAvais);
+        model.addAttribute("histories",history);
 
         return "ThueTraPhong/ThueTraPhong";
     }
@@ -96,26 +98,19 @@ public class ReservationController {
 
     @GetMapping("/main/reservation/update")
     public String showFormForUpdate(@RequestParam("reservationID") int id, Model model) throws ResourceNotFoundException {
-        Reservation reservation = reservationService.getReservation(id);
-        model.addAttribute("reservationUpdate",reservation);
-        List<Room> rooms = roomService.getRooms();
-        List<Reservation> reservations = reservationService.getReservations();
-        List<HistoryReservation> historyReservations = historyReservationService.getHistoryReservationByReservationID(id);
-        model.addAttribute("reservations",reservations);
-        model.addAttribute("rooms",rooms);
-        model.addAttribute("historys",historyReservations);
-        return "DatPhong/ChinhSua-DatPhong";
+        return "";
     }
 
-    @RequestMapping("/main/reservation/delete/room")
+    @RequestMapping("/main/reservation/delete/his")
     @ResponseBody
-    public void deleteRoom(@RequestParam("historyID") int id) throws ResourceNotFoundException{
-        historyReservationService.deleteHistoryReservation(id);
+    public void deleteRoom(@RequestBody Map<String,String> param) throws ResourceNotFoundException{
+        historyReservationService.deleteHistoryReservation(Integer.parseInt(param.get("id")));
     }
 
     @RequestMapping("/main/reservation/start")
-    public String checkInRoom(@RequestParam("historyReservationID") int id) throws ResourceNotFoundException {
-        HistoryReservation historyReservation = historyReservationService.getHistoryReservation(id);
+    @ResponseBody
+    public String checkInRoom(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
+        HistoryReservation historyReservation = historyReservationService.getHistoryReservation(Integer.parseInt(param.get("id")));
 
         // thời gian check in thực tế
         Date date = new Date();

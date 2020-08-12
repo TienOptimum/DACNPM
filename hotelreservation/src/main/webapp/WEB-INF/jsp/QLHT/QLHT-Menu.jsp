@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Adomx - Responsive Bootstrap 4 Admin Template</title>
+    <title>Quản lý menu</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -75,88 +75,6 @@
 
                                 <ul class="header-notification-area">
 
-                                   
-
-                                        <!-- Dropdown -->
-                                        <div class="adomx-dropdown-menu dropdown-menu-notifications">
-                                            <div class="head">
-                                                <h5 class="title">You have 4 new notification.</h5>
-                                            </div>
-                                            <div class="body custom-scroll">
-                                                <ul>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-notifications-none"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-block"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-info-outline"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-shield-security"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-notifications-none"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-block"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-info-outline"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="zmdi zmdi-shield-security"></i>
-                                                            <p>There are many variations of pages available.</p>
-                                                            <span>11.00 am   Today</span>
-                                                        </a>
-                                                        <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="footer">
-                                                <a href="#" class="view-all">view all</a>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
                                     <!--User-->
                                     <li class="adomx-dropdown col-auto">
                                         <a class="toggle" href="#">
@@ -212,11 +130,11 @@
 
                 <nav class="side-header-menu" id="side-header-menu">
                     <ul>
-                        <li class="mt-2"><a href="TrangChinh.html"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>  
-					    <li class="mt-2"><a href="ThueTraPhong.html"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
-					    <li class="mt-2"><a href="DatPhong.html"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>               
-                        <li class="mt-2"><a href="QuanLyKho.html"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li> 
-						<li class="mt-2 active"><a href="QuanLyHeThong.html"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
+                        <li class="mt-2"><a href="/index"><i class="ti-home"></i> <span>TRANG CHÍNH</span></a></li>
+					    <li class="mt-2"><a href="/roomrent"><i class="ti-exchange-vertical"></i> <span>THUÊ TRẢ PHÒNG</span></a></li>
+					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
+                        <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
+						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
                   
@@ -283,14 +201,12 @@
                                             <div class="col-lg-4 mb-20">
 												<label>Loại menu</label>
 												<select class="form-control" name="type">
-													<optgroup label="Cách tính tiền">
-														<option>One</option>
-														<option>Two</option>
-														<option>Three</option>
-													</optgroup>
+                                                    <option value="Đồ ăn">Đồ ăn</option>
+                                                    <option value="Đồ uống">Đồ uống</option>
+                                                    <option value="Loại khác">Loại khác</option>
 												</select>
                                             </div>
-                                     
+
                                         </div>
 									</div>
                                     
@@ -311,8 +227,6 @@
                                         </div>
 									</div>
 									
-
-
                                     <div class="col-12 mb-20">
                                         <input type="submit" value="Thêm" class="button button-primary">                                   
 										<button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
@@ -336,74 +250,72 @@
 					
 					<div class="box">
                         <div class="box-head">
-                            <h4 class="title">THÊM MỚI MENU</h4>
+                            <h4 class="title">CHỈNH SỬA MENU</h4>
                         </div>
                         <div class="box-body">
 						<!--Form start -->
-                            <form>
-                                <div class="row mbn-20">
+                            <div class="row mbn-20">
 									
-									<div class="col-12 mb-20">
+                                <div class="col-12 mb-20">
 									
-										<div class="row mbn-20">
+                                    <div class="row mbn-20">
+                                        <input id="menu-id" value="" style="display: none;">
 										<!--Tên menu-->
-                                            <div class="col-lg-4 mb-20">
-												<label>Tên menu</label>
-												<input type="text" class="form-control" placeholder="Tên menu">
-                                            </div>				
-											<!--Loại menu -->
-                                            <div class="col-lg-4 mb-20">
-												<label>Loại menu</label>
-												<select class="form-control">
-													<optgroup label="Cách tính tiền">
-														<option>One</option>
-														<option>Two</option>
-														<option>Three</option>
-													</optgroup>
-												</select>
-                                            </div>
-                                     
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Tên menu</label>
+                                                <input id="name-update" type="text" class="form-control">
                                         </div>
-									</div>
+											<!--Loại menu -->
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Loại menu</label>
+                                            <select class="form-control" id="type-update">
+                                                <option value="Đồ ăn">Đồ ăn</option>
+                                                <option value="Đồ uống">Đồ uống</option>
+                                                <option value="Loại khác">Loại khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                     
 									<div class="col-12 mb-20">
-									
 										<div class="row mbn-20">
 										<!--Giá nhập -->
                                             <div class="col-lg-4 mb-20">
 												<label>Giá nhập</label>
-												<input type="number" class="form-control">
+												<input id="entryPrice-update" type="number" class="form-control">
                                             </div>
 										<!--Giá bán -->
                                             <div class="col-lg-4 mb-20">
 												<label>Giá bán</label>
-												<input type="number" class="form-control">
+												<input id="price-update" type="number" class="form-control">
                                             </div>
-                                            
                                         </div>
 									</div>
-									
-									
-									<!--Ưu tiên hiển thị -->
-									<div class="col-12 mb-20">
-										<div class="row mbn-20">
-											<div class="col-lg-4 mb-20">
-												<label>Ưu tiên hiển thị</label>
-												<input type="number" class="form-control">
-											</div>
-										</div>
-									</div>
-
 
                                     <div class="col-12 mb-20">
-                                        <input type="submit" value="Cập nhật" class="button button-primary">
-										<button class="button button-warning"><span>Xóa</span></button>
+                                        <button onclick="update()" class="button button-primary"><span>Cập nhật</span></button>
+										<button class="button button-warning" data-toggle="modal" data-target="#myModal"><span>Xóa</span></button>
 										<button class="button button-danger" onclick="turnOffForm('form-edit')"><span>Hủy</span></button>
                                     </div>
 
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <p>Bạn muốn xóa dữ liệu?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" onclick="deleteMenu()">Đồng ý</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
-                            </form>
-							<!--Form end --> 
+                            </div>
+							<!--Form end -->
                         </div>
                     </div>
 					
@@ -432,11 +344,11 @@
                                 <tbody>
                                 <c:forEach var="menu" items="${menus}">
                                     <tr>
-                                        <td>${menu.name}</td>
-                                        <td>${menu.type}</td>
-                                        <td>${menu.entryPrice}&nbsp;₫</td>
-                                        <td>${menu.price}&nbsp;₫</td>
-									    <td><button class="button button-success" onclick="swapForm('form-edit','form-add')"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
+                                        <td id="menu-name${menu.id}">${menu.name}</td>
+                                        <td id="menu-type${menu.id}">${menu.type}</td>
+                                        <td id="menu-entry-price${menu.id}">${menu.entryPrice}</td>
+                                        <td id="menu-price${menu.id}">${menu.price}</td>
+									    <td id="button${menu.id}"><button id="${menu.id}" class="button button-success" onclick="swapFormUpdate('form-edit','form-add',this.id)"><i class="zmdi zmdi-edit zmdi-hc-fw"></i><span>Chỉnh sửa</span></button></td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -459,7 +371,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; <a href="https://themeforest.net/user/codecarnival">Codecarnival</a></p>
+                    <p class="text-body-light">2019 &copy; T-Hotel</p>
                 </div>
 
             </div>
@@ -481,6 +393,74 @@
     function turnOffForm(off){
       var x = document.getElementById(off);
       x.style.display ="none";
+   }
+
+   function swapFormUpdate(on,off,id){
+       var x = document.getElementById(on);
+       var y = document.getElementById(off);
+       x.style.display ="block";
+       y.style.display ="none";
+
+       document.getElementById("menu-id").value = id;
+       document.getElementById("name-update").value = document.getElementById("menu-name"+id).innerText;
+       document.getElementById("type-update").value = document.getElementById("menu-type"+id).innerText;
+       document.getElementById("entryPrice-update").value = document.getElementById("menu-entry-price"+id).innerHTML;
+       document.getElementById("price-update").value = document.getElementById("menu-price"+id).innerHTML;
+   }
+
+   function update() {
+       var menu = {
+           "id": document.getElementById("menu-id").value,
+           "name": document.getElementById("name-update").value,
+           "type": document.getElementById("type-update").value,
+           "entryPrice": document.getElementById("entryPrice-update").value,
+           "price": document.getElementById("price-update").value
+       }
+
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               var myObj = JSON.parse(this.responseText);
+               updateView(myObj);
+           }
+       };
+
+       xhttp.open("POST", "/main/menu/update", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify(menu));
+   }
+
+   function updateView(menu) {
+       document.getElementById("form-edit").style.display = "none";
+       var id = document.getElementById("menu-id").value
+       document.getElementById("menu-name" + id).innerHTML = menu.name;
+       document.getElementById("menu-type" + id).innerHTML = menu.type;
+       document.getElementById("menu-entry-price" + id).innerHTML = menu.entryPrice;
+       document.getElementById("menu-price" + id).innerHTML = menu.price;
+   }
+
+   function deleteMenu() {
+       var id = document.getElementById("menu-id").value;
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               updateViewAfterDelete();
+           }
+       };
+       xhttp.open("POST", "/main/menu/delete", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify({id:id}));
+   }
+
+   function updateViewAfterDelete() {
+       $('#myModal').modal('hide');
+       document.getElementById("form-edit").style.display = "none";
+       var id = document.getElementById("menu-id").value
+       document.getElementById("menu-name" + id).remove();
+       document.getElementById("menu-type" + id).remove();
+       document.getElementById("menu-entry-price" + id).remove();
+       document.getElementById("menu-price" + id).remove();
+       document.getElementById("button"+ id).remove();
    }
 </script>
 

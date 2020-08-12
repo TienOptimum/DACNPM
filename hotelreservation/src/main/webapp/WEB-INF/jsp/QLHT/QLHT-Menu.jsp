@@ -154,25 +154,22 @@
 				<div class="col-auto">
 					<div class="row align-items-center">
 
-                                    <!--Side Header Toggle-->
-                                    <div class="col-auto">
-										<div class="page-heading">
-											<h3 class="title">Menu</h3>
-										</div>
-									</div>
+                        <!--Side Header Toggle-->
+                        <div class="col-auto">
+                            <div class="page-heading">
+                                <h3 class="title">Menu</h3>
+                            </div>
+                        </div>
 
-                                    <!--Header Search-->
-                                    <div class="col-auto">
-                                        <div class="page-heading">
-											<button class="button button-round button-success" onclick="swapForm('form-add','form-edit')"><span>Thêm mới</span></button>
-										</div>
-                                    </div>
-									<!--Footer Search-->
-
+                        <!--Header Search-->
+                        <div class="col-auto">
+                            <div class="page-heading">
+                                <button class="button button-round button-success" onclick="swapForm('form-add','form-edit')"><span>Thêm mới</span></button>
+                            </div>
+                        </div>
+                        <!--Footer Search-->
 					</div>                
 				</div><!-- Page Heading End -->
-		
-
             </div>
 
 			<!--Div form add start -->

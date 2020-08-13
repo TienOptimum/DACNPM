@@ -13,9 +13,8 @@ public interface HistoryReservationService {
     public void saveHistoryReservation(HistoryReservation historyReservation);
     public HistoryReservation getHistoryReservation(int id) throws ResourceNotFoundException;
     public List<HistoryReservation> getHistoryReservationByReservationID(int id) throws ResourceNotFoundException;
-    public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate);
+    public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate, int roomID);
     public void deleteHistoryReservation(int id) throws ResourceNotFoundException;
-    public List<HistoryReservation> getHistoryReservationByCheckRoom(Timestamp checkIn, Timestamp checkOut);
     public List<HistoryReservation> getHistoryReservationByRoomRoomStatus(int id);
     public List<HistoryReservation> getListHistoryReservationByStatus(String status);
 }

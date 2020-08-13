@@ -213,11 +213,19 @@ public class ReservationController {
         Date d2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(body.get("checkOut"));
         Timestamp checkOutTime = new Timestamp(d2.getTime());
 
+        String rs = "failed";
+
         //check phong co trong lich khong
-        if(historyReservationService.checkRoomAvailable(checkInTime,checkOutTime)){
-            return ResponseEntity.ok("ok");
-        }else{
-            return ResponseEntity.ok("failed");
+        if (listIDRoom != null) {
+            for (int i = 0; i < listIDRoom.size() ; i++){
+                if (historyReservationService.checkRoomAvailable(checkInTime, checkOutTime,listIDRoom.get(i))) {
+                    rs = "ok";
+                } else {
+                    rs = "failed";
+                    break;
+                }
+            }
         }
+        return ResponseEntity.ok(rs);
     }
 }

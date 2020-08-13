@@ -247,7 +247,7 @@
                                 </div>
                             </form>
                             <div class="col-12 mb-20">
-                                <button class="button button-primary" onclick="checkValid()">Lưu</button>
+                                <button class="button button-primary" onclick="test()">Lưu</button>
                                 <button class="button button-danger" onclick="swapFormOff('form-add')"><span>Hủy</span></button>
                             </div>
                         </div>
@@ -485,7 +485,7 @@
         const FAILED = 'failed';
         function handleCheckValid(responseStatus) {
             if (responseStatus == OK) {
-                handleCheck();
+                // handleCheck();
                 submitForm();
             }else {
                 alert("Phòng được đặt đã trùng lịch!");
@@ -508,20 +508,32 @@
             return result;
         }
 
-        function handleCheck() {
-            $.ajax({
-                url: "/main/reservation/checkedRoom",
-                type: 'POST',
-                dataType: 'json',
-                data: JSON.stringify(checkRoom())
-                ,
-                headers : {
-                    'Accept' : 'application/json',
-                    'Content-Type' : 'application/json'
-                },
-            }).done(function(ketqua) {
-                console.log(ketqua)
-            });
+        // function handleCheck() {
+        //     $.ajax({
+        //         url: "/main/reservation/checkedRoom",
+        //         type: 'POST',
+        //         dataType: 'json',
+        //         data: JSON.stringify(checkRoom())
+        //         ,
+        //         headers : {
+        //             'Accept' : 'application/json',
+        //             'Content-Type' : 'application/json'
+        //         },
+        //     }).done(function(ketqua) {
+        //         console.log(ketqua)
+        //     });
+        // }
+
+        function test() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    checkValid();
+                }
+            };
+            xhttp.open("POST", "/main/reservation/checkedRoom", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify(checkRoom()));
         }
     </script>
 </body>

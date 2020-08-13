@@ -42,11 +42,6 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     }
 
     @Override
-    public List<HistoryReservation> getHistoryReservationByCheckRoom(Timestamp checkIn, Timestamp checkOut){
-        return historyReservationRepository.checkReservationAvailable(checkIn,checkOut);
-    }
-
-    @Override
     public List<HistoryReservation> getHistoryReservationByRoomRoomStatus(int id) {
         return historyReservationRepository.findAllByRoomRoomStatusId(id);
     }
@@ -57,8 +52,8 @@ public class HistoryReservationServiceImpl implements HistoryReservationService{
     }
 
     @Override
-    public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate) {
-        List<HistoryReservation> historyReservations = historyReservationRepository.checkReservationAvailable(checkInDate,checkOutDate);
+    public boolean checkRoomAvailable(Timestamp checkInDate, Timestamp checkOutDate, int roomID) {
+        List<HistoryReservation> historyReservations = historyReservationRepository.checkReservationAvailable(checkInDate,checkOutDate,roomID);
 
         if (historyReservations.size() == 0){
             return true;

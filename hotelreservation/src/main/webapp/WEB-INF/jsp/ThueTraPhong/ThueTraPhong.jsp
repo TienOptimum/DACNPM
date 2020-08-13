@@ -170,7 +170,9 @@
                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#history">Lịch sử</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="waiting">
+					
+                    <div class="tab-pane fade show active" id="waiting">
+					
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -185,14 +187,91 @@
                                             <td>${roomAvai.name}</td>
                                             <td>${roomAvai.roomStatus.name}</td>
                                             <td>
-                                                <button class="button button-success"><span>Nhận phòng</span></button>
+                                                <button class="button button-success" onclick="turnOnForm('form-add')"><span>Nhận phòng</span></button>
                                             </td>
                                         </tr>
                                     </c:forEach>
                                 </tbody>
                             </table>
+							
+						<div class="row" id="form-add" style="display: none;">
+
+							<div class="col-12 mb-30">
+					
+								<div class="box">
+										<div class="box-head">
+										<h4 class="title">Nhận phòng</h4>
+										</div>
+									<div class="box-body">
+										<form >
+											<div class="row mbn-20">
+
+												<div class="col-12 mb-20">
+													<div class="row mbn-20">
+													<!--Tên khách hàng -->
+														<div class="col-lg-4 mb-20">
+															<label>Họ tên khách hàng</label>
+															<input type="text" name="customerName" class="form-control">
+														</div>
+													<!--Số điện thoại -->
+														<div class="col-lg-4 mb-20">
+															<label>Số điện thoại</label>
+															<input type="number" name="phone" class="form-control">
+														</div>
+                                            
+													</div>
+												</div>
+                                    
+												<!--Date -->
+												<div class="col-12 mb-20">				
+													<div class="row mbn-20">
+													<!--Ngày nhận phòng -->
+														<div class="col-lg-4 mb-20">
+															<h6 class="mb-15">Ngày nhận phòng</h6>
+															<input type="datetime-local" id="checkInDate" name="checkInDate">
+														</div>
+												<!--Ngày trả phòng -->
+														<div class="col-lg-4 mb-20">
+															<h6 class="mb-15">Ngày trả phòng</h6>
+															<input type="datetime-local" id="checkOutDate" name="checkOutDate">
+														</div>
+                                            
+													</div>
+												</div>
+									
+											<!--Tiền trả trước -->
+												<div class="col-12 mb-20">
+													<label>Tiền trả trước</label>
+													<input type="number" name="deposits" class="form-control">
+												</div>
+									
+												<!--Loại phòng -->
+												<div class="col-12 mb-20">
+													<h6 class="mb-15">Loại phòng</h6>
+													<div class="adomx-checkbox-radio-group inline">
+														<c:forEach var="room" items="${rooms}">
+														<label class="adomx-checkbox"><input type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
+														</c:forEach>
+													</div>
+												</div>
+												<!--Ghi chú -->
+												<div class="col-12 mb-20">
+													<textarea class="form-control" name="note" placeholder="Ghi chú"></textarea>
+												</div>
+											</div>
+										</form>
+										<div class="col-12 mb-20">
+											<button class="button button-primary" onclick="test()">Nhận phòng</button>
+											<button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			
                         </div>
-                    <div class="tab-pane fade" id="rented">
+                  
+				  <div class="tab-pane fade" id="rented">
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -287,7 +366,7 @@
                         </div>
 						</div>
 						
-                        <div class="tab-pane fade" id="history">
+                    <div class="tab-pane fade" id="history">
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -429,6 +508,16 @@
             document.getElementById("his-cost"+id).remove();
             document.getElementById("button"+id).remove();
         }
+		
+		function turnOffForm(off){
+			var x = document.getElementById(off);
+			x.style.display ="none";
+		}
+		
+		function turnOnForm(on){
+			var x = document.getElementById(on);
+			x.style.display ="block";
+		}
     </script>
 
 </body>

@@ -162,7 +162,7 @@
 
         <div class="row mbn-30">
             <div class="col-md-12">
-            <div class="box">
+			<div class="box">
                 <div class="box-body">
                     <ul class="nav nav-tabs nav-justified">
                         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#waiting">Phòng chờ</a></li>
@@ -192,7 +192,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="rented">
+                    <div class="tab-pane fade" id="rented">
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -211,11 +211,82 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
+							<!-- Thanh toán -->
+							<div class="col-md-4 order-md-2 mb-4" id="payment" style="display: none;">
+								<h4 class="d-flex justify-content-between align-items-center mb-3">
+									<span class="text-muted">Thanh toán</span>
+								</h4>
+								<ul class="list-group mb-3">
+								
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+										<div>
+											<h6 class="my-0">Thời gian nhận phòng</h6>
+										</div>
+										<span class="text-muted" id="checkin"></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+										<div>
+											<h6 class="my-0">Thời gian trả phòng</h6>
+										</div>
+										<span class="text-muted" id="checkout"></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Tiền phòng</h6>
+											</div>
+												<span class="text-muted"></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Phụ thu</h6>
+											</div>
+												<span class="text-muted"></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Tiền trả trước</h6>
+											</div>
+												<span class="text-muted" ></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Tiền menu</h6>
+											</div>
+												<span class="text-muted" ></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Giảm giá</h6>
+											</div>
+												<span class="text-muted" ></span>
+									</li>
+									
+									<li class="list-group-item d-flex justify-content-between lh-condensed">
+											<div>
+												<h6 class="my-0">Tổng tiền</h6>
+											</div>
+											<span class="text-muted" ></span>
+									</li>
+									
+									
+									<li class="list-group-item d-flex justify-content-between">
+										<span>Tiền cần thanh toán</span>
+										<strong id="thanhtoan"></strong>
+									</li>
+								</ul>
 
-                            <label> Thanh toán </label>
-                            <label id="thanhtoan"></label>
-                            <label id="cachtinhtien"></label>
+								<div class="card p-2">
+									<button  class="btn btn-secondary")>Xác nhận</button>
+								</div>
                         </div>
+						</div>
+						
                         <div class="tab-pane fade" id="history">
                             <table class="table">
                                 <thead>
@@ -254,15 +325,18 @@
 
                                 </div>
                             </div>
+							
                         </div>
-                    </div>
+                    
                 </div>
                 </div>
             </div>
 
-        </div>
+			</div>
 
-    </div><!-- Content Body End -->
+		</div>
+	</div>
+	<!-- Content Body End -->
 
     <!-- Footer Section Start -->
     <div class="footer-section">
@@ -301,6 +375,13 @@
 
     <script>
         function handlePayment(id) {
+            document.getElementById("payment").style.display ="block";
+			
+			var today = new Date();
+			var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+			var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+			var dateTime = date+' '+time;
+			
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -308,15 +389,21 @@
                     displayPayment(myObj)
                 }
             };
-            xhttp.open("POST", "/roomrent/pay", true);
+			
+			xhttp.open("POST", "/roomrent/pay", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify({id:id}));
-
+			
             function displayPayment(res) {
                 document.getElementById("thanhtoan").innerHTML = res.cost;
                 document.getElementById("cachtinhtien").innerHTML = res.room.paymentMethod.price;
+				document.getElementById("checkin").innerHTML = res.reservation.checkInDate;
+				document.getElementById("checkout").innerHTML = dateTime;
             }
         }
+		
+		
+		
 
         function showModal(id) {
             document.getElementById("button-modal").value = id;

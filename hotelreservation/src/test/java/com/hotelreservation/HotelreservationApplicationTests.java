@@ -14,8 +14,4 @@ class HotelreservationApplicationTests {
 	void contextLoads() {
 	}
 
-	public void historyReservationService_checkRoomAvailable(){
-		final SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
-	}
-
 }

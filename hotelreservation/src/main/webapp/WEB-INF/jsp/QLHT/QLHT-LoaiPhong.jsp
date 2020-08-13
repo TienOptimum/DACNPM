@@ -334,7 +334,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; T-Hotel</p>
+                    <p class="text-body-light">2020 &copy; T-Hotel</p>
                 </div>
 
             </div>

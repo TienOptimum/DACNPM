@@ -225,12 +225,12 @@
 									</div>
 									
                                     <div class="col-12 mb-20">
-                                        <input type="submit" value="Thêm" class="button button-primary">                                   
-										<button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+                                        <input type="submit" value="Thêm" class="button button-primary">
                                     </div>
 
                                 </div>
                             </form>
+                            <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
 							<!--Form end --> 
                         </div>
                     </div>
@@ -368,7 +368,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; T-Hotel</p>
+                    <p class="text-body-light">2020 &copy; T-Hotel</p>
                 </div>
 
             </div>

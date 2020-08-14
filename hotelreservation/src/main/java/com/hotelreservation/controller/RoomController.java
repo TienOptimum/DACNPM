@@ -1,6 +1,5 @@
 package com.hotelreservation.controller;
 
-import com.hotelreservation.entry.KindOfRoomParam;
 import com.hotelreservation.entry.RoomParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.KindOfRoom;
@@ -11,10 +10,13 @@ import com.hotelreservation.services.PaymentMethodService;
 import com.hotelreservation.services.RoomService;
 import com.hotelreservation.services.RoomStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
@@ -76,5 +78,21 @@ public class RoomController {
     public String update(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
         roomService.deleteRoom(Integer.parseInt(param.get("id")));
         return "ok";
+    }
+
+    @PostMapping(value = "/main/room/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> checkRoomValid(@RequestBody Map<String, String> body) throws ParseException {
+        String name =  body.get("name");
+        String rs = "failed";
+
+        //check loai phong co ton tai
+        if (roomService.checkRoomAvailable(name)) {
+            rs = "ok";
+        } else {
+            rs = "failed";
+        }
+
+        return ResponseEntity.ok(rs);
     }
 }

@@ -1,7 +1,7 @@
 <html class="no-js" lang="en">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
-
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -40,6 +40,12 @@
 </head>
 
 <body>
+
+<c:if test="${pageContext.request.userPrincipal.name != null}">
+    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    </form>
+</c:if>
 
     <div class="main-wrapper">
 
@@ -137,7 +143,7 @@
                         <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
 						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
 						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
-						<li class="mt-2"><a href="#"><i class="zmdi zmdi-sign-in"></i> <span>ĐĂNG XUẤT</span></a></li>
+						<li class="mt-2"><a onclick="document.forms['logoutForm'].submit()"><i class="zmdi zmdi-sign-in"></i><span>ĐĂNG XUẤT</span></a></li>
                   
                     </ul>
                 </nav>
@@ -187,7 +193,7 @@
                         </div>
                         <div class="box-body">
 						<!--Form start -->
-                            <form action="/main/kindofroom/create" method="post" modelAttribute="kindofroom">
+                            <form id="add" action="/main/kindofroom/create" method="post" modelAttribute="kindofroom">
                                 <div class="row mbn-20">
 
 									<div class="col-12 mb-20">
@@ -195,7 +201,7 @@
 										<!--Tên phòng -->
                                             <div class="col-lg-4 mb-20">
 												<label>Tên loại phòng</label>
-												<input type="text" name="name" class="form-control">
+												<input id="kindRoomName" type="text" name="name" class="form-control" required>
                                             </div>
                                           
                                         </div>
@@ -207,17 +213,17 @@
 										<!--Loại phòng -->
                                             <div class="col-lg-4 mb-20">
 												<label>Mô tả</label>
-												<input type="text" name="description" class="form-control">
+												<input type="text" name="description" class="form-control" required>
                                             </div>
                                         </div>
 									</div>
 
-                                    <div class="col-12 mb-20">
-                                        <input type="submit" value="Thêm" class="button button-primary">
-                                    </div>
                                 </div>
                             </form>
-                            <button class="button button-danger" onclick="swapFormOff('form-add')"><span>Hủy</span></button>
+                            <div class="col-12 mb-20">
+                                <button class="button button-primary" onclick="checkValid()">Lưu</button>
+                                <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+                            </div>
 							<!--Form end --> 
                         </div>
                     </div>
@@ -245,7 +251,7 @@
 										<!--Tên phòng -->
                                         <div class="col-lg-4 mb-20">
                                             <label>Tên loại phòng</label>
-												<input id="name-update" type="text" class="form-control">
+												<input id="name-update" type="text" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +261,7 @@
                                         <!--Loại phòng -->
                                         <div class="col-lg-4 mb-20">
                                             <label>Mô tả</label>
-                                                <input id="des-update" type="text" class="form-control">
+                                                <input id="des-update" type="text" class="form-control" required>
                                             </div>
                                         </div>
 									</div>
@@ -263,7 +269,7 @@
                                 <div class="col-12 mb-20">
                                     <button onclick="update()" class="button button-primary"><span>Cập nhật</span></button>
                                     <button class="button button-warning" data-toggle="modal" data-target="#myModal"><span>Xóa</span></button>
-                                    <button class="button button-danger" onclick="swapFormOff('form-edit')"><span>Hủy</span></button>
+                                    <button class="button button-danger" onclick="turnOffForm('form-edit')"><span>Hủy</span></button>
                                 </div>
 
                                 <!-- Modal -->
@@ -364,7 +370,7 @@
        document.getElementById("des-update").value = document.getElementById("kindofroom-des"+id).innerText;
    }
    
-    function swapFormOff(off){
+    function turnOffForm(off){
       var x = document.getElementById(off);
       x.style.display ="none";
    }
@@ -447,6 +453,40 @@
             document.getElementById("kindofroom-name" + id).innerHTML = kindOfRoom.name;
             document.getElementById("kindofroom-des" + id).innerHTML = kindOfRoom.description;
         }
+
+
+        function checkValid() {
+            var name = document.getElementById("kindRoomName").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    handleCheckValid(this.responseText);
+                }
+            };
+            xhttp.open("POST", "/main/kindofroom/check", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({name:name}));
+        }
+
+        const OK = 'ok';
+        const FAILED = 'failed';
+        function handleCheckValid(responseStatus) {
+            if (responseStatus == OK) {
+                // handleCheck();
+                submitForm();
+            }else if(responseStatus == FAILED){
+                alert("Tên loại phòng đã tồn tại!");
+            }
+        }
+
+        function submitForm() {
+            document.getElementById("add").submit();
+        }
+
+
+
+
     </script>
 </body>
 

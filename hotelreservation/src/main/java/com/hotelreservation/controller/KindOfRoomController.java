@@ -6,10 +6,17 @@ import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.repositories.KindOfRoomRepository;
 import com.hotelreservation.services.KindOfRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -49,5 +56,22 @@ public class KindOfRoomController {
     public String update(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
         kindOfRoomService.deleteKindOfRoom(Integer.parseInt(param.get("id")));
         return "ok";
+    }
+
+
+    @PostMapping(value = "/main/kindofroom/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> checkRoomValid(@RequestBody Map<String, String> body) throws ParseException {
+        String name =  body.get("name");
+        String rs = "failed";
+
+        //check loai phong co ton tai
+                if (kindOfRoomService.checkKindOfRoomAvailable(name)) {
+                    rs = "ok";
+                } else {
+                    rs = "failed";
+                }
+
+        return ResponseEntity.ok(rs);
     }
 }

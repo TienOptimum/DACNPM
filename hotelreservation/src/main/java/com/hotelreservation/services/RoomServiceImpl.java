@@ -1,6 +1,7 @@
 package com.hotelreservation.services;
 
 import com.hotelreservation.exception.ResourceNotFoundException;
+import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.model.Room;
 import com.hotelreservation.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,16 @@ public class RoomServiceImpl implements RoomService{
     public Room getRoom(int id) throws ResourceNotFoundException {
         return roomRepository.findById(id).orElseThrow(
                 ()-> new ResourceNotFoundException(id));
+    }
+
+    @Override
+    public boolean checkRoomAvailable(String name) {
+        List<Room> rooms = roomRepository.checkRoomAvailable(name);
+
+        if (rooms.size() == 0){
+            return true;
+        }
+        return false;
     }
 
     @Override

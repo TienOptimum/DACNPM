@@ -1,6 +1,7 @@
 package com.hotelreservation.services;
 
 import com.hotelreservation.exception.ResourceNotFoundException;
+import com.hotelreservation.model.HistoryReservation;
 import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.repositories.KindOfRoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,16 @@ public class KindOfRoomServiceImpl implements KindOfRoomService{
     public KindOfRoom getKindOfRoom(int id) throws ResourceNotFoundException {
         return kindOfRoomRepository.findById(id).orElseThrow(
                 ()-> new ResourceNotFoundException(id));
+    }
+
+    @Override
+    public boolean checkKindOfRoomAvailable(String name) {
+        List<KindOfRoom> kindOfRooms = kindOfRoomRepository.checkKindOfRoomAvailable(name);
+
+        if (kindOfRooms.size() == 0){
+            return true;
+        }
+        return false;
     }
 
     @Override

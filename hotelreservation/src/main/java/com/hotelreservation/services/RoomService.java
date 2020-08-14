@@ -9,6 +9,7 @@ public interface RoomService {
     public List<Room> getRooms();
     public void saveRoom(Room room);
     public Room getRoom(int id) throws ResourceNotFoundException;
+    public boolean checkRoomAvailable(String name);
     public void deleteRoom(int id) throws ResourceNotFoundException;
     public List<Room> getRoomByRoomStatusID(int id);
 }

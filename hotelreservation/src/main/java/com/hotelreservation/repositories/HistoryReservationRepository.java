@@ -19,6 +19,7 @@ public interface HistoryReservationRepository extends JpaRepository<HistoryReser
                     "from history_reservation, reservation " +
                     "where history_reservation.reservation_id = reservation.id " +
                     "and (history_reservation.room_id =:roomID)" +
+                    "and ((history_reservation.status = 'ON') or (history_reservation.status = 'R_ON'))" +
                     "and ((:checkInDate between reservation.check_in_date and reservation.check_out_date) " +
                     "or (:checkOutDate between reservation.check_in_date and reservation.check_out_date)" +
                     "or (:checkInDate < reservation.check_in_date) and (:checkOutDate > reservation.check_out_date)) " )

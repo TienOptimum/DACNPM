@@ -1,15 +1,14 @@
 package com.hotelreservation.controller;
 
 
+import com.hotelreservation.entry.BillParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.HistoryReservation;
 import com.hotelreservation.model.Reservation;
 import com.hotelreservation.model.Room;
 import com.hotelreservation.model.RoomStatus;
-import com.hotelreservation.repositories.RoomStatusRepository;
 import com.hotelreservation.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,8 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.crypto.Data;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -69,23 +66,27 @@ public class ReservationController {
 
     @PostMapping(value="/main/reservation/create")
     public String create(@ModelAttribute Reservation reservation, HttpServletRequest request){
-            reservationService.saveReservation(reservation);
+        reservation.getCheckInDate().setHours(14);
+        reservation.getCheckInDate().setMinutes(0);
+        reservation.getCheckOutDate().setHours(12);
+        reservation.getCheckOutDate().setMinutes(0);
 
-            try {
-                if(listIDRoom != null)
-                    for (int i = 0 ; i < listIDRoom.size() ; i++){
-                        HistoryReservation historyReservation = new HistoryReservation();
-                        historyReservation.setReservation(reservation);
-                        historyReservation.setRoom(roomService.getRoom(listIDRoom.get(i)));
-                        historyReservation.setEarlyCheckIn("N");
-                        historyReservation.setStatus("ON");
-                        historyReservationService.saveHistoryReservation(historyReservation);
-                    }
-            }catch (ResourceNotFoundException ex) {
+        reservationService.saveReservation(reservation);
 
-            }
+        try {
+            if(listIDRoom != null)
+                for (int i = 0 ; i < listIDRoom.size() ; i++){
+                    HistoryReservation historyReservation = new HistoryReservation();
+                    historyReservation.setReservation(reservation);
+                    historyReservation.setRoom(roomService.getRoom(listIDRoom.get(i)));
+                    historyReservation.setEarlyCheckIn("N");
+                    historyReservation.setStatus("ON");
+                    historyReservationService.saveHistoryReservation(historyReservation);
+                }
+        }catch (ResourceNotFoundException ex) {
+        }
 
-            return "redirect:/main/reservation";
+        return "redirect:/main/reservation";
     }
 
     List<Integer> listIDRoom = new ArrayList<>();
@@ -142,14 +143,16 @@ public class ReservationController {
     }
 
     @RequestMapping("/roomrent/pay")
-    public @ResponseBody HistoryReservation pay(@RequestBody Map<String, String> body) throws ResourceNotFoundException {
+    public @ResponseBody BillParam pay(@RequestBody Map<String, String> body) throws ResourceNotFoundException {
         int hisID = Integer.parseInt(body.get("id"));
         HistoryReservation historyReservation = historyReservationService.getHistoryReservation(hisID);
         //thời gian check out lý thuyết
         Date d1 = historyReservation.getReservation().getCheckOutDate();
+        System.out.println(d1);
         long checkOutTime = d1.getTime();
         //thời gian check out thực tế
         Date date = new Date();
+        historyReservation.getReservation().setCheckOutDate(date);
         long realCheckOut = date.getTime();
         // tiền menu
         double menuCost = 0;
@@ -178,14 +181,17 @@ public class ReservationController {
         // kiểm tra việc checkin Sớm
         String earlyCheckIn = historyReservation.getEarlyCheckIn();
 
+        // tiền trả trước
+        double deposits = historyReservation.getReservation().getDeposits();
+
         if (getDayReservation < 1){
             getDayReservation = 1;
         }
 
         if (earlyCheckIn.equals("Y")){
-            totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge + 50000;
+            totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge + 50000 - deposits;
         }else{
-            totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge;
+            totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge - deposits;
         }
 
         RoomStatus roomStatus = roomStatusService.getRoomStatusByID(1);
@@ -193,17 +199,28 @@ public class ReservationController {
         historyReservation.setStatus("OFF");
         historyReservation.setCost(totalPay);
         historyReservationService.saveHistoryReservation(historyReservation);
+
         // xử lí việc hiện thông tin thanh toán
-
-        return historyReservation;
+        BillParam billParam = new BillParam();
+        billParam.checkInDate = historyReservation.getReservation().getCheckInDate();
+        billParam.checkOutDate = historyReservation.getReservation().getCheckOutDate();
+        billParam.room_price = paymentMethod * getDayReservation;
+        if (timeBonus == 0){
+            billParam.surcharge = 0;
+        }else{
+            billParam.surcharge = surcharge * timeBonus;
+        }
+        billParam.deposits = deposits;
+        billParam.menu_price = menuCost;
+        if (earlyCheckIn.equals("Y")){
+            billParam.total_cost = billParam.room_price + billParam.surcharge + billParam.menu_price + 50000;
+        }else{
+            billParam.total_cost = billParam.room_price + billParam.surcharge + billParam.menu_price;
+        }
+        billParam.total_pay = totalPay;
+        return billParam;
     }
 
-    @RequestMapping("/main/confirmPay")
-    public String confirmPay(){
-        return "redirect:/roomrent";
-    }
-
-    //
     @PostMapping(value = "/main/reservation/room/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<String> checkRoomValid(@RequestBody Map<String, String> body) throws ParseException {

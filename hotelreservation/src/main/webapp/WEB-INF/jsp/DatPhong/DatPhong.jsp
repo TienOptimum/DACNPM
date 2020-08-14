@@ -247,7 +247,7 @@
                                 </div>
                             </form>
                             <div class="col-12 mb-20">
-                                <button class="button button-primary" onclick="test()">Lưu</button>
+                                <button class="button button-primary" onclick="reservation()">Lưu</button>
                                 <button class="button button-danger" onclick="swapFormOff('form-add')"><span>Hủy</span></button>
                             </div>
                         </div>
@@ -471,15 +471,24 @@
         function checkValid() {
             var checkIn = document.getElementById("checkInDate").value;
             var checkOut = document.getElementById("checkOutDate").value;
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    handleCheckValid(this.responseText);
-                }
-            };
-            xhttp.open("POST", "/main/reservation/room/check", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify({checkIn:checkIn,checkOut:checkOut}));
+
+            var d = new Date(checkIn);
+            d.setHours(14,0,0,0);
+            var dd = new Date();
+            dd.setHours(0,0,0,0);
+            if ( d === dd || d > dd){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        handleCheckValid(this.responseText);
+                    }
+                };
+                xhttp.open("POST", "/main/reservation/room/check", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify({checkIn:checkIn,checkOut:checkOut}));
+            }else{
+                alert("Vui lòng chọn thời gian check in sau thời điểm hiện tại!")
+            }
         }
         const OK = 'ok';
         const FAILED = 'failed';
@@ -508,23 +517,7 @@
             return result;
         }
 
-        // function handleCheck() {
-        //     $.ajax({
-        //         url: "/main/reservation/checkedRoom",
-        //         type: 'POST',
-        //         dataType: 'json',
-        //         data: JSON.stringify(checkRoom())
-        //         ,
-        //         headers : {
-        //             'Accept' : 'application/json',
-        //             'Content-Type' : 'application/json'
-        //         },
-        //     }).done(function(ketqua) {
-        //         console.log(ketqua)
-        //     });
-        // }
-
-        function test() {
+        function reservation() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {

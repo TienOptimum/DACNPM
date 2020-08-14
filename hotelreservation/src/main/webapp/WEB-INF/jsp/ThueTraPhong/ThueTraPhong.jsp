@@ -160,6 +160,83 @@
 
         </div><!-- Page Headings End -->
 
+        <div class="row" id="form-add" style="display: none;">
+
+            <div class="col-12 mb-30">
+
+                <div class="box">
+                    <div class="box-head">
+                        <h4 class="title">Nhận phòng</h4>
+                    </div>
+                    <div class="box-body">
+                        <form >
+                            <div class="row mbn-20">
+
+                                <div class="col-12 mb-20">
+                                    <div class="row mbn-20">
+                                        <!--Tên khách hàng -->
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Họ tên khách hàng</label>
+                                            <input type="text"  class="form-control">
+                                        </div>
+                                        <!--Số điện thoại -->
+                                        <div class="col-lg-4 mb-20">
+                                            <label>Số điện thoại</label>
+                                            <input type="number"  class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--Date -->
+                                <div class="col-12 mb-20">
+                                    <div class="row mbn-20">
+                                        <!--Ngày nhận phòng -->
+                                        <div class="col-lg-4 mb-20">
+                                            <h6 class="mb-15">Ngày nhận phòng</h6>
+                                            <input type="datetime-local" >
+                                        </div>
+                                        <!--Ngày trả phòng -->
+                                        <div class="col-lg-4 mb-20">
+                                            <h6 class="mb-15">Ngày trả phòng</h6>
+                                            <input type="datetime-local" >
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--Tiền trả trước -->
+                                <div class="col-12 mb-20">
+                                    <label>Tiền trả trước</label>
+                                    <input type="number"  class="form-control">
+                                </div>
+
+                                <!--Loại phòng -->
+                                <div class="col-12 mb-20">
+                                    <h6 class="mb-15">Loại phòng</h6>
+                                    <div class="adomx-checkbox-radio-group inline">
+                                        <c:forEach var="room" items="${rooms}">
+                                            <label class="adomx-checkbox">
+                                                <input type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}
+                                            </label>
+                                        </c:forEach>
+                                    </div>
+                                </div>
+                                <!--Ghi chú -->
+                                <div class="col-12 mb-20">
+                                    <textarea class="form-control" name="note" placeholder="Ghi chú"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-12 mb-20">
+                            <button class="button button-primary" onclick="test()">Nhận phòng</button>
+                            <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row mbn-30">
             <div class="col-md-12">
 			<div class="box">
@@ -177,7 +254,7 @@
                                 <thead>
                                 <tr>
                                     <th>Tên phòng</th>
-                                    <th>Trạng thái</th>
+                                    <th>Thông tin phòng</th>
                                     <th>Tùy chọn</th>
                                 </tr>
                                 </thead>
@@ -185,7 +262,7 @@
                                     <c:forEach var="roomAvai" items="${roomAvais}">
                                         <tr>
                                             <td>${roomAvai.name}</td>
-                                            <td>${roomAvai.roomStatus.name}</td>
+                                            <td>${roomAvai.description}</td>
                                             <td>
                                                 <button class="button button-success" onclick="turnOnForm('form-add')"><span>Nhận phòng</span></button>
                                             </td>
@@ -193,178 +270,87 @@
                                     </c:forEach>
                                 </tbody>
                             </table>
-							
-						<div class="row" id="form-add" style="display: none;">
-
-							<div class="col-12 mb-30">
-					
-								<div class="box">
-										<div class="box-head">
-										<h4 class="title">Nhận phòng</h4>
-										</div>
-									<div class="box-body">
-										<form >
-											<div class="row mbn-20">
-
-												<div class="col-12 mb-20">
-													<div class="row mbn-20">
-													<!--Tên khách hàng -->
-														<div class="col-lg-4 mb-20">
-															<label>Họ tên khách hàng</label>
-															<input type="text" name="customerName" class="form-control">
-														</div>
-													<!--Số điện thoại -->
-														<div class="col-lg-4 mb-20">
-															<label>Số điện thoại</label>
-															<input type="number" name="phone" class="form-control">
-														</div>
-                                            
-													</div>
-												</div>
-                                    
-												<!--Date -->
-												<div class="col-12 mb-20">				
-													<div class="row mbn-20">
-													<!--Ngày nhận phòng -->
-														<div class="col-lg-4 mb-20">
-															<h6 class="mb-15">Ngày nhận phòng</h6>
-															<input type="datetime-local" id="checkInDate" name="checkInDate">
-														</div>
-												<!--Ngày trả phòng -->
-														<div class="col-lg-4 mb-20">
-															<h6 class="mb-15">Ngày trả phòng</h6>
-															<input type="datetime-local" id="checkOutDate" name="checkOutDate">
-														</div>
-                                            
-													</div>
-												</div>
-									
-											<!--Tiền trả trước -->
-												<div class="col-12 mb-20">
-													<label>Tiền trả trước</label>
-													<input type="number" name="deposits" class="form-control">
-												</div>
-									
-												<!--Loại phòng -->
-												<div class="col-12 mb-20">
-													<h6 class="mb-15">Loại phòng</h6>
-													<div class="adomx-checkbox-radio-group inline">
-														<c:forEach var="room" items="${rooms}">
-														<label class="adomx-checkbox"><input type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
-														</c:forEach>
-													</div>
-												</div>
-												<!--Ghi chú -->
-												<div class="col-12 mb-20">
-													<textarea class="form-control" name="note" placeholder="Ghi chú"></textarea>
-												</div>
-											</div>
-										</form>
-										<div class="col-12 mb-20">
-											<button class="button button-primary" onclick="test()">Nhận phòng</button>
-											<button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-			
                         </div>
                   
 				  <div class="tab-pane fade" id="rented">
-                            <table class="table">
-                                <thead>
+                      <table class="table">
+                          <thead>
+                            <tr>
+                                <th>Tên phòng</th>
+                                <th>Dịch vụ</th>
+                                <th>Thanh toán</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <c:forEach var="roomRent" items="${roomRents}">
                                 <tr>
-                                    <th>Tên phòng</th>
-                                    <th>Dịch vụ</th>
-                                    <th>Thanh toán</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <c:forEach var="roomRent" items="${roomRents}">
-                                    <tr>
-                                        <td>${roomRent.room.name}</td>
-                                        <td><button class="button button-primary"><span>Thêm menu</span></button></td>
-                                        <td><button class="button button-warning" onclick="handlePayment(${roomRent.id})"><span>Trả phòng</span></button></td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
+                                  <td>${roomRent.room.name}</td>
+                                  <td><button class="button button-primary"><span>Thêm menu</span></button></td>
+                                  <td><button class="button button-warning" onclick="handlePayment(${roomRent.id})"><span>Trả phòng</span></button></td>
+                              </tr>
+                          </c:forEach>
+                          </tbody>
+                      </table>
 							<!-- Thanh toán -->
-							<div class="col-md-4 order-md-2 mb-4" id="payment" style="display: none;">
-								<h4 class="d-flex justify-content-between align-items-center mb-3">
-									<span class="text-muted">Thanh toán</span>
-								</h4>
-								<ul class="list-group mb-3">
-								
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-										<div>
-											<h6 class="my-0">Thời gian nhận phòng</h6>
-										</div>
-										<span class="text-muted" id="checkin"></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-										<div>
-											<h6 class="my-0">Thời gian trả phòng</h6>
-										</div>
-										<span class="text-muted" id="checkout"></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Tiền phòng</h6>
-											</div>
-												<span class="text-muted"></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Phụ thu</h6>
-											</div>
-												<span class="text-muted"></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Tiền trả trước</h6>
-											</div>
-												<span class="text-muted" ></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Tiền menu</h6>
-											</div>
-												<span class="text-muted" ></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Giảm giá</h6>
-											</div>
-												<span class="text-muted" ></span>
-									</li>
-									
-									<li class="list-group-item d-flex justify-content-between lh-condensed">
-											<div>
-												<h6 class="my-0">Tổng tiền</h6>
-											</div>
-											<span class="text-muted" ></span>
-									</li>
-									
-									
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Tiền cần thanh toán</span>
-										<strong id="thanhtoan"></strong>
-									</li>
-								</ul>
+                      <div class="col-md-4 order-md-2 mb-4" id="payment" style="display: none;">
+                          <h4 class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="text-muted">Thanh toán</span>
+                          </h4>
+                          <ul class="list-group mb-3">
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Thời gian nhận phòng</h6>
+                                  </div>
+                                  <strong id="checkin"></strong>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Thời gian trả phòng</h6>
+                                  </div>
+                                  <strong id="checkout"></strong>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Tiền phòng</h6>
+                                  </div>
+                                  <strong id="cachtinhtien"></strong>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Phụ thu</h6>
+                                  </div>
+                                  <strong id="phuthu"></strong>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Tiền menu</h6>
+                                  </div>
+                                  <strong id="tienmenu"></strong>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Tổng tiền</h6>
+                                  </div>
+                                  <strong id="tongtien"></strong>
+                              </li>
 
-								<div class="card p-2">
-									<button  class="btn btn-secondary")>Xác nhận</button>
-								</div>
-                        </div>
-						</div>
+                              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                  <div>
+                                      <h6 class="my-0">Tiền đã trả trước</h6>
+                                  </div>
+                                  <strong id="tientratruoc"></strong>
+                              </li>
+
+                              <li class="list-group-item d-flex justify-content-between">
+                                  <span>Tiền cần thanh toán</span>
+                                  <strong id="thanhtoan"></strong>
+                              </li>
+                          </ul>
+                          <div class="card p-2">
+                              <button  class="btn btn-secondary" onclick="confirmPay()">Xác nhận</button>
+                          </div>
+                      </div>
+                  </div>
 						
                     <div class="tab-pane fade" id="history">
                             <table class="table">
@@ -422,7 +408,7 @@
         <div class="container-fluid">
 
             <div class="footer-copyright text-center">
-                <p class="text-body-light">2019 @ T-Hotel</p>
+                <p class="text-body-light">2020 &copy; T-Hotel</p>
             </div>
 
         </div>
@@ -456,11 +442,6 @@
         function handlePayment(id) {
             document.getElementById("payment").style.display ="block";
 			
-			var today = new Date();
-			var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-			var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-			var dateTime = date+' '+time;
-			
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -473,16 +454,26 @@
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify({id:id}));
 			
-            function displayPayment(res) {
-                document.getElementById("thanhtoan").innerHTML = res.cost;
-                document.getElementById("cachtinhtien").innerHTML = res.room.paymentMethod.price;
-				document.getElementById("checkin").innerHTML = res.reservation.checkInDate;
-				document.getElementById("checkout").innerHTML = dateTime;
+            function displayPayment(bill) {
+                document.getElementById("thanhtoan").innerHTML = bill.total_pay;
+                document.getElementById("cachtinhtien").innerHTML = bill.room_price;
+                var checkIn = bill.checkInDate;
+                var d = new Date(checkIn);
+				document.getElementById("checkin").innerHTML = d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear() +" " + d.getHours() +":" + d.getMinutes();
+                var checkOut = bill.checkOutDate;
+                var d = new Date(checkOut);
+                document.getElementById("checkout").innerHTML = d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear() +" " + d.getHours() +":" + d.getMinutes();
+                document.getElementById("phuthu").innerHTML = bill.surcharge;
+                document.getElementById("tienmenu").innerHTML = bill.menu_price;
+                document.getElementById("tientratruoc").innerHTML = bill.deposits;
+                document.getElementById("tongtien").innerText = bill.total_cost;
             }
         }
-		
-		
-		
+
+        function confirmPay() {
+            document.getElementById("payment").style.display ="none";
+            window.location.replace("/roomrent");
+        }
 
         function showModal(id) {
             document.getElementById("button-modal").value = id;

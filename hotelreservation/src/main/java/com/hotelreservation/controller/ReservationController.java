@@ -2,6 +2,7 @@ package com.hotelreservation.controller;
 
 
 import com.hotelreservation.entry.BillParam;
+import com.hotelreservation.entry.ReservationParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.HistoryReservation;
 import com.hotelreservation.model.Reservation;
@@ -244,5 +245,62 @@ public class ReservationController {
             }
         }
         return ResponseEntity.ok(rs);
+    }
+
+    @PostMapping(value = "/main/reservation/room/checkOffline", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> checkRoomOffline(@RequestBody Map<String, String> body) throws ParseException, ResourceNotFoundException {
+        Date d1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(body.get("checkIn"));
+        Timestamp checkInTime = new Timestamp(d1.getTime());
+
+        Date d2 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm").parse(body.get("checkOut"));
+        Timestamp checkOutTime = new Timestamp(d2.getTime());
+
+        Room room = roomService.getRoom(Integer.parseInt(body.get("id")));
+
+        String rs = "failed";
+
+        //check phong co trong lich khong
+        if (historyReservationService.checkRoomAvailable(checkInTime, checkOutTime, room.getId())) {
+            rs = "ok";
+        } else {
+            rs = "failed";
+        }
+        return ResponseEntity.ok(rs);
+    }
+
+    @PostMapping(value="/main/reservation/createOffline")
+    public @ResponseBody String create(@RequestBody ReservationParam reservationOffline) throws ResourceNotFoundException {
+        Reservation reservation = new Reservation();
+
+        reservation.setCustomerName(reservationOffline.nameCus);
+        reservation.setPhone(reservationOffline.phone);
+        reservation.setCheckInDate(reservationOffline.check_in_date);
+        reservation.setCheckOutDate(reservationOffline.check_out_date);
+        reservation.setDeposits(reservationOffline.tien_tra_truoc);
+
+        Date date = new Date();
+        reservation.getCheckInDate().setHours(date.getHours());
+        reservation.getCheckInDate().setMinutes(date.getMinutes());
+
+        reservation.getCheckOutDate().setHours(12);
+        reservation.getCheckOutDate().setMinutes(0);
+
+        reservationService.saveReservation(reservation);
+
+        RoomStatus roomStatus = roomStatusService.getRoomStatusByID(2);
+
+        try {
+            HistoryReservation historyReservation = new HistoryReservation();
+            historyReservation.setReservation(reservation);
+            historyReservation.setRoom(roomService.getRoom(reservationOffline.room_id));
+            historyReservation.getRoom().setRoomStatus(roomStatus);
+            historyReservation.setEarlyCheckIn("N");
+            historyReservation.setStatus("R-ON");
+            historyReservationService.saveHistoryReservation(historyReservation);
+        }catch (ResourceNotFoundException ex) {
+
+        }
+        return "ok";
     }
 }

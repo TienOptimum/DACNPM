@@ -265,7 +265,7 @@
                             <h4 class="title">CHỈNH SỬA ĐẶT PHÒNG</h4>
                         </div>
                         <div class="box-body">
-                            <form action="/main/reservation/create" method="post" modelAttribute="reservation">
+                            <form>
                                 <div class="row mbn-20">
 
                                     <div class="col-12 mb-20">

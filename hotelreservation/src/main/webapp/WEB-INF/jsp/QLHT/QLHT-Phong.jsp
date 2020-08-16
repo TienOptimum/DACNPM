@@ -367,7 +367,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; <a href="https://themeforest.net/user/codecarnival">Codecarnival</a></p>
+                    <p class="text-body-light">2020 &copy; T-Hotel</p>
                 </div>
 
             </div>
@@ -434,25 +434,42 @@
 
     <script>
         function update() {
-            var room = {
-                "id": document.getElementById("room-id").value,
-                "name": document.getElementById("name-update").value,
-                "kind_of_room_id": document.getElementById("kindOfRoom-update").value,
-                "payment_method_id": document.getElementById("paymentMethod-update").value,
-                "description": document.getElementById("des-update").value
-            }
-
+            var name = document.getElementById("name-update").value;
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var myObj = JSON.parse(this.responseText);
-                    updateView(myObj);
+                    handleUpdate(this.responseText);
                 }
             };
-
-            xhttp.open("POST", "/main/room/update", true);
+            xhttp.open("POST", "/main/room/check", true);
             xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify(room));
+            xhttp.send(JSON.stringify({name:name}));
+        }
+
+        function handleUpdate(responseStatus) {
+            if (responseStatus == OK) {
+                var room = {
+                    "id": document.getElementById("room-id").value,
+                    "name": document.getElementById("name-update").value,
+                    "kind_of_room_id": document.getElementById("kindOfRoom-update").value,
+                    "payment_method_id": document.getElementById("paymentMethod-update").value,
+                    "description": document.getElementById("des-update").value
+                }
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        updateView(myObj);
+                    }
+                };
+
+                xhttp.open("POST", "/main/room/update", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify(room));
+            }else{
+                alert("Tên phòng đã tồn tại!");
+            }
         }
 
         function updateView(room) {
@@ -483,7 +500,6 @@
         const FAILED = 'failed';
         function handleCheckValid(responseStatus) {
             if (responseStatus == OK) {
-                // handleCheck();
                 submitForm();
             }else if(responseStatus == FAILED){
                 alert("Tên phòng đã tồn tại!");

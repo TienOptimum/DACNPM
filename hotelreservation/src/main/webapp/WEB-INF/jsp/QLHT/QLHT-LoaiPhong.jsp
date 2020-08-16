@@ -428,23 +428,40 @@
 
     <script>
         function update() {
-            var kindofroom = {
-                "id": document.getElementById("kindofroom-id").value,
-                "name": document.getElementById("name-update").value,
-                "description": document.getElementById("des-update").value
-            }
-
+            var name = document.getElementById("name-update").value;
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var myObj = JSON.parse(this.responseText);
-                    updateView(myObj);
+                    handleAfterUpdate(this.responseText);
                 }
             };
-
-            xhttp.open("POST", "/main/kindofroom/update", true);
+            xhttp.open("POST", "/main/kindofroom/check", true);
             xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify(kindofroom));
+            xhttp.send(JSON.stringify({name:name}));
+        }
+
+        function handleAfterUpdate(responseStatus) {
+            if (responseStatus == OK) {
+                var kindofroom = {
+                    "id": document.getElementById("kindofroom-id").value,
+                    "name": document.getElementById("name-update").value,
+                    "description": document.getElementById("des-update").value
+                }
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        updateView(myObj);
+                    }
+                };
+
+                xhttp.open("POST", "/main/kindofroom/update", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify(kindofroom));
+            }else{
+                alert("Tên loại phòng đã tồn tại!");
+            }
         }
 
         function updateView(kindOfRoom) {
@@ -460,7 +477,6 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
                     handleCheckValid(this.responseText);
                 }
             };
@@ -473,9 +489,8 @@
         const FAILED = 'failed';
         function handleCheckValid(responseStatus) {
             if (responseStatus == OK) {
-                // handleCheck();
                 submitForm();
-            }else if(responseStatus == FAILED){
+            }else{
                 alert("Tên loại phòng đã tồn tại!");
             }
         }
@@ -483,9 +498,6 @@
         function submitForm() {
             document.getElementById("add").submit();
         }
-
-
-
 
     </script>
 </body>

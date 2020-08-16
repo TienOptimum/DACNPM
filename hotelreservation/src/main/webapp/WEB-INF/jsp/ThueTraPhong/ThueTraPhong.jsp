@@ -174,15 +174,16 @@
 
                                 <div class="col-12 mb-20">
                                     <div class="row mbn-20">
+                                        <input id="room-reservation" value="" style="display: none;">
                                         <!--Tên khách hàng -->
                                         <div class="col-lg-4 mb-20">
                                             <label>Họ tên khách hàng</label>
-                                            <input type="text"  class="form-control">
+                                            <input id="name-cus" type="text"  class="form-control">
                                         </div>
                                         <!--Số điện thoại -->
                                         <div class="col-lg-4 mb-20">
                                             <label>Số điện thoại</label>
-                                            <input type="number"  class="form-control">
+                                            <input id="phone" type="number"  class="form-control">
                                         </div>
 
                                     </div>
@@ -191,15 +192,10 @@
                                 <!--Date -->
                                 <div class="col-12 mb-20">
                                     <div class="row mbn-20">
-                                        <!--Ngày nhận phòng -->
-                                        <div class="col-lg-4 mb-20">
-                                            <h6 class="mb-15">Ngày nhận phòng</h6>
-                                            <input type="datetime-local" >
-                                        </div>
                                         <!--Ngày trả phòng -->
                                         <div class="col-lg-4 mb-20">
                                             <h6 class="mb-15">Ngày trả phòng</h6>
-                                            <input type="datetime-local" >
+                                            <input id="check-out-date" type="datetime-local" >
                                         </div>
 
                                     </div>
@@ -208,28 +204,12 @@
                                 <!--Tiền trả trước -->
                                 <div class="col-12 mb-20">
                                     <label>Tiền trả trước</label>
-                                    <input type="number"  class="form-control">
-                                </div>
-
-                                <!--Loại phòng -->
-                                <div class="col-12 mb-20">
-                                    <h6 class="mb-15">Loại phòng</h6>
-                                    <div class="adomx-checkbox-radio-group inline">
-                                        <c:forEach var="room" items="${rooms}">
-                                            <label class="adomx-checkbox">
-                                                <input type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}
-                                            </label>
-                                        </c:forEach>
-                                    </div>
-                                </div>
-                                <!--Ghi chú -->
-                                <div class="col-12 mb-20">
-                                    <textarea class="form-control" name="note" placeholder="Ghi chú"></textarea>
+                                    <input id="tien-tra-truoc" type="number" class="form-control">
                                 </div>
                             </div>
                         </form>
                         <div class="col-12 mb-20">
-                            <button class="button button-primary" onclick="test()">Nhận phòng</button>
+                            <button class="button button-primary" onclick="handleReservation()">Nhận phòng</button>
                             <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
                         </div>
                     </div>
@@ -261,10 +241,10 @@
                                 <tbody>
                                     <c:forEach var="roomAvai" items="${roomAvais}">
                                         <tr>
-                                            <td>${roomAvai.name}</td>
-                                            <td>${roomAvai.description}</td>
-                                            <td>
-                                                <button class="button button-success" onclick="turnOnForm('form-add')"><span>Nhận phòng</span></button>
+                                            <td id="room-avai-name${roomAvai.id}">${roomAvai.name}</td>
+                                            <td id="room-avai-des${roomAvai.id}">${roomAvai.description}</td>
+                                            <td id="button-room-avai${roomAvai.id}">
+                                                <button id="${roomAvai.id}" class="button button-success" onclick="turnOnForm('form-add',this.id)"><span>Nhận phòng</span></button>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -505,10 +485,61 @@
 			x.style.display ="none";
 		}
 		
-		function turnOnForm(on){
+		function turnOnForm(on,id){
 			var x = document.getElementById(on);
+            document.getElementById("room-reservation").value = id;
 			x.style.display ="block";
 		}
+
+		function handleReservation() {
+            var checkOut = document.getElementById("check-out-date").value;
+            var id = document.getElementById("room-reservation").value;
+
+            var checkIn = new Date();
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    handleCheckValid(this.responseText);
+                }
+            };
+            xhttp.open("POST", "/main/reservation/room/checkOffline", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({checkIn:checkIn,checkOut:checkOut,id:id}));
+        }
+
+        function reservationOffline() {
+            var dd = new Date();
+            dd.setHours(0,0,0,0);
+
+
+            var reservationOffline = {
+                nameCus:document.getElementById("name-cus").value,
+                phone:document.getElementById("phone").value,
+                check_in_date:dd,
+                check_out_date:document.getElementById("check-out-date").value,
+                tien_tra_truoc:document.getElementById("tien-tra-truoc").value,
+                room_id:document.getElementById("room-reservation").value
+            }
+            return reservationOffline;
+        }
+
+        const OK = 'ok';
+        const FAILED = 'failed';
+        function handleCheckValid(responseStatus) {
+            if (responseStatus == OK) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        window.location.replace("/roomrent");
+                    }
+                };
+                xhttp.open("POST", "/main/reservation/createOffline", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify(reservationOffline()));
+            }else {
+                alert("Phòng đã được đặt trước trong khoảng thời gian đã chọn!");
+            }
+        }
     </script>
 
 </body>

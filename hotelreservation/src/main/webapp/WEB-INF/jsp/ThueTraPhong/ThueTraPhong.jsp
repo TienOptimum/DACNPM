@@ -216,6 +216,41 @@
             </div>
         </div>
 
+        <div class="row" id="form-menu" style="display: none;">
+            <div class="col-12 mb-30">
+                <div class="box">
+                    <div class="box-head">
+                        <h4 class="title">Thêm Menu</h4>
+                    </div>
+                    <div class="box-body">
+                        <form>
+                            <div class="row mbn-20">
+                                <div class="col-12 mb-20">
+                                    <div class="row mbn-20">
+                                        <!--Loại Menu -->
+                                        <div class="col-lg-2 mb-20">
+                                            <label>Loại menu</label>
+                                                <input id="reservation-menu" value="" style="display:none;">
+                                                <select class="form-control" id="type-menu">
+                                                    <c:forEach var="menu" items="${menus}">
+                                                        <option value="${menu.id}">${menu.name}</option>
+                                                    </c:forEach>
+                                                </select>
+                                            <input id="amount-menu" type="number" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-12 mb-20">
+                            <button class="button button-primary" onclick="handleAddMenu()">Thêm dịch vụ</button>
+                            <button class="button button-danger" onclick="turnOffForm('form-menu')"><span>Hủy</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row mbn-30">
             <div class="col-md-12">
 			<div class="box">
@@ -264,7 +299,7 @@
                             <c:forEach var="roomRent" items="${roomRents}">
                                 <tr>
                                   <td>${roomRent.room.name}</td>
-                                  <td><button class="button button-primary"><span>Thêm menu</span></button></td>
+                                  <td><button class="button button-primary" onclick="turnOnFormMenu(${roomRent.id})"><span>Thêm menu</span></button></td>
                                   <td><button class="button button-warning" onclick="handlePayment(${roomRent.id})"><span>Trả phòng</span></button></td>
                               </tr>
                           </c:forEach>
@@ -538,6 +573,31 @@
             }else {
                 alert("Phòng đã được đặt trước trong khoảng thời gian đã chọn!");
             }
+        }
+
+        function turnOnFormMenu(id) {
+            document.getElementById("form-menu").style.display = "block";
+            document.getElementById("reservation-menu").value = id;
+        }
+
+        function handleAddMenu() {
+            var menu_id = document.getElementById("type-menu").value;
+            var amount = document.getElementById("amount-menu").value;
+            var id = document.getElementById("reservation-menu").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    afterAddMenu();
+                }
+            };
+            xhttp.open("POST", "/main/reservation/addMenu", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({menu_id:menu_id,amount:amount,id:id}));
+        }
+        
+        function afterAddMenu() {
+            document.getElementById("form-menu").style.display = "none";
         }
     </script>
 

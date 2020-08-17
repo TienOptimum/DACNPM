@@ -19,3 +19,5 @@ INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,s
 
 
 INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123')
+
+SET SQL_SAFE_UPDATES=0;

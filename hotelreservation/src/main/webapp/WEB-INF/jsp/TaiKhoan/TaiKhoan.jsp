@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Adomx - Responsive Bootstrap 4 Admin Template</title>
+    <title>Tài Khoản</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,9 +49,8 @@
 
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
-                        <a href="index.html">
-                            <img src="assets/images/logo/logo.png" alt="">
-                            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
+                        <a href="/index">
+                            <img src="../assets/images/logo/thotel.png" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 

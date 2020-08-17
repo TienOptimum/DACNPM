@@ -54,8 +54,7 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="/index">
-                            <img src="assets/images/logo/logo.png" alt="">
-                            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="">
+                            <img src="../assets/images/logo/thotel.png" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -234,7 +233,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2019 &copy; T-Hotel </p>
+                    <p class="text-body-light">2020 &copy; T-Hotel </p>
                 </div>
 
             </div>

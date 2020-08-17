@@ -5,19 +5,20 @@ INSERT INTO payment_method(name,price,surcharge,check_in_time,check_out_time) va
 
 INSERT INTO menu(name,type,entry_price,price) values ('Bánh','Đồ ăn',8000,10000),('Sting','Đồ uống',7000,15000);
 
-INSERT INTO room(description, name,kind_of_room_id,payment_method_id,room_status_id) values ('phòng một giường, tivi','111',1,1,1),('phòng một giường, tivi','112',1,1,1),('phòng một giường, tivi','113',1,1,1),('phòng một giường, tivi','114',1,1,1),('phòng một giường đôi,tivi','222',2,2,1),('phòng 8 người, giường tầng','333',3,3,1),('phòng đầy đủ nội thất (tivi, tủ lạnh...)','VIP1',4,4,1);
+INSERT INTO room(description, name,kind_of_room_id,payment_method_id,room_status_id) values ('phòng một giường, tivi','111',1,1,2),('phòng một giường, tivi','112',1,1,1),('phòng một giường, tivi','113',1,1,1),('phòng một giường, tivi','114',1,1,1),('phòng một giường đôi,tivi','222',2,2,1),('phòng 8 người, giường tầng','333',3,3,1),('phòng đầy đủ nội thất (tivi, tủ lạnh...)','VIP1',4,4,1);
 
 INSERT INTO room_status(name) values ('Trống'),('Đã nhận phòng'),('Chờ nhận phòng');
 
-INSERT INTO reservation (check_in_date, check_out_date, customer_name, deposits, phone) VALUES ( '2020-08-17 14:00:00', '2020-08-19 12:00:00', 'Nguyễn Văn A', '200000', '0374606941');
+INSERT INTO reservation (check_in_date, check_out_date, customer_name, deposits, phone) VALUES ( '2020-08-17 16:15:43', '2020-08-19 12:00:00', 'Nguyễn Văn A', '200000', '0374606941');
 INSERT INTO reservation (check_in_date, check_out_date, customer_name, deposits, phone) VALUES ('2020-08-18 14:00:00', '2020-08-20 12:00:00', 'Nguyễn Thị B', '150000', '0374606942');
+INSERT INTO reservation (check_in_date, check_out_date, customer_name, deposits, phone) VALUES ('2020-08-18 14:00:00', '2020-08-21 12:00:00', 'Nguyễn Trần Chí D', '200000', '0374336942');
 INSERT INTO reservation (check_in_date, check_out_date, customer_name, deposits, phone) VALUES ('2020-08-25 14:00:00', '2020-08-27 12:00:00', 'Trần Bách C', '250000', '0374636942');
 
-INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '1', '1','ON');
+INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '1', '1','R-ON');
 INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '2', '5','ON');
-INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '3', '7','ON');
+INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '4', '7','ON');
+INSERT INTO history_reservation (cost, early_check_in, reservation_id, room_id,status) VALUES ( '0', 'N', '3', '3','ON');
 
-
-INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123')
+INSERT INTO user(password,username) values('$2a$10$rDibciT1mfS/d.Ijbig2GuViOSTwcAe0ydknraGrBXoZvGBv3C4KK','admin123');
 
 SET SQL_SAFE_UPDATES=0;

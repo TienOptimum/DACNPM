@@ -51,8 +51,7 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="/index">
-                            <img src="../assets/images/logo/logo.png" alt="">
-                            <img src="../assets/images/logo/logo-light.png" class="logo-light" alt="">
+                            <img src="../assets/images/logo/thotel.png" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -315,7 +314,7 @@
                                         <h6 class="mb-15">Loại phòng</h6>
                                         <div class="adomx-checkbox-radio-group inline">
                                             <c:forEach var="room" items="${rooms}">
-                                                <label class="adomx-checkbox"><input id="room-id-update${room.id}" type="checkbox" class="checkRoom" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
+                                                <label class="adomx-checkbox"><input type="checkbox" class="checkRoomUpdate" value="${room.id}"> <i class="icon"></i>${room.name} ${room.kindOfRoom.name}</label>
                                             </c:forEach>
                                         </div>
                                     </div>
@@ -326,7 +325,7 @@
                                 </div>
                             </form>
                             <div class="col-12 mb-20">
-                                <button class="button button-primary" onclick="checkValid()">Lưu</button>
+                                <button class="button button-primary" onclick="reservationUpdate()">Lưu</button>
                                 <button class="button button-danger" onclick="swapFormOff('form-edit')"><span>Hủy</span></button>
                             </div>
                         </div>
@@ -415,10 +414,99 @@
        document.getElementById("reservation-id").value = id;
        document.getElementById("cus-update").value = document.getElementById("history-res-cus-name"+id).innerText;
        document.getElementById("phone-update").value = document.getElementById("history-res-phone"+id).value;
-       document.getElementById("checkInDate-update").value = document.getElementById("history-res-checkin-date"+id).innerText;
-       document.getElementById("checkOutDate-update").vale = document.getElementById("history-res-checkout-date"+id).innerText;
        document.getElementById("deposits-update").value = document.getElementById("history-res-deposits"+id).value;
        document.getElementById("note-update").value = document.getElementById("history-res-note"+id).value;
+   }
+
+   function checkRoomUpdate() {
+       var inputs = document.getElementsByClassName("checkRoomUpdate");
+       var arr = Array.from(inputs);
+       var result = []
+       for (let i = 0; i < arr.length ; i++){
+           if (arr[i].checked == true){
+               result.push(arr[i].value)
+           }
+       }
+       return result;
+   }
+
+   function reservationUpdate() {
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               checkValidUpdate();
+           }
+       };
+       xhttp.open("POST", "/main/reservation/checkedRoom", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify(checkRoomUpdate()));
+   }
+
+   function checkValidUpdate() {
+       var checkIn = document.getElementById("checkInDate-update").value;
+       var checkOut = document.getElementById("checkOutDate-update").value;
+
+       var d = new Date(checkIn);
+       d.setHours(14,0,0,0);
+       var dd = new Date();
+       dd.setHours(0,0,0,0);
+       if ( d === dd || d > dd){
+           var xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                   confirmUpdate(this.responseText);
+               }
+           };
+           xhttp.open("POST", "/main/reservation/room/check", true);
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send(JSON.stringify({checkIn:checkIn,checkOut:checkOut}));
+       }else{
+           alert("Vui lòng chọn thời gian check in sau thời điểm hiện tại!")
+       }
+   }
+
+   function confirmUpdate(responseStatus) {
+       if (responseStatus == OK) {
+           update();
+       }else {
+           alert("Phòng được đặt đã trùng lịch!");
+       }
+   }
+
+   function update() {
+       var id = document.getElementById("reservation-id").value;
+       var checkIn = document.getElementById("checkInDate-update").value;
+       var checkOut = document.getElementById("checkOutDate-update").value;
+       var cusName = document.getElementById("cus-update").value;
+       var phone = document.getElementById("phone-update").value;
+       var deposits = document.getElementById("deposits-update").value;
+       var note = document.getElementById("note-update").value;
+
+       var xhttp = new XMLHttpRequest();
+       xhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               var myObj = JSON.parse(this.responseText);
+               updateViewAfterUpdate(myObj);
+           }
+       };
+       xhttp.open("POST", "/main/reservation/update", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send(JSON.stringify({id:id,checkIn:checkIn,checkOut:checkOut,cusName:cusName,phone:phone,deposits:deposits,note:note}));
+   }
+
+   function updateViewAfterUpdate(historyReservation) {
+       document.getElementById("form-edit").style.display = "none";
+       var id = document.getElementById("reservation-id").value;
+       document.getElementById("history-room-name"+id).innerHTML = historyReservation.room.name;
+
+       var checkIn = historyReservation.reservation.checkInDate
+       var d = new Date(checkIn);
+       document.getElementById("history-res-checkin-date"+id).innerHTML = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate() +" " + d.getHours() +":0" + d.getMinutes() + ":0" + d.getSeconds() + ".0";
+       var checkOut = historyReservation.reservation.checkOutDate;
+       var d = new Date(checkOut);
+       document.getElementById("history-res-checkout-date"+id).innerHTML = d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate() +" " + d.getHours() +":0" + d.getMinutes() + ":0" + d.getSeconds() + ".0";
+
+       document.getElementById("history-res-cus-name"+id).innerHTML = historyReservation.reservation.customerName;
    }
    
    function start(id) {

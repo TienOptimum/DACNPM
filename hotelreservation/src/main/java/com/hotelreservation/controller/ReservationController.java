@@ -4,10 +4,7 @@ package com.hotelreservation.controller;
 import com.hotelreservation.entry.BillParam;
 import com.hotelreservation.entry.ReservationParam;
 import com.hotelreservation.exception.ResourceNotFoundException;
-import com.hotelreservation.model.HistoryReservation;
-import com.hotelreservation.model.Reservation;
-import com.hotelreservation.model.Room;
-import com.hotelreservation.model.RoomStatus;
+import com.hotelreservation.model.*;
 import com.hotelreservation.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -40,15 +37,23 @@ public class ReservationController {
     @Autowired
     RoomStatusService roomStatusService;
 
+    @Autowired
+    HistoryMenuService historyMenuService;
+
+    @Autowired
+    MenuService menuService;
+
     @RequestMapping("/roomrent")
     private String roomRentRedirect(Model model){
         List<HistoryReservation> roomRents = historyReservationService.getListHistoryReservationByStatus("R-ON");
         List<Room> roomAvais = roomService.getRoomByRoomStatusID(1);
         List<HistoryReservation> history = historyReservationService.getListHistoryReservationByStatus("OFF");
+        List<Menu> menus = menuService.getMenus();
 
         model.addAttribute("roomRents", roomRents);
         model.addAttribute("roomAvais",roomAvais);
         model.addAttribute("histories",history);
+        model.addAttribute("menus",menus);
 
         return "ThueTraPhong/ThueTraPhong";
     }
@@ -208,11 +213,10 @@ public class ReservationController {
         // lấy ra giá phụ thu
         double surcharge = historyReservation.getRoom().getPaymentMethod().getSurcharge();
         // lấy ra danh sách menu đã sử dụng của phòng
-//        ArrayList<Integer> menu = new ArrayList();
-//
-//        for (int i = 0; i < menu.size() ; i++){
-//            menuCost += menu.get(i);
-//        }
+        List<HistoryMenu> historyMenus = historyMenuService.getHisMenuByHisReservationID(hisID);
+        for ( int i = 0; i < historyMenus.size(); i++){
+            menuCost += historyMenus.get(i).getAmount() * historyMenus.get(i).getMenu().getPrice();
+        }
 
         long diffTimeBonus = realCheckOut - checkOutTime;
         long timeBonus = 0;
@@ -349,6 +353,25 @@ public class ReservationController {
         }catch (ResourceNotFoundException ex) {
 
         }
+        return "ok";
+    }
+
+    @RequestMapping("/main/reservation/addMenu")
+    @ResponseBody
+    public String addMenu(@RequestBody Map<String, String> body) throws ResourceNotFoundException{
+        HistoryMenu historyMenu = new HistoryMenu();
+
+        historyMenu.setHistoryReservation(historyReservationService.getHistoryReservation(Integer.parseInt(body.get("id"))));
+        historyMenu.setMenu(menuService.getMenu(Integer.parseInt(body.get("menu_id"))));
+
+        int amount = 0;
+        if (!body.get("amount").equals("") || body.get("amount") != null || Integer.parseInt(body.get("amount")) > 0){
+            amount = Integer.parseInt(body.get("amount"));
+        }
+        historyMenu.setAmount(amount);
+
+        historyMenuService.saveHistoryMenu(historyMenu);
+
         return "ok";
     }
 }

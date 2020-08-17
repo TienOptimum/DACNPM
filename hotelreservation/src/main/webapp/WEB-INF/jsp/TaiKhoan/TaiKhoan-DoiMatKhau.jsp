@@ -38,7 +38,11 @@
 </head>
 
 <body>
-
+<c:if test="${pageContext.request.userPrincipal.name != null}">
+    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    </form>
+</c:if>
     <div class="main-wrapper">
 
 
@@ -158,7 +162,7 @@
                             <h4 class="title">Đổi mật khẩu</h4>
                         </div>
                         <div class="box-body">
-							<div id="errormsg" style="display:none"></div>
+							<div id="errormsg" style="display:none; color: red"></div>
 							
 							<div class="col-12 mb-20">
                                 <label>Old Password</label>
@@ -174,7 +178,7 @@
                                     </div>
 									
 									<div class="col-12 mb-20">
-                                        <span id="error" style="display:none">Password mismatch</span>
+                                        <span id="error" style="display:none;color: red">Xác nhận mật khẩu không đúng</span>
                                     </div>
                                    
 
@@ -249,21 +253,31 @@
             var pass = document.getElementById("pass").value;
             var oldPass = document.getElementById("oldpass").value;
             var passConfirm = document.getElementById("passConfirm").value;
+            var error =  document.getElementById("error");
             var valid = pass == passConfirm;
-            if (!valid || pass == "" || passConfirm == ""){
-                document.getElementById("error").show();
+            if (!valid){
+                error.style.display="block";
                 return;
+            } if(pass == ""){
+                error.style.display="block";
+                return;
+            }if(passConfirm == "") {
+                error.style.display="block";
+                return;
+            }else{
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText + "11111");
+                        error.textContent = this.responseText;
+                        error.style.display="block";
+                    }
+                };
+                xhttp.open("POST", "/user/changePassword", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify({oldpassword:oldPass,password:pass}));
             }
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText + "11111");
-                    // handleCheckValid(this.responseText);
-                }
-            };
-            xhttp.open("POST", "/user/changePassword", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify({oldpassword:oldPass,password:pass}));
+
         }
 
         // const OK = 'ok';

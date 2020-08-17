@@ -1,6 +1,7 @@
 package com.hotelreservation.services;
 
 import com.hotelreservation.exception.ResourceNotFoundException;
+import com.hotelreservation.model.KindOfRoom;
 import com.hotelreservation.model.Menu;
 import com.hotelreservation.repositories.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,15 @@ public class MenuServiceImpl implements MenuService{
     @Override
     public void deleteMenu(int id) {
         menuRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean checkMenuAvailable(String name) {
+        List<Menu> Menus = menuRepository.checkMenuAvailable(name);
+
+        if (Menus.size() == 0){
+            return true;
+        }
+        return false;
     }
 }

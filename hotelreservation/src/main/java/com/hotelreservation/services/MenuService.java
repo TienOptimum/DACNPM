@@ -10,5 +10,6 @@ public interface MenuService {
     public void saveMenu(Menu menu);
     public Menu getMenu(int id) throws ResourceNotFoundException;
     public void deleteMenu(int id) throws ResourceNotFoundException;
+    public boolean checkMenuAvailable(String name);
 
 }

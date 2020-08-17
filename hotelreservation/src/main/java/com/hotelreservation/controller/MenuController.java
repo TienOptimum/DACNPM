@@ -5,10 +5,13 @@ import com.hotelreservation.exception.ResourceNotFoundException;
 import com.hotelreservation.model.Menu;
 import com.hotelreservation.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
@@ -50,5 +53,21 @@ public class MenuController {
     public String update(@RequestBody Map<String,String> param) throws ResourceNotFoundException {
         menuService.deleteMenu(Integer.parseInt(param.get("id")));
         return "ok";
+    }
+
+    @PostMapping(value = "/main/menu/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<String> checkRoomValid(@RequestBody Map<String, String> body) throws ParseException {
+        String name =  body.get("name");
+        String rs = "failed";
+
+        //check loai phong co ton tai
+        if (menuService.checkMenuAvailable(name)) {
+            rs = "ok";
+        } else {
+            rs = "failed";
+        }
+
+        return ResponseEntity.ok(rs);
     }
 }

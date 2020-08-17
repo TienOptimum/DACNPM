@@ -55,7 +55,7 @@
                     <!-- Header Logo (Header Left) Start -->
                     <div class="header-logo col-auto">
                         <a href="/index">
-                            <img src="../assets/images/logo/thotel.png alt="">
+                            <img src="../assets/images/logo/thotel.png" alt="">
                         </a>
                     </div><!-- Header Logo (Header Left) End -->
 
@@ -139,7 +139,7 @@
 					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
                         <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
 						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
-						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
+						<li class="mt-2"><a href="/user"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a onclick="document.forms['logoutForm'].submit()"><i class="zmdi zmdi-sign-in"></i><span>ĐĂNG XUẤT</span></a></li>
                   
                     </ul>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="box-body">
 						<!--Form start -->
-                            <form action="/main/menu/create" method="post" modelAttribute="menu">
+                            <form id="add" action="/main/menu/create" method="post" modelAttribute="menu">
                                 <div class="row mbn-20">
 									
 									<div class="col-12 mb-20">
@@ -196,7 +196,8 @@
 										<!--Tên menu-->
                                             <div class="col-lg-4 mb-20">
 												<label>Tên menu</label>
-												<input type="text" class="form-control" name="name">
+												<input id="menuName" type="text" class="form-control" name="name">
+                                                <span id="errorName" style="color: red"></span>
                                             </div>				
 											<!--Loại menu -->
                                             <div class="col-lg-4 mb-20">
@@ -217,24 +218,28 @@
 										<!--Giá nhập -->
                                             <div class="col-lg-4 mb-20">
 												<label>Giá nhập</label>
-												<input type="number" name="entryPrice" class="form-control">
+												<input id="priceIn" type="number" name="entryPrice" class="form-control">
+                                                <span id="errorIn" style="color: red"></span>
                                             </div>
 										<!--Giá bán -->
                                             <div class="col-lg-4 mb-20">
 												<label>Giá bán</label>
-												<input type="number" name="price" class="form-control">
+												<input id="priceOut" type="number" name="price" class="form-control">
+                                                <span id="errorOut" style="color: red"></span>
                                             </div>
                                             
                                         </div>
 									</div>
 									
-                                    <div class="col-12 mb-20">
-                                        <input type="submit" value="Thêm" class="button button-primary">
-                                    </div>
+
 
                                 </div>
                             </form>
-                            <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+                            <div class="col-12 mb-20">
+                                <button class="button button-primary" onclick="checkValid()"><span>Lưu</span></button>
+                                <button class="button button-danger" onclick="turnOffForm('form-add')"><span>Hủy</span></button>
+                            </div>
+
 							<!--Form end --> 
                         </div>
                     </div>
@@ -462,6 +467,45 @@
        document.getElementById("menu-entry-price" + id).remove();
        document.getElementById("menu-price" + id).remove();
        document.getElementById("button"+ id).remove();
+   }
+
+   function checkValid() {
+       var name = document.getElementById("menuName").value;
+       var priceIn = document.getElementById("priceIn").value;
+       var priceOut = document.getElementById("priceOut").value;
+       if (name ==""){
+           document.getElementById("errorName").textContent = "Không được bỏ trống";
+           return;
+       }if (priceIn ==""){
+           document.getElementById("errorIn").textContent = "Không được bỏ trống";
+           return;
+       }if (priceOut ==""){
+           document.getElementById("errorOut").textContent = "Không được bỏ trống";
+           return;
+       }else{
+           var xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                   handleCheckValid(this.responseText);
+               }
+           };
+           xhttp.open("POST", "/main/menu/check", true);
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send(JSON.stringify({name:name}));
+       }
+
+   }
+   const OK = 'ok';
+   const FAILED = 'failed';
+   function handleCheckValid(responseStatus) {
+       if (responseStatus == OK) {
+           submitForm();
+       }else{
+           alert("Tên menu đã tồn tại!");
+       }
+   }
+   function submitForm() {
+       document.getElementById("add").submit();
    }
 </script>
 

@@ -116,7 +116,7 @@
 					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
                         <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
 						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
-						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
+						<li class="mt-2"><a href=/user"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a onclick="document.forms['logoutForm'].submit()"><i class="zmdi zmdi-sign-in"></i><span>ĐĂNG XUẤT</span></a></li>
                   
                     </ul>
@@ -176,6 +176,7 @@
                                             <div class="col-lg-4 mb-20">
 												<label>Tên phòng</label>
 												<input id="roomName" type="text" name="name" class="form-control">
+                                                <span id="errorName" style="color: red"></span>
                                             </div>
                                         </div>
 									</div>
@@ -483,16 +484,22 @@
 
         function checkValid() {
             var name = document.getElementById("roomName").value;
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
-                    handleCheckValid(this.responseText);
-                }
-            };
-            xhttp.open("POST", "/main/room/check", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify({name:name}));
+            if (name ==""){
+                document.getElementById("errorName").textContent = "Không được bỏ trống";
+                return;
+            }else{
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        handleCheckValid(this.responseText);
+                    }
+                };
+                xhttp.open("POST", "/main/room/check", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify({name:name}));
+            }
+
         }
 
         const OK = 'ok';

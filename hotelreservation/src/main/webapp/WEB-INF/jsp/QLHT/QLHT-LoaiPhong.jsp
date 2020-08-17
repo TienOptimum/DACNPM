@@ -141,7 +141,7 @@
 					    <li class="mt-2"><a href="/main/reservation"><i class="ti-calendar"></i> <span>ĐẶT PHÒNG</span></a></li>
                         <li class="mt-2"><a href="/warehouse"><i class="fa fa-database"></i> <span>QUẢN LÝ KHO</span></a></li>
 						<li class="mt-2 active"><a href="/main/manager"><i class="zmdi zmdi-settings"></i> <span>QUẢN LÝ HỆ THỐNG</span></a></li>
-						<li class="mt-2"><a href="#"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
+						<li class="mt-2"><a href="/user"><i class="ti-user"></i> <span>TÀI KHOẢN</span></a></li>
 						<li class="mt-2"><a onclick="document.forms['logoutForm'].submit()"><i class="zmdi zmdi-sign-in"></i><span>ĐĂNG XUẤT</span></a></li>
                   
                     </ul>
@@ -201,6 +201,7 @@
                                             <div class="col-lg-4 mb-20">
 												<label>Tên loại phòng</label>
 												<input id="kindRoomName" type="text" name="name" class="form-control" required>
+                                                <span id="errorKind" style="color: red"></span>
                                             </div>
                                           
                                         </div>
@@ -212,7 +213,8 @@
 										<!--Loại phòng -->
                                             <div class="col-lg-4 mb-20">
 												<label>Mô tả</label>
-												<input type="text" name="description" class="form-control" required>
+												<input id="kindDes" type="text" name="description" class="form-control" required>
+                                                <span id="errorDes" style="color: red"></span>
                                             </div>
                                         </div>
 									</div>
@@ -438,7 +440,6 @@
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify({name:name}));
         }
-
         function handleAfterUpdate(responseStatus) {
             if (responseStatus == OK) {
                 var kindofroom = {
@@ -446,7 +447,6 @@
                     "name": document.getElementById("name-update").value,
                     "description": document.getElementById("des-update").value
                 }
-
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
@@ -454,7 +454,6 @@
                         updateView(myObj);
                     }
                 };
-
                 xhttp.open("POST", "/main/kindofroom/update", true);
                 xhttp.setRequestHeader("Content-type", "application/json");
                 xhttp.send(JSON.stringify(kindofroom));
@@ -462,7 +461,6 @@
                 alert("Tên loại phòng đã tồn tại!");
             }
         }
-
         function updateView(kindOfRoom) {
             document.getElementById("form-edit").style.display = "none";
             var id = document.getElementById("kindofroom-id").value
@@ -470,20 +468,27 @@
             document.getElementById("kindofroom-des" + id).innerHTML = kindOfRoom.description;
         }
 
-
         function checkValid() {
-            var name = document.getElementById("kindRoomName").value;
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    handleCheckValid(this.responseText);
-                }
-            };
-            xhttp.open("POST", "/main/kindofroom/check", true);
-            xhttp.setRequestHeader("Content-type", "application/json");
-            xhttp.send(JSON.stringify({name:name}));
-        }
+            var nameKind = document.getElementById("kindRoomName").value;
+            if (nameKind ==""){
+                document.getElementById("errorKind").textContent = "Không được bỏ trống";
+                return;
+            }if (document.getElementById("kindDes").value ==""){
+                document.getElementById("errorDes").textContent = "Không được bỏ trống";
+                return;
+            }else{
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        handleCheckValid(this.responseText);
+                    }
+                };
+                xhttp.open("POST", "/main/kindofroom/check", true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(JSON.stringify({name:nameKind}));
+            }
 
+        }
         const OK = 'ok';
         const FAILED = 'failed';
         function handleCheckValid(responseStatus) {
@@ -493,7 +498,6 @@
                 alert("Tên loại phòng đã tồn tại!");
             }
         }
-
         function submitForm() {
             document.getElementById("add").submit();
         }

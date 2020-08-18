@@ -195,7 +195,6 @@ public class ReservationController {
         HistoryReservation historyReservation = historyReservationService.getHistoryReservation(hisID);
         //thời gian check out lý thuyết
         Date d1 = historyReservation.getReservation().getCheckOutDate();
-        System.out.println(d1);
         long checkOutTime = d1.getTime();
         //thời gian check out thực tế
         Date date = new Date();
@@ -207,7 +206,7 @@ public class ReservationController {
         double totalPay = 0;
         // lấy ra số ngày đặt phòng
         long day = realCheckOut - historyReservation.getReservation().getCheckInDate().getTime();
-        long getDayReservation = TimeUnit.MILLISECONDS.toDays(day);
+        long getDayReservation = TimeUnit.MILLISECONDS.toDays(day) + 1;
         //lấy ra giá phòng
         double paymentMethod = historyReservation.getRoom().getPaymentMethod().getPrice();
         // lấy ra giá phụ thu
@@ -229,10 +228,6 @@ public class ReservationController {
 
         // tiền trả trước
         double deposits = historyReservation.getReservation().getDeposits();
-
-        if (getDayReservation < 1){
-            getDayReservation = 1;
-        }
 
         if (earlyCheckIn.equals("Y")){
             totalPay += getDayReservation * paymentMethod + menuCost + timeBonus * surcharge + 50000 - deposits;

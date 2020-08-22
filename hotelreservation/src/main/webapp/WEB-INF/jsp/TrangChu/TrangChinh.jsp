@@ -80,87 +80,6 @@
                         <div class="col-auto">
 
                             <ul class="header-notification-area">
-
-
-                                <!-- Dropdown -->
-                                <div class="adomx-dropdown-menu dropdown-menu-notifications">
-                                    <div class="head">
-                                        <h5 class="title">You have 4 new notification.</h5>
-                                    </div>
-                                    <div class="body custom-scroll">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-notifications-none"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-block"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-info-outline"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-shield-security"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-notifications-none"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-block"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-info-outline"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-shield-security"></i>
-                                                    <p>There are many variations of pages available.</p>
-                                                    <span>11.00 am   Today</span>
-                                                </a>
-                                                <button class="delete"><i class="zmdi zmdi-close-circle-o"></i></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="footer">
-                                        <a href="#" class="view-all">view all</a>
-                                    </div>
-                                </div>
-
-
                                 <!--User-->
                                 <li class="adomx-dropdown col-auto">
                                     <a class="toggle" href="#">
@@ -224,13 +143,6 @@
                 </div>
             </div><!-- Page Heading End -->
 
-            <!-- Page Button Group Start -->
-            <div class="col-12 col-lg-auto mb-20">
-                <div class="page-date-range">
-                    <input type="text" class="form-control input-date-predefined">
-                </div>
-            </div><!-- Page Button Group End -->
-
         </div><!-- Page Headings End -->
 
         <!-- Top Report Wrap Start -->
@@ -277,7 +189,7 @@
 
                     <!-- Footer -->
                     <div class="footer">
-                        <button class="button button-info"><span><i class="ti-key"></i>Thuê phòng</span></button>
+                        <button class="button button-info"><span><a href="/roomrent"><i class="ti-key"></i>Thuê phòng</span></button>
                     </div>
 
                 </div>
@@ -298,12 +210,6 @@
                         <h5>Hôm nay</h5>
                         <h2>5 Phòng</h2>
                     </div>
-
-                    <!-- Footer -->
-                    <div class="footer">
-                        <button class="button button-info"><span><i class="ti-back-left"></i>Trả phòng</span></button>
-                    </div>
-
                 </div>
             </div><!-- Top Report End -->
 
@@ -320,16 +226,12 @@
                     <div class="box-body">
                         <div class="chart-legends-1 row">
                             <div class="chart-legend-1 col-12 col-sm-4">
-                                <h5 class="title">Total Sale</h5>
+                                <h5 class="title">Total Come-in</h5>
                                 <h3 class="value text-secondary">$5000,000</h3>
                             </div>
                             <div class="chart-legend-1 col-12 col-sm-4">
                                 <h5 class="title">Total View</h5>
                                 <h3 class="value text-primary">10000,000</h3>
-                            </div>
-                            <div class="chart-legend-1 col-12 col-sm-4">
-                                <h5 class="title">Total Support</h5>
-                                <h3 class="value text-warning">100,000</h3>
                             </div>
                         </div>
                         <div class="chartjs-revenue-statistics-chart">

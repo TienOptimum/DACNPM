@@ -273,6 +273,7 @@
                           <thead>
                             <tr>
                                 <th>Tên phòng</th>
+                                <th>Thời gian nhận phòng</th>
                                 <th>Dịch vụ</th>
                                 <th>Thanh toán</th>
                             </tr>
@@ -281,6 +282,7 @@
                             <c:forEach var="roomRent" items="${roomRents}">
                                 <tr>
                                   <td>${roomRent.room.name}</td>
+                                  <td>${roomRent.reservation.checkInDate}</td>
                                   <td><button class="button button-primary" onclick="turnOnFormMenu(${roomRent.id})"><span>Thêm menu</span></button></td>
                                   <td><button class="button button-warning" onclick="handlePayment(${roomRent.id})"><span>Trả phòng</span></button></td>
                               </tr>

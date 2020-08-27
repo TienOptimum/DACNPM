@@ -31,7 +31,7 @@ public class UserController {
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
-        return "DangNhapDangKy/Register";
+        return "DangNhapDangKy/Register1";
     }
 
     @PostMapping("/registration")
@@ -39,14 +39,14 @@ public class UserController {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "DangNhapDangKy/Register";
+            return "DangNhapDangKy/Register1";
         }
 
         userService.save(userForm);
 
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "DangNhapDangKy/Login";
+        return "DangNhapDangKy/Login1";
     }
 
     @GetMapping("/login")
@@ -57,7 +57,7 @@ public class UserController {
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
 
-        return "DangNhapDangKy/Login";
+        return "DangNhapDangKy/Login1";
     }
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
